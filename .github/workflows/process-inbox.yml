@@ -1,0 +1,174 @@
+name: Process inbox
+
+# Runs process.py whenever screenshots land in inbox/, or by hand from the Actions tab
+# ("Run workflow", e.g. after topping up credits or replacing the API key).
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'inbox/**'
+      - '!inbox/.gitkeep'     # a change that only touches .gitkeep does not start a run
+  workflow_dispatch:
+
+# One run at a time. A second upload waits in the queue instead of running alongside.
+# cancel-in-progress is false so a run that is already calling the API is never killed.
+concurrency:
+  group: process-inbox
+  cancel-in-progress: false
+
+# Least privilege: the job can read and write repo contents and nothing else.
+permissions:
+  contents: write
+
+env:
+  TZ: Asia/Kolkata            # "today" is calculated in IST, not UTC
+  PYTHONUNBUFFERED: "1"       # log lines appear in order, as they happen
+  PYTHONUTF8: "1"             # Hindi/Urdu text prints safely
+
+jobs:
+  process:
+    name: Extract events from inbox/
+    # Only on main, and never for the bot's own commits (belt and braces: pushes made with
+    # GITHUB_TOKEN do not start workflows anyway).
+    if: github.ref == 'refs/heads/main' && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v6
+        with:
+          # Always the newest main, not the commit that triggered this run. If runs are queued,
+          # the later one must see the earlier run's results (hash_log.json, done/, ...).
+          ref: main
+          fetch-depth: 0      # full history so "git pull --rebase" works if main moves
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Pre-flight checks
+        shell: bash
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          echo "Runner clock: $(date -u '+%Y-%m-%d %H:%M UTC')  =  $(TZ=Asia/Kolkata date '+%Y-%m-%d %H:%M IST')"
+          for f in process.py prompt.txt requirements.txt; do
+            if [ ! -f "$f" ]; then
+              echo "::error title=Missing file::$f was not found in the repo root. process.py, prompt.txt and requirements.txt must sit next to each other at the top level."
+              exit 1
+            fi
+          done
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error title=ANTHROPIC_API_KEY is missing::The repo secret ANTHROPIC_API_KEY is not set or is empty. Add it under Settings > Secrets and variables > Actions, then use Run workflow."
+            exit 1
+          fi
+          echo "inbox/ contains $(find inbox -maxdepth 1 -type f ! -name '.gitkeep' 2>/dev/null | wc -l) file(s)"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run process.py
+        id: process
+        shell: bash
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          log="$RUNNER_TEMP/process.log"
+          set +e
+          python process.py 2>&1 | tee "$log"
+          code=${PIPESTATUS[0]}
+          set -e
+          # process.py prints its own ::error annotation for fatal API errors. For anything else
+          # (a crash, a SystemExit message) add one so the failure is still visible on the run page.
+          if [ "$code" -ne 0 ] && ! grep -q '^::error' "$log"; then
+            last=$(tail -n 5 "$log" | tr '\n' ' ')
+            last=${last//%/%25}
+            echo "::error title=process.py failed (exit code $code)::$last"
+          fi
+          exit "$code"
+
+      # Runs even when process.py failed: it keeps the groups that finished before a fatal error
+      # and leaves the rest in inbox/, and those results must be saved. The job still ends up
+      # marked as failed because the step above failed.
+      - name: Commit results
+        if: ${{ !cancelled() && steps.process.conclusion != 'skipped' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Stage only what process.py owns. Missing paths are skipped instead of erroring.
+          for p in events.json needs_review.json hash_log.json done thumbs; do
+            if [ -e "$p" ] || [ -n "$(git ls-files -- "$p")" ]; then
+              git add -A -- "$p"
+            fi
+          done
+          # inbox/: stage deletions of processed images only (nothing new is ever added there).
+          if [ -n "$(git ls-files -- inbox)" ]; then
+            git add -u -- inbox
+          fi
+
+          if git diff --cached --quiet; then
+            echo "Nothing changed, nothing to commit."
+            exit 0
+          fi
+
+          git commit -m "Update events"
+
+          # main may have moved while this ran (a new upload, a manual edit). Rebase, then push.
+          for attempt in 1 2 3 4 5; do
+            if ! git pull --rebase origin main; then
+              git rebase --abort || true
+              echo "::error title=Could not rebase onto main::main changed in a way that conflicts with this run's results (usually a hand-edit of events.json made while the run was going). Nothing was pushed. Use Run workflow to try again."
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push failed (attempt $attempt of 5), retrying..."
+            sleep $((attempt * 3))
+          done
+          echo "::error title=Could not push to main::The push failed 5 times. Check Settings > Actions > General > Workflow permissions, and whether a branch protection rule blocks pushes to main."
+          exit 1
+
+      - name: Run summary
+        if: ${{ !cancelled() }}
+        shell: bash
+        env:
+          PROCESS_OUTCOME: ${{ steps.process.outcome }}
+        run: |
+          log="$RUNNER_TEMP/process.log"
+          {
+            echo "## Inbox processing"
+            echo
+            if [ "$PROCESS_OUTCOME" = "failure" ]; then
+              echo "### :x: process.py stopped with an error"
+              echo
+              if [ -f "$log" ] && grep -q '^::error' "$log"; then
+                grep '^::error' "$log" | sed -E 's/^::error[^:]*::/- /'
+                echo
+              fi
+              echo "Results from groups that finished before the error were saved and committed. Images that did not finish are still in \`inbox/\`."
+              echo
+              echo "**How to put it right**"
+              echo "- Key rejected (401/403): create a new key in the Anthropic Console, update the \`ANTHROPIC_API_KEY\` secret."
+              echo "- Credit balance too low: top up in the Anthropic Console (Plans & Billing)."
+              echo "- Rate limit or outage (429/5xx): wait a few minutes."
+              echo "- Then open **Actions > Process inbox > Run workflow** to process what is left."
+              echo
+            elif [ "$PROCESS_OUTCOME" = "success" ]; then
+              echo "### :white_check_mark: Finished"
+              echo
+            fi
+            if [ -f "$log" ] && grep -q -- '---- summary ----' "$log"; then
+              echo '```'
+              sed -n '/---- summary ----/,$p' "$log" | grep -v '^::'
+              echo '```'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
