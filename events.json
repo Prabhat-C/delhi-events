@@ -1,1 +1,33 @@
-{"events": []}
+{
+  "events": [
+    {
+      "id": "664aab52cc62",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Raagrang (2nd Edition) by Nibaddh Foundation",
+      "organiser": "Nibaddh Foundation",
+      "description": "A 2nd edition classical music evening featuring a classical vocal recital by Pt. Suresh Gandharv Ji, a santoor recital by Abhay Sopori Ji, and tabla accompaniment, with a book inauguration on solo tabla vadan by Dr. Deepak Dabhade. The event is held in loving memory of Ustad Iqbal Ahmed Khan.",
+      "details": null,
+      "date": "2026-11-17",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "India International Centre, Multipurpose Hall, Max Mueller Marg, Delhi - 110003",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Seats are first come first served. Chief guest: Vidushi Krishna Bisht (SNA Awardee).",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "done/Screenshot 2026-11-08 at 1.23.00 PM.png",
+      "thumb": "thumbs/f5f09652b780.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-08 at 1.23.00 PM.png"
+      ],
+      "image_hashes": [
+        "f5f09652b780b485ef7ec5c8e2a8792b57e193b9786aa198ef444cb98da61cb4"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-08"
+    }
+  ]
+}
