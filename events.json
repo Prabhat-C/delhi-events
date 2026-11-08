@@ -28,6 +28,35 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-08"
+    },
+    {
+      "id": "7aba7f289b18",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "9th International Ancient Arts Festival 2026",
+      "organiser": "Rays of Wisdom Society",
+      "description": "A two-evening festival of Indian classical and folk dance and classical music. Its theme is art that heals, connects and awakens.",
+      "details": null,
+      "date": "2026-11-25",
+      "end_date": "2026-11-26",
+      "start_time": null,
+      "end_time": null,
+      "venue": "Kamani Auditorium, New Delhi",
+      "registration_link": "https://iaaf26.raysofwisdomsociety.net",
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "done/Screenshot 2026-11-08 at 1.23.50 PM.png",
+      "thumb": "thumbs/3a9c2035f4c9.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-08 at 1.23.50 PM.png"
+      ],
+      "image_hashes": [
+        "3a9c2035f4c9bac6ff1cad77d1029104c8757487cc98fa1da53bf65c67a66dcb"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-08"
     }
   ]
 }
