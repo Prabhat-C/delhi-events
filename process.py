@@ -15,7 +15,7 @@ Pipeline
   5. Text is cleaned (emoji etc.), links are cleaned and tested, duplicates are merged,
      thumbnails are made, events.json / needs_review.json / hash_log.json are written.
 
-Usage (from the repo root, with ANTHROPIC_API_KEY set):
+Usage (from the repo root; ANTHROPIC_API_KEY comes from the environment, or from a local .env):
     python process.py                       # normal run, same as the GitHub Action
     python process.py --dry-run --limit 3   # call the API, print results, change nothing on disk
     python process.py --skip-link-check     # do not make HTTP requests to registration links
@@ -34,6 +34,7 @@ import os
 import re
 import shutil
 import sys
+import time
 import unicodedata
 from collections import Counter
 from dataclasses import dataclass, field
@@ -323,7 +324,7 @@ class Attempt:
 
 @dataclass
 class Outcome:
-    kind: str                       # event | expired | not_event | deferred | failed
+    kind: str                       # event | expired | not_event | failed
     attempt: Optional[Attempt] = None
     sticky_uncertain: bool = False
 
@@ -331,7 +332,7 @@ class Outcome:
 class ModelCallError(Exception):
     def __init__(self, kind: str, message: str):
         super().__init__(message)
-        self.kind = kind            # fatal | transient | rejected
+        self.kind = kind            # fatal (stop the run) | rejected (a 400 about one image)
 
 
 def parse_events(text: str) -> Optional[list]:
@@ -367,6 +368,50 @@ def reconcile_groups(events: list, n: int):
             log.warning("batch event %r had no usable image indices; dropped", ev.get("title"))
     orphans = [i for i in range(1, n + 1) if i not in seen]
     return groups, orphans
+
+
+# --------------------------------------------------------------------------------------
+# API errors: what stops the run, what is retried, what only affects one image
+# --------------------------------------------------------------------------------------
+RETRY_WAITS = (3, 10, 30)   # seconds to wait before retry 1, 2, 3 (429, 5xx/529, network errors)
+
+
+def classify_api_error(e: Exception):
+    """(kind, message) for an Anthropic SDK error, or None for any other exception.
+    kind: "fatal" = stop the whole run | "rejected" = a 400 about the image itself | "retry"."""
+    if anthropic is None or not isinstance(e, anthropic.APIError):
+        return None
+    status = getattr(e, "status_code", None)
+    detail = str(e)
+    low = detail.lower()
+    if status == 401:
+        return "fatal", ("The API rejected your key (401). Replace ANTHROPIC_API_KEY: create a new key in the "
+                         f"Anthropic Console, then update the GitHub secret (or your local .env). Detail: {detail}")
+    if status == 403:
+        return "fatal", ("The API refused this key (403). Replace ANTHROPIC_API_KEY with a key that has access: "
+                         f"create a new key in the Anthropic Console, then update the GitHub secret (or .env). Detail: {detail}")
+    if status == 404:
+        return "fatal", f"The API says a model or endpoint was not found (404). Check the model names in LADDER. Detail: {detail}"
+    if status == 400:
+        if "credit balance" in low:
+            return "fatal", ("Your Anthropic credit balance is too low. Top up credits in the Anthropic Console "
+                             f"(Plans & Billing), then run again. Detail: {detail}")
+        if "image" in low:
+            return "rejected", detail
+        return "fatal", ("The API rejected the request (400) for a reason that is not about a single image, so the "
+                         f"run was stopped. Detail: {detail}")
+    if status == 413:
+        return "rejected", detail            # request too large: handled per image
+    if status is None or status == 429 or status >= 500:
+        return "retry", detail               # no status = connection error or timeout
+    return "fatal", f"Unexpected API error {status}: {detail}"
+
+
+def retry_after_seconds(e: Exception) -> Optional[float]:
+    try:
+        return float(e.response.headers.get("retry-after"))
+    except Exception:
+        return None
 
 
 # --------------------------------------------------------------------------------------
@@ -433,6 +478,10 @@ class Ctx:
         self.usage: dict[str, dict] = {}
         self.counts: Counter = Counter()
         self._b64: dict[str, dict] = {}
+        self.api_calls = 0                 # every create() attempt, including retries
+        self.api_ok = 0                    # attempts that got a response
+        self.pending_failed: list = []     # images with no usable output; decided at the end of the run
+        self.dupe_imgs: list = []          # inbox files already in hash_log; moved at the end of the run
 
     # -- persistence ---------------------------------------------------------------
     def save(self) -> None:
@@ -501,26 +550,44 @@ class Ctx:
             content.append(self.image_block(im))
         content.append({"type": "text", "text": "Return the JSON object."})
         max_tokens = min(MAX_TOKENS_CAP, int((2000 + 800 * len(imgs) + THINKING_ALLOWANCE[rung.effort]) * bump))
-        try:
-            resp = self.client.messages.create(
-                model=rung.model,
-                max_tokens=max_tokens,
-                system=self.system,
-                messages=[{"role": "user", "content": content}],
-                # sent via extra_body so it works whichever SDK version is installed
-                extra_body={"output_config": {"effort": rung.effort}},
-            )
-        except Exception as e:
-            if anthropic is not None:
-                if isinstance(e, (anthropic.AuthenticationError, anthropic.PermissionDeniedError, anthropic.NotFoundError)):
-                    raise ModelCallError("fatal", f"{type(e).__name__}: {e}") from e
-                if isinstance(e, anthropic.BadRequestError):
-                    raise ModelCallError("rejected", f"{type(e).__name__}: {e}") from e
-                if isinstance(e, anthropic.APIError):
-                    raise ModelCallError("transient", f"{type(e).__name__}: {e}") from e
-            raise
+        resp = self._create(
+            model=rung.model,
+            max_tokens=max_tokens,
+            system=self.system,
+            messages=[{"role": "user", "content": content}],
+            # sent via extra_body so it works whichever SDK version is installed
+            extra_body={"output_config": {"effort": rung.effort}},
+        )
         self._log_usage(rung, len(imgs), resp)
         return "".join(b.text for b in resp.content if getattr(b, "type", None) == "text")
+
+    def _create(self, **kwargs):
+        """One API request with retries for 429 / 5xx / 529 / network errors. Raises ModelCallError."""
+        total = len(RETRY_WAITS) + 1
+        for n in range(1, total + 1):
+            self.api_calls += 1
+            try:
+                resp = self.client.messages.create(**kwargs)
+            except Exception as e:
+                cls = classify_api_error(e)
+                if cls is None:
+                    raise                       # not an API error: a bug, let it surface
+                kind, detail = cls
+                if kind == "retry":
+                    if n < total:
+                        wait = RETRY_WAITS[n - 1]
+                        ra = retry_after_seconds(e)
+                        if ra:
+                            wait = min(max(wait, ra), 60)
+                        log.warning("API error, retrying in %ss (retry %d of %d): %s", wait, n, len(RETRY_WAITS), detail[:200])
+                        time.sleep(wait)
+                        continue
+                    raise ModelCallError("fatal", (
+                        f"The API was rate-limited or unavailable and still failing after {len(RETRY_WAITS)} retries. "
+                        f"Wait a few minutes (see status.anthropic.com), then run again. Last error: {detail}")) from e
+                raise ModelCallError(kind, detail) from e
+            self.api_ok += 1
+            return resp
 
     def _log_usage(self, rung: Rung, n_images: int, resp) -> None:
         u = resp.usage
@@ -607,9 +674,7 @@ def resolve_group(ctx: Ctx, imgs: list, initial: Optional[dict], start_rung: int
         except ModelCallError as e:
             if e.kind == "fatal":
                 raise
-            log.warning("%s on rung %s for %s: %s", e.kind, rung.name, [i.name for i in imgs], e)
-            if e.kind == "transient" and not attempts:
-                return Outcome("deferred")      # leave in inbox, try again next run
+            log.warning("image rejected by the API on rung %s for %s: %s", rung.name, [i.name for i in imgs], e)
             break
         if events is None:
             continue                            # unparseable twice -> next rung
@@ -687,11 +752,6 @@ def upsert(ctx: Ctx, entry: dict) -> tuple[str, str]:
 
 def commit(ctx: Ctx, imgs: list, out: Outcome) -> None:
     names = [i.name for i in imgs]
-    if out.kind == "deferred":
-        ctx.counts["deferred"] += 1
-        log.warning("deferred (left in inbox for the next run): %s", names)
-        return
-
     if out.kind in ("expired", "not_event"):
         ev = out.attempt.event if out.attempt else {}
         for im in imgs:
@@ -749,22 +809,31 @@ def commit(ctx: Ctx, imgs: list, out: Outcome) -> None:
 # Batches and the main run
 # --------------------------------------------------------------------------------------
 def handle_group(ctx: Ctx, imgs: list, initial, start_rung=0, force_uncertain=False) -> None:
-    commit(ctx, imgs, resolve_group(ctx, imgs, initial, start_rung, force_uncertain))
+    out = resolve_group(ctx, imgs, initial, start_rung, force_uncertain)
+    if out.kind == "failed":
+        # No usable output. Not committed yet: if the whole run turns out to have failed, nothing is changed.
+        ctx.pending_failed.append((imgs, out))
+    else:
+        commit(ctx, imgs, out)
 
 
 def process_batch(ctx: Ctx, imgs: list) -> None:
     n = len(imgs)
     log.info("batch of %d image(s): %s", n, [i.name for i in imgs])
+    rejected = False
     try:
         events = ctx.call_events(LADDER[0], imgs)
     except ModelCallError as e:
         if e.kind == "fatal":
             raise
-        log.warning("batch call failed (%s): %s", e.kind, e)
-        events = None
+        log.warning("batch call rejected by the API (%s)", e)
+        events, rejected = None, True
     if events is None:
         if n == 1:
-            handle_group(ctx, imgs, None, start_rung=1)       # rung 1 was already spent on this image
+            if rejected:
+                ctx.pending_failed.append((imgs, Outcome("failed")))   # this image itself is the problem
+            else:
+                handle_group(ctx, imgs, None, start_rung=1)       # rung 1 was already spent on this image
         else:
             log.warning("could not group the batch; processing images one by one (marked grouping_uncertain)")
             for im in imgs:
@@ -785,8 +854,8 @@ def run(ctx: Ctx) -> None:
     for p in files:
         sha = sha256_file(p)
         if sha in ctx.hashlog or sha in seen:
-            log.info("already processed (same file hash), moving to done/: %s", p.name)
-            ctx.move_to_done(Img(p, sha))
+            log.info("already processed (same file hash), will move to done/ at the end: %s", p.name)
+            ctx.dupe_imgs.append(Img(p, sha))
             continue
         try:
             with Image.open(p) as im:
@@ -801,6 +870,13 @@ def run(ctx: Ctx) -> None:
     log.info("%d new image(s) to process (today = %s IST)", len(todo), ctx.today)
     for i in range(0, len(todo), ctx.args.batch_size):
         process_batch(ctx, todo[i:i + ctx.args.batch_size])
+    if ctx.api_calls and not ctx.api_ok:
+        raise ModelCallError("fatal", "Every API call in this run failed, so the run was treated as failed and "
+                                      "nothing was changed. See the errors above.")
+    for imgs, out in ctx.pending_failed:
+        commit(ctx, imgs, out)
+    for im in ctx.dupe_imgs:
+        ctx.move_to_done(im)
     ctx.save()
 
 
@@ -822,12 +898,29 @@ def summarize(ctx: Ctx) -> None:
         log.info("%d item(s) added to needs_review.json", ctx.counts["review"])
 
 
+def load_dotenv(path: Path) -> None:
+    """Local convenience only: read KEY=VALUE lines from .env. Real environment variables always win,
+    so in GitHub Actions (where there is no .env) the secret from the workflow is what gets used."""
+    if not path.is_file():
+        return
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        if line.startswith("export "):
+            line = line[7:]
+        k, v = line.split("=", 1)
+        k, v = k.strip(), v.strip().strip("\"'")
+        if k and not os.environ.get(k):
+            os.environ[k] = v
+
+
 def make_client():
     if anthropic is None:
         raise SystemExit("The anthropic package is not installed: pip install anthropic pillow")
     if not os.environ.get("ANTHROPIC_API_KEY"):
         raise SystemExit("ANTHROPIC_API_KEY is not set")
-    return anthropic.Anthropic(max_retries=3, timeout=180.0)
+    return anthropic.Anthropic(max_retries=0, timeout=180.0)  # retries are handled in Ctx._create
 
 
 def parse_args(argv=None):
@@ -846,12 +939,18 @@ def main(argv=None, client=None) -> int:
     args = parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(message)s", stream=sys.stdout)
     today = date.fromisoformat(args.today) if args.today else datetime.now(IST).date()
+    load_dotenv(Path(args.base_dir) / ".env")
     ctx = Ctx(Path(args.base_dir), args, client or make_client(), today)
     try:
         run(ctx)
     except ModelCallError as e:
-        ctx.save()
-        log.error("stopping: %s", e)
+        log.error("")
+        log.error("RUN STOPPED: %s", e)
+        kept = sum(ctx.counts[k] for k in ("published", "held", "expired", "not_event", "duplicate"))
+        log.error("Images not yet finished were left in inbox/. Nothing was marked as processed or held for them.%s",
+                  f" {kept} result(s) finished before the error were kept." if kept else "")
+        if os.environ.get("GITHUB_ACTIONS"):
+            print("::error title=process.py stopped::" + str(e).replace("\n", " "))
         summarize(ctx)
         return 1
     summarize(ctx)
