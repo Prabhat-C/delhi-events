@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FED | Free Events Delhi</title>
 <meta name="description" content="Free events in Delhi NCR: screenings, theatre, music, talks and more.">
+<link rel="preload" as="fetch" href="events.json" crossorigin>
 <style>
 /* ---- Tokens ---- */
 :root {
@@ -44,6 +45,11 @@ header { padding: 40px 0 28px; text-align: center; }
 /* ---- List and cards ---- */
 #status { text-align: center; color: var(--muted); padding: 40px 0; margin: 0; }
 #status button { margin-left: 8px; }
+/* Loading text is kept for screen readers only; sighted users see the skeleton cards */
+#status.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
 #events { list-style: none; margin: 0; padding: 0; }
 .card {
   display: grid;
@@ -55,6 +61,8 @@ header { padding: 40px 0 28px; text-align: center; }
   border-radius: 2px;
   overflow: hidden;
 }
+/* Paints the thumbnail column grey so there is no gap while the image fades in */
+.card:not(.no-thumb) { background: linear-gradient(to right, var(--thumb-bg) 30%, var(--surface) 30%); }
 .card:hover { border-color: var(--muted); }
 .card.no-thumb { grid-template-columns: minmax(0, 1fr); }
 .body { min-width: 0; padding: clamp(8px, 2.5vw, 16px) clamp(10px, 3vw, 20px); }
@@ -62,7 +70,9 @@ header { padding: 40px 0 28px; text-align: center; }
   width: 100%; height: 100%; aspect-ratio: 3 / 4;
   object-fit: cover; border-radius: 0; display: block;
   background: var(--thumb-bg);
+  opacity: 0; transition: opacity .25s ease;   /* fades in once loaded */
 }
+.thumb.loaded { opacity: 1; }
 .card h2 { margin: 0 0 4px; font-size: 1.1rem; line-height: 1.3; }
 /* Title is a real button; its ::after stretches over the whole card so the card is clickable */
 .open {
@@ -95,6 +105,16 @@ header { padding: 40px 0 28px; text-align: center; }
 .card .btn { margin-top: 6px; }
 @media (max-width: 479px) { .card .desc { display: none; } }
 
+/* ---- Skeleton cards (shown until events render) ---- */
+.skel { animation: skel-pulse 1.4s ease-in-out infinite; }
+.skel-thumb { height: 100%; aspect-ratio: 3 / 4; }
+.skel-line { height: .9em; margin: 0 0 .7em; border-radius: 2px; background: var(--thumb-bg); }
+.skel-line:nth-child(1) { width: 70%; height: 1.1em; }
+.skel-line:nth-child(2) { width: 45%; }
+.skel-line:nth-child(3) { width: 60%; }
+.skel-line:nth-child(4) { width: 35%; }
+@keyframes skel-pulse { 50% { opacity: .55; } }
+
 /* ---- Zoom view (native dialog: Esc, focus trap and backdrop come built in) ---- */
 dialog {
   width: min(960px, calc(100% - 24px)); max-height: calc(100dvh - 24px);
@@ -106,6 +126,14 @@ dialog::backdrop { background: rgba(0, 0, 0, .6); }
 .bar .btn { margin: 0; background: transparent; color: var(--ink); border: 1px solid var(--line); padding: 6px 14px; }
 .zoom { display: grid; gap: 20px; padding: 0 16px 20px; }
 .poster { width: 100%; height: auto; display: block; border-radius: 4px; }
+/* Blurred thumbnail first, full poster fades in on top when loaded */
+.poster-wrap { position: relative; overflow: hidden; border-radius: 4px; }
+.poster.ph { filter: blur(8px); transform: scale(1.04); }
+.poster-wrap.failed .poster.ph { filter: none; transform: none; }
+.poster.full { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .3s ease; }
+.poster.full.show { opacity: 1; }
+.poster.full.static { position: static; height: auto; }
+.poster-note { margin: 8px 0 0; font-size: .85rem; color: var(--muted); }
 .side h2 { margin: 0 0 6px; font-size: 1.3rem; line-height: 1.3; }
 .side .desc { display: block; -webkit-line-clamp: unset; line-clamp: unset; overflow: visible; margin-top: 12px; }.details { margin: 12px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: .95rem; }
 @media (min-width: 760px) {
@@ -113,7 +141,11 @@ dialog::backdrop { background: rgba(0, 0, 0, .6); }
 }
 
 footer { padding: 24px 0 48px; text-align: center; color: var(--muted); font-size: .85rem; }
-@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+  .thumb, .poster.full { transition: none; }
+  .skel { animation: none; }
+}
 </style>
 </head>
 <body>
@@ -125,7 +157,12 @@ footer { padding: 24px 0 48px; text-align: center; color: var(--muted); font-siz
 </header>
 
 <main class="wrap">
-  <p id="status" role="status">Loading events…</p>
+  <p id="status" role="status" class="sr-only">Loading events…</p>
+  <div id="skeleton" aria-hidden="true">
+    <div class="card skel"><div class="skel-thumb"></div><div class="body"><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line"></div></div></div>
+    <div class="card skel"><div class="skel-thumb"></div><div class="body"><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line"></div></div></div>
+    <div class="card skel"><div class="skel-thumb"></div><div class="body"><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line"></div></div></div>
+  </div>
   <ul id="events"></ul>
 </main>
 
@@ -145,6 +182,7 @@ footer { padding: 24px 0 48px; text-align: center; color: var(--muted); font-siz
   var DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   var statusEl = document.getElementById("status");
+  var skeleton = document.getElementById("skeleton");
   var listEl = document.getElementById("events");
   var dialog = document.getElementById("zoom");
   var zoomBody = document.getElementById("zoom-body");
@@ -243,9 +281,38 @@ footer { padding: 24px 0 48px; text-align: center; color: var(--muted); font-siz
     }, "Register");
   }
 
+  /* ---- Poster preloading ---- */
+
+  var preloaded = {};
+
+  // Skip preloading on data saver or slow connections
+  function canPreload() {
+    var c = navigator.connection;
+    return !(c && (c.saveData || /^(slow-2g|2g|3g)$/.test(c.effectiveType)));
+  }
+
+  // Fetch a poster into the browser cache; calls done() when finished (or failed)
+  function preloadPoster(url, done) {
+    if (!url || preloaded[url]) { if (done) done(); return; }
+    var im = new Image();
+    preloaded[url] = im;
+    im.onload = function () { if (done) done(); };
+    im.onerror = function () { delete preloaded[url]; if (done) done(); };
+    im.src = url;
+  }
+
+  // Preload the first 6 posters one at a time, when the browser is idle
+  function preloadFirst(urls) {
+    if (!canPreload()) return;
+    var queue = urls.slice(0, 6);
+    function next() { var u = queue.shift(); if (u) preloadPoster(u, next); }
+    var idle = window.requestIdleCallback || function (fn) { return setTimeout(fn, 1500); };
+    idle(next);
+  }
+
   /* ---- Cards ---- */
 
-  function buildCard(ev, thisYear) {
+  function buildCard(ev, thisYear, index) {
     var title = str(ev.title) || "Untitled event";
     var thumb = assetUrl(ev.thumb) || assetUrl(ev.poster);
     var poster = assetUrl(ev.poster);
@@ -253,7 +320,12 @@ footer { padding: 24px 0 48px; text-align: center; color: var(--muted); font-siz
     var card = el("article", { "class": "card" + (thumb ? "" : " no-thumb") });
 
     if (thumb) {
-      var img = el("img", { "class": "thumb", src: thumb, alt: "Poster for " + title, loading: "lazy", decoding: "async" });
+      var attrs = { "class": "thumb", src: thumb, alt: "Poster for " + title,
+                    width: "300", height: "400", decoding: "async" };   // size hint; CSS sets the real size
+      if (index >= 4) attrs.loading = "lazy";          // first 4 load immediately
+      if (index === 0) attrs.fetchpriority = "high";   // first image gets top priority
+      var img = el("img", attrs);
+      img.addEventListener("load", function () { img.classList.add("loaded"); });
       // If the thumbnail is missing, fall back to the full poster once
       img.addEventListener("error", function () {
         if (poster && !img.dataset.fb && img.getAttribute("src") !== poster) {
@@ -261,6 +333,7 @@ footer { padding: 24px 0 48px; text-align: center; color: var(--muted); font-siz
           img.src = poster;
         }
       });
+      if (img.complete && img.naturalWidth) img.classList.add("loaded");
       card.append(img);
     }
 
@@ -272,17 +345,63 @@ footer { padding: 24px 0 48px; text-align: center; color: var(--muted); font-siz
     var reg = registerButton(ev);
     if (reg) body.append(reg);
     card.append(body);
+
+    // Start fetching the full poster as soon as someone points at or touches the card
+    function warm() { if (canPreload()) preloadPoster(assetUrl(ev.poster) || assetUrl(ev.thumb)); }
+    card.addEventListener("pointerenter", warm);
+    card.addEventListener("touchstart", warm, { passive: true });
+
     return el("li", {}, card);
   }
 
   /* ---- Zoom view ---- */
 
+  // Zoom poster: blurred thumbnail first, then the full poster fades in
+  function buildPoster(title, thumbSrc, posterSrc) {
+    var alt = "Poster for " + title;
+    var wrap = el("div", { "class": "poster-wrap" });
+
+    // Nothing separate to use as a placeholder: just show the poster
+    if (!thumbSrc || thumbSrc === posterSrc) {
+      wrap.append(el("img", { "class": "poster", src: posterSrc, alt: alt }));
+      return wrap;
+    }
+
+    var ph = el("img", { "class": "poster ph", src: thumbSrc, alt: alt });
+    wrap.append(ph);
+
+    var full = new Image();                         // loads off-screen first
+    full.onload = function () {
+      if (!wrap.isConnected) return;                // zoom view was closed or reused
+      full.className = "poster full";
+      full.alt = alt;
+      wrap.append(full);
+      function finish() { if (wrap.isConnected) { ph.remove(); full.classList.add("static"); } }
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        full.classList.add("show");
+        finish();
+      } else {
+        requestAnimationFrame(function () { requestAnimationFrame(function () { full.classList.add("show"); }); });
+        full.addEventListener("transitionend", finish, { once: true });
+        setTimeout(finish, 450);                    // safety net if transitionend doesn't fire
+      }
+    };
+    full.onerror = function () {
+      if (!wrap.isConnected) return;
+      wrap.classList.add("failed");                 // un-blur the thumbnail
+      wrap.append(el("p", { "class": "poster-note", role: "status" }, "Couldn't load full poster."));
+    };
+    full.src = posterSrc;
+    return wrap;
+  }
+
   function openZoom(ev, thisYear) {
     var title = str(ev.title) || "Untitled event";
-    var poster = assetUrl(ev.poster) || assetUrl(ev.thumb);
+    var posterSrc = assetUrl(ev.poster) || assetUrl(ev.thumb);
+    var thumbSrc = assetUrl(ev.thumb) || assetUrl(ev.poster);
     zoomBody.replaceChildren();
 
-    if (poster) zoomBody.append(el("img", { "class": "poster", src: poster, alt: "Poster for " + title }));
+    if (posterSrc) zoomBody.append(buildPoster(title, thumbSrc, posterSrc));
 
     var side = el("div", { "class": "side" });
     side.append(el("h2", { id: "zoom-title", dir: "auto" }, title), metaBlock(ev, thisYear));
@@ -304,7 +423,16 @@ footer { padding: 24px 0 48px; text-align: center; color: var(--muted); font-siz
 
   /* ---- Load and render ---- */
 
-  function showStatus(text, retry) {
+  function showLoading() {
+    skeleton.hidden = false;
+    statusEl.className = "sr-only";                 // announced to screen readers only
+    statusEl.hidden = false;
+    statusEl.textContent = "Loading events…";
+  }
+
+  function showStatus(text, retry) {                // empty list or error
+    skeleton.hidden = true;
+    statusEl.className = "";
     statusEl.hidden = false;
     statusEl.replaceChildren(text);
     if (retry) {
@@ -315,7 +443,7 @@ footer { padding: 24px 0 48px; text-align: center; color: var(--muted); font-siz
   }
 
   function load() {
-    showStatus("Loading events…");
+    showLoading();
     listEl.replaceChildren();
     fetch("events.json", { cache: "no-cache" })
       .then(function (res) {
@@ -349,7 +477,9 @@ footer { padding: 24px 0 48px; text-align: center; color: var(--muted); font-siz
           return;
         }
         statusEl.hidden = true;
-        events.forEach(function (ev) { listEl.append(buildCard(ev, thisYear)); });
+        skeleton.hidden = true;
+        events.forEach(function (ev, i) { listEl.append(buildCard(ev, thisYear, i)); });
+        preloadFirst(events.map(function (ev) { return assetUrl(ev.poster) || assetUrl(ev.thumb); }));
       })
       .catch(function () {
         showStatus("Couldn't load events right now.", true);
