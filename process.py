@@ -12,13 +12,21 @@ Pipeline
         3 haiku-5-5 high                                 4 sonnet-5-5 medium
         5 give up: keep the best attempt and flag it for manual review
   4. Expired events are dropped (images go to done/), recurring events never expire.
-  5. Text is cleaned (emoji etc.), links are cleaned and tested, duplicates are merged,
-     thumbnails are made, events.json / needs_review.json / hash_log.json are written.
+  5. Text is cleaned (emoji etc.), links are cleaned and tested, duplicates are merged.
+  6. For each kept event two derived images are made from its first screenshot: a thumbnail
+     (thumbs/<sha12>.jpg) and a lightweight display poster (posters/<sha12>.jpg, long edge <= 1600 px,
+     JPEG q80). events.json "poster" points to the display poster and "source_files" still lists the
+     originals in done/, which are never modified. If the display poster cannot be made, "poster"
+     falls back to the original in done/.
+  7. events.json / needs_review.json / hash_log.json are written.
 
 Usage (from the repo root; ANTHROPIC_API_KEY comes from the environment, or from a local .env):
     python process.py                       # normal run, same as the GitHub Action
     python process.py --dry-run --limit 3   # call the API, print results, change nothing on disk
     python process.py --skip-link-check     # do not make HTTP requests to registration links
+    python process.py --backfill-posters --dry-run   # one-off: list events whose poster still points to done/
+    python process.py --backfill-posters    # one-off: make display posters for those, update only
+                                            # events.json "poster" (no API calls, no API key needed)
 
 Requires: pip install anthropic pillow
 """
@@ -61,6 +69,8 @@ IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".webp"}
 BATCH_SIZE = 15            # spec: about 15 to 20 images per request
 MAX_EDGE = 1568            # images are downscaled to this long edge before sending
 THUMB_WIDTH = 480
+DISPLAY_MAX_EDGE = 1600    # display posters (posters/): long edge, never upscaled
+DISPLAY_QUALITY = 80
 SANE_PAST_DAYS = 366       # a date older than this is treated as a misread, not as "expired"
 SANE_FUTURE_DAYS = 730
 
@@ -459,11 +469,31 @@ def est_cost(model: str, tin: int, tout: int) -> Optional[float]:
     return None if not p else (tin * p[0] + tout * p[1]) / 1e6
 
 
+def render_display_poster(src: Path, dst: Path) -> None:
+    """Display copy of a screenshot: EXIF transpose, flatten transparency onto white, RGB, long edge at most
+    DISPLAY_MAX_EDGE (never upscaled), JPEG quality DISPLAY_QUALITY, optimized. The original is not modified."""
+    with Image.open(src) as raw:
+        img = ImageOps.exif_transpose(raw).convert("RGBA")
+        bg = Image.new("RGBA", img.size, (255, 255, 255, 255))
+        bg.alpha_composite(img)
+        img = bg.convert("RGB")
+    scale = DISPLAY_MAX_EDGE / max(img.size)
+    if scale < 1:
+        img = img.resize((max(1, round(img.width * scale)), max(1, round(img.height * scale))), Image.LANCZOS)
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    tmp = dst.with_name(dst.name + ".tmp")          # write, then replace: a failed save leaves no half file
+    try:
+        img.save(tmp, "JPEG", quality=DISPLAY_QUALITY, optimize=True)
+        os.replace(tmp, dst)
+    finally:
+        tmp.unlink(missing_ok=True)
+
+
 class Ctx:
     def __init__(self, base: Path, args, client, today: date):
         self.base, self.args, self.client, self.today = base, args, client, today
         self.inbox = base / args.inbox
-        self.done, self.thumbs = base / "done", base / "thumbs"
+        self.done, self.thumbs, self.posters = base / "done", base / "thumbs", base / "posters"
         self.events_path = base / "events.json"
         self.review_path = base / "needs_review.json"
         self.hash_path = base / "hash_log.json"
@@ -541,6 +571,29 @@ class Ctx:
         except Exception as e:  # a missing thumbnail must not lose the event
             log.warning("thumbnail failed for %s: %s", src.name, e)
             return None
+
+    def make_poster(self, src: Path, sha: str) -> Optional[str]:
+        """Write posters/<sha12>.jpg from src. Returns the repo-relative path, or None (with a warning) on failure."""
+        if self.args.dry_run:
+            return None
+        dst = self.posters / f"{sha[:12]}.jpg"
+        try:
+            render_display_poster(src, dst)
+            return dst.relative_to(self.base).as_posix()
+        except Exception as e:  # a missing display copy must not lose the event
+            log.warning("display poster failed for %s: %s", src.name, e)
+            return None
+
+    def remove_orphan_poster(self, rel, keep) -> None:
+        """Delete a superseded display copy. Only files directly inside posters/ are ever removed, never done/."""
+        if self.args.dry_run or not isinstance(rel, str) or rel == keep or not rel.startswith("posters/"):
+            return
+        p = (self.base / rel).resolve()
+        if p.parent == self.posters.resolve():
+            try:
+                p.unlink(missing_ok=True)
+            except OSError as e:
+                log.warning("could not remove %s: %s", rel, e)
 
     # -- the API call ----------------------------------------------------------------
     def call(self, rung: Rung, imgs: list, bump: float = 1.0) -> str:
@@ -727,8 +780,9 @@ def finalize_event(best: Optional[Attempt], sticky: bool):
     return ev, ("held" if held else "published"), reasons, link_problem
 
 
-def upsert(ctx: Ctx, entry: dict) -> tuple[str, str]:
-    """Insert into events, merging duplicates (same normalised title + start date)."""
+def upsert(ctx: Ctx, entry: dict) -> tuple[str, str, Optional[dict]]:
+    """Insert into events, merging duplicates (same normalised title + start date).
+    Returns (action, id, replaced_entry); replaced_entry is the old entry when action == "replaced"."""
     key = dedupe_key(entry)
     if key:
         for i, ex in enumerate(ctx.events):
@@ -743,11 +797,11 @@ def upsert(ctx: Ctx, entry: dict) -> tuple[str, str]:
                 entry["source_files"], entry["image_hashes"] = merged_files, merged_hashes
                 ctx.events[i] = entry
                 ctx.review = [r for r in ctx.review if r["id"] != ex["id"]]
-                return "replaced", entry["id"]
+                return "replaced", entry["id"], ex
             ex["source_files"], ex["image_hashes"] = merged_files, merged_hashes
-            return "duplicate", ex["id"]
+            return "duplicate", ex["id"], None
     ctx.events.append(entry)
-    return "added", entry["id"]
+    return "added", entry["id"], None
 
 
 def commit(ctx: Ctx, imgs: list, out: Outcome) -> None:
@@ -779,7 +833,17 @@ def commit(ctx: Ctx, imgs: list, out: Outcome) -> None:
         "rung": best.rung if best else "none",
         "added": ctx.today.isoformat(),
     }
-    action, final_id = upsert(ctx, entry)
+    action, final_id, replaced = upsert(ctx, entry)
+    if action != "duplicate" and not ctx.args.dry_run:
+        # The display poster is made only now, for the entry that was kept, so a losing duplicate leaves no
+        # file behind. It comes from this group's first screenshot (the one the thumbnail uses).
+        poster_rel = ctx.make_poster(ctx.base / rel_paths[0], imgs[0].sha)
+        if poster_rel is None:
+            log.warning("using the original screenshot as the poster for %r", entry.get("title"))
+        else:
+            entry["poster"] = poster_rel
+        if replaced:   # the old entry's display copy is superseded; a legacy done/ path is never deleted
+            ctx.remove_orphan_poster(replaced.get("poster"), keep=entry["poster"])
 
     for im in imgs:
         log.info("finished image=%s rung=%s result=%s review=%s", im.name, entry["rung"],
@@ -880,6 +944,39 @@ def run(ctx: Ctx) -> None:
     ctx.save()
 
 
+def backfill_posters(ctx: Ctx) -> None:
+    """One-off: for every event whose poster still points into done/, make its display poster, point "poster" at it,
+    and save events.json. Nothing else is touched (no API calls, no needs_review.json / hash_log.json / done/)."""
+    changed = 0
+    for e in ctx.events:
+        poster = e.get("poster")
+        if not (isinstance(poster, str) and poster.startswith("done/")):
+            continue
+        label = f"{e.get('id')} {e.get('title')!r}"
+        src = ctx.base / poster
+        if not src.is_file():
+            log.warning("skip %s: %s not found", label, poster)
+            ctx.counts["missing"] += 1
+            continue
+        dst_rel = f"posters/{sha256_file(src)[:12]}.jpg"
+        if ctx.args.dry_run:
+            log.info("would make %s from %s for %s", dst_rel, poster, label)
+            ctx.counts["would_backfill"] += 1
+            continue
+        try:
+            render_display_poster(src, ctx.base / dst_rel)
+        except Exception as err:
+            log.warning("skip %s: display poster failed: %s", label, err)
+            ctx.counts["failed"] += 1
+            continue
+        e["poster"] = dst_rel
+        changed += 1
+        ctx.counts["backfilled"] += 1
+        log.info("poster for %s: %s", label, dst_rel)
+    if changed:
+        write_json(ctx.events_path, {"events": ctx.events})
+
+
 def summarize(ctx: Ctx) -> None:
     log.info("---- summary ----")
     log.info("results: %s", dict(ctx.counts) or "nothing processed")
@@ -932,6 +1029,9 @@ def parse_args(argv=None):
     ap.add_argument("--today", help="override today's date (YYYY-MM-DD), useful for testing expiry")
     ap.add_argument("--dry-run", action="store_true", help="call the API and print results; move/write nothing")
     ap.add_argument("--skip-link-check", action="store_true", help="clean links but make no HTTP requests")
+    ap.add_argument("--backfill-posters", action="store_true",
+                    help="one-off: make display posters (posters/) for events whose poster still points to done/ and "
+                         "update only events.json; no API calls. Combine with --dry-run to preview")
     return ap.parse_args(argv)
 
 
@@ -940,9 +1040,9 @@ def main(argv=None, client=None) -> int:
     logging.basicConfig(level=logging.INFO, format="%(message)s", stream=sys.stdout)
     today = date.fromisoformat(args.today) if args.today else datetime.now(IST).date()
     load_dotenv(Path(args.base_dir) / ".env")
-    ctx = Ctx(Path(args.base_dir), args, client or make_client(), today)
+    ctx = Ctx(Path(args.base_dir), args, None if args.backfill_posters else (client or make_client()), today)
     try:
-        run(ctx)
+        backfill_posters(ctx) if args.backfill_posters else run(ctx)
     except ModelCallError as e:
         log.error("")
         log.error("RUN STOPPED: %s", e)
