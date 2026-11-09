@@ -13,10 +13,11 @@ Pipeline
         5 give up: keep the best attempt and flag it for manual review
   4. Expired events are dropped (images go to done/), recurring events never expire.
   5. Text is cleaned (emoji etc.), links are cleaned and tested, duplicates are merged.
-  6. For each kept event two derived images are made from its first screenshot: a thumbnail
+  6. For each kept event two derived images are made from its poster screenshot (the one the model names in
+     "poster_image"; the first screenshot if that is missing or invalid): a thumbnail
      (thumbs/<sha12>.jpg) and a lightweight display poster (posters/<sha12>.jpg, long edge <= 1600 px,
      JPEG q80). events.json "poster" points to the display poster and "source_files" still lists the
-     originals in done/, which are never modified. If the display poster cannot be made, "poster"
+     originals in done/ (poster screenshot first), which are never modified. If the display poster cannot be made, "poster"
      falls back to the original in done/.
   7. events.json / needs_review.json / hash_log.json are written.
 
@@ -24,9 +25,6 @@ Usage (from the repo root; ANTHROPIC_API_KEY comes from the environment, or from
     python process.py                       # normal run, same as the GitHub Action
     python process.py --dry-run --limit 3   # call the API, print results, change nothing on disk
     python process.py --skip-link-check     # do not make HTTP requests to registration links
-    python process.py --backfill-posters --dry-run   # one-off: list events whose poster still points to done/
-    python process.py --backfill-posters    # one-off: make display posters for those, update only
-                                            # events.json "poster" (no API calls, no API key needed)
 
 Requires: pip install anthropic pillow
 """
@@ -323,6 +321,7 @@ class Attempt:
     problems: list = field(default_factory=list)
     expired: bool = False
     link_failed: Optional[str] = None     # cleaned link that did not pass the HTTP test
+    poster_img: Optional["Img"] = None    # screenshot the model chose as the poster (None -> first image)
 
     @property
     def ok(self) -> bool:
@@ -674,8 +673,19 @@ class Ctx:
 # --------------------------------------------------------------------------------------
 # Evaluating one model answer
 # --------------------------------------------------------------------------------------
-def evaluate(ctx: Ctx, raw: dict, rung_name: str, sticky_uncertain: bool, extra_problems=()) -> Attempt:
+def pick_poster(raw_value, numbers: dict) -> Optional["Img"]:
+    """poster_image from the model. `numbers` maps the screenshot numbers used in THIS answer to this group's
+    own images. Anything that is not an int (bool excluded) naming one of them gives None, meaning "first image".
+    It is optional: it is never part of the required-keys check, so it can never hold an event or cause a retry."""
+    if isinstance(raw_value, bool) or not isinstance(raw_value, int):
+        return None
+    return numbers.get(raw_value)
+
+
+def evaluate(ctx: Ctx, raw: dict, rung_name: str, sticky_uncertain: bool, numbers: dict,
+             extra_problems=()) -> Attempt:
     missing = [k for k in EVENT_KEYS if k not in raw]
+    poster_img = pick_poster(raw.get("poster_image"), numbers)
     ev = {k: raw.get(k) for k in STORED_KEYS}
     ev["grouping_uncertain"] = bool(ev["grouping_uncertain"]) or sticky_uncertain
     if isinstance(ev.get("confidence"), str):
@@ -690,7 +700,7 @@ def evaluate(ctx: Ctx, raw: dict, rung_name: str, sticky_uncertain: bool, extra_
 
     date_ok = not any(c in ("date", "end_date") for c, _ in problems)
     if date_ok and is_expired(ev, ctx.today):
-        return Attempt(ev, rung_name, problems, expired=True)   # expired: no escalation, no link test
+        return Attempt(ev, rung_name, problems, expired=True, poster_img=poster_img)   # no escalation, no link test
 
     link_failed = None
     link = ev.get("registration_link")
@@ -704,18 +714,21 @@ def evaluate(ctx: Ctx, raw: dict, rung_name: str, sticky_uncertain: bool, extra_
             link_failed = res.cleaned or link.strip()
             ev["registration_link"] = link_failed
             problems.append(("link", f"registration link failed the check: {link_failed} ({res.detail})"))
-    return Attempt(ev, rung_name, problems, link_failed=link_failed)
+    return Attempt(ev, rung_name, problems, link_failed=link_failed, poster_img=poster_img)
 
 
 def resolve_group(ctx: Ctx, imgs: list, initial: Optional[dict], start_rung: int = 0,
-                  force_uncertain: bool = False) -> Outcome:
-    """Run the escalation ladder for one group of images."""
+                  force_uncertain: bool = False, numbers: Optional[dict] = None) -> Outcome:
+    """Run the escalation ladder for one group of images.
+    `numbers` maps the batch screenshot numbers used by the batch answer (`initial`) to this group's images.
+    A retry sends only this group's images, numbered 1..n, so its answers use `retry_numbers`."""
+    retry_numbers = {i: im for i, im in enumerate(imgs, 1)}
     sticky = bool(force_uncertain or (initial or {}).get("grouping_uncertain"))
     attempts: list[Attempt] = []
     empties = 0
     first = 0
     if initial is not None:
-        a = evaluate(ctx, initial, LADDER[0].name, sticky)
+        a = evaluate(ctx, initial, LADDER[0].name, sticky, numbers or retry_numbers)
         attempts.append(a)
         if a.expired or a.ok:
             return Outcome("expired" if a.expired else "event", a, sticky)
@@ -737,7 +750,7 @@ def resolve_group(ctx: Ctx, imgs: list, initial: Optional[dict], start_rung: int
         extra = []
         if len(events) > 1:
             extra.append(("grouping", f"retry on this group's images returned {len(events)} events"))
-        a = evaluate(ctx, events[0], rung.name, sticky, extra)
+        a = evaluate(ctx, events[0], rung.name, sticky, retry_numbers, extra)
         attempts.append(a)
         if a.expired or a.ok:
             break
@@ -790,11 +803,13 @@ def upsert(ctx: Ctx, entry: dict) -> tuple[str, str, Optional[dict]]:
                 continue
             merged_files = ex.get("source_files", []) + entry["source_files"]
             merged_hashes = ex.get("image_hashes", []) + entry["image_hashes"]
+            new_files = entry["source_files"] + ex.get("source_files", [])     # used if the new entry wins:
+            new_hashes = entry["image_hashes"] + ex.get("image_hashes", [])    # its poster screenshot stays first
             new_better = (completeness(entry), CONF_RANK.get(entry.get("confidence"), 0)) > \
                          (completeness(ex), CONF_RANK.get(ex.get("confidence"), 0))
             if new_better:
                 entry["id"] = ex["id"]
-                entry["source_files"], entry["image_hashes"] = merged_files, merged_hashes
+                entry["source_files"], entry["image_hashes"] = new_files, new_hashes
                 ctx.events[i] = entry
                 ctx.review = [r for r in ctx.review if r["id"] != ex["id"]]
                 return "replaced", entry["id"], ex
@@ -820,12 +835,16 @@ def commit(ctx: Ctx, imgs: list, out: Outcome) -> None:
 
     best = out.attempt
     ev, status, reasons, link_problem = finalize_event(best, out.sticky_uncertain)
-    rel_paths = [ctx.move_to_done(im) for im in imgs]
+    # The poster screenshot is the model's poster_image when valid, else the first image. It goes first in
+    # source_files / image_hashes and is the source of the thumbnail, the display poster and "poster".
+    chosen = best.poster_img if best and best.poster_img in imgs else imgs[0]
+    ordered = [chosen] + [im for im in imgs if im is not chosen]
+    rel_paths = [ctx.move_to_done(im) for im in ordered]
     poster = rel_paths[0]
-    thumb = ctx.make_thumb(ctx.base / rel_paths[0], imgs[0].sha) if not ctx.args.dry_run else None
-    hashes = [im.sha for im in imgs]
+    thumb = ctx.make_thumb(ctx.base / rel_paths[0], chosen.sha) if not ctx.args.dry_run else None
+    hashes = [im.sha for im in ordered]
     entry = {
-        "id": hashlib.sha1("".join(sorted(hashes)).encode()).hexdigest()[:12],
+        "id": hashlib.sha1("".join(sorted(hashes)).encode()).hexdigest()[:12],   # sorted: independent of the choice
         "status": status,
         **{k: ev.get(k) for k in STORED_KEYS},
         "poster": poster, "thumb": thumb,
@@ -836,8 +855,8 @@ def commit(ctx: Ctx, imgs: list, out: Outcome) -> None:
     action, final_id, replaced = upsert(ctx, entry)
     if action != "duplicate" and not ctx.args.dry_run:
         # The display poster is made only now, for the entry that was kept, so a losing duplicate leaves no
-        # file behind. It comes from this group's first screenshot (the one the thumbnail uses).
-        poster_rel = ctx.make_poster(ctx.base / rel_paths[0], imgs[0].sha)
+        # file behind. It comes from the chosen poster screenshot (the one the thumbnail uses).
+        poster_rel = ctx.make_poster(ctx.base / rel_paths[0], chosen.sha)
         if poster_rel is None:
             log.warning("using the original screenshot as the poster for %r", entry.get("title"))
         else:
@@ -872,8 +891,8 @@ def commit(ctx: Ctx, imgs: list, out: Outcome) -> None:
 # --------------------------------------------------------------------------------------
 # Batches and the main run
 # --------------------------------------------------------------------------------------
-def handle_group(ctx: Ctx, imgs: list, initial, start_rung=0, force_uncertain=False) -> None:
-    out = resolve_group(ctx, imgs, initial, start_rung, force_uncertain)
+def handle_group(ctx: Ctx, imgs: list, initial, start_rung=0, force_uncertain=False, numbers=None) -> None:
+    out = resolve_group(ctx, imgs, initial, start_rung, force_uncertain, numbers)
     if out.kind == "failed":
         # No usable output. Not committed yet: if the whole run turns out to have failed, nothing is changed.
         ctx.pending_failed.append((imgs, out))
@@ -905,7 +924,7 @@ def process_batch(ctx: Ctx, imgs: list) -> None:
         return
     groups, orphans = reconcile_groups(events, n)
     for ev, idxs in groups:
-        handle_group(ctx, [imgs[i - 1] for i in idxs], ev)
+        handle_group(ctx, [imgs[i - 1] for i in idxs], ev, numbers={i: imgs[i - 1] for i in idxs})
     for i in orphans:
         log.info("image %s was not placed in any event; processing it on its own", imgs[i - 1].name)
         handle_group(ctx, [imgs[i - 1]], None, start_rung=0)
@@ -942,39 +961,6 @@ def run(ctx: Ctx) -> None:
     for im in ctx.dupe_imgs:
         ctx.move_to_done(im)
     ctx.save()
-
-
-def backfill_posters(ctx: Ctx) -> None:
-    """One-off: for every event whose poster still points into done/, make its display poster, point "poster" at it,
-    and save events.json. Nothing else is touched (no API calls, no needs_review.json / hash_log.json / done/)."""
-    changed = 0
-    for e in ctx.events:
-        poster = e.get("poster")
-        if not (isinstance(poster, str) and poster.startswith("done/")):
-            continue
-        label = f"{e.get('id')} {e.get('title')!r}"
-        src = ctx.base / poster
-        if not src.is_file():
-            log.warning("skip %s: %s not found", label, poster)
-            ctx.counts["missing"] += 1
-            continue
-        dst_rel = f"posters/{sha256_file(src)[:12]}.jpg"
-        if ctx.args.dry_run:
-            log.info("would make %s from %s for %s", dst_rel, poster, label)
-            ctx.counts["would_backfill"] += 1
-            continue
-        try:
-            render_display_poster(src, ctx.base / dst_rel)
-        except Exception as err:
-            log.warning("skip %s: display poster failed: %s", label, err)
-            ctx.counts["failed"] += 1
-            continue
-        e["poster"] = dst_rel
-        changed += 1
-        ctx.counts["backfilled"] += 1
-        log.info("poster for %s: %s", label, dst_rel)
-    if changed:
-        write_json(ctx.events_path, {"events": ctx.events})
 
 
 def summarize(ctx: Ctx) -> None:
@@ -1029,9 +1015,6 @@ def parse_args(argv=None):
     ap.add_argument("--today", help="override today's date (YYYY-MM-DD), useful for testing expiry")
     ap.add_argument("--dry-run", action="store_true", help="call the API and print results; move/write nothing")
     ap.add_argument("--skip-link-check", action="store_true", help="clean links but make no HTTP requests")
-    ap.add_argument("--backfill-posters", action="store_true",
-                    help="one-off: make display posters (posters/) for events whose poster still points to done/ and "
-                         "update only events.json; no API calls. Combine with --dry-run to preview")
     return ap.parse_args(argv)
 
 
@@ -1040,9 +1023,9 @@ def main(argv=None, client=None) -> int:
     logging.basicConfig(level=logging.INFO, format="%(message)s", stream=sys.stdout)
     today = date.fromisoformat(args.today) if args.today else datetime.now(IST).date()
     load_dotenv(Path(args.base_dir) / ".env")
-    ctx = Ctx(Path(args.base_dir), args, None if args.backfill_posters else (client or make_client()), today)
+    ctx = Ctx(Path(args.base_dir), args, client or make_client(), today)
     try:
-        backfill_posters(ctx) if args.backfill_posters else run(ctx)
+        run(ctx)
     except ModelCallError as e:
         log.error("")
         log.error("RUN STOPPED: %s", e)
