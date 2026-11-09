@@ -50,13 +50,255 @@
       "poster": "posters/3a9c2035f4c9.jpg",
       "thumb": "thumbs/3a9c2035f4c9.jpg",
       "source_files": [
-        "done/Screenshot 2026-11-08 at 1.23.50 PM.png"
+        "done/Screenshot 2026-11-08 at 1.23.50 PM.png",
+        "done/Screenshot 2026-11-08 at 1.26.41 PM.png"
       ],
       "image_hashes": [
-        "3a9c2035f4c9bac6ff1cad77d1029104c8757487cc98fa1da53bf65c67a66dcb"
+        "3a9c2035f4c9bac6ff1cad77d1029104c8757487cc98fa1da53bf65c67a66dcb",
+        "12b8b5034f9a0b3498196d9258c3b321c1d5511e170e584a0879b84a7e2888b3"
       ],
       "rung": "haiku-low",
       "added": "2026-11-08"
+    },
+    {
+      "id": "387b76cd4cf2",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Umang Utsav 2026",
+      "organiser": "Pratham Umang",
+      "description": null,
+      "details": null,
+      "date": "2026-11-28",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Triveni Kala Sangam, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Free entry, open to all art lovers.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/ddfee5a31b30.jpg",
+      "thumb": "thumbs/ddfee5a31b30.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-07 at 7.55.35 PM.png"
+      ],
+      "image_hashes": [
+        "ddfee5a31b3093544be4e164f99e01048d73e56a390d0b6b9767edebd863a536"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "1c3f472e4983",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Phulkari Futures",
+      "organiser": "Rafunaama",
+      "description": "A film screening of The Kaurs of 1984 by The Quint, followed by a stitching circle reflecting on the aftermath of the 1984 anti-Sikh pogrom through thread, memory and fabulation.",
+      "details": null,
+      "date": "2026-11-15",
+      "end_date": null,
+      "start_time": "15:00",
+      "end_time": "18:00",
+      "venue": "Hekh (1/4A, 3rd Floor, Block C, Jangpura B), New Delhi",
+      "registration_link": "https://docs.google.com/forms/d/e/1FAIpQLSfs0nKW2wtMOSYv7Q_hdBzNQn0yP5CiDri1LHQUrmyr8leSPg/viewform",
+      "confidence": "high",
+      "notes": "Trigger warning: the film and session involve discussions of sexual and gender-based violence. Seats are limited. Venue access is by stairs only. No registration fee.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/dd2f564896b8.jpg",
+      "thumb": "thumbs/dd2f564896b8.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-07 at 7.56.18 PM.png",
+        "done/Screenshot 2026-11-07 at 7.56.27 PM.png"
+      ],
+      "image_hashes": [
+        "dd2f564896b819b90b4e494d3207b708735481bb7bd519c5041634fb696c6c12",
+        "c191ddce286c828a26af9438ed21407d805c6195cb9eea6fddcf9aa6a0fdd500"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "7b8e421bef62",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "7th Beyond Borders Feminist Film Festival",
+      "organiser": "Kriti Film Club",
+      "description": "A feminist film festival bringing together films, filmmakers, conversations and communities. The poster art pays tribute to Delhi, its people, artists and histories.",
+      "details": "The 7th Beyond Borders Feminist Film Festival is coming to the capital this November-December 2026, bringing with films filmmakers, conversations and communities across two venues.\n\nAlliance Française de Delhi\n30th November - 2nd December 2026\n\nIndia Habitat Centre\n5th - 7th December 2026\n\nA special thank you to Sana Ally for bringing the festival poster's vision to life. Born and raised in Delhi, she draws her love for art and storytelling from the city's vibrant cultural scene. Through this poster, the team, Aanchal Kapur and Ayushi Alva pay tribute to Delhi, its people, artists and histories, particularly the Lodhi Art District, where Sana and Aanchal grew up and walked along, while celebrating a festival whose values resonate deeply with them.",
+      "date": "2026-11-30",
+      "end_date": "2026-12-07",
+      "start_time": null,
+      "end_time": null,
+      "venue": "Alliance Française de Delhi; India Habitat Centre",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Venue-specific dates: Alliance Française de Delhi 30 Nov to 2 Dec 2026; India Habitat Centre 5 to 7 Dec 2026. Session times not stated.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/3f9836367d77.jpg",
+      "thumb": "thumbs/3f9836367d77.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-07 at 7.56.40 PM.png",
+        "done/Screenshot 2026-11-07 at 7.56.52 PM.png"
+      ],
+      "image_hashes": [
+        "3f9836367d77d3d85774f96ce81e492a2882800b0448b88399acada625956b71",
+        "dbc8bb316e365efef9876e4142dd7f8ce71ee849e88507dfb6e49c2c47271dd0"
+      ],
+      "rung": "haiku-medium",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "84966a546adb",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "National Theatre Festival",
+      "organiser": "Mask Players Art Group",
+      "description": "A three-day national theatre festival celebrating diversity, languages and stories, featuring six plays in Maithili, Assamese, Kashmiri, Telugu, Garhwali and Hindi.",
+      "details": null,
+      "date": "2026-11-13",
+      "end_date": "2026-11-15",
+      "start_time": null,
+      "end_time": null,
+      "venue": "Sammukh, National School of Drama, New Delhi",
+      "registration_link": "https://docs.google.com/forms/d/e/1FAIpQLSfB1thu4xntwDJ0Nv2_IbQ6WmgKC6M6nwPjrZ0UnEwMF1UzVw/viewform",
+      "confidence": "high",
+      "notes": "Show times: Day 1 (13 Nov) Inauguration 3:30 PM, Bojh 4:00 PM, Helen 7:00 PM. Day 2 (14 Nov) Arnimaal 4:00 PM, Kohinoor 7:00 PM. Day 3 (15 Nov) Barff 4:00 PM, Hanuman Inside Me 7:00 PM. The poster also lists the location as Bahawalpur House, Bhagwandas Road, Mandi House, New Delhi - 110001. Scan the QR code or use the registration form to claim a free pass.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/d8d9b5d57e4a.jpg",
+      "thumb": "thumbs/d8d9b5d57e4a.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-07 at 7.57.13 PM.png",
+        "done/Screenshot 2026-11-07 at 7.57.25 PM.png"
+      ],
+      "image_hashes": [
+        "d8d9b5d57e4a3e1b929bca0ac873d432d48df97077922f2073e0d2d1dfeffc05",
+        "9628fae46bec5844aab0224502c5fc79e60e76220c21652ba9d3941c79c4dcf4"
+      ],
+      "rung": "haiku-high",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "3b584b364971",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "36th Urdu Drama Festival",
+      "organiser": "Urdu Academy, Delhi",
+      "description": "A festival of Urdu drama productions staged over six nights, including Umrao Jaan, Kanjoos, Doosra Kamra, Bulle Shah, Ghalib-e-Azam and Mahjabeen Hun, Meena Hun, Naaz Hun.",
+      "details": null,
+      "date": "2026-11-13",
+      "end_date": "2026-11-18",
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "Sri Ram Centre, Safdar Hashmi Marg, Mandi House, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Seats are available on first-come, first-served basis. Take your seat before the scheduled time. Handbags, cameras, eatables and unnecessary goods are not allowed. Keep mobile phones off in the auditorium.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/808a073ea9c8.jpg",
+      "thumb": "thumbs/808a073ea9c8.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-07 at 7.58.37 PM.png"
+      ],
+      "image_hashes": [
+        "808a073ea9c8686e7ce1729ffcfdffdaca8e02b824180570ac7f35ad59db5ffd"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "d3ee6e83aadb",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Ghalib-e-Azam",
+      "organiser": "Collegiate Drama Society",
+      "description": "A historical drama about the poet Ghalib, written by Dr Charandas Sidhu and directed by Ravi Taneja, with music by Veena and Saloni.",
+      "details": null,
+      "date": "2026-11-17",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "Shri Ram Centre, Mandi House, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Part of the Urdu Academy Drama Festival 2026.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/fa3bd0e011b1.jpg",
+      "thumb": "thumbs/fa3bd0e011b1.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-08 at 1.23.12 PM.png"
+      ],
+      "image_hashes": [
+        "fa3bd0e011b17059126eba82d4f731b8fc22fec47debfde06ee067c973311bcb"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "a006ed2b5bed",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Anant Utsav",
+      "organiser": "SPICMACAY",
+      "description": "A folk, tribal arts and craft festival featuring performers from across India, including Harikatha, folk dance, Kathakali-style performance, Kabir Gayan and Dastangoi.",
+      "details": null,
+      "date": "2026-11-13",
+      "end_date": "2026-11-15",
+      "start_time": "17:30",
+      "end_time": "21:30",
+      "venue": "Sunder Nursery Amphitheatre, New Delhi",
+      "registration_link": "https://docs.google.com/forms/d/e/1FAIpQLScuV52YCmiARuJMIB9lLAa-4x3MuCqo6qTJlKHngc-GO4d-4w/viewform",
+      "confidence": "high",
+      "notes": "Entry open for all. Registration via the link. RSVP: Suman Doonga 98993 08093, Aditi Shukla 98919 76396. Dedicated to Smt. Teejan Bai Pandavani.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/d56309052c3b.jpg",
+      "thumb": "thumbs/d56309052c3b.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-07 at 7.59.04 PM.png",
+        "done/Screenshot 2026-11-07 at 7.59.19 PM.png"
+      ],
+      "image_hashes": [
+        "d56309052c3ba1dd55ef53e7b2b8edc3b0c743349f24441512e9b622767ebabd",
+        "407bdebd0a652e102d0aad5f113f29c60be1baa72d6036df6b760dd87b5eb64c"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "572d5e1839ad",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Aapki Inayat",
+      "organiser": null,
+      "description": "A Sufi x Bollywood live music set with Inayat Kaur Bajaj.",
+      "details": null,
+      "date": "2026-11-12",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "India Habitat Centre, Stein Auditorium, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Free entry, open to all.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/fe17d5a0e2b2.jpg",
+      "thumb": "thumbs/fe17d5a0e2b2.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-08 at 1.23.29 PM.png"
+      ],
+      "image_hashes": [
+        "fe17d5a0e2b296d0773163232ca282bbad3525d4d879c6113ca9e8d302f10331"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-09"
     }
   ]
 }

@@ -12,5 +12,103 @@
     "event_id": "7aba7f289b18",
     "title": "9th International Ancient Arts Festival 2026",
     "processed": "2026-11-08"
+  },
+  "ddfee5a31b3093544be4e164f99e01048d73e56a390d0b6b9767edebd863a536": {
+    "file": "Screenshot 2026-11-07 at 7.55.35 PM.png",
+    "outcome": "published",
+    "event_id": "387b76cd4cf2",
+    "title": "Umang Utsav 2026",
+    "processed": "2026-11-09"
+  },
+  "dd2f564896b819b90b4e494d3207b708735481bb7bd519c5041634fb696c6c12": {
+    "file": "Screenshot 2026-11-07 at 7.56.18 PM.png",
+    "outcome": "published",
+    "event_id": "1c3f472e4983",
+    "title": "Phulkari Futures",
+    "processed": "2026-11-09"
+  },
+  "c191ddce286c828a26af9438ed21407d805c6195cb9eea6fddcf9aa6a0fdd500": {
+    "file": "Screenshot 2026-11-07 at 7.56.27 PM.png",
+    "outcome": "published",
+    "event_id": "1c3f472e4983",
+    "title": "Phulkari Futures",
+    "processed": "2026-11-09"
+  },
+  "3f9836367d77d3d85774f96ce81e492a2882800b0448b88399acada625956b71": {
+    "file": "Screenshot 2026-11-07 at 7.56.40 PM.png",
+    "outcome": "published",
+    "event_id": "7b8e421bef62",
+    "title": "7th Beyond Borders Feminist Film Festival",
+    "processed": "2026-11-09"
+  },
+  "dbc8bb316e365efef9876e4142dd7f8ce71ee849e88507dfb6e49c2c47271dd0": {
+    "file": "Screenshot 2026-11-07 at 7.56.52 PM.png",
+    "outcome": "published",
+    "event_id": "7b8e421bef62",
+    "title": "7th Beyond Borders Feminist Film Festival",
+    "processed": "2026-11-09"
+  },
+  "d8d9b5d57e4a3e1b929bca0ac873d432d48df97077922f2073e0d2d1dfeffc05": {
+    "file": "Screenshot 2026-11-07 at 7.57.13 PM.png",
+    "outcome": "published",
+    "event_id": "84966a546adb",
+    "title": "National Theatre Festival",
+    "processed": "2026-11-09"
+  },
+  "9628fae46bec5844aab0224502c5fc79e60e76220c21652ba9d3941c79c4dcf4": {
+    "file": "Screenshot 2026-11-07 at 7.57.25 PM.png",
+    "outcome": "published",
+    "event_id": "84966a546adb",
+    "title": "National Theatre Festival",
+    "processed": "2026-11-09"
+  },
+  "aaeff73398551491aaed56588b3584d2243fe2e6292b241f3fad6cc5171ccbff": {
+    "file": "Screenshot 2026-11-07 at 7.57.53 PM.png",
+    "outcome": "expired",
+    "event_id": null,
+    "title": "Manto ki Auratein",
+    "processed": "2026-11-09"
+  },
+  "808a073ea9c8686e7ce1729ffcfdffdaca8e02b824180570ac7f35ad59db5ffd": {
+    "file": "Screenshot 2026-11-07 at 7.58.37 PM.png",
+    "outcome": "published",
+    "event_id": "3b584b364971",
+    "title": "36th Urdu Drama Festival",
+    "processed": "2026-11-09"
+  },
+  "fa3bd0e011b17059126eba82d4f731b8fc22fec47debfde06ee067c973311bcb": {
+    "file": "Screenshot 2026-11-08 at 1.23.12 PM.png",
+    "outcome": "published",
+    "event_id": "d3ee6e83aadb",
+    "title": "Ghalib-e-Azam",
+    "processed": "2026-11-09"
+  },
+  "d56309052c3ba1dd55ef53e7b2b8edc3b0c743349f24441512e9b622767ebabd": {
+    "file": "Screenshot 2026-11-07 at 7.59.04 PM.png",
+    "outcome": "published",
+    "event_id": "a006ed2b5bed",
+    "title": "Anant Utsav",
+    "processed": "2026-11-09"
+  },
+  "407bdebd0a652e102d0aad5f113f29c60be1baa72d6036df6b760dd87b5eb64c": {
+    "file": "Screenshot 2026-11-07 at 7.59.19 PM.png",
+    "outcome": "published",
+    "event_id": "a006ed2b5bed",
+    "title": "Anant Utsav",
+    "processed": "2026-11-09"
+  },
+  "fe17d5a0e2b296d0773163232ca282bbad3525d4d879c6113ca9e8d302f10331": {
+    "file": "Screenshot 2026-11-08 at 1.23.29 PM.png",
+    "outcome": "published",
+    "event_id": "572d5e1839ad",
+    "title": "Aapki Inayat",
+    "processed": "2026-11-09"
+  },
+  "12b8b5034f9a0b3498196d9258c3b321c1d5511e170e584a0879b84a7e2888b3": {
+    "file": "Screenshot 2026-11-08 at 1.26.41 PM.png",
+    "outcome": "duplicate_event",
+    "event_id": "7aba7f289b18",
+    "title": "9th International Ancient Arts Festival 2026",
+    "processed": "2026-11-09"
   }
 }
