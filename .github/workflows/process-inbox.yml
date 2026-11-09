@@ -103,7 +103,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           # Stage only what process.py owns. Missing paths are skipped instead of erroring.
-          for p in events.json needs_review.json hash_log.json done thumbs; do
+          for p in events.json needs_review.json hash_log.json done thumbs posters; do
             if [ -e "$p" ] || [ -n "$(git ls-files -- "$p")" ]; then
               git add -A -- "$p"
             fi
