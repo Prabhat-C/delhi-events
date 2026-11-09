@@ -121,37 +121,6 @@
       "added": "2026-11-09"
     },
     {
-      "id": "7b8e421bef62",
-      "status": "published",
-      "grouping_uncertain": false,
-      "title": "7th Beyond Borders Feminist Film Festival",
-      "organiser": "Kriti Film Club",
-      "description": "A feminist film festival bringing together films, filmmakers, conversations and communities. The poster art pays tribute to Delhi, its people, artists and histories.",
-      "details": "The 7th Beyond Borders Feminist Film Festival is coming to the capital this November-December 2026, bringing with films filmmakers, conversations and communities across two venues.\n\nAlliance Française de Delhi\n30th November - 2nd December 2026\n\nIndia Habitat Centre\n5th - 7th December 2026\n\nA special thank you to Sana Ally for bringing the festival poster's vision to life. Born and raised in Delhi, she draws her love for art and storytelling from the city's vibrant cultural scene. Through this poster, the team, Aanchal Kapur and Ayushi Alva pay tribute to Delhi, its people, artists and histories, particularly the Lodhi Art District, where Sana and Aanchal grew up and walked along, while celebrating a festival whose values resonate deeply with them.",
-      "date": "2026-11-30",
-      "end_date": "2026-12-07",
-      "start_time": null,
-      "end_time": null,
-      "venue": "Alliance Française de Delhi; India Habitat Centre",
-      "registration_link": null,
-      "confidence": "high",
-      "notes": "Venue-specific dates: Alliance Française de Delhi 30 Nov to 2 Dec 2026; India Habitat Centre 5 to 7 Dec 2026. Session times not stated.",
-      "recurrence": null,
-      "recurring": false,
-      "poster": "posters/3f9836367d77.jpg",
-      "thumb": "thumbs/3f9836367d77.jpg",
-      "source_files": [
-        "done/Screenshot 2026-11-07 at 7.56.40 PM.png",
-        "done/Screenshot 2026-11-07 at 7.56.52 PM.png"
-      ],
-      "image_hashes": [
-        "3f9836367d77d3d85774f96ce81e492a2882800b0448b88399acada625956b71",
-        "dbc8bb316e365efef9876e4142dd7f8ce71ee849e88507dfb6e49c2c47271dd0"
-      ],
-      "rung": "haiku-medium",
-      "added": "2026-11-09"
-    },
-    {
       "id": "84966a546adb",
       "status": "published",
       "grouping_uncertain": false,
