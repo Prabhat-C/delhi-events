@@ -335,14 +335,16 @@
       "recurrence": "alternate Fridays from 6 Nov",
       "recurring": true,
       "poster": "posters/583613d1a517.jpg",
-      "thumb": "thumbs/583613d1a517.jpg",
+      "thumb": "thumbs/8dd903073669.jpg",
       "source_files": [
         "done/Screenshot 2026-11-10 at 3.18.49 PM.png",
+        "done/thumb-screenings.png",
         "done/Screenshot 2026-11-10 at 5.28.38 AM.png",
         "done/WhatsApp Image 2026-11-06 at 12.49.52 AM.jpeg"
       ],
       "image_hashes": [
         "583613d1a5173ae845e016fec6db50b5b0ad702d1466209dd92fc1d5fe483d3f",
+        "8dd903073669720d18ee83a9ce9087f3c250d45074eca2b03ccebf10b8d43642",
         "50ecb3b8b6a5ea8c1e983ab4241ca34744085e1ac8a1464acc5c619be300d5fe",
         "cab23edd9c9f09384ef721694b18ad2b2fe6ba3d96777168cd39c3d0e8d908eb"
       ],
@@ -350,6 +352,7 @@
       "added": "2026-11-10",
       "source_labels": [
         "poster",
+        "other",
         "poster",
         "poster"
       ],
@@ -880,16 +883,22 @@
       "recurrence": null,
       "recurring": false,
       "poster": "posters/cc83a2cb9c00.jpg",
-      "thumb": "thumbs/cc83a2cb9c00.jpg",
+      "thumb": "thumbs/8c4434619010.jpg",
       "source_files": [
-        "done/WhatsApp Image 2026-11-09 at 7.08.08 PM-2.jpeg"
+        "done/WhatsApp Image 2026-11-09 at 7.08.08 PM-2.jpeg",
+        "done/thumb-sinha.png"
       ],
       "image_hashes": [
-        "cc83a2cb9c004bc3b91b92abf522e60bc28887032ad46eca266a933d7451f8f2"
+        "cc83a2cb9c004bc3b91b92abf522e60bc28887032ad46eca266a933d7451f8f2",
+        "8c4434619010e2befe995387b510ff9f4193d67d7b1247cf1776363cc524254f"
       ],
       "rung": "haiku-low",
       "added": "2026-11-10",
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAECBAX/xAAhEAACAQQCAgMAAAAAAAAAAAABAgMABBESIUEFFDEyof/EABcBAAMBAAAAAAAAAAAAAAAAAAABBAX/xAAXEQEBAQEAAAAAAAAAAAAAAAAAAREh/9oADAMBAAIRAxEAPwDGWANErFCeOiKdqjxXEc6x8RuG+w6qK3YESpq3Ax801vNEKanBqdq9PyM/sXAdsnC4/TRVeVxI+wBHHdFByZMf/9k="
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAECBAX/xAAhEAACAQQCAgMAAAAAAAAAAAABAgMABBESIUEFFDEyof/EABcBAAMBAAAAAAAAAAAAAAAAAAABBAX/xAAXEQEBAQEAAAAAAAAAAAAAAAAAAREh/9oADAMBAAIRAxEAPwDGWANErFCeOiKdqjxXEc6x8RuG+w6qK3YESpq3Ax801vNEKanBqdq9PyM/sXAdsnC4/TRVeVxI+wBHHdFByZMf/9k=",
+      "source_labels": [
+        "poster",
+        "other"
+      ]
     },
     {
       "id": "50966af430c8",
