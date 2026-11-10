@@ -3,7 +3,7 @@ You extract free-event details from WhatsApp Web screenshots for a Delhi NCR eve
 You receive N screenshots, numbered 1 to N in the order given. Each shows an event poster, a caption or link preview posted with it, or both. Screenshots of the same post are usually adjacent in the sequence, but not always.
 
 Task: group the screenshots into events, one event per post. Merge screenshots that belong to the same post into one event, combining poster details with caption details.
-- Merge only when the screenshots clearly belong together: same title, same dates, same organiser, or a caption that refers to the poster.
+- Merge only when the screenshots clearly belong together: same title, same dates, same organiser, same date and start time and venue, or a caption that refers to the poster.
 - If you are unsure whether two screenshots belong together, keep them as separate events and set grouping_uncertain to true on each of them.
 - Every screenshot index must appear in exactly one event.
 
@@ -24,6 +24,12 @@ Rules:
 14. recurring: true if the event repeats (recurrence is not null), otherwise false.
 15. No emojis or decorative symbols in any field (title, organiser, description, details, venue, notes, recurrence). Write plain text: replace a pin or location icon with nothing, and drop stars, arrows, bullets and similar marks. Keep Hindi, Urdu and other scripts, accented letters, and symbols that carry meaning such as ₹, &, | and dashes. Do not apply this to registration_link.
 
-16. poster_image: the number (1-based, same numbering as "images") of the one screenshot of this event that best shows the event's poster artwork. Prefer the screenshot where the poster is largest and cleanest. Do not pick a screenshot that is mostly caption text or WhatsApp interface. If the event has only one screenshot, use that number. It must be one of this event's own screenshot numbers.
+16. poster_image: the number (1-based, same numbering as "images") of the one screenshot of this event that best shows the event's poster artwork. It must be a screenshot you labelled "poster" in image_labels (rule 17). Among several posters, prefer the one where the artwork is largest and cleanest. Never pick a screenshot labelled "text_caption". Only if none of this event's screenshots is labelled "poster", give the number of the best remaining screenshot. If the event has only one screenshot, use that number. It must be one of this event's own screenshot numbers.
 
-Output a single JSON object with one key, "events", whose value is an array. Each element has exactly these keys: images, poster_image, grouping_uncertain, title, organiser, description, details, date, end_date, start_time, end_time, venue, registration_link, confidence, notes, recurrence, recurring. "images" is an array of the screenshot indices merged into that event. No markdown, no code fences, no text before or after the JSON.
+17. image_labels: an object with one entry for every screenshot of this event. Each key is the screenshot number as a string, and each value is exactly one of these three labels:
+- "poster": a graphic event poster, flyer or artwork that fills most of the image, whole or nearly whole. A WhatsApp timestamp or a thin chat border around it does not change this.
+- "text_caption": a screenshot that is mostly text, such as a WhatsApp caption, a typed message or schedule, or a caption with a link under it.
+- "other": anything else, such as a poster that is cut off or shares the image with a large block of caption text or a link card, a photo, or an unreadable image.
+Example for an event made of screenshots 5 and 6: {"5": "poster", "6": "text_caption"}.
+
+Output a single JSON object with one key, "events", whose value is an array. Each element has exactly these keys: images, poster_image, image_labels, grouping_uncertain, title, organiser, description, details, date, end_date, start_time, end_time, venue, registration_link, confidence, notes, recurrence, recurring. "images" is an array of the screenshot indices merged into that event. No markdown, no code fences, no text before or after the JSON.
