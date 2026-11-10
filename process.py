@@ -13,13 +13,23 @@ Pipeline
         5 give up: keep the best attempt and flag it for manual review
   4. Expired events are dropped (images go to done/), recurring events never expire.
   5. Text is cleaned (emoji etc.), links are cleaned and tested, duplicates are merged.
-  6. For each kept event two derived images are made from its poster screenshot (the one the model names in
-     "poster_image"; the first screenshot if that is missing or invalid): a thumbnail
+  6. The model labels every screenshot "poster", "text_caption" or "other" (image_labels). The poster screenshot
+     of an event is always one labelled "poster" (the model's poster_image when it is one; otherwise code picks).
+     With no "poster" at all, the best remaining screenshot is used and the event gets the review reason
+     "no poster". For each kept event two derived images are made from the poster screenshot: a thumbnail
      (thumbs/<sha12>.jpg) and a lightweight display poster (posters/<sha12>.jpg, long edge <= 1600 px,
      JPEG q80). events.json "poster" points to the display poster and "source_files" still lists the
      originals in done/ (poster screenshot first), which are never modified. If the display poster cannot be made, "poster"
-     falls back to the original in done/.
-  7. events.json / needs_review.json / hash_log.json are written.
+     falls back to the original in done/. "source_labels" holds one label per source file.
+  7. Merge step (after all batches): events from this run are compared with each other and with the existing
+     entries by date + normalised venue + start_time (title ignored). Matches are merged into one entry;
+     same date and venue with a different start time goes to needs_review.json instead.
+  8. Image overrides (no API call): an inbox file named poster-<key>, thumb-<key> or zoom-<key> replaces the card
+     thumbnail and zoom poster (poster-), only the thumbnail (thumb-) or only the zoom poster (zoom-) of the event
+     the key points to (event id, or words from its title). Applied after the merge step.
+  9. events.json / needs_review.json / hash_log.json are written.
+  Inbox images are processed in order of the time in their file name (the file's modified time when the name has
+  none), so a poster and its caption screenshot usually land in the same batch.
 
 Usage (from the repo root; ANTHROPIC_API_KEY comes from the environment, or from a local .env):
     python process.py                       # normal run, same as the GitHub Action
@@ -85,6 +95,10 @@ COMPLETENESS_FIELDS = [
     "start_time", "end_time", "venue", "registration_link", "recurrence",
 ]
 CONF_RANK = {"low": 0, "medium": 1, "high": 2}
+LABELS = ("poster", "text_caption", "other")   # what the model calls each screenshot (image_labels)
+# Manual image overrides: a file in inbox/ named poster-<key>.jpg, thumb-<key>.jpg or zoom-<key>.jpg is not sent to
+# the model. <key> is an event id (4+ hex characters) or words from its title.
+OVERRIDE_RE = re.compile(r"^(poster|thumb|zoom)[-_ ]+(.+)$", re.I)
 
 
 class Rung(NamedTuple):
@@ -312,6 +326,282 @@ def completeness(entry: dict) -> int:
 
 
 # --------------------------------------------------------------------------------------
+# Poster labels, venue matching and the cross-event merge
+# (everything here works on plain dicts, so dedupe_existing.py can reuse it unchanged)
+# --------------------------------------------------------------------------------------
+_SCREENSHOT_NAME_RE = re.compile(r"^screen ?shot", re.I)
+_VENUE_SYNONYMS = {"center": "centre", "sri": "shri", "shree": "shri"}
+_VENUE_FILLER = {"delhi", "ncr", "the"}
+
+
+def is_screenshot_name(name: str) -> bool:
+    """'Screenshot ...' files come from the screenshot tool and may show a WhatsApp timestamp or chat edge;
+    anything else (for example 'WhatsApp Image ...') is a downloaded original. Only ever used as a tie-breaker."""
+    return bool(_SCREENSHOT_NAME_RE.match(name.strip()))
+
+
+def guess_label(path: Path) -> Optional[str]:
+    """Pixel-based guess, 'poster' or 'text_caption', for images that have no model label: entries made before
+    labels existed, or a model answer without image_labels. A dark-mode WhatsApp text screenshot is mostly dark
+    neutral grey (half or more of its pixels). Returns None when the file cannot be read."""
+    try:
+        with Image.open(path) as raw:
+            img = ImageOps.exif_transpose(raw).convert("RGB")
+        img.thumbnail((160, 160))
+        data = img.tobytes()
+    except Exception:
+        return None
+    total = len(data) // 3
+    if not total:
+        return None
+    # Dark-mode WhatsApp grey is roughly (34, 37, 38). Count pixels that are dark and neutral, but not near-black
+    # (black-background posters are common), so text on that grey is not split across colour buckets.
+    dark = sum(1 for r, g, b in zip(data[0::3], data[1::3], data[2::3])
+               if min(r, g, b) >= 20 and max(r, g, b) <= 80 and max(r, g, b) - min(r, g, b) <= 24)
+    return "text_caption" if dark / total >= 0.5 else "poster"
+
+
+def stored_labels(e: dict) -> list:
+    """source_labels of a stored entry, one per source file; None where the label is unknown (older entries)."""
+    files = e.get("source_files") or []
+    s = e.get("source_labels")
+    if not isinstance(s, list) or len(s) != len(files):
+        return [None] * len(files)
+    return [x if x in LABELS else None for x in s]
+
+
+def entry_labels(base: Path, e: dict) -> list:
+    """Like stored_labels, but unknown labels are filled with a pixel guess (never None)."""
+    return [lab or guess_label(base / f) or "other" for f, lab in zip(e.get("source_files") or [], stored_labels(e))]
+
+
+def poster_label(base: Path, e: dict) -> str:
+    """Label of the entry's poster screenshot (the first source file)."""
+    files = e.get("source_files") or []
+    if not files:
+        return "other"
+    return stored_labels(e)[0] or guess_label(base / files[0]) or "other"
+
+
+def entry_rank(base: Path, e: dict) -> tuple:
+    """Which of two matching entries is kept: a real poster first, then a downloaded file over a screenshot
+    (no timestamp or chat edge), then the more complete entry, then the higher confidence."""
+    files = e.get("source_files") or [""]
+    return (1 if poster_label(base, e) == "poster" else 0,
+            0 if is_screenshot_name(Path(files[0]).name) else 1,
+            completeness(e), CONF_RANK.get(e.get("confidence"), 0))
+
+
+def norm_venue(v) -> str:
+    """Venue key for matching: lowercase, bracketed text removed, punctuation stripped, filler words
+    (new delhi, delhi, ncr, the, pin codes) dropped, a few spelling variants unified."""
+    if not isinstance(v, str):
+        return ""
+    s = norm_title(re.sub(r"\([^)]*\)|\[[^\]]*\]", " ", v))
+    s = re.sub(r"\bnew delhi\b", " ", s)
+    words = []
+    for w in s.split():
+        w = _VENUE_SYNONYMS.get(w, w)
+        if w in _VENUE_FILLER or re.fullmatch(r"11\d{4}", w):
+            continue
+        words.append(w)
+    return " ".join(words)
+
+
+def match_kind(a: dict, b: dict) -> tuple[Optional[str], str]:
+    """('merge', '') for the same event, ('borderline', why) for a pair a person should look at, or (None, '').
+    Same date + same normalised venue + same start_time (or a start_time missing on either side) is a merge,
+    provided the end dates also agree. Titles are ignored."""
+    da, db = parse_iso(a.get("date")), parse_iso(b.get("date"))
+    if da is None or da != db:
+        return None, ""
+    va, vb = norm_venue(a.get("venue")), norm_venue(b.get("venue"))
+    if not va or not vb:
+        return None, ""
+    sa, sb = a.get("start_time"), b.get("start_time")
+    if sa and sb and sa != sb:
+        if va == vb:
+            return "borderline", f"same date and venue but different start time ({sa} and {sb})"
+        return None, ""
+    if va == vb:
+        ea, eb = parse_iso(a.get("end_date")) or da, parse_iso(b.get("end_date")) or da
+        if ea != eb:
+            return "borderline", f"same date, venue and start time but different end date ({ea} and {eb})"
+        return "merge", ""
+    ta, tb = set(va.split()), set(vb.split())
+    small, large = (ta, tb) if len(ta) <= len(tb) else (tb, ta)
+    if len(small) >= 2 and small <= large:
+        return "borderline", "same date and start time, and one venue is worded as a longer version of the other"
+    return None, ""
+
+
+def remove_derived(base: Path, rel, keep, dry_run: bool = False) -> None:
+    """Delete a thumbnail or display poster that is no longer used. Only files directly inside thumbs/ or
+    posters/ are ever removed, never anything in done/."""
+    if dry_run or not isinstance(rel, str) or rel == keep:
+        return
+    p = (base / rel).resolve()
+    if p.parent in {(base / "thumbs").resolve(), (base / "posters").resolve()}:
+        try:
+            p.unlink(missing_ok=True)
+        except OSError as e:
+            log.warning("could not remove %s: %s", rel, e)
+
+
+@dataclass
+class MergeStore:
+    """The state the merge step works on. The lists and the dict are changed in place."""
+    base: Path
+    events: list
+    review: list
+    hashlog: dict
+    dry_run: bool = False
+
+
+def add_review(store: MergeStore, entry: dict, reason: str, **extra) -> None:
+    item = next((r for r in store.review if r.get("id") == entry.get("id")), None)
+    if item is None:
+        item = {"id": entry.get("id"), "status": entry.get("status"), "title": entry.get("title"),
+                "date": entry.get("date"), "confidence": entry.get("confidence"), "reasons": [],
+                "poster": entry.get("poster"), "thumb": entry.get("thumb"),
+                "source_files": entry.get("source_files")}
+        store.review.append(item)
+    if reason not in item["reasons"]:
+        item["reasons"].append(reason)
+    item.update(extra)
+
+
+def _longer(a, b):
+    if not a:
+        return b or None
+    if not b:
+        return a
+    return b if len(b) > len(a) else a
+
+
+def merge_pair(store: MergeStore, w: dict, l: dict) -> None:
+    """Fold entry l into entry w (in place). w keeps its id, title, poster and thumbnail. l's source images are
+    added to w; a registration link is kept if either has one; the longer details and the better (longer)
+    description are kept; empty fields are filled from l. l's thumbnail and display poster files are deleted."""
+    base = store.base
+    labels, l_labels = entry_labels(base, w), entry_labels(base, l)
+    files, hashes = list(w.get("source_files") or []), list(w.get("image_hashes") or [])
+    l_hashes = l.get("image_hashes") or []
+    for k, f in enumerate(l.get("source_files") or []):
+        if f in files:
+            continue
+        files.append(f)
+        labels.append(l_labels[k])
+        if k < len(l_hashes):
+            hashes.append(l_hashes[k])
+    w["source_files"], w["image_hashes"], w["source_labels"] = files, hashes, labels
+
+    for k in ("title", "organiser", "start_time", "end_time", "end_date", "venue", "recurrence"):
+        if not w.get(k) and l.get(k):
+            w[k] = l[k]
+    w["recurring"] = w.get("recurrence") is not None
+    if not w.get("registration_link") and l.get("registration_link"):
+        w["registration_link"] = l["registration_link"]
+    w["details"] = _longer(w.get("details"), l.get("details"))
+    w["description"] = _longer(w.get("description"), l.get("description"))
+    wn, ln = (w.get("notes") or "").strip(), (l.get("notes") or "").strip()
+    w["notes"] = wn if (not ln or ln in wn) else (f"{wn} {ln}" if wn else ln)
+    w["confidence"] = max((w.get("confidence"), l.get("confidence")), key=lambda c: CONF_RANK.get(c, -1))
+    if w.get("status") != "published" and l.get("status") == "published":
+        w["status"] = "published"
+    w["grouping_uncertain"] = False
+    added = [a for a in (w.get("added"), l.get("added")) if a]
+    if added:
+        w["added"] = min(added)
+
+    for h in l_hashes:                                     # the hash log must point at the surviving entry
+        if h in store.hashlog:
+            store.hashlog[h]["event_id"] = w["id"]
+    remove_derived(base, l.get("thumb"), w.get("thumb"), store.dry_run)
+    remove_derived(base, l.get("poster"), w.get("poster"), store.dry_run)
+
+    # needs_review.json: l's item goes away, w's item is brought up to date
+    l_item = next((r for r in store.review if r.get("id") == l.get("id")), None)
+    store.review[:] = [r for r in store.review if r.get("id") != l.get("id")]
+    if l_item and l_item.get("link_problem") and not w.get("registration_link"):
+        add_review(store, w, f"registration link failed the check (read as {l_item['link_problem']}); "
+                             "paste the correct link from WhatsApp", link_problem=l_item["link_problem"])
+    poster_ok = bool(labels) and labels[0] == "poster"
+    if not poster_ok:
+        add_review(store, w, "no poster")
+    item = next((r for r in store.review if r.get("id") == w.get("id")), None)
+    if item:
+        kept = []
+        for reason in item.get("reasons", []):
+            if reason.startswith("grouping uncertain"):
+                continue
+            if reason == "no poster" and poster_ok:
+                continue
+            if reason.startswith("registration link failed") and w.get("registration_link"):
+                continue
+            if reason.startswith("confidence is") and w.get("confidence") == "high":
+                continue
+            kept.append(reason)
+        if w.get("registration_link"):
+            item.pop("link_problem", None)
+        if kept:
+            item.update(reasons=kept, status=w.get("status"), title=w.get("title"), confidence=w.get("confidence"),
+                        poster=w.get("poster"), thumb=w.get("thumb"), source_files=w["source_files"])
+        else:
+            store.review.remove(item)
+
+
+def merge_events(store: MergeStore, only_ids=None) -> list[str]:
+    """Merge duplicate entries in store.events, in place, and return one message per merge or review flag.
+    Only pairs where at least one entry is in only_ids are looked at (None = every pair). Same date + venue
+    with a different start time is never merged: the later entry gets a needs_review.json reason instead."""
+    msgs: list[str] = []
+    watch = None if only_ids is None else set(only_ids)
+    base = store.base
+
+    def looked_at(a: dict, b: dict) -> bool:
+        return watch is None or a.get("id") in watch or b.get("id") in watch
+
+    # Pass 1: merge until nothing more matches (a merge can bring two other entries together).
+    restart = True
+    while restart:
+        restart = False
+        ev = store.events
+        for j in range(1, len(ev)):
+            for i in range(j):
+                a, b = ev[i], ev[j]
+                if not looked_at(a, b) or match_kind(a, b)[0] != "merge":
+                    continue
+                if entry_rank(base, b) > entry_rank(base, a):
+                    w, l, li = b, a, i
+                else:
+                    w, l, li = a, b, j
+                msgs.append(f"merged '{l.get('title')}' into '{w.get('title')}' "
+                            f"({w.get('date')}, {w.get('venue')}, {w.get('start_time') or 'no time'})")
+                merge_pair(store, w, l)
+                del ev[li]
+                if watch is not None:
+                    watch.add(w["id"])
+                restart = True
+                break
+            if restart:
+                break
+
+    # Pass 2: on the entries that are left, flag pairs a person should look at (never merged automatically).
+    ev = store.events
+    for j in range(1, len(ev)):
+        for i in range(j):
+            a, b = ev[i], ev[j]
+            if not looked_at(a, b):
+                continue
+            kind, why = match_kind(a, b)
+            if kind == "borderline":
+                add_review(store, b, f"possible duplicate of '{a.get('title')}' ({a.get('id')}): {why}")
+                msgs.append(f"review: '{b.get('title')}' and '{a.get('title')}' - {why}")
+    return msgs
+
+
+# --------------------------------------------------------------------------------------
 # Attempts
 # --------------------------------------------------------------------------------------
 @dataclass
@@ -321,7 +611,8 @@ class Attempt:
     problems: list = field(default_factory=list)
     expired: bool = False
     link_failed: Optional[str] = None     # cleaned link that did not pass the HTTP test
-    poster_img: Optional["Img"] = None    # screenshot the model chose as the poster (None -> first image)
+    poster_img: Optional["Img"] = None    # screenshot the model chose as the poster (None -> chosen in code)
+    labels: Optional[dict] = None         # image sha -> "poster" | "text_caption" | "other"; None = model gave none
 
     @property
     def ok(self) -> bool:
@@ -448,6 +739,32 @@ def natural_key(p: Path):
     return [int(t) if t.isdigit() else t for t in re.split(r"(\d+)", p.name.lower())]
 
 
+# "Screenshot 2026-11-10 at 5.26.59 AM.png", "WhatsApp Image 2026-11-09 at 5.56.39 PM.jpeg" and similar
+_NAME_TIME_RE = re.compile(r"(\d{4})-(\d{2})-(\d{2})\D+?(\d{1,2})[.:](\d{2})[.:](\d{2})\s*([AaPp][Mm])?")
+
+
+def inbox_sort_key(p: Path):
+    """Order inbox images by time, so a poster and its caption screenshot sit next to each other. The time in the
+    file name is used first (a GitHub checkout resets every file's modified time), then the file's modified time."""
+    ts = None
+    m = _NAME_TIME_RE.search(p.name)
+    if m:
+        try:
+            y, mo, d, h, mi, s = (int(x) for x in m.groups()[:6])
+            ap = (m.group(7) or "").lower()
+            if ap:
+                h = h % 12 + (12 if ap == "pm" else 0)
+            ts = datetime(y, mo, d, h, mi, s, tzinfo=IST).timestamp()
+        except ValueError:
+            ts = None
+    if ts is None:
+        try:
+            ts = p.stat().st_mtime
+        except OSError:
+            ts = 0.0
+    return (ts, natural_key(p))
+
+
 def load_json(path: Path, default):
     if path.exists():
         with open(path, encoding="utf-8") as f:
@@ -511,6 +828,8 @@ class Ctx:
         self.api_ok = 0                    # attempts that got a response
         self.pending_failed: list = []     # images with no usable output; decided at the end of the run
         self.dupe_imgs: list = []          # inbox files already in hash_log; moved at the end of the run
+        self.new_ids: set = set()          # ids of entries added or changed in this run (the merge step looks at these)
+        self.override_files: list = []     # inbox files named poster-/thumb-/zoom-<key>; applied after the merge step
 
     # -- persistence ---------------------------------------------------------------
     def save(self) -> None:
@@ -583,16 +902,10 @@ class Ctx:
             log.warning("display poster failed for %s: %s", src.name, e)
             return None
 
-    def remove_orphan_poster(self, rel, keep) -> None:
-        """Delete a superseded display copy. Only files directly inside posters/ are ever removed, never done/."""
-        if self.args.dry_run or not isinstance(rel, str) or rel == keep or not rel.startswith("posters/"):
-            return
-        p = (self.base / rel).resolve()
-        if p.parent == self.posters.resolve():
-            try:
-                p.unlink(missing_ok=True)
-            except OSError as e:
-                log.warning("could not remove %s: %s", rel, e)
+    def remove_derived(self, rel, keep) -> None:
+        """Delete a superseded thumbnail or display copy. Only files directly inside thumbs/ or posters/ are
+        ever removed, never done/."""
+        remove_derived(self.base, rel, keep, self.args.dry_run)
 
     # -- the API call ----------------------------------------------------------------
     def call(self, rung: Rung, imgs: list, bump: float = 1.0) -> str:
@@ -682,10 +995,61 @@ def pick_poster(raw_value, numbers: dict) -> Optional["Img"]:
     return numbers.get(raw_value)
 
 
+def parse_labels(raw_value, numbers: dict) -> Optional[dict]:
+    """image_labels from the model: {"5": "poster", "6": "text_caption"} keyed by screenshot number. Returns
+    {image sha: label} for this group's images (an unlabelled or unknown label counts as "other"), or None when
+    the model gave no usable labels at all. Like poster_image it is not a required key, so it never causes a retry."""
+    if not isinstance(raw_value, dict):
+        return None
+    out: dict = {}
+    for k, v in raw_value.items():
+        try:
+            n = int(str(k).strip())
+        except ValueError:
+            continue
+        im = numbers.get(n)
+        if im is None or not isinstance(v, str):
+            continue
+        v = v.strip().lower().replace(" ", "_").replace("-", "_")
+        out[im.sha] = v if v in LABELS else "other"
+    if not out:
+        return None
+    for im in numbers.values():
+        out.setdefault(im.sha, "other")
+    return out
+
+
+def _pixel_area(im: "Img") -> int:
+    try:
+        with Image.open(im.path) as r:
+            return r.size[0] * r.size[1]
+    except Exception:
+        return 0
+
+
+def choose_poster(imgs: list, labels: dict, pick: Optional["Img"]) -> tuple["Img", bool]:
+    """The screenshot that becomes the thumbnail and display poster. Returns (image, is_real_poster).
+    Always an image labelled "poster" when there is one, whatever poster_image said. Among several posters the
+    model's pick wins, but a downloaded file beats a 'Screenshot ...' file (no timestamp or chat edge).
+    With no poster at all: the model's pick if it is not a text screenshot, else the largest "other" image,
+    else the largest image, and is_real_poster is False."""
+    posters = [im for im in imgs if labels.get(im.sha) == "poster"]
+    if posters:
+        clean = [im for im in posters if not is_screenshot_name(im.name)]
+        if pick in posters and (pick in clean or not clean):
+            return pick, True
+        return (clean or posters)[0], True
+    pool = [im for im in imgs if labels.get(im.sha) == "other"] or list(imgs)
+    if pick in pool:
+        return pick, False
+    return max(pool, key=_pixel_area), False
+
+
 def evaluate(ctx: Ctx, raw: dict, rung_name: str, sticky_uncertain: bool, numbers: dict,
              extra_problems=()) -> Attempt:
     missing = [k for k in EVENT_KEYS if k not in raw]
     poster_img = pick_poster(raw.get("poster_image"), numbers)
+    labels = parse_labels(raw.get("image_labels"), numbers)
     ev = {k: raw.get(k) for k in STORED_KEYS}
     ev["grouping_uncertain"] = bool(ev["grouping_uncertain"]) or sticky_uncertain
     if isinstance(ev.get("confidence"), str):
@@ -700,7 +1064,7 @@ def evaluate(ctx: Ctx, raw: dict, rung_name: str, sticky_uncertain: bool, number
 
     date_ok = not any(c in ("date", "end_date") for c, _ in problems)
     if date_ok and is_expired(ev, ctx.today):
-        return Attempt(ev, rung_name, problems, expired=True, poster_img=poster_img)   # no escalation, no link test
+        return Attempt(ev, rung_name, problems, expired=True, poster_img=poster_img, labels=labels)   # no escalation, no link test
 
     link_failed = None
     link = ev.get("registration_link")
@@ -714,7 +1078,7 @@ def evaluate(ctx: Ctx, raw: dict, rung_name: str, sticky_uncertain: bool, number
             link_failed = res.cleaned or link.strip()
             ev["registration_link"] = link_failed
             problems.append(("link", f"registration link failed the check: {link_failed} ({res.detail})"))
-    return Attempt(ev, rung_name, problems, link_failed=link_failed, poster_img=poster_img)
+    return Attempt(ev, rung_name, problems, link_failed=link_failed, poster_img=poster_img, labels=labels)
 
 
 def resolve_group(ctx: Ctx, imgs: list, initial: Optional[dict], start_rung: int = 0,
@@ -793,6 +1157,11 @@ def finalize_event(best: Optional[Attempt], sticky: bool):
     return ev, ("held" if held else "published"), reasons, link_problem
 
 
+def _real_poster(e: dict) -> int:
+    """1 unless the entry's poster screenshot is known to be a text or other image (an unknown label is fine)."""
+    return 1 if (stored_labels(e) or [None])[0] in ("poster", None) else 0
+
+
 def upsert(ctx: Ctx, entry: dict) -> tuple[str, str, Optional[dict]]:
     """Insert into events, merging duplicates (same normalised title + start date).
     Returns (action, id, replaced_entry); replaced_entry is the old entry when action == "replaced"."""
@@ -803,17 +1172,19 @@ def upsert(ctx: Ctx, entry: dict) -> tuple[str, str, Optional[dict]]:
                 continue
             merged_files = ex.get("source_files", []) + entry["source_files"]
             merged_hashes = ex.get("image_hashes", []) + entry["image_hashes"]
+            merged_labels = stored_labels(ex) + entry["source_labels"]
             new_files = entry["source_files"] + ex.get("source_files", [])     # used if the new entry wins:
             new_hashes = entry["image_hashes"] + ex.get("image_hashes", [])    # its poster screenshot stays first
-            new_better = (completeness(entry), CONF_RANK.get(entry.get("confidence"), 0)) > \
-                         (completeness(ex), CONF_RANK.get(ex.get("confidence"), 0))
+            new_labels = entry["source_labels"] + stored_labels(ex)
+            new_better = (_real_poster(entry), completeness(entry), CONF_RANK.get(entry.get("confidence"), 0)) > \
+                         (_real_poster(ex), completeness(ex), CONF_RANK.get(ex.get("confidence"), 0))
             if new_better:
                 entry["id"] = ex["id"]
-                entry["source_files"], entry["image_hashes"] = new_files, new_hashes
+                entry["source_files"], entry["image_hashes"], entry["source_labels"] = new_files, new_hashes, new_labels
                 ctx.events[i] = entry
                 ctx.review = [r for r in ctx.review if r["id"] != ex["id"]]
                 return "replaced", entry["id"], ex
-            ex["source_files"], ex["image_hashes"] = merged_files, merged_hashes
+            ex["source_files"], ex["image_hashes"], ex["source_labels"] = merged_files, merged_hashes, merged_labels
             return "duplicate", ex["id"], None
     ctx.events.append(entry)
     return "added", entry["id"], None
@@ -835,10 +1206,21 @@ def commit(ctx: Ctx, imgs: list, out: Outcome) -> None:
 
     best = out.attempt
     ev, status, reasons, link_problem = finalize_event(best, out.sticky_uncertain)
-    # The poster screenshot is the model's poster_image when valid, else the first image. It goes first in
-    # source_files / image_hashes and is the source of the thumbnail, the display poster and "poster".
-    chosen = best.poster_img if best and best.poster_img in imgs else imgs[0]
+    labels = best.labels if best is not None else None
+    if labels is None:
+        # No labels from the model (or no usable answer at all): guess from the pixels, before the files move.
+        if best is not None:
+            log.warning("no usable image_labels for %s; guessing the labels from the pixels", names)
+        labels = {im.sha: guess_label(im.path) or "other" for im in imgs}
+    # The poster screenshot is always one labelled "poster" when the group has one (the model's poster_image if it
+    # is one). It goes first in source_files / image_hashes and is the source of the thumbnail, the display
+    # poster and "poster". With no poster at all the best remaining image is used and the event is flagged.
+    chosen, has_poster = choose_poster(imgs, labels, best.poster_img if best else None)
+    if best is not None and not has_poster:
+        reasons.append("no poster")
+        log.warning("no poster among %s; using %s", names, chosen.name)
     ordered = [chosen] + [im for im in imgs if im is not chosen]
+    source_labels = [labels.get(im.sha, "other") for im in ordered]
     rel_paths = [ctx.move_to_done(im) for im in ordered]
     poster = rel_paths[0]
     thumb = ctx.make_thumb(ctx.base / rel_paths[0], chosen.sha) if not ctx.args.dry_run else None
@@ -848,12 +1230,15 @@ def commit(ctx: Ctx, imgs: list, out: Outcome) -> None:
         "status": status,
         **{k: ev.get(k) for k in STORED_KEYS},
         "poster": poster, "thumb": thumb,
-        "source_files": rel_paths, "image_hashes": hashes,
+        "source_files": rel_paths, "image_hashes": hashes, "source_labels": source_labels,
         "rung": best.rung if best else "none",
         "added": ctx.today.isoformat(),
     }
     action, final_id, replaced = upsert(ctx, entry)
-    if action != "duplicate" and not ctx.args.dry_run:
+    ctx.new_ids.add(final_id)
+    if action == "duplicate":
+        ctx.remove_derived(entry.get("thumb"), keep=None)   # the thumbnail made for the losing entry is not used
+    elif not ctx.args.dry_run:
         # The display poster is made only now, for the entry that was kept, so a losing duplicate leaves no
         # file behind. It comes from the chosen poster screenshot (the one the thumbnail uses).
         poster_rel = ctx.make_poster(ctx.base / rel_paths[0], chosen.sha)
@@ -861,8 +1246,9 @@ def commit(ctx: Ctx, imgs: list, out: Outcome) -> None:
             log.warning("using the original screenshot as the poster for %r", entry.get("title"))
         else:
             entry["poster"] = poster_rel
-        if replaced:   # the old entry's display copy is superseded; a legacy done/ path is never deleted
-            ctx.remove_orphan_poster(replaced.get("poster"), keep=entry["poster"])
+        if replaced:   # the old entry's thumbnail and display copy are superseded; a legacy done/ path is never deleted
+            ctx.remove_derived(replaced.get("poster"), keep=entry["poster"])
+            ctx.remove_derived(replaced.get("thumb"), keep=entry["thumb"])
 
     for im in imgs:
         log.info("finished image=%s rung=%s result=%s review=%s", im.name, entry["rung"],
@@ -930,8 +1316,158 @@ def process_batch(ctx: Ctx, imgs: list) -> None:
         handle_group(ctx, [imgs[i - 1]], None, start_rung=0)
 
 
+def merge_new(ctx: Ctx) -> None:
+    """Merge step: compare every entry added or changed in this run with all other entries (events.json as it
+    stands, including this run's other events) by date + venue + start_time, ignoring titles."""
+    store = MergeStore(ctx.base, ctx.events, ctx.review, ctx.hashlog, ctx.args.dry_run)
+    msgs = merge_events(store, ctx.new_ids)
+    for m in msgs:
+        log.info("merge step: %s", m)
+        ctx.counts["review" if m.startswith("review:") else "merged"] += 1
+    if msgs:
+        ctx.save()
+
+
+def override_parts(p: Path):
+    """("poster"|"thumb"|"zoom", key) when the file name is an override name, else None."""
+    m = OVERRIDE_RE.match(p.stem)
+    if not m:
+        return None
+    key = re.sub(r"\s*\(\d+\)\s*$", "", m.group(2)).strip()   # "poster-karwaan (1).jpg" from a repeated download
+    return (m.group(1).lower(), key) if key else None
+
+
+def find_override_target(events: list, key: str) -> tuple[Optional[dict], str]:
+    """The one event a key points to, or (None, why not). A key is an event id (or its first 4+ characters) or
+    words that all appear in the event title."""
+    k = key.strip().lower()
+    if re.fullmatch(r"[0-9a-f]{4,12}", k):
+        hits = [e for e in events if str(e.get("id", "")).lower() == k] or \
+               [e for e in events if str(e.get("id", "")).lower().startswith(k)]
+        if len(hits) == 1:
+            return hits[0], ""
+        if len(hits) > 1:
+            return None, f"{len(hits)} events have an id starting {k!r}; use more characters"
+    words = norm_title(key).split()
+    if not words:
+        return None, f"no event matches {key!r}"
+    hits = [e for e in events if all(w in norm_title(str(e.get("title") or "")) for w in words)]
+    if len(hits) > 1:
+        exact = [e for e in hits if norm_title(str(e.get("title") or "")) == " ".join(words)]
+        hits = exact if len(exact) == 1 else hits
+    if len(hits) == 1:
+        return hits[0], ""
+    if not hits:
+        return None, f"no event matches {key!r}"
+    return None, f"{len(hits)} events match {key!r} (" + "; ".join(f"{e['id']} {e.get('title')}" for e in hits[:6]) + \
+        "); use the event id in the file name"
+
+
+def _derived_in_use(ctx: Ctx, rel, owner_id) -> bool:
+    """True when an event other than owner_id still points to this thumbs/ or posters/ file."""
+    return any(rel in (e.get("poster"), e.get("thumb")) for e in ctx.events if e.get("id") != owner_id)
+
+
+def _override_problem(ctx: Ctx, name: str, why: str) -> None:
+    msg = f"image {name} in inbox/ was not applied: {why}"
+    log.warning(msg)
+    if os.environ.get("GITHUB_ACTIONS"):
+        print("::warning title=Image override not applied::" + msg)
+    ctx.counts["override_failed"] += 1
+    if ctx.args.dry_run:
+        return
+    item = next((r for r in ctx.review if r.get("id") is None and r.get("title") == name), None)
+    if item is None:
+        ctx.review.append({"id": None, "status": None, "title": name, "date": None, "confidence": None,
+                           "reasons": [why], "poster": None, "thumb": None, "source_files": []})
+    else:
+        item["reasons"] = [why]
+
+
+def apply_overrides(ctx: Ctx) -> None:
+    """Handle inbox files named poster-<key>, thumb-<key> or zoom-<key> (no API call):
+    poster- sets the card thumbnail and the zoom poster from the image, thumb- only the thumbnail, zoom- only the
+    zoom poster. A poster- file is applied before thumb-/zoom- files, so those can override part of it. The image
+    goes to done/ and into source_files; the replaced thumbs/ and posters/ files are deleted when nothing else uses
+    them. A file that matches no event, or more than one, stays in inbox/ and gets an entry in needs_review.json."""
+    order = {"poster": 0, "thumb": 1, "zoom": 1}
+    todo = sorted(ctx.override_files, key=lambda t: (order[t[1]], t[0].name.lower()))
+    for path, kind, key in todo:
+        if not path.exists():
+            continue
+        ev, why = find_override_target(ctx.events, key)
+        if ev is None:
+            _override_problem(ctx, path.name, why)
+            continue
+        try:
+            with Image.open(path) as im:
+                im.verify()
+            sha = sha256_file(path)
+        except Exception as e:
+            log.warning("cannot read %s (%s); left in inbox", path.name, e)
+            continue
+        want_thumb, want_poster = kind in ("poster", "thumb"), kind in ("poster", "zoom")
+        if ctx.args.dry_run:
+            log.info("override %s -> event %s %r (dry run, nothing written)", path.name, ev["id"], ev.get("title"))
+            continue
+        new_thumb = ctx.make_thumb(path, sha) if want_thumb else None
+        new_poster = ctx.make_poster(path, sha) if want_poster else None
+        if (want_thumb and not new_thumb) or (want_poster and not new_poster):
+            _override_problem(ctx, path.name, "the image could not be turned into a thumbnail or poster")
+            continue
+        # where the original lives: reuse an identical file already in done/, otherwise move this one there
+        prior = (ctx.hashlog.get(sha) or {}).get("file")
+        existing = ctx.done / prior if prior else None
+        if existing is not None and existing.is_file() and sha256_file(existing) == sha:
+            rel = existing.relative_to(ctx.base).as_posix()
+            path.unlink()
+        else:
+            rel = ctx.move_to_done(Img(path, sha))
+        old_poster, old_thumb = ev.get("poster"), ev.get("thumb")
+        files = list(ev.get("source_files") or [])
+        hashes = list(ev.get("image_hashes") or [])
+        labels = entry_labels(ctx.base, ev)
+        rest = [(f, hashes[k] if k < len(hashes) else None, lab) for k, (f, lab) in enumerate(zip(files, labels))
+                if f != rel and (k >= len(hashes) or hashes[k] != sha)]
+        if want_poster:       # the zoom poster comes first in source_files, labelled "poster"
+            ev["poster"] = new_poster
+            front = [(rel, sha, "poster")]
+            rest_all = front + rest
+        else:                 # thumbnail only: the image is kept as an extra source, the poster screenshot stays first
+            rest_all = rest[:1] + [(rel, sha, "other")] + rest[1:] if rest else [(rel, sha, "other")]
+        if want_thumb:
+            ev["thumb"] = new_thumb
+        ev["source_files"] = [r[0] for r in rest_all]
+        ev["image_hashes"] = [r[1] for r in rest_all if r[1]]
+        ev["source_labels"] = [r[2] for r in rest_all]
+        for old, new in ((old_poster, ev.get("poster")), (old_thumb, ev.get("thumb"))):
+            if old != new and not _derived_in_use(ctx, old, ev["id"]):
+                ctx.remove_derived(old, keep=new)
+        kept = []
+        for r in ctx.review:
+            if r.get("id") is None and r.get("title") == path.name:
+                continue                                     # an earlier "not applied" note for this file
+            if r.get("id") == ev["id"]:
+                r.update(poster=ev["poster"], thumb=ev["thumb"], source_files=ev["source_files"])
+                if want_poster:
+                    r["reasons"] = [x for x in r.get("reasons", []) if x != "no poster"]
+                if not r["reasons"]:
+                    continue
+            kept.append(r)
+        ctx.review = kept
+        if sha not in ctx.hashlog:
+            ctx.record([Img(Path(rel), sha)], "image_override", ev["id"], ev.get("title"))
+            ctx.hashlog[sha]["file"] = Path(rel).name
+        ctx.counts["override"] += 1
+        log.info("override %s: %s of event %s %r replaced", Path(rel).name,
+                 {"poster": "thumbnail and poster", "thumb": "thumbnail", "zoom": "poster"}[kind], ev["id"], ev.get("title"))
+        ctx.save()
+
+
 def run(ctx: Ctx) -> None:
-    files = sorted((p for p in ctx.inbox.glob("*") if p.is_file() and p.suffix.lower() in IMAGE_EXTS), key=natural_key)
+    files = sorted((p for p in ctx.inbox.glob("*") if p.is_file() and p.suffix.lower() in IMAGE_EXTS), key=inbox_sort_key)
+    ctx.override_files = [(p, *parts) for p in files if (parts := override_parts(p))]
+    files = [p for p in files if not override_parts(p)]
     todo: list[Img] = []
     seen: set[str] = set()
     for p in files:
@@ -960,6 +1496,8 @@ def run(ctx: Ctx) -> None:
         commit(ctx, imgs, out)
     for im in ctx.dupe_imgs:
         ctx.move_to_done(im)
+    merge_new(ctx)
+    apply_overrides(ctx)
     ctx.save()
 
 
@@ -1034,6 +1572,14 @@ def main(argv=None, client=None) -> int:
                   f" {kept} result(s) finished before the error were kept." if kept else "")
         if os.environ.get("GITHUB_ACTIONS"):
             print("::error title=process.py stopped::" + str(e).replace("\n", " "))
+        try:
+            merge_new(ctx)      # results finished before the error are kept, so they are merged too
+        except Exception as e2:  # a failed merge must not hide the real error
+            log.warning("merge step after the error failed: %s", e2)
+        try:
+            apply_overrides(ctx)    # these need no API call, so they still go through
+        except Exception as e3:
+            log.warning("applying image overrides after the error failed: %s", e3)
         summarize(ctx)
         return 1
     summarize(ctx)
