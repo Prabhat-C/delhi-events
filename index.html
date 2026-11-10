@@ -126,14 +126,18 @@ dialog::backdrop { background: rgba(0, 0, 0, .6); }
 .bar .btn { margin: 0; background: transparent; color: var(--ink); border: 1px solid var(--line); padding: 6px 14px; }
 .zoom { display: grid; gap: 20px; padding: 0 16px 20px; }
 .poster { width: 100%; height: auto; display: block; border-radius: 4px; }
-/* Blurred thumbnail first, full poster fades in on top when loaded */
-.poster-wrap { position: relative; overflow: hidden; border-radius: 4px; }
-.poster.ph { filter: blur(8px); transform: scale(1.04); }
+/* Tiny blur placeholder (poster_blur) stretched to the box, sharp poster fades in on top when loaded.
+   The placeholder is a small copy of the same poster, so its natural proportions set the box shape. */
+.poster-wrap { position: relative; overflow: hidden; border-radius: 4px; background: #16181d; }
+.poster-wrap.empty { aspect-ratio: 3 / 4; }                      /* no poster_blur: plain dark box until the poster sizes it */
+.poster.ph { filter: blur(10px); transform: scale(1.1); }
+.poster-wrap.sized .poster.ph { position: absolute; inset: 0; height: 100%; }   /* box now has the poster's exact ratio */
 .poster-wrap.failed .poster.ph { filter: none; transform: none; }
 .poster.full { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .3s ease; }
 .poster.full.show { opacity: 1; }
 .poster.full.static { position: static; height: auto; }
 .poster-note { margin: 8px 0 0; font-size: .85rem; color: var(--muted); }
+.poster-wrap .poster-note { position: absolute; left: 0; right: 0; bottom: 0; margin: 0; padding: 8px 10px; background: rgba(0, 0, 0, .65); color: #fff; }
 .side h2 { margin: 0 0 6px; font-size: 1.3rem; line-height: 1.3; }
 .side .desc { display: block; -webkit-line-clamp: unset; line-clamp: unset; overflow: visible; margin-top: 12px; }.details { margin: 12px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: .95rem; }
 @media (min-width: 760px) {
@@ -356,27 +360,39 @@ footer { padding: 24px 0 48px; text-align: center; color: var(--muted); font-siz
 
   /* ---- Zoom view ---- */
 
-  // Zoom poster: blurred thumbnail first, then the full poster fades in
-  function buildPoster(title, thumbSrc, posterSrc) {
+  // Only a clean base64 string goes into a data: URL
+  function blurSrc(v) {
+    v = str(v);
+    return v && /^[A-Za-z0-9+\/=]+$/.test(v) ? "data:image/jpeg;base64," + v : null;
+  }
+
+  // Zoom poster: the tiny poster_blur (stretched, same proportions as the poster) first, then the sharp poster
+  // fades in. A poster that is already loaded or cached is shown at once, with no placeholder and no fade.
+  // The card thumbnail is not used here at all.
+  function buildPoster(title, blur, posterSrc) {
     var alt = "Poster for " + title;
     var wrap = el("div", { "class": "poster-wrap" });
+    var full = new Image();
+    var settled = false;
+    var ph = null;
 
-    // Nothing separate to use as a placeholder: just show the poster
-    if (!thumbSrc || thumbSrc === posterSrc) {
-      wrap.append(el("img", { "class": "poster", src: posterSrc, alt: alt }));
-      return wrap;
-    }
-
-    var ph = el("img", { "class": "poster ph", src: thumbSrc, alt: alt });
-    wrap.append(ph);
-
-    var full = new Image();                         // loads off-screen first
+    full.alt = alt;
     full.onload = function () {
-      if (!wrap.isConnected) return;                // zoom view was closed or reused
+      if (settled || !wrap.isConnected) return;     // already shown, or the zoom view was closed or reused
+      settled = true;
+      // Give the box the poster's exact shape (the blur copy is rounded to whole pixels), then fade in
+      wrap.style.aspectRatio = full.naturalWidth + " / " + full.naturalHeight;
+      wrap.classList.remove("empty");
+      wrap.classList.add("sized");
       full.className = "poster full";
-      full.alt = alt;
       wrap.append(full);
-      function finish() { if (wrap.isConnected) { ph.remove(); full.classList.add("static"); } }
+      function finish() {
+        if (!wrap.isConnected) return;
+        if (ph) ph.remove();
+        full.classList.add("static");
+        wrap.classList.remove("sized");
+        wrap.style.aspectRatio = "";
+      }
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         full.classList.add("show");
         finish();
@@ -387,21 +403,37 @@ footer { padding: 24px 0 48px; text-align: center; color: var(--muted); font-siz
       }
     };
     full.onerror = function () {
-      if (!wrap.isConnected) return;
-      wrap.classList.add("failed");                 // un-blur the thumbnail
+      if (settled || !wrap.isConnected) return;
+      settled = true;
+      wrap.classList.add("failed");                 // un-blur the placeholder
       wrap.append(el("p", { "class": "poster-note", role: "status" }, "Couldn't load full poster."));
     };
     full.src = posterSrc;
+
+    // Already loaded or cached (idle preload, hover, touch, earlier visit): show it instantly
+    if (full.complete && full.naturalWidth) {
+      settled = true;
+      full.className = "poster";
+      wrap.append(full);
+      return wrap;
+    }
+
+    var b = blurSrc(blur);
+    if (b) {
+      ph = el("img", { "class": "poster ph", src: b, alt: "", "aria-hidden": "true" });
+      wrap.append(ph);
+    } else {
+      wrap.classList.add("empty");                  // no placeholder: plain dark box, the poster sizes it when loaded
+    }
     return wrap;
   }
 
   function openZoom(ev, thisYear) {
     var title = str(ev.title) || "Untitled event";
     var posterSrc = assetUrl(ev.poster) || assetUrl(ev.thumb);
-    var thumbSrc = assetUrl(ev.thumb) || assetUrl(ev.poster);
     zoomBody.replaceChildren();
 
-    if (posterSrc) zoomBody.append(buildPoster(title, thumbSrc, posterSrc));
+    if (posterSrc) zoomBody.append(buildPoster(title, ev.poster_blur, posterSrc));
 
     var side = el("div", { "class": "side" });
     side.append(el("h2", { id: "zoom-title", dir: "auto" }, title), metaBlock(ev, thisYear));

@@ -20,7 +20,8 @@ Pipeline
      (thumbs/<sha12>.jpg) and a lightweight display poster (posters/<sha12>.jpg, long edge <= 1600 px,
      JPEG q80). events.json "poster" points to the display poster and "source_files" still lists the
      originals in done/ (poster screenshot first), which are never modified. If the display poster cannot be made, "poster"
-     falls back to the original in done/. "source_labels" holds one label per source file.
+     falls back to the original in done/. "poster_blur" is a tiny base64 JPEG (about 20 px wide) of the same image,
+     used by the zoom view as a placeholder; anything that replaces "poster" must replace "poster_blur" too. "source_labels" holds one label per source file.
   7. Merge step (after all batches): events from this run are compared with each other and with the existing
      entries by date + normalised venue + start_time (title ignored). Matches are merged into one entry;
      same date and venue with a different start time goes to needs_review.json instead.
@@ -79,6 +80,8 @@ MAX_EDGE = 1568            # images are downscaled to this long edge before send
 THUMB_WIDTH = 480
 DISPLAY_MAX_EDGE = 1600    # display posters (posters/): long edge, never upscaled
 DISPLAY_QUALITY = 80
+BLUR_WIDTH = 20            # poster_blur placeholder: tiny JPEG of the poster, base64 (about 0.5 to 1 KB)
+BLUR_QUALITY = 40
 SANE_PAST_DAYS = 366       # a date older than this is treated as a misread, not as "expired"
 SANE_FUTURE_DAYS = 730
 
@@ -805,6 +808,22 @@ def render_display_poster(src: Path, dst: Path) -> None:
         tmp.unlink(missing_ok=True)
 
 
+def render_blur(src: Path) -> str:
+    """Tiny placeholder of a poster for the zoom view: same proportions, BLUR_WIDTH px wide, low-quality JPEG,
+    returned as a base64 string (no data: prefix; index.html adds it). Raises on an unreadable image."""
+    with Image.open(src) as raw:
+        img = ImageOps.exif_transpose(raw).convert("RGBA")
+        bg = Image.new("RGBA", img.size, (255, 255, 255, 255))
+        bg.alpha_composite(img)
+        img = bg.convert("RGB")
+    w = min(BLUR_WIDTH, img.width)
+    h = max(1, round(img.height * w / img.width))
+    img = img.resize((w, h), Image.LANCZOS)
+    buf = io.BytesIO()
+    img.save(buf, "JPEG", quality=BLUR_QUALITY, optimize=True)
+    return base64.b64encode(buf.getvalue()).decode("ascii")
+
+
 class Ctx:
     def __init__(self, base: Path, args, client, today: date):
         self.base, self.args, self.client, self.today = base, args, client, today
@@ -900,6 +919,16 @@ class Ctx:
             return dst.relative_to(self.base).as_posix()
         except Exception as e:  # a missing display copy must not lose the event
             log.warning("display poster failed for %s: %s", src.name, e)
+            return None
+
+    def make_blur(self, src: Path) -> Optional[str]:
+        """poster_blur for the poster made from src, or None (with a warning) on failure. Never loses the event."""
+        if self.args.dry_run:
+            return None
+        try:
+            return render_blur(src)
+        except Exception as e:
+            log.warning("blur placeholder failed for %s: %s", src.name, e)
             return None
 
     def remove_derived(self, rel, keep) -> None:
@@ -1229,7 +1258,7 @@ def commit(ctx: Ctx, imgs: list, out: Outcome) -> None:
         "id": hashlib.sha1("".join(sorted(hashes)).encode()).hexdigest()[:12],   # sorted: independent of the choice
         "status": status,
         **{k: ev.get(k) for k in STORED_KEYS},
-        "poster": poster, "thumb": thumb,
+        "poster": poster, "thumb": thumb, "poster_blur": None,
         "source_files": rel_paths, "image_hashes": hashes, "source_labels": source_labels,
         "rung": best.rung if best else "none",
         "added": ctx.today.isoformat(),
@@ -1246,6 +1275,7 @@ def commit(ctx: Ctx, imgs: list, out: Outcome) -> None:
             log.warning("using the original screenshot as the poster for %r", entry.get("title"))
         else:
             entry["poster"] = poster_rel
+        entry["poster_blur"] = ctx.make_blur(ctx.base / rel_paths[0])   # same image as the display poster
         if replaced:   # the old entry's thumbnail and display copy are superseded; a legacy done/ path is never deleted
             ctx.remove_derived(replaced.get("poster"), keep=entry["poster"])
             ctx.remove_derived(replaced.get("thumb"), keep=entry["thumb"])
@@ -1412,6 +1442,7 @@ def apply_overrides(ctx: Ctx) -> None:
             continue
         new_thumb = ctx.make_thumb(path, sha) if want_thumb else None
         new_poster = ctx.make_poster(path, sha) if want_poster else None
+        new_blur = ctx.make_blur(path) if want_poster else None
         if (want_thumb and not new_thumb) or (want_poster and not new_poster):
             _override_problem(ctx, path.name, "the image could not be turned into a thumbnail or poster")
             continue
@@ -1431,6 +1462,7 @@ def apply_overrides(ctx: Ctx) -> None:
                 if f != rel and (k >= len(hashes) or hashes[k] != sha)]
         if want_poster:       # the zoom poster comes first in source_files, labelled "poster"
             ev["poster"] = new_poster
+            ev["poster_blur"] = new_blur     # always replaced with the new poster's blur, never left stale
             front = [(rel, sha, "poster")]
             rest_all = front + rest
         else:                 # thumbnail only: the image is kept as an extra source, the poster screenshot stays first
