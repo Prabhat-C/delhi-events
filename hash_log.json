@@ -100,7 +100,7 @@
   "3840c18149401cb9e9f2ec64dc4e15ec64e669ba82dda3c18baccf9494e215e9": {
     "file": "Screenshot 2026-11-10 at 5.26.59 AM.png",
     "outcome": "published",
-    "event_id": "ba574daf953c",
+    "event_id": "5fdf00c233f3",
     "title": "Umrao Jaan - A Stage Play",
     "processed": "2026-11-10"
   },
@@ -121,28 +121,28 @@
   "650840b61ac01a764b165a01ff1f8cfaebe758f2a786d539cc3198ae7fdabb43": {
     "file": "Screenshot 2026-11-10 at 5.29.28 AM.png",
     "outcome": "published",
-    "event_id": "e4981370d50e",
+    "event_id": "6da1a5244bad",
     "title": "Abhinandan Samaroh: 6th Edition",
     "processed": "2026-11-10"
   },
   "6d3b46501a40afd5445b8e54b94f17a79258e0d3b5ec604f1b1caf1ccf34adac": {
     "file": "Screenshot 2026-11-10 at 5.30.02 AM.png",
     "outcome": "published",
-    "event_id": "e4981370d50e",
+    "event_id": "6da1a5244bad",
     "title": "Abhinandan Samaroh: 6th Edition",
     "processed": "2026-11-10"
   },
   "4462c3efffafb407a20fa487a6ab74eac68e5ab785541f42971a8431b0417a4c": {
     "file": "Screenshot 2026-11-10 at 5.30.36 AM.png",
     "outcome": "published",
-    "event_id": "9e02a0671346",
+    "event_id": "76104755d78b",
     "title": "SWARN: A Celebration of the Golden Era of Indian Classical Music",
     "processed": "2026-11-10"
   },
   "3adf74525aaca6efa2232c246acc04d59939dd08fa067c8405ff0adae95219b7": {
     "file": "Screenshot 2026-11-10 at 5.31.56 AM.png",
     "outcome": "published",
-    "event_id": "6caa7d075bec",
+    "event_id": "e3b5791c7cdd",
     "title": "Three New Indian Classics: Book Launch with Rehmat-e-Nusrat",
     "processed": "2026-11-10"
   },
@@ -375,6 +375,13 @@
     "outcome": "published",
     "event_id": "2be82e650a1a",
     "title": "Mushaira & Kavi Sammelan",
+    "processed": "2026-11-10"
+  },
+  "583613d1a5173ae845e016fec6db50b5b0ad702d1466209dd92fc1d5fe483d3f": {
+    "file": "Screenshot 2026-11-10 at 3.18.49 PM.png",
+    "outcome": "published",
+    "event_id": "f5665a6d78de",
+    "title": "Film Screenings",
     "processed": "2026-11-10"
   }
 }

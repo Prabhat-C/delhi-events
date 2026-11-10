@@ -272,35 +272,6 @@
       "added": "2026-11-09"
     },
     {
-      "id": "ba574daf953c",
-      "status": "published",
-      "grouping_uncertain": false,
-      "title": "Umrao Jaan - A Stage Play",
-      "organiser": "Theatreleela Acting Studio",
-      "description": "A stage play adaptation of Umrao Jaan, based on the novel by Mirza Hadi Ruswa, presented as part of the 36th Urdu Drama Festival. Scripted and directed by Varun Sharma.",
-      "details": null,
-      "date": "2026-11-13",
-      "end_date": null,
-      "start_time": "18:30",
-      "end_time": null,
-      "venue": "Shri Ram Centre, Mandi House, Delhi",
-      "registration_link": null,
-      "confidence": "high",
-      "notes": "",
-      "recurrence": null,
-      "recurring": false,
-      "poster": "posters/3840c1814940.jpg",
-      "thumb": "thumbs/3840c1814940.jpg",
-      "source_files": [
-        "done/Screenshot 2026-11-10 at 5.26.59 AM.png"
-      ],
-      "image_hashes": [
-        "3840c18149401cb9e9f2ec64dc4e15ec64e669ba82dda3c18baccf9494e215e9"
-      ],
-      "rung": "haiku-low",
-      "added": "2026-11-10"
-    },
-    {
       "id": "7be8c0183fe5",
       "status": "published",
       "grouping_uncertain": false,
@@ -318,18 +289,22 @@
       "notes": "",
       "recurrence": null,
       "recurring": false,
-      "poster": "posters/77d845dd39cb.jpg",
-      "thumb": "thumbs/77d845dd39cb.jpg",
+      "poster": "posters/281009c2728c.jpg",
+      "thumb": "thumbs/281009c2728c.jpg",
       "source_files": [
-        "done/Screenshot 2026-11-10 at 5.27.52 AM.png",
-        "done/WhatsApp Image 2026-11-06 at 3.02.24 PM.jpeg"
+        "done/WhatsApp Image 2026-11-06 at 3.02.24 PM.jpeg",
+        "done/Screenshot 2026-11-10 at 5.27.52 AM.png"
       ],
       "image_hashes": [
-        "77d845dd39cbc4aef8d16026304af862ec02ca7087f693ffd5a1c1b20bb7d71e",
-        "281009c2728cf707a3da95ad72b5293fa5e81cb1db734e73f8687fe5fc13c44a"
+        "281009c2728cf707a3da95ad72b5293fa5e81cb1db734e73f8687fe5fc13c44a",
+        "77d845dd39cbc4aef8d16026304af862ec02ca7087f693ffd5a1c1b20bb7d71e"
       ],
       "rung": "haiku-low",
-      "added": "2026-11-10"
+      "added": "2026-11-10",
+      "source_labels": [
+        "poster",
+        "text_caption"
+      ]
     },
     {
       "id": "f5665a6d78de",
@@ -349,107 +324,25 @@
       "notes": "Registration via the form link; seats may be limited.",
       "recurrence": "alternate Fridays from 6 Nov",
       "recurring": true,
-      "poster": "posters/50ecb3b8b6a5.jpg",
-      "thumb": "thumbs/50ecb3b8b6a5.jpg",
+      "poster": "posters/583613d1a517.jpg",
+      "thumb": "thumbs/583613d1a517.jpg",
       "source_files": [
+        "done/Screenshot 2026-11-10 at 3.18.49 PM.png",
         "done/Screenshot 2026-11-10 at 5.28.38 AM.png",
         "done/WhatsApp Image 2026-11-06 at 12.49.52 AM.jpeg"
       ],
       "image_hashes": [
+        "583613d1a5173ae845e016fec6db50b5b0ad702d1466209dd92fc1d5fe483d3f",
         "50ecb3b8b6a5ea8c1e983ab4241ca34744085e1ac8a1464acc5c619be300d5fe",
         "cab23edd9c9f09384ef721694b18ad2b2fe6ba3d96777168cd39c3d0e8d908eb"
       ],
       "rung": "haiku-low",
-      "added": "2026-11-10"
-    },
-    {
-      "id": "e4981370d50e",
-      "status": "published",
-      "grouping_uncertain": false,
-      "title": "Abhinandan Samaroh: 6th Edition",
-      "organiser": "Nritya Dhara",
-      "description": "An Odissi dance presentation by Vinod Kevin Bachan and Vrinda Chadha, disciples of Guru Ranjana Gauhar, celebrating India's classical dance heritage.",
-      "details": null,
-      "date": "2026-11-18",
-      "end_date": null,
-      "start_time": "19:00",
-      "end_time": null,
-      "venue": "Stein Auditorium, India Habitat Centre, Lodi Road, New Delhi",
-      "registration_link": null,
-      "confidence": "high",
-      "notes": "Guests are asked to be seated by 6:45 PM.",
-      "recurrence": null,
-      "recurring": false,
-      "poster": "posters/650840b61ac0.jpg",
-      "thumb": "thumbs/650840b61ac0.jpg",
-      "source_files": [
-        "done/Screenshot 2026-11-10 at 5.29.28 AM.png",
-        "done/Screenshot 2026-11-10 at 5.30.02 AM.png"
-      ],
-      "image_hashes": [
-        "650840b61ac01a764b165a01ff1f8cfaebe758f2a786d539cc3198ae7fdabb43",
-        "6d3b46501a40afd5445b8e54b94f17a79258e0d3b5ec604f1b1caf1ccf34adac"
-      ],
-      "rung": "haiku-low",
-      "added": "2026-11-10"
-    },
-    {
-      "id": "9e02a0671346",
-      "status": "published",
-      "grouping_uncertain": false,
-      "title": "SWARN: A Celebration of the Golden Era of Indian Classical Music",
-      "organiser": "Vrindan Foundation for Art & Culture",
-      "description": "An evening of Indian classical music featuring a flute recital by Grammy Award-winning flautist Rakesh Chaurasia and an ethno music soundscape by Arunangshu Chaudhury.",
-      "details": null,
-      "date": "2026-11-23",
-      "end_date": null,
-      "start_time": "18:00",
-      "end_time": "21:30",
-      "venue": "Kamani Auditorium, New Delhi",
-      "registration_link": null,
-      "confidence": "high",
-      "notes": "Entry passes available at reception.",
-      "recurrence": null,
-      "recurring": false,
-      "poster": "posters/4462c3efffaf.jpg",
-      "thumb": "thumbs/4462c3efffaf.jpg",
-      "source_files": [
-        "done/Screenshot 2026-11-10 at 5.30.36 AM.png"
-      ],
-      "image_hashes": [
-        "4462c3efffafb407a20fa487a6ab74eac68e5ab785541f42971a8431b0417a4c"
-      ],
-      "rung": "haiku-low",
-      "added": "2026-11-10"
-    },
-    {
-      "id": "6caa7d075bec",
-      "status": "published",
-      "grouping_uncertain": false,
-      "title": "Three New Indian Classics: Book Launch with Rehmat-e-Nusrat",
-      "organiser": "Murty Classical Library of India and Harvard University Press",
-      "description": "Launch of three new Indian classics, Exquisite Things and Strange Wonders, Jain Tales of Moksha and God at Play, followed by a musical performance by Rehmat-e-Nusrat. Held in collaboration with Tales of City.",
-      "details": null,
-      "date": "2026-11-20",
-      "end_date": null,
-      "start_time": "19:00",
-      "end_time": null,
-      "venue": "Stein Auditorium, India Habitat Centre, New Delhi",
-      "registration_link": "https://habitatclub.indiahabitat.in/registration?id=5207",
-      "confidence": "high",
-      "notes": "Registration required; seats available on a first-come, first-served basis. Queries can be emailed to murtyclassicsindia@gmail.com.",
-      "recurrence": null,
-      "recurring": false,
-      "poster": "posters/3adf74525aac.jpg",
-      "thumb": "thumbs/3adf74525aac.jpg",
-      "source_files": [
-        "done/Screenshot 2026-11-10 at 5.31.56 AM.png"
-      ],
-      "image_hashes": [
-        "3adf74525aaca6efa2232c246acc04d59939dd08fa067c8405ff0adae95219b7"
-      ],
-      "rung": "haiku-low",
-      "added": "2026-11-10"
+      "added": "2026-11-10",
+      "source_labels": [
+        "poster",
+        "poster",
+        "poster"
+      ]
     },
     {
       "id": "d9dd32cabfb4",
@@ -644,21 +537,27 @@
       "start_time": "19:00",
       "end_time": null,
       "venue": "Stein Auditorium, India Habitat Centre, New Delhi",
-      "registration_link": null,
+      "registration_link": "https://habitatclub.indiahabitat.in/registration?id=5207",
       "confidence": "high",
-      "notes": "Registration required; seats on a first-come, first-served basis. Queries to murtyclassicsindia@gmail.com.",
+      "notes": "Registration required; seats on a first-come, first-served basis. Queries to murtyclassicsindia@gmail.com. Registration required; seats available on a first-come, first-served basis. Queries can be emailed to murtyclassicsindia@gmail.com.",
       "recurrence": null,
       "recurring": false,
       "poster": "posters/a61386226d63.jpg",
       "thumb": "thumbs/a61386226d63.jpg",
       "source_files": [
-        "done/WhatsApp Image 2026-11-03 at 9.58.14 PM.jpeg"
+        "done/WhatsApp Image 2026-11-03 at 9.58.14 PM.jpeg",
+        "done/Screenshot 2026-11-10 at 5.31.56 AM.png"
       ],
       "image_hashes": [
-        "a61386226d6348bdd60f83743f994f1ff3c0d5f27ec49023aa493e3fa28215db"
+        "a61386226d6348bdd60f83743f994f1ff3c0d5f27ec49023aa493e3fa28215db",
+        "3adf74525aaca6efa2232c246acc04d59939dd08fa067c8405ff0adae95219b7"
       ],
       "rung": "haiku-low",
-      "added": "2026-11-10"
+      "added": "2026-11-10",
+      "source_labels": [
+        "poster",
+        "poster"
+      ]
     },
     {
       "id": "9565da53991b",
@@ -695,28 +594,34 @@
       "grouping_uncertain": false,
       "title": "Vrindan's Swarn",
       "organiser": "Vrindan",
-      "description": "A music concert with tabla by Arunangshu Chaudhury, titled Royal Roots, and flute by Rakesh Chaurasia, titled Eternal Echoes.",
+      "description": "An evening of Indian classical music featuring a flute recital by Grammy Award-winning flautist Rakesh Chaurasia and an ethno music soundscape by Arunangshu Chaudhury.",
       "details": null,
       "date": "2026-11-23",
       "end_date": null,
       "start_time": "18:00",
-      "end_time": null,
+      "end_time": "21:30",
       "venue": "Kamani Auditorium, New Delhi",
       "registration_link": null,
       "confidence": "high",
-      "notes": "",
+      "notes": "Entry passes available at reception.",
       "recurrence": null,
       "recurring": false,
       "poster": "posters/075c5063ba74.jpg",
       "thumb": "thumbs/075c5063ba74.jpg",
       "source_files": [
-        "done/WhatsApp Image 2026-11-04 at 5.41.55 PM.jpeg"
+        "done/WhatsApp Image 2026-11-04 at 5.41.55 PM.jpeg",
+        "done/Screenshot 2026-11-10 at 5.30.36 AM.png"
       ],
       "image_hashes": [
-        "075c5063ba745129ad2bb2f3d43f1d6b9f7a6d3f9fdf5eb61fb1d0672b181a95"
+        "075c5063ba745129ad2bb2f3d43f1d6b9f7a6d3f9fdf5eb61fb1d0672b181a95",
+        "4462c3efffafb407a20fa487a6ab74eac68e5ab785541f42971a8431b0417a4c"
       ],
       "rung": "haiku-low",
-      "added": "2026-11-10"
+      "added": "2026-11-10",
+      "source_labels": [
+        "poster",
+        "text_caption"
+      ]
     },
     {
       "id": "6da1a5244bad",
@@ -733,21 +638,31 @@
       "venue": "Stein Auditorium, India Habitat Centre, Lodi Road, New Delhi (Entry from Gate No-3)",
       "registration_link": null,
       "confidence": "high",
-      "notes": "Please take your seats by 06:45 PM. Entry from Gate No-3.",
+      "notes": "Please take your seats by 06:45 PM. Entry from Gate No-3. Guests are asked to be seated by 6:45 PM.",
       "recurrence": null,
       "recurring": false,
       "poster": "posters/db50690bb9d4.jpg",
       "thumb": "thumbs/db50690bb9d4.jpg",
       "source_files": [
         "done/WhatsApp Image 2026-11-05 at 9.33.55 AM.jpeg",
-        "done/WhatsApp Image 2026-11-05 at 9.35.05 AM.jpeg"
+        "done/WhatsApp Image 2026-11-05 at 9.35.05 AM.jpeg",
+        "done/Screenshot 2026-11-10 at 5.29.28 AM.png",
+        "done/Screenshot 2026-11-10 at 5.30.02 AM.png"
       ],
       "image_hashes": [
         "db50690bb9d4fdfc44d9cefbdebcd71fa1be476088cc180dafb13eb6c7ac6b71",
-        "3ead3f728f4aca1f0e9c3f1652c4cffb71372dcb5ad03d4e9f92f17afe019bb8"
+        "3ead3f728f4aca1f0e9c3f1652c4cffb71372dcb5ad03d4e9f92f17afe019bb8",
+        "650840b61ac01a764b165a01ff1f8cfaebe758f2a786d539cc3198ae7fdabb43",
+        "6d3b46501a40afd5445b8e54b94f17a79258e0d3b5ec604f1b1caf1ccf34adac"
       ],
       "rung": "haiku-low",
-      "added": "2026-11-10"
+      "added": "2026-11-10",
+      "source_labels": [
+        "poster",
+        "poster",
+        "text_caption",
+        "text_caption"
+      ]
     },
     {
       "id": "5fdf00c233f3",
@@ -755,7 +670,7 @@
       "grouping_uncertain": false,
       "title": "Umrao Jaan",
       "organiser": "Theatreleela Acting Studio",
-      "description": "A stage play based on the novel Umrao Jaan Ada by Mirza Hadi Ruswa, scripted and directed by Varun Sharma.",
+      "description": "A stage play adaptation of Umrao Jaan, based on the novel by Mirza Hadi Ruswa, presented as part of the 36th Urdu Drama Festival. Scripted and directed by Varun Sharma.",
       "details": null,
       "date": "2026-11-13",
       "end_date": null,
@@ -770,13 +685,19 @@
       "poster": "posters/c316312b2535.jpg",
       "thumb": "thumbs/c316312b2535.jpg",
       "source_files": [
-        "done/WhatsApp Image 2026-11-07 at 2.39.50 PM.jpeg"
+        "done/WhatsApp Image 2026-11-07 at 2.39.50 PM.jpeg",
+        "done/Screenshot 2026-11-10 at 5.26.59 AM.png"
       ],
       "image_hashes": [
-        "c316312b2535e81b40890949cc817ef37c388af801a9928f24f30c59fc5fb05a"
+        "c316312b2535e81b40890949cc817ef37c388af801a9928f24f30c59fc5fb05a",
+        "3840c18149401cb9e9f2ec64dc4e15ec64e669ba82dda3c18baccf9494e215e9"
       ],
       "rung": "haiku-low",
-      "added": "2026-11-10"
+      "added": "2026-11-10",
+      "source_labels": [
+        "poster",
+        "text_caption"
+      ]
     },
     {
       "id": "238a530e5715",
