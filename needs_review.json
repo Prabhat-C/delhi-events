@@ -38,12 +38,12 @@
       "date": "2026-12-02",
       "confidence": "medium",
       "reasons": [
-        "confidence is medium",
-        "no poster"
+        "confidence is medium"
       ],
-      "poster": "posters/1cda8579b89e.jpg",
+      "poster": "posters/311310bfc1ce.jpg",
       "thumb": "thumbs/a33bfb383ffb.jpg",
       "source_files": [
+        "done/zoom-ncpa.jpg",
         "done/Screenshot 2026-11-11 at 4.00.17 AM.png",
         "done/thumb-ncpa.png"
       ]
@@ -80,6 +80,32 @@
       "source_files": [
         "done/Screenshot 2026-11-11 at 4.24.54 AM.png"
       ]
+    },
+    {
+      "id": null,
+      "status": null,
+      "title": "thumb-sumitra.png",
+      "date": null,
+      "confidence": null,
+      "reasons": [
+        "2 events match 'sumitra' (66e42cf1da5e Sumitra Charat Ram Award for Lifetime Achievement; 82c9ed716507 Sumitra Charat Ram Award for Lifetime Achievement); use the event id in the file name"
+      ],
+      "poster": null,
+      "thumb": null,
+      "source_files": []
+    },
+    {
+      "id": null,
+      "status": null,
+      "title": "zoom-sumitra.jpg",
+      "date": null,
+      "confidence": null,
+      "reasons": [
+        "2 events match 'sumitra' (66e42cf1da5e Sumitra Charat Ram Award for Lifetime Achievement; 82c9ed716507 Sumitra Charat Ram Award for Lifetime Achievement); use the event id in the file name"
+      ],
+      "poster": null,
+      "thumb": null,
+      "source_files": []
     }
   ]
 }
