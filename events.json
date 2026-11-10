@@ -790,15 +790,21 @@
       "recurrence": null,
       "recurring": false,
       "poster": "posters/346e4595b0b0.jpg",
-      "thumb": "thumbs/346e4595b0b0.jpg",
+      "thumb": "thumbs/c319a1fb4bb3.jpg",
       "source_files": [
-        "done/WhatsApp Image 2026-11-09 at 7.08.06 PM.jpeg"
+        "done/WhatsApp Image 2026-11-09 at 7.08.06 PM.jpeg",
+        "done/thumb-6254f2becfc5.png"
       ],
       "image_hashes": [
-        "346e4595b0b0d14c909faa10ad594ee26f8a79e45a9f570d07c73ad2e9ac2b48"
+        "346e4595b0b0d14c909faa10ad594ee26f8a79e45a9f570d07c73ad2e9ac2b48",
+        "c319a1fb4bb3c366953e7b23721b11feb8f2ec6325d1cfdf592fd06433a3d8d2"
       ],
       "rung": "haiku-low",
-      "added": "2026-11-10"
+      "added": "2026-11-10",
+      "source_labels": [
+        "poster",
+        "other"
+      ]
     },
     {
       "id": "f8e1b13ff97d",
