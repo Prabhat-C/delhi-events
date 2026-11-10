@@ -142,11 +142,13 @@
       "thumb": "thumbs/d8d9b5d57e4a.jpg",
       "source_files": [
         "done/Screenshot 2026-11-07 at 7.57.13 PM.png",
-        "done/Screenshot 2026-11-07 at 7.57.25 PM.png"
+        "done/Screenshot 2026-11-07 at 7.57.25 PM.png",
+        "done/WhatsApp Image 2026-10-28 at 1.10.02 PM.jpeg"
       ],
       "image_hashes": [
         "d8d9b5d57e4a3e1b929bca0ac873d432d48df97077922f2073e0d2d1dfeffc05",
-        "9628fae46bec5844aab0224502c5fc79e60e76220c21652ba9d3941c79c4dcf4"
+        "9628fae46bec5844aab0224502c5fc79e60e76220c21652ba9d3941c79c4dcf4",
+        "cfd6ea6153e1693579d41abfb55a03e6de988318b9a1d71f539c215558440698"
       ],
       "rung": "haiku-high",
       "added": "2026-11-09"
@@ -268,6 +270,759 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-09"
+    },
+    {
+      "id": "ba574daf953c",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Umrao Jaan - A Stage Play",
+      "organiser": "Theatreleela Acting Studio",
+      "description": "A stage play adaptation of Umrao Jaan, based on the novel by Mirza Hadi Ruswa, presented as part of the 36th Urdu Drama Festival. Scripted and directed by Varun Sharma.",
+      "details": null,
+      "date": "2026-11-13",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "Shri Ram Centre, Mandi House, Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/3840c1814940.jpg",
+      "thumb": "thumbs/3840c1814940.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-10 at 5.26.59 AM.png"
+      ],
+      "image_hashes": [
+        "3840c18149401cb9e9f2ec64dc4e15ec64e669ba82dda3c18baccf9494e215e9"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "7be8c0183fe5",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Karwaan Baithak: The Idea of the Republic",
+      "organiser": null,
+      "description": "A conversation with Dr. Parakala Prabhakar, economist, political commentator and author of The Crooked Timber of New India, on the Republic, democracy and its many institutions.",
+      "details": null,
+      "date": "2026-11-15",
+      "end_date": null,
+      "start_time": "16:30",
+      "end_time": null,
+      "venue": "Arthshila Delhi, Okhla",
+      "registration_link": "https://forms.gle/wpf4oKAR3BjQ4EeP9",
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/77d845dd39cb.jpg",
+      "thumb": "thumbs/77d845dd39cb.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-10 at 5.27.52 AM.png",
+        "done/WhatsApp Image 2026-11-06 at 3.02.24 PM.jpeg"
+      ],
+      "image_hashes": [
+        "77d845dd39cbc4aef8d16026304af862ec02ca7087f693ffd5a1c1b20bb7d71e",
+        "281009c2728cf707a3da95ad72b5293fa5e81cb1db734e73f8687fe5fc13c44a"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "f5665a6d78de",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Film Screenings",
+      "organiser": "American Center New Delhi",
+      "description": null,
+      "details": null,
+      "date": "2026-11-06",
+      "end_date": null,
+      "start_time": "14:00",
+      "end_time": null,
+      "venue": "The American Center, 24, Kasturba Gandhi Marg",
+      "registration_link": "https://docs.google.com/forms/d/e/1FAIpQLSerWg_KfzGwr5Lu4fJMCuIXGwSTWermshRYsXIUZqnTn-IEgg/viewform",
+      "confidence": "high",
+      "notes": "Registration via the form link; seats may be limited.",
+      "recurrence": "alternate Fridays from 6 Nov",
+      "recurring": true,
+      "poster": "posters/50ecb3b8b6a5.jpg",
+      "thumb": "thumbs/50ecb3b8b6a5.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-10 at 5.28.38 AM.png",
+        "done/WhatsApp Image 2026-11-06 at 12.49.52 AM.jpeg"
+      ],
+      "image_hashes": [
+        "50ecb3b8b6a5ea8c1e983ab4241ca34744085e1ac8a1464acc5c619be300d5fe",
+        "cab23edd9c9f09384ef721694b18ad2b2fe6ba3d96777168cd39c3d0e8d908eb"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "e4981370d50e",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Abhinandan Samaroh: 6th Edition",
+      "organiser": "Nritya Dhara",
+      "description": "An Odissi dance presentation by Vinod Kevin Bachan and Vrinda Chadha, disciples of Guru Ranjana Gauhar, celebrating India's classical dance heritage.",
+      "details": null,
+      "date": "2026-11-18",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "Stein Auditorium, India Habitat Centre, Lodi Road, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Guests are asked to be seated by 6:45 PM.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/650840b61ac0.jpg",
+      "thumb": "thumbs/650840b61ac0.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-10 at 5.29.28 AM.png",
+        "done/Screenshot 2026-11-10 at 5.30.02 AM.png"
+      ],
+      "image_hashes": [
+        "650840b61ac01a764b165a01ff1f8cfaebe758f2a786d539cc3198ae7fdabb43",
+        "6d3b46501a40afd5445b8e54b94f17a79258e0d3b5ec604f1b1caf1ccf34adac"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "9e02a0671346",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "SWARN: A Celebration of the Golden Era of Indian Classical Music",
+      "organiser": "Vrindan Foundation for Art & Culture",
+      "description": "An evening of Indian classical music featuring a flute recital by Grammy Award-winning flautist Rakesh Chaurasia and an ethno music soundscape by Arunangshu Chaudhury.",
+      "details": null,
+      "date": "2026-11-23",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": "21:30",
+      "venue": "Kamani Auditorium, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Entry passes available at reception.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/4462c3efffaf.jpg",
+      "thumb": "thumbs/4462c3efffaf.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-10 at 5.30.36 AM.png"
+      ],
+      "image_hashes": [
+        "4462c3efffafb407a20fa487a6ab74eac68e5ab785541f42971a8431b0417a4c"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "6caa7d075bec",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Three New Indian Classics: Book Launch with Rehmat-e-Nusrat",
+      "organiser": "Murty Classical Library of India and Harvard University Press",
+      "description": "Launch of three new Indian classics, Exquisite Things and Strange Wonders, Jain Tales of Moksha and God at Play, followed by a musical performance by Rehmat-e-Nusrat. Held in collaboration with Tales of City.",
+      "details": null,
+      "date": "2026-11-20",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "Stein Auditorium, India Habitat Centre, New Delhi",
+      "registration_link": "https://habitatclub.indiahabitat.in/registration?id=5207",
+      "confidence": "high",
+      "notes": "Registration required; seats available on a first-come, first-served basis. Queries can be emailed to murtyclassicsindia@gmail.com.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/3adf74525aac.jpg",
+      "thumb": "thumbs/3adf74525aac.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-10 at 5.31.56 AM.png"
+      ],
+      "image_hashes": [
+        "3adf74525aaca6efa2232c246acc04d59939dd08fa067c8405ff0adae95219b7"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "d9dd32cabfb4",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Concert: Sri Chinmoy's Music for Peace",
+      "organiser": null,
+      "description": "An evening of music as meditation, blending sitar, tabla, flute and harmonium, performed by international artists Kanala Auer, Sadanand Magee, Devashu Zuderall and Vandanyiya.",
+      "details": "Concert: Sri Chinmoy's Music for Peace\n\nJoin an evening of music as meditation, blending sitar, tabla, flute, and harmonium to create a journey inward toward inner joy and serenity.\n\nDate: Saturday, November 14\nTime: 7:00 PM – 8:30 PM\nVenue: Chittaranjan Bhavan, New Delhi\nFeaturing: International artists Kanala Auer, Sadanand Magee, Devashu Zuderall, and Vandanyiya.\nEntry: FREE (Registration required)",
+      "date": "2026-11-14",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": "20:30",
+      "venue": "Chittaranjan Bhavan, New Delhi",
+      "registration_link": "https://shorturl.at/C2OJ9",
+      "confidence": "high",
+      "notes": "Entry is free but registration is required.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/1d7346514af4.jpg",
+      "thumb": "thumbs/1d7346514af4.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-10-28 at 2.32.31 PM.jpeg",
+        "done/Screenshot 2026-11-10 at 5.36.53 AM.png"
+      ],
+      "image_hashes": [
+        "1d7346514af4b7c8a2543de89632dc2cea330b1adc0d68c050db06d63b8d6f45",
+        "e56e6f3af3f65238268179567ee8cdd04165f525c4d810796a9a3074e14976f8"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "5396fe3df648",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Kahani: Painted Narratives of India",
+      "organiser": "Sameksha",
+      "description": "An exhibition tracing the visual storytelling traditions of India's folk and indigenous art forms, including Jogi, Gond, Phad, Kalighat, Warli, Madhubani and Mata ni Pachedi. Curated by Minhazz Majumdar.",
+      "details": null,
+      "date": "2026-10-23",
+      "end_date": "2026-11-21",
+      "start_time": "11:30",
+      "end_time": "18:30",
+      "venue": "Sameksha, 60, Pandit Deendayal Upadhyay Marg, New Delhi 110002",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Opening on 23 October from 6:30 PM to 8:30 PM; on view 24 October to 21 November, 11:30 AM to 6:30 PM.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/b5938516a2de.jpg",
+      "thumb": "thumbs/b5938516a2de.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-10-28 at 1.22.48 PM.jpeg",
+        "done/Screenshot 2026-11-10 at 5.37.28 AM.png"
+      ],
+      "image_hashes": [
+        "b5938516a2dea91f5c6e4a970217b8134fe574c483dd4221a2346e794f2b0ef8",
+        "7c45346f12ac53045ea4ca0b7cd0fd03fe3c56c9f229ef8204f9fb4a7ff3df98"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "6101448ef755",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Beyond Ghazal Festival: A Celebration of Timeless Poetry and Soulful Melodies",
+      "organiser": "beyondghazal",
+      "description": "An evening of soulful ghazals, poetry and melodies celebrating the timeless beauty of ghazal and the artists who bring its words to life.",
+      "details": "beyondghazal A Celebration of Timeless Poetry & Soulful Melodies\n\nDelhi, get ready for an evening where poetry meets melody, tradition meets contemporary expression, and every note tells a story.\n\nBorn in the heart of Delhi, Beyond Ghazal is more than a musical evening — it is a celebration of the timeless beauty of ghazal, its poetry, its emotions, and the artists who bring every word to life.\n\nAn evening of soulful ghazals\nTimeless poetry & unforgettable melodies\nA meeting of generations\nCelebrating the art of musical storytelling\n\n12th November 2026 | Thursday",
+      "date": "2026-11-12",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "Kamani Auditorium, Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/b89f24b52bee.jpg",
+      "thumb": "thumbs/b89f24b52bee.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-10 at 5.37.57 AM.png",
+        "done/Screenshot 2026-11-10 at 5.38.37 AM.png"
+      ],
+      "image_hashes": [
+        "b89f24b52bee0c3a3c6877d0930f6e29bd80be5c84edc4c7561a05db62d60669",
+        "15bad524421f00ad927de19631657e74aae44029d67b7e0d89a3fcf6c9fdcc39"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "35e496f911ee",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Rasabilasa 2026",
+      "organiser": "Srijan Chhanda, Kolkata",
+      "description": "An evening of dazzling solo and group Odissi and Bharatanatyam performances celebrating the birth centenary of Guru Kelucharan Mahapatra, presented by Dr. Rajib Bhattacharya.",
+      "details": null,
+      "date": "2026-11-19",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "Stein Auditorium, India Habitat Centre, Lodhi Road, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/484d1a12154f.jpg",
+      "thumb": "thumbs/484d1a12154f.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-02 at 5.14.32 PM-2.jpeg"
+      ],
+      "image_hashes": [
+        "484d1a12154f8b1e5d414b32fefc4a1c47244379361bf013786983737d68b237"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "516bbb6f6875",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "TAYA",
+      "organiser": "Aravali International Film Festival",
+      "description": "A monthly screening of the Sanskrit film Taya, directed by Dr Prabha Gopalapillai. The story follows a woman who challenged the rules of a society that refused to question its men.",
+      "details": null,
+      "date": "2026-11-20",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "ML Bhartia Auditorium, Alliance Française de Delhi, 72, Lodi Estate, New Delhi - 110003",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Free entry, limited seats. IMDb qualifying.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/a34b60e364a8.jpg",
+      "thumb": "thumbs/a34b60e364a8.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-02 at 5.14.32 PM.jpeg"
+      ],
+      "image_hashes": [
+        "a34b60e364a88e4675bab2a2b860b70f78346315d3bd26409626995f8d80e2a4"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "208ce8db5a87",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "बुल्ला शाह",
+      "organiser": "Sumukha Rangmandal",
+      "description": "A 36th Urdu Drama Festival production of Bulla Shah, written by Pratap Sehgal and directed by Arvind Singh Chandravanshi.",
+      "details": null,
+      "date": "2026-11-16",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "SRC, Mandi House",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/e5765f763403.jpg",
+      "thumb": "thumbs/e5765f763403.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-03 at 6.32.58 PM.jpeg"
+      ],
+      "image_hashes": [
+        "e5765f76340396aa6703032ffef7cb354bf325df1a24fb42009ac554211d50fd"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "e3b5791c7cdd",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Launch of Three New Indian Classics, followed by a performance by Rehmat-e-Nusrat",
+      "organiser": "Murty Classical Library of India and Harvard University Press",
+      "description": "Launch of three new Indian classics: Exquisite Things and Strange Wonders by Amir Khusraw Dihlavi, Jain Tales of Moksha by Shivakotyacharya, and God at Play Volume 2 by Mhaimbhat. The launch is followed by a musical performance by Rehmat-e-Nusrat.",
+      "details": null,
+      "date": "2026-11-20",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "Stein Auditorium, India Habitat Centre, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Registration required; seats on a first-come, first-served basis. Queries to murtyclassicsindia@gmail.com.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/a61386226d63.jpg",
+      "thumb": "thumbs/a61386226d63.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-03 at 9.58.14 PM.jpeg"
+      ],
+      "image_hashes": [
+        "a61386226d6348bdd60f83743f994f1ff3c0d5f27ec49023aa493e3fa28215db"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "9565da53991b",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Korean Fest",
+      "organiser": null,
+      "description": "A Korean cultural festival featuring traditional Korean costumes, dance performances and decor.",
+      "details": null,
+      "date": "2026-11-13",
+      "end_date": "2026-11-22",
+      "start_time": "11:00",
+      "end_time": null,
+      "venue": "Pacific Mall, Subhash Nagar, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Free entry and free gifts.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/57965ff2718b.jpg",
+      "thumb": "thumbs/57965ff2718b.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-04 at 2.48.11 AM.jpeg"
+      ],
+      "image_hashes": [
+        "57965ff2718bcd01497855886ab19d3656719124a87c01915e24481e3a4aea3e"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "76104755d78b",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Vrindan's Swarn",
+      "organiser": "Vrindan",
+      "description": "A music concert with tabla by Arunangshu Chaudhury, titled Royal Roots, and flute by Rakesh Chaurasia, titled Eternal Echoes.",
+      "details": null,
+      "date": "2026-11-23",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Kamani Auditorium, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/075c5063ba74.jpg",
+      "thumb": "thumbs/075c5063ba74.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-04 at 5.41.55 PM.jpeg"
+      ],
+      "image_hashes": [
+        "075c5063ba745129ad2bb2f3d43f1d6b9f7a6d3f9fdf5eb61fb1d0672b181a95"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "6da1a5244bad",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "6th Edition Abhinandan Samaroh",
+      "organiser": "Nritya Dhara",
+      "description": "A classical dance and cultural heritage showcase including an Odissi presentation by Vinod Kevin Bachan and Vrinda Chadha, a Mohiniyattam piece, a Kathak presentation by Smt. Roopa Rani Das Borah, and an Odissi ensemble performance.",
+      "details": null,
+      "date": "2026-11-18",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "Stein Auditorium, India Habitat Centre, Lodi Road, New Delhi (Entry from Gate No-3)",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Please take your seats by 06:45 PM. Entry from Gate No-3.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/db50690bb9d4.jpg",
+      "thumb": "thumbs/db50690bb9d4.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-05 at 9.33.55 AM.jpeg",
+        "done/WhatsApp Image 2026-11-05 at 9.35.05 AM.jpeg"
+      ],
+      "image_hashes": [
+        "db50690bb9d4fdfc44d9cefbdebcd71fa1be476088cc180dafb13eb6c7ac6b71",
+        "3ead3f728f4aca1f0e9c3f1652c4cffb71372dcb5ad03d4e9f92f17afe019bb8"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "5fdf00c233f3",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Umrao Jaan",
+      "organiser": "Theatreleela Acting Studio",
+      "description": "A stage play based on the novel Umrao Jaan Ada by Mirza Hadi Ruswa, scripted and directed by Varun Sharma.",
+      "details": null,
+      "date": "2026-11-13",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "Shri Ram Centre, Mandi House, Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Seats are available on a first-come, first-served basis.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/c316312b2535.jpg",
+      "thumb": "thumbs/c316312b2535.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-07 at 2.39.50 PM.jpeg"
+      ],
+      "image_hashes": [
+        "c316312b2535e81b40890949cc817ef37c388af801a9928f24f30c59fc5fb05a"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "238a530e5715",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "लल्लन मिस",
+      "organiser": "Ratnay",
+      "description": "A stage production written and directed by Rama Pandey, with production management by Ashok Malkani.",
+      "details": null,
+      "date": "2026-11-12",
+      "end_date": null,
+      "start_time": "18:15",
+      "end_time": null,
+      "venue": "Shri Ram Center, Safdar Hashmi Marg, Mandi House, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Free entry, first come first serve. Contact: 9873102241.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/23a3cc0360d0.jpg",
+      "thumb": "thumbs/23a3cc0360d0.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-09 at 4.28.33 PM.jpeg"
+      ],
+      "image_hashes": [
+        "23a3cc0360d0cfba866e68d90a4412425203bec782a88dd85ed05898a5ec5930"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "e1504e454f83",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Persia in the Mirror of Mughal India",
+      "organiser": "BIPS; Ashoka University",
+      "description": "An international conference on Persian literature, history and culture in Mughal India, with academic sessions on literature, the Deccan Sultanates, Mughal court history and Ghalib. It also includes a valediction and the release of the book Iran: Beauty and Tyranny by Ramin Jahanbegloo.",
+      "details": null,
+      "date": "2026-11-10",
+      "end_date": "2026-11-12",
+      "start_time": "09:30",
+      "end_time": null,
+      "venue": "India International Centre, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Sessions run on 10 to 12 November; the day two programme (12 November) is shown in the screenshots. Book release of Iran: Beauty and Tyranny is 6:00 to 7:30 pm on 12 November, moderated by Nena Mahal.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/b62089fd2fdf.jpg",
+      "thumb": "thumbs/b62089fd2fdf.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-09 at 5.56.39 PM.jpeg",
+        "done/WhatsApp Image 2026-11-09 at 5.56.36 PM.jpeg",
+        "done/WhatsApp Image 2026-11-09 at 5.56.37 PM.jpeg",
+        "done/WhatsApp Image 2026-11-09 at 5.56.38 PM.jpeg",
+        "done/WhatsApp Image 2026-11-09 at 5.56.33 PM.jpeg",
+        "done/WhatsApp Image 2026-11-09 at 5.56.34 PM-2.jpeg",
+        "done/WhatsApp Image 2026-11-09 at 5.56.34 PM.jpeg",
+        "done/WhatsApp Image 2026-11-09 at 5.56.35 PM.jpeg"
+      ],
+      "image_hashes": [
+        "b62089fd2fdf3ab8ac7e4258829b95f358029aab8a809bc1b466f654002bf915",
+        "ac63d6c3b0cacb62c1663ccc05dbac03602f0ea384fc8a41d29971e3f9f95b6e",
+        "6fc247f80cf6e2569d71d828a42836c09cb9c39f62a24a1a2b0b360091b43dbb",
+        "00d7e499396a3481dba6ed26fff979d831c194ab68b160598bdd6fead2eeefc6",
+        "2f772e7c478e98b5ef0889b4e527eba1d72338f7bbd473d65242a774d733e7dc",
+        "548d8687f1858caec9cd150a3f622d46fa17cbafa431ae5528430ef1827f765a",
+        "a9e89560707ac1955dffe5bbae9daaa79f19256249d33e0724711d4a244cc46c",
+        "c9fbaa833959b906e3912fa3343ce1abcb1d1d1699f16937f3ddddf74d9c32ff"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "6254f2becfc5",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Yoga for Prevention and Management of Diabetes: A Holistic Path to Health & Wellbeing!",
+      "organiser": null,
+      "description": "A health and wellness dialogue on yoga for preventing and managing diabetes, with a workshop, a short talk and a panel discussion on integrating yoga with modern medicine. Speakers include Dr. S.V. Madhu and Dr. Ashwani Kumar.",
+      "details": null,
+      "date": "2026-11-10",
+      "end_date": null,
+      "start_time": "10:00",
+      "end_time": "17:00",
+      "venue": "Seminar Rooms 1, 2, 3, Kamaladevi Complex, 40 Max Mueller Marg, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "The morning workshop (10:00 AM to 1:00 PM) is strictly for IIC members and staff only. The afternoon session is 4:00 to 5:00 PM and is followed by a Q and A.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/346e4595b0b0.jpg",
+      "thumb": "thumbs/346e4595b0b0.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-09 at 7.08.06 PM.jpeg"
+      ],
+      "image_hashes": [
+        "346e4595b0b0d14c909faa10ad594ee26f8a79e45a9f570d07c73ad2e9ac2b48"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "f8e1b13ff97d",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Reel Magic - Looking Back With Nostalgia! Sangtye Aika screening",
+      "organiser": "IHC 35mm Film Club, Habitat Centre",
+      "description": "A 35mm screening of the 1959 Marathi film Sangtye Aika, directed by Anant Mane, as part of a celebration of the club's 35mm projectors.",
+      "details": null,
+      "date": "2026-11-10",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "The Stein Auditorium",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Entry free. Limited seating on a first come, first served basis. Open to all.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/db52de5e6afd.jpg",
+      "thumb": "thumbs/db52de5e6afd.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-09 at 7.08.07 PM.jpeg"
+      ],
+      "image_hashes": [
+        "db52de5e6afd6de6fbe1f69563517e6fc3da4a537cd9234da19760efc2e75b5b"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "67f19535fb83",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Celebration of 155th Birth Anniversary of Dr. Sachchidanand Sinha",
+      "organiser": null,
+      "description": "A day of events marking the 155th birth anniversary of Dr. Sachchidanand Sinha, including a thematic photo exhibition, a panel discussion, a short biographical film, a Kathak dance performance and a keynote address.",
+      "details": null,
+      "date": "2026-11-10",
+      "end_date": null,
+      "start_time": "10:30",
+      "end_time": null,
+      "venue": "Conference Room I, IIC; C.D. Deshmukh Auditorium, 40 Max Mueller Marg, New Delhi 110003",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Collaborators are Rajendra Prasad Academy, SAUV Foundation and Stree Darpan. Sessions run from 10:30 AM (exhibition) to the 5:50 PM keynote; the exhibition and panel are in Conference Room I and the film, dance and keynote are in C.D. Deshmukh Auditorium.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/cc83a2cb9c00.jpg",
+      "thumb": "thumbs/cc83a2cb9c00.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-09 at 7.08.08 PM-2.jpeg"
+      ],
+      "image_hashes": [
+        "cc83a2cb9c004bc3b91b92abf522e60bc28887032ad46eca266a933d7451f8f2"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "50966af430c8",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "बोझ (Bojh) - Maithili Natak",
+      "organiser": "Achhinjal",
+      "description": "A Maithili play titled Bojh, written and performed by Kashyap Kamal, with music direction by Vaishali Jha and direction and concept by Shiva Kunder.",
+      "details": null,
+      "date": "2026-11-10",
+      "end_date": null,
+      "start_time": "19:30",
+      "end_time": null,
+      "venue": "Mithirang Studio, Menrod, Mandawali, Delhi 110092",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "This is the ninth presentation (navam prastuti) of the play. Contact: +91-9661496395, achhinjal@gmail.com.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/a3fae9931d4d.jpg",
+      "thumb": "thumbs/a3fae9931d4d.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-09 at 7.08.08 PM.jpeg"
+      ],
+      "image_hashes": [
+        "a3fae9931d4d286d523a3e309a66ffceedc4401ffc5978973f6bb699946ca937"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "31bf93e70622",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "SaMaPa 22nd Sangeet Sammelan",
+      "organiser": "Sopori Academy of Music and Performing Arts",
+      "description": "Delhi's premier classical music festival featuring vocal, flute, dhrupad, santoor and percussion performances by leading Indian classical artists.",
+      "details": null,
+      "date": "2026-11-21",
+      "end_date": "2026-11-22",
+      "start_time": "17:45",
+      "end_time": null,
+      "venue": "Kamani Auditorium, Copernicus Marg, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Entry free. Seating on a first come, first serve basis. Arrive at least 15 minutes before the programme begins. RSVP: 7303055335.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/b18c08befcce.jpg",
+      "thumb": "thumbs/b18c08befcce.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-09 at 9.12.08 PM.jpeg"
+      ],
+      "image_hashes": [
+        "b18c08befcce1b09a4ee46f5947a87fb636e69cbd0a6ded1d34d7bb233c90f27"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "2be82e650a1a",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Mushaira & Kavi Sammelan",
+      "organiser": "Vasta and Dusras",
+      "description": "An evening of Urdu mushaira poetry and Kavi Sammelan celebrating culture.",
+      "details": null,
+      "date": "2026-11-12",
+      "end_date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "venue": "India Islamic Cultural Centre, Lodhi Road, Delhi-110003",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/f6b8c912a562.jpg",
+      "thumb": "thumbs/f6b8c912a562.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-09 at 9.16.22 PM.jpeg"
+      ],
+      "image_hashes": [
+        "f6b8c912a56271fb2d810067c55833ab59285afedf13ca15f3df8832971df591"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-10"
     }
   ]
 }
