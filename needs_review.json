@@ -15,6 +15,55 @@
         "done/WhatsApp Image 2026-11-07 at 2.39.50 PM.jpeg",
         "done/Screenshot 2026-11-10 at 5.26.59 AM.png"
       ]
+    },
+    {
+      "id": "ee24423b81bf",
+      "status": "published",
+      "title": "14th Guru M. L. Koser Festival of Music & Dance",
+      "date": "2026-11-27",
+      "confidence": "high",
+      "reasons": [
+        "no poster"
+      ],
+      "poster": "posters/4e2ff7b061a1.jpg",
+      "thumb": "thumbs/4e2ff7b061a1.jpg",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-10 at 9.53.20 PM.jpeg"
+      ]
+    },
+    {
+      "id": "1d7e0d48c767",
+      "status": "published",
+      "title": "NCPA Connections India - Delhi",
+      "date": "2026-12-02",
+      "confidence": "medium",
+      "reasons": [
+        "confidence is medium",
+        "no poster"
+      ],
+      "poster": "posters/1cda8579b89e.jpg",
+      "thumb": "thumbs/1cda8579b89e.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-11 at 4.00.17 AM.png"
+      ]
+    },
+    {
+      "id": "66e42cf1da5e",
+      "status": "held",
+      "title": "Sumitra Charat Ram Award for Lifetime Achievement",
+      "date": null,
+      "confidence": "low",
+      "reasons": [
+        "date missing or not YYYY-MM-DD: None",
+        "confidence is low",
+        "venue missing",
+        "no poster"
+      ],
+      "poster": "posters/9a4877201a12.jpg",
+      "thumb": "thumbs/9a4877201a12.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-11 at 4.05.04 AM.png"
+      ]
     }
   ]
 }
