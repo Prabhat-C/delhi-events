@@ -38,9 +38,11 @@ body {
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 
 /* ---- Header ---- */
-header { padding: 40px 0 28px; text-align: center; }
-.brand { margin: 0; font-size: 2.6rem; font-weight: 800; letter-spacing: .28em; padding-left: .28em; line-height: 1.1; }
-.tagline { margin: 6px 0 0; color: var(--muted); font-size: .95rem; }
+header { padding: 40px 0 80px; text-align: center; }
+
+.logo { display: inline-block; --ls: .28em; }
+.brand { margin: 0 calc(var(--ls) * -1) 0 0; font-size: 6rem; font-weight: 300; letter-spacing: var(--ls); line-height: 1.1; }
+.tagline { margin: -10px 0 0; width: 100%; color: var(--muted); font-size: 1.1rem; letter-spacing: .2em; font-style: italic; text-align: justify; text-align-last: justify; }
 
 /* ---- List and cards ---- */
 #status { text-align: center; color: var(--muted); padding: 40px 0; margin: 0; }
@@ -144,7 +146,20 @@ dialog::backdrop { background: rgba(0, 0, 0, .6); }
   .zoom { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 28px; padding: 0 24px 24px; align-items: start; }
 }
 
-footer { padding: 24px 0 48px; text-align: center; color: var(--muted); font-size: .85rem; }
+/* ---- Info box (notice and copyright): at the bottom on small screens, top right on wide screens ---- */
+body { position: relative; }
+footer { padding: 8px 0 32px; }
+.info {
+  background: #e1e1e1; padding: 16px 18px; border-radius: 2px;
+  text-align: center; color: var(--muted); font-size: .7rem; line-height: 1.6;
+}
+.info p { margin: 0; }
+.info p + p { margin-top: 12px; }
+.info a { color: inherit; text-decoration: underline; }   /* same colour and font as the rest of the box */
+@media (min-width: 1480px) {
+  footer { padding: 0; }
+  .info { position: absolute; top: 57px; right: 30px; width: 320px; }   /* top = top edge of the FED letters; sits in the free space beside the 760px column */
+}
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; }
   .thumb, .poster.full { transition: none; }
@@ -155,8 +170,10 @@ footer { padding: 24px 0 48px; text-align: center; color: var(--muted); font-siz
 <body>
 <header>
   <div class="wrap">
-    <h1 class="brand">FED</h1>
-    <p class="tagline">Free Events Delhi</p>
+    <div class="logo">
+      <h1 class="brand">FED</h1>
+      <p class="tagline">Free Events Delhi</p>
+    </div>
   </div>
 </header>
 
@@ -171,7 +188,13 @@ footer { padding: 24px 0 48px; text-align: center; color: var(--muted); font-siz
 </main>
 
 <footer>
-  <div class="wrap">Every event listed here is free. Details can change, so check with the organiser.</div>
+  <div class="wrap">
+    <aside class="info">
+      <p>Every event listed here is free. Details can change, so check with the organiser.</p>
+      <p><a href="https://chat.whatsapp.com/LikFIKWgCoILTAktiD6NGE" target="_blank" rel="noopener noreferrer">Join on WhatsApp</a></p>
+      <p>© 2026 FED | Free Events Delhi. Made by Prabhat.</p>
+    </aside>
+  </div>
 </footer>
 
 <dialog id="zoom" aria-labelledby="zoom-title">
@@ -496,10 +519,11 @@ footer { padding: 24px 0 48px; text-align: center; color: var(--muted); font-siz
           return !(last && last < today);                    // hide past events (IST)
         });
 
-        // Recurring events sort as if they happen today
-        function key(ev) { return ev.recurring === true ? today : (ev.date || "9999-12-31"); }
+        // Non-recurring events first, then all recurring events in a group at the end.
+        // Within each group: date (for recurring, the date it started), start time, title.
         events.sort(function (a, b) {
-          return key(a).localeCompare(key(b)) ||
+          return (a.recurring === true) - (b.recurring === true) ||
+                 (a.date || "9999-12-31").localeCompare(b.date || "9999-12-31") ||
                  (a.start_time || "").localeCompare(b.start_time || "") ||
                  (a.title || "").localeCompare(b.title || "");
         });
@@ -517,6 +541,31 @@ footer { padding: 24px 0 48px; text-align: center; color: var(--muted); font-siz
         showStatus("Couldn't load events right now.", true);
       });
   }
+
+  /* ---- Align the top of the info box with the top of the FED letters (any font, any device) ---- */
+  // The gap between the h1's top edge and the top of its capital letters depends on the font, so it is measured
+  // with canvas text metrics and written to the box as an inline `top`. The CSS value is the fallback.
+  // (`top` only has an effect when the box is absolutely positioned, i.e. on wide screens.)
+  var INFO_NUDGE = -10;   // manual fine-tune in pixels: positive moves the box down, negative moves it up
+  var infoBox = document.querySelector(".info");
+  var brandEl = document.querySelector(".brand");
+  function alignInfo() {
+    try {
+      var cs = getComputedStyle(brandEl);
+      var ctx = document.createElement("canvas").getContext("2d");
+      ctx.font = cs.fontStyle + " " + cs.fontWeight + " " + cs.fontSize + " " + cs.fontFamily;
+      var m = ctx.measureText("FED");
+      var lineH = parseFloat(cs.lineHeight);
+      if (!(m.fontBoundingBoxAscent > 0) || !(m.actualBoundingBoxAscent > 0) || !(lineH > 0)) return;   // old browser: keep CSS value
+      var baseline = (lineH - (m.fontBoundingBoxAscent + m.fontBoundingBoxDescent)) / 2 + m.fontBoundingBoxAscent;
+      var top = brandEl.getBoundingClientRect().top + window.pageYOffset + baseline - m.actualBoundingBoxAscent;
+      infoBox.style.top = Math.round(top + INFO_NUDGE) + "px";
+    } catch (e) { /* keep the CSS value */ }
+  }
+  alignInfo();
+  window.addEventListener("resize", alignInfo);
+  window.addEventListener("load", alignInfo);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(alignInfo);
 
   load();
 })();
