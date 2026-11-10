@@ -42,9 +42,10 @@
         "no poster"
       ],
       "poster": "posters/1cda8579b89e.jpg",
-      "thumb": "thumbs/1cda8579b89e.jpg",
+      "thumb": "thumbs/a33bfb383ffb.jpg",
       "source_files": [
-        "done/Screenshot 2026-11-11 at 4.00.17 AM.png"
+        "done/Screenshot 2026-11-11 at 4.00.17 AM.png",
+        "done/thumb-ncpa.png"
       ]
     },
     {
@@ -63,6 +64,21 @@
       "thumb": "thumbs/9a4877201a12.jpg",
       "source_files": [
         "done/Screenshot 2026-11-11 at 4.05.04 AM.png"
+      ]
+    },
+    {
+      "id": "82c9ed716507",
+      "status": "published",
+      "title": "Sumitra Charat Ram Award for Lifetime Achievement",
+      "date": "2026-11-17",
+      "confidence": "high",
+      "reasons": [
+        "no poster"
+      ],
+      "poster": "posters/2556b5c94eca.jpg",
+      "thumb": "thumbs/2556b5c94eca.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-11 at 4.24.54 AM.png"
       ]
     }
   ]
