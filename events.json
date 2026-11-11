@@ -1610,6 +1610,150 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-11"
+    },
+    {
+      "id": "e89a881b1c33",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Knit's Island (2024)",
+      "organiser": "Alliance Française de Delhi",
+      "description": "Screening of the film Knit's Island (2024).",
+      "details": null,
+      "date": "2026-11-12",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "M. L. Bhartia Auditorium, Alliance Franaise",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Free entry.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/edb625680321.jpg",
+      "thumb": "thumbs/edb625680321.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFA//EACEQAAEDAwQDAAAAAAAAAAAAAAEAAgMEESESIjKBMVFx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAf/EABgRAQEAAwAAAAAAAAAAAAAAAAASAQIh/9oADAMBAAIRAxEAPwBesc+aOJsT7NtltsApeCn1yP1CMR29ZJWzOA+lB59Jk11NkiAdtabdoVA+UJkZ2f/Z",
+      "source_files": [
+        "done/Screenshot 2026-11-11 at 11.05.34 PM.png",
+        "done/Screenshot 2026-11-11 at 11.06.06 PM.png"
+      ],
+      "image_hashes": [
+        "edb625680321d8239710158bd3e9e111419bf44af8ce32de7ed80884221b29b1",
+        "7adfc745776a6c7e52ccfbd95078edc6309c0d46cef272053692972d3ac68939"
+      ],
+      "source_labels": [
+        "poster",
+        "other"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-11"
+    },
+    {
+      "id": "4ee50d31c427",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Izhakalkkappuram (2026)",
+      "organiser": "Habitat World",
+      "description": "Screening of the 2026 film Izhakalkkappuram, followed by a discussion with the filmmaker.",
+      "details": null,
+      "date": "2026-11-16",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "Stein Auditorium, India Habitat Centre",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Free entry.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/3d0432ffef08.jpg",
+      "thumb": "thumbs/3d0432ffef08.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMCBAb/xAAmEAABAwEFCQAAAAAAAAAAAAABAAIDEQQSIYHBExUyNUZxc4Kx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgH/xAAXEQEAAwAAAAAAAAAAAAAAAAAAESFB/9oADAMBAAIRAxEAPwDMuGzs76jB1APqnBAN3STvjwv3WuIwyOafauX++ib04fKdEJo9UIS0xCpKEqDgPdCov//Z",
+      "source_files": [
+        "done/Screenshot 2026-11-11 at 11.14.33 PM.png",
+        "done/Screenshot 2026-11-11 at 11.14.50 PM.png"
+      ],
+      "image_hashes": [
+        "3d0432ffef08ca084c6cd9e5608f8c4d2639c912e1078c3cdec4f369c67e34ae",
+        "51f667da2220bcd0985c80ae578d0d33cc9a18c000a7946f56518692918e70d0"
+      ],
+      "source_labels": [
+        "poster",
+        "other"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-11"
+    },
+    {
+      "id": "76a0c88d84d2",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Where Is My Friend's House? (1987)",
+      "organiser": "Navrasa Duende Movie Club",
+      "description": "Screening of the 1987 film Where Is My Friend's House?",
+      "details": null,
+      "date": "2026-11-21",
+      "end_date": null,
+      "start_time": "14:30",
+      "end_time": null,
+      "venue": "M. L. Bhartia Auditorium, Alliance Franaise",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Free entry.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/075d7ac77260.jpg",
+      "thumb": "thumbs/075d7ac77260.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFBAb/xAAiEAACAQMDBQEAAAAAAAAAAAABAgADBBEFEjQTIXFyscH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAAH/xAAZEQEBAQADAAAAAAAAAAAAAAABAAIhMUH/2gAMAwEAAhEDEQA/AJFO2cMFVWfC98KTNFHSHuAQD03GNwcEE5lrRePW9x8jhzLrwnwyM+2Om5e7oVLCotFmRztzlcwjNa5x9f0whTmZ1f/Z",
+      "source_files": [
+        "done/Screenshot 2026-11-11 at 11.16.00 PM.png",
+        "done/Screenshot 2026-11-11 at 11.16.17 PM.png"
+      ],
+      "image_hashes": [
+        "075d7ac77260448899b1088ba3b818dd893acedb788faec0e18add8a6ded481f",
+        "e0c99fc4f6ca2712a88f4fac9622f192d606f88aea3f45eabe3e42b79fc6dd4d"
+      ],
+      "source_labels": [
+        "poster",
+        "other"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-11"
+    },
+    {
+      "id": "ccfda62e92f2",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Citizen Kane (1941)",
+      "organiser": "Navrasa Duende Movie Club",
+      "description": "Screening of the 1941 film Citizen Kane.",
+      "details": null,
+      "date": "2026-11-22",
+      "end_date": null,
+      "start_time": "10:30",
+      "end_time": null,
+      "venue": "M. L. Bhartia Auditorium, Alliance Franaise",
+      "registration_link": "https://fillum.in/film/260",
+      "confidence": "high",
+      "notes": "Free entry. Registration required.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/514609e4d36e.jpg",
+      "thumb": "thumbs/514609e4d36e.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGBP/EACUQAAICAQIFBQEAAAAAAAAAAAECAwQAETEFIWFysRMUNDVBcf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwB9cqe7jsQrM8PNSSv6NNj0xLYFJDVmSssQRgw9M6FtDzB32/vPpm/jfwOIdqeMnl+tpdreBgO7L0b0gmaaEEqAQzDUYZMwbP3nDA//2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-11 at 11.18.33 PM.png",
+        "done/Screenshot 2026-11-11 at 11.18.46 PM.png"
+      ],
+      "image_hashes": [
+        "514609e4d36ecab01ed45c850fc816d7f271ddb1375d016300a4ee1986f6345b",
+        "7aa5bb8abb87bbf79d34117f9cfaf3ba9edf1d5c0198a20fba91e694ddf29407"
+      ],
+      "source_labels": [
+        "poster",
+        "other"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-11"
     }
   ]
 }
