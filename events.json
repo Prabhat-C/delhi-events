@@ -1594,16 +1594,19 @@
       "recurrence": null,
       "recurring": false,
       "poster": "posters/3d9170a29a3b.jpg",
-      "thumb": "thumbs/3d9170a29a3b.jpg",
+      "thumb": "thumbs/faef358a2d18.jpg",
       "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAECAwQG/8QAIhAAAgIBAwQDAAAAAAAAAAAAAQIAEQMSITEyQWGBBCRR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8A6NVUZmYdR8xjQYxk0IbrgHeF16gpoVy99XqTjc05K+tXMYM+BiyWyMDfeJTG9rZUr4u4hi1XusLtq1bVERC0G+YjZH+0cQDUAEJsfvEREUR//9k=",
       "source_files": [
-        "done/tribal-literary-festival.jpg"
+        "done/tribal-literary-festival.jpg",
+        "done/thumb-tribal.png"
       ],
       "image_hashes": [
-        "3d9170a29a3b38b60f535f368bd855cb83904c88a8406546f4d3df41a35c00b1"
+        "3d9170a29a3b38b60f535f368bd855cb83904c88a8406546f4d3df41a35c00b1",
+        "faef358a2d1813d0989152388df11d4dfb989578e90d0b1d4d88c9587fe40fe2"
       ],
       "source_labels": [
-        "poster"
+        "poster",
+        "other"
       ],
       "rung": "haiku-low",
       "added": "2026-11-11"
