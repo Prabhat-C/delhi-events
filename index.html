@@ -38,11 +38,44 @@ body {
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 
 /* ---- Header ---- */
-header { padding: 40px 0 80px; text-align: center; }
+header { padding: 40px 0 56px; text-align: center; }
 
 .logo { display: inline-block; --ls: .28em; }
 .brand { margin: 0 calc(var(--ls) * -1) 0 0; font-size: 6rem; font-weight: 300; letter-spacing: var(--ls); line-height: 1.1; }
 .tagline { margin: -10px 0 0; width: 100%; color: var(--muted); font-size: 1.1rem; letter-spacing: .2em; font-style: italic; text-align: justify; text-align-last: justify; }
+
+/* ---- Search box: sits under the tagline, exactly as wide as the FED letters ---- */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+/* width:0 + min-width:100% stops the input's own size from stretching the logo; it just follows the FED width */
+.search { position: relative; display: block; width: 0; min-width: 100%; margin-top: 22px; text-align: left; }
+.search.pending { visibility: hidden; }            /* keeps its space until events load, so nothing jumps */
+.search input {
+  display: block; width: 100%; margin: 0; padding: 2px 30px 2px 10px;   /* thin box: height is just a little more than the text */
+  font: inherit; font-size: 16px;                  /* 16px stops iPhones zooming in on focus */
+  line-height: 1.25; color: var(--ink);
+  background: #f4f4f4; border: 1px solid #b9bec3; border-radius: 2px;
+  -webkit-appearance: none; appearance: none;
+}
+/* No blue focus ring on the box; the border simply turns darker while typing */
+.search input:focus, .search input:focus-visible { outline: none; border-color: var(--muted); }
+.search input::placeholder { color: var(--muted); opacity: 1; }
+.search input::-webkit-search-cancel-button,
+.search input::-webkit-search-decoration { -webkit-appearance: none; appearance: none; display: none; }
+.search-clear {
+  position: absolute; top: 0; right: 0; width: 30px; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  background: none; border: 0; padding: 0; cursor: pointer;
+  font-size: 1.2rem; line-height: 1; color: var(--muted);
+}
+.search-clear[hidden] { display: none; }
+/* Magnifier shows while the box is empty; the x takes its place once something is typed. Same dim grey for both. */
+.search { --search-ink: #b3b7bc; }
+.search-clear { color: var(--search-ink); }
+.search-icon { position: absolute; top: 50%; right: 8px; transform: translateY(-50%); color: var(--search-ink); pointer-events: none; }
+.search.has-value .search-icon { display: none; }
 
 /* ---- List and cards ---- */
 #status { text-align: center; color: var(--muted); padding: 40px 0; margin: 0; }
@@ -160,6 +193,43 @@ footer { padding: 8px 0 32px; }
   footer { padding: 0; }
   .info { position: absolute; top: 57px; right: 24px; width: min(320px, calc(50vw - 440px)); }   /* top = top edge of the FED letters; sits in the free space beside the 760px column */
 }
+/* ---- Event rail: fixed vertical grid, one row per day for the next 30 days, one cell per event ---- */
+:root {
+  --row: clamp(9px, calc((100dvh - 90px) / 36), 14px);   /* row height shrinks to fit short screens */
+  --cell: calc(var(--row) - 4px);
+  --cell-gap: 3px;
+  --cell-bg: #a1c5ad;                                     /* cell colour */
+}
+.rail { position: fixed; top: 50%; transform: translateY(-50%); left: 16px; z-index: 5;
+         /* width = free space between the viewport's left edge and the cards (cards start at (100vw - 760px) / 2 + 16px),
+            minus the rail's own left offset and a gap. Cells wrap to fit, so smaller cells mean more per row. */
+         width: calc((100vw - 760px) / 2 - 24px); }  /* vertically centred: shrinking rows adds equal space above and below */
+.rail[hidden] { display: none; }
+.rail-month {
+  margin-top: 8px; height: var(--row); display: flex; align-items: center;
+  font-size: calc(var(--row) * .62); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink);
+}
+.rail-month:first-child { margin-top: 0; }
+.rail-row { display: flex; align-items: flex-start; gap: 6px; min-height: var(--row); }
+.rail-day {
+  flex: none; width: 18px; height: var(--row); display: flex; align-items: center; justify-content: flex-start;   /* left edge lines up with the month's first letter */
+  font-size: calc(var(--row) * .6); color: var(--muted); font-variant-numeric: tabular-nums;
+}
+.rail-day.today { color: var(--ink); font-weight: 700; }
+.rail-cells { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; gap: var(--cell-gap); padding: 2px 0; }
+.rail-cell {
+  width: var(--cell); height: var(--cell); padding: 0; border: 0; border-radius: 2px;
+  background: var(--cell-bg); cursor: pointer;
+}
+.rail-cell:hover { filter: brightness(1.25); }
+.rail-cell[hidden] { display: none; }               /* cells of events filtered out by the search */
+.card.flash { outline: 3px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 1000px) {
+  .rail { display: none !important; }                     /* no rail on phones and small screens */
+}
+@media (min-width: 1001px) {
+  :root { --cell-gap: 4px; }
+}
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; }
   .thumb, .poster.full { transition: none; }
@@ -168,11 +238,19 @@ footer { padding: 8px 0 32px; }
 </style>
 </head>
 <body>
+<nav class="rail" id="rail" aria-label="Events in the next 30 days" hidden></nav>
 <header>
   <div class="wrap">
     <div class="logo">
       <h1 class="brand">FED</h1>
       <p class="tagline">Free Events Delhi</p>
+      <div class="search pending" id="search" role="search">
+        <label for="q" class="sr-only">Search events</label>
+        <input type="search" id="q" enterkeyhint="search" autocomplete="off"
+               autocapitalize="off" autocorrect="off" spellcheck="false">
+        <button type="button" class="search-clear" id="search-clear" aria-label="Clear search" hidden>&times;</button>
+        <svg class="search-icon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15 15l6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </div>
     </div>
   </div>
 </header>
@@ -190,13 +268,13 @@ footer { padding: 8px 0 32px; }
 <footer>
   <div class="wrap">
     <aside class="info">
-      <p>Every event listed here is free. Details can change, so check with the organiser.</p>
+      <p>Events are free. Details can change, so check with the organiser.</p>
       <p>
         <!-- Replace REPLACE_FEEDBACK_LINK below (a Google Form or a mailto: link both work) -->
         <a href="https://forms.gle/78FRMKMFPsaNT2Ry9" target="_blank" rel="noopener noreferrer">Feedback</a> &middot;
         <a href="https://chat.whatsapp.com/LikFIKWgCoILTAktiD6NGE" target="_blank" rel="noopener noreferrer">Join on WhatsApp</a>
       </p>
-      <p>© 2026 FED | Free Events Delhi. Made by Prabhat.</p>
+      <p>© 2026 FED. Made by Prabhat.</p>
     </aside>
   </div>
 </footer>
@@ -217,6 +295,14 @@ footer { padding: 8px 0 32px; }
   var listEl = document.getElementById("events");
   var dialog = document.getElementById("zoom");
   var zoomBody = document.getElementById("zoom-body");
+  var railEl = document.getElementById("rail");
+  var cardFor = new Map();                          // event object -> its <li>, used by the rail
+  var RAIL_DAYS = 30;
+  var searchEl = document.getElementById("search");
+  var searchInput = document.getElementById("q");
+  var searchClear = document.getElementById("search-clear");
+  var searchText = new Map();                       // event object -> lowercase, accent-free text to search
+  var railCells = new Map();                        // event object -> its rail buttons (one per day it runs)
 
   /* ---- Helpers ---- */
 
@@ -493,6 +579,124 @@ footer { padding: 8px 0 32px; }
   dialog.addEventListener("click", function (e) { if (e.target === dialog) dialog.close(); });
   dialog.addEventListener("close", function () { document.body.style.overflow = ""; });
 
+  /* ---- Event rail ---- */
+
+  function addDays(iso, n) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+    return new Date(Date.UTC(+m[1], +m[2] - 1, +m[3] + n)).toISOString().slice(0, 10);
+  }
+
+  function goToCard(ev) {
+    var li = cardFor.get(ev);
+    if (!li) return;
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    li.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+    var card = li.firstElementChild;
+    card.classList.remove("flash");
+    void card.offsetWidth;                          // restart the highlight if clicked twice
+    card.classList.add("flash");
+    setTimeout(function () { card.classList.remove("flash"); }, 1800);
+  }
+
+  // One row per day for the next 30 days (today first), one cell per event on that day.
+  // A multi-day event gets a cell on every day it runs. Recurring events are left out.
+  function buildRail(events, today) {
+    railEl.replaceChildren();
+    railEl.hidden = true;
+    railCells.clear();
+    var days = [], byDay = {}, total = 0;
+    for (var i = 0; i < RAIL_DAYS; i++) { days.push(addDays(today, i)); byDay[days[i]] = []; }
+    events.forEach(function (ev) {
+      if (ev.recurring === true || !ev.date) return;
+      var last = ev.end_date || ev.date;
+      days.forEach(function (d) { if (ev.date <= d && d <= last) { byDay[d].push(ev); total++; } });
+    });
+    if (!total) return;
+
+    var lastMonth = null;
+    days.forEach(function (d, idx) {
+      var mi = +d.slice(5, 7) - 1;
+      if (mi !== lastMonth) {                       // month split with short month name
+        railEl.append(el("div", { "class": "rail-month" }, MONTHS[mi]));
+        lastMonth = mi;
+      }
+      var cells = el("div", { "class": "rail-cells" });
+      byDay[d].forEach(function (ev) {
+        var title = str(ev.title) || "Untitled event";
+        var b = el("button", { type: "button", "class": "rail-cell", title: title,
+                               "aria-label": title + ", " + fmtDate(d, false) });
+        b.addEventListener("click", function () { goToCard(ev); });
+        var mine = railCells.get(ev);
+        if (!mine) railCells.set(ev, mine = []);
+        mine.push(b);
+        cells.append(b);
+      });
+      railEl.append(el("div", { "class": "rail-row" }, [
+        el("span", { "class": "rail-day" + (idx === 0 ? " today" : "") }, String(+d.slice(8, 10))),
+        cells
+      ]));
+    });
+    railEl.hidden = false;
+  }
+
+  /* ---- Search ---- */
+
+  // Lowercase and strip accents so "francaise" finds "Française". Devanagari and Urdu are left as they are.
+  function norm(s) {
+    return String(s == null ? "" : s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  }
+
+  // Title, venue, description and organiser, joined into one searchable string
+  function haystack(ev) {
+    return norm([ev.title, ev.venue, ev.description, ev.organiser].map(str).filter(Boolean).join(" "));
+  }
+
+  // Every typed word must appear somewhere in the event's text. No match = the cards simply disappear.
+  function applySearch() {
+    var terms = norm(searchInput.value).split(/\s+/).filter(Boolean);
+    searchClear.hidden = !searchInput.value;
+    searchEl.classList.toggle("has-value", !!searchInput.value);
+    cardFor.forEach(function (li, ev) {
+      var hay = searchText.get(ev) || "";
+      var ok = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      li.hidden = !ok;
+      (railCells.get(ev) || []).forEach(function (b) { b.hidden = !ok; });
+    });
+  }
+
+  // Keep the search in the address bar (?q=...) so a filtered view can be shared
+  var urlTimer = null;
+  function syncUrl() {
+    try {
+      var u = new URL(location.href);
+      var q = searchInput.value.trim();
+      if (q) u.searchParams.set("q", q); else u.searchParams.delete("q");
+      history.replaceState(null, "", u);
+    } catch (e) { /* the address bar is a nicety, never a requirement */ }
+  }
+
+  searchInput.addEventListener("input", function () {
+    applySearch();
+    clearTimeout(urlTimer);
+    urlTimer = setTimeout(syncUrl, 400);             // wait for typing to pause (browsers limit history updates)
+  });
+  searchInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") searchInput.blur();       // closes the phone keyboard
+    else if (e.key === "Escape" && searchInput.value) { e.preventDefault(); clearSearch(false); }
+  });
+  searchClear.addEventListener("click", function () { clearSearch(true); });
+
+  function clearSearch(refocus) {
+    searchInput.value = "";
+    applySearch();
+    syncUrl();
+    if (refocus) searchInput.focus();
+  }
+
+  try { searchInput.value = new URLSearchParams(location.search).get("q") || ""; } catch (e) { /* ignore */ }
+  searchClear.hidden = !searchInput.value;
+  searchEl.classList.toggle("has-value", !!searchInput.value);
+
   /* ---- Load and render ---- */
 
   function showLoading() {
@@ -517,6 +721,10 @@ footer { padding: 8px 0 32px; }
   function load() {
     showLoading();
     listEl.replaceChildren();
+    cardFor.clear();
+    searchText.clear();
+    searchEl.classList.add("pending");
+    railEl.hidden = true;
     fetch("events.json", { cache: "no-cache" })
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
@@ -551,7 +759,15 @@ footer { padding: 8px 0 32px; }
         }
         statusEl.hidden = true;
         skeleton.hidden = true;
-        events.forEach(function (ev, i) { listEl.append(buildCard(ev, thisYear, i)); });
+        events.forEach(function (ev, i) {
+          var li = buildCard(ev, thisYear, i);
+          cardFor.set(ev, li);
+          searchText.set(ev, haystack(ev));
+          listEl.append(li);
+        });
+        buildRail(events, today);
+        searchEl.classList.remove("pending");
+        applySearch();                                // applies a search typed early or taken from ?q=
         preloadFirst(events.map(function (ev) { return assetUrl(ev.poster) || assetUrl(ev.thumb); }));
       })
       .catch(function () {
