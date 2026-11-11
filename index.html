@@ -16,7 +16,14 @@
   --muted: #565e66;
   --line: #e1e4e7;
   --accent: #0f5c70;      /* "Recurring" tag and text links */
-  --btn: #464e62;         /* Register button (dark grey) */
+  /* ONE theme colour for the left grid, the right day list and the Register button.
+     >>> Change --theme and all three follow. Only its hue and saturation are used: each part keeps its own lightness. <<< */
+  --theme: #2f7d9e;
+  --theme-light: hsl(from var(--theme) h calc(s * .45) 70%);   /* grid cells, day-list numbers */
+  --theme-mid:   hsl(from var(--theme) h s 40%);               /* grid cell of the card in the middle of the screen */
+  --theme-dark:  hsl(from var(--theme) h s 25%);               /* highlighted day and month in the day list */
+  --theme-btn:   hsl(from var(--theme) h calc(s * .3) 33%);    /* Register button */
+  --btn: var(--theme-btn);
   --btn-ink: #ffffff;
   --focus: #1a5fd0;
   --thumb-bg: #e4e7ea;
@@ -198,7 +205,8 @@ footer { padding: 8px 0 32px; }
   --row: clamp(9px, calc((100dvh - 90px) / 36), 14px);   /* row height shrinks to fit short screens */
   --cell: calc(var(--row) - 4px);
   --cell-gap: 3px;
-  --cell-bg: #a1c5ad;                                     /* cell colour */
+  --cell-bg: var(--theme-light);                          /* cell colour (comes from --theme at the top of the file) */
+  --cell-on: var(--theme-mid);                            /* colour of the cell whose card is in the middle of the screen */
 }
 .rail { position: fixed; top: 50%; transform: translateY(-50%); left: 16px; z-index: 5;
          /* width = free space between the viewport's left edge and the cards (cards start at (100vw - 760px) / 2 + 16px),
@@ -221,14 +229,52 @@ footer { padding: 8px 0 32px; }
   width: var(--cell); height: var(--cell); padding: 0; border: 0; border-radius: 2px;
   background: var(--cell-bg); cursor: pointer;
 }
+.rail-cell { transition: background-color .2s ease; }
 .rail-cell:hover { filter: brightness(1.25); }
+.rail-cell.on { background: var(--cell-on); }
 .rail-cell[hidden] { display: none; }               /* cells of events filtered out by the search */
-.card.flash { outline: 3px solid var(--accent); outline-offset: 2px; }
+.card.flash { border-color: var(--muted); }            /* same look as hovering the card; shown briefly after a grid cell is clicked */
 @media (max-width: 1000px) {
   .rail { display: none !important; }                     /* no rail on phones and small screens */
 }
 @media (min-width: 1001px) {
   :root { --cell-gap: 4px; }
+}
+
+/* ---- Day list (phones and small screens): fixed column of the next 30 days near the right edge ----
+   Cards scroll underneath it. The day of the card in the middle of the screen is highlighted.
+   >>> Change the look of this list with the variables on the first line below. <<< */
+.daylist {
+  --dl-row: clamp(10px, calc((100dvh - 110px) / 40), 14px);  /* height of one day; the numbers scale with it, and the list stays centred */
+  --dl-font: calc(var(--dl-row) * .72);                     /* number / month text size (same style as the desktop grid numbers) */
+  --dl-ink: var(--theme-light);                             /* colour of the day numbers (from --theme at the top of the file) */
+  --dl-month-ink: var(--dl-ink);                              /* colour of the vertical month names */
+  --dl-on: var(--theme-dark);                               /* colour of the highlighted day and month */
+  --dl-right: 15px;                                          /* distance from the right edge of the screen */
+  display: none;
+  position: fixed; top: 50%; right: var(--dl-right); transform: translateY(-50%); z-index: 5;
+  flex-direction: column; align-items: center;
+  pointer-events: none; user-select: none; -webkit-user-select: none;   /* never blocks taps on the cards */
+}
+.dl-day {
+  height: var(--dl-row); display: flex; align-items: center;
+  font-size: var(--dl-font); line-height: 1; color: var(--dl-ink); font-variant-numeric: tabular-nums;
+}
+.dl-day.month-start { margin-top: 4px; }                    /* small gap where the month changes */
+.dl-month {
+  writing-mode: vertical-rl; text-orientation: upright;      /* letters stacked top to bottom */
+  font-size: var(--dl-font); font-weight: 700; line-height: 1; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--dl-month-ink);
+}
+.dl-month.top { margin-bottom: 6px; }
+.dl-month.bottom { margin-top: 6px; }
+.dl-day.on, .dl-month.on { color: var(--dl-on); font-weight: 700; }
+@media (max-width: 1000px) {
+  .daylist:not([hidden]) { display: flex; }
+}
+/* Old browsers without relative colours (before 2023) get fixed shades of the default green instead */
+@supports not (color: hsl(from red h s l)) {
+  :root { --theme-light: #a1c5ad; --theme-mid: #2f9e54; --theme-dark: #1d6233; --theme-btn: #47624f; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; }
@@ -239,6 +285,7 @@ footer { padding: 8px 0 32px; }
 </head>
 <body>
 <nav class="rail" id="rail" aria-label="Events in the next 30 days" hidden></nav>
+<div class="daylist" id="daylist" aria-hidden="true" hidden></div>
 <header>
   <div class="wrap">
     <div class="logo">
@@ -296,6 +343,9 @@ footer { padding: 8px 0 32px; }
   var dialog = document.getElementById("zoom");
   var zoomBody = document.getElementById("zoom-body");
   var railEl = document.getElementById("rail");
+  var daylistEl = document.getElementById("daylist");
+  var dlDays = {};                                  // ISO date -> its element in the day list
+  var dlTopMonth = null, dlTopEl = null, dlBottomEl = null, dlToday = null, dlLast = null;
   var cardFor = new Map();                          // event object -> its <li>, used by the rail
   var RAIL_DAYS = 30;
   var searchEl = document.getElementById("search");
@@ -639,6 +689,85 @@ footer { padding: 8px 0 32px; }
     railEl.hidden = false;
   }
 
+  /* ---- Day list (small screens) ---- */
+
+  // Same 30 days as the grid: current month name at the top (vertical), day numbers, next month name at the bottom.
+  function buildDayList(events, today) {
+    daylistEl.replaceChildren();
+    daylistEl.hidden = true;
+    dlDays = {};
+    dlToday = today;
+    dlLast = addDays(today, RAIL_DAYS - 1);
+    var any = events.some(function (ev) {
+      return ev.recurring !== true && ev.date && ev.date <= dlLast && (ev.end_date || ev.date) >= today;
+    });
+    if (!any) return;
+
+    dlTopMonth = +today.slice(5, 7) - 1;
+    dlTopEl = el("div", { "class": "dl-month top" }, MONTHS[dlTopMonth]);
+    dlBottomEl = el("div", { "class": "dl-month bottom" }, MONTHS[(dlTopMonth + 1) % 12]);
+    daylistEl.append(dlTopEl);
+    var lastMonth = dlTopMonth;
+    for (var i = 0; i < RAIL_DAYS; i++) {
+      var d = addDays(today, i);
+      var mi = +d.slice(5, 7) - 1;
+      var cls = "dl-day" + (mi !== lastMonth ? " month-start" : "");
+      lastMonth = mi;
+      var node = el("div", { "class": cls }, String(+d.slice(8, 10)));
+      dlDays[d] = node;
+      daylistEl.append(node);
+    }
+    daylistEl.append(dlBottomEl);
+    daylistEl.hidden = false;
+  }
+
+  // Runs on every scroll: finds the card nearest the middle of the screen, then lights its cell in the left grid
+  // (wide screens) and its day and month in the right-hand day list (small screens).
+  var railOn = null;
+  function updateDayList() {
+    if (daylistEl.hidden && railEl.hidden) return;
+    var mid = window.innerHeight / 2, best = null, bestDist = Infinity;
+    cardFor.forEach(function (li, ev) {
+      if (li.hidden) return;                          // filtered out by the search
+      var r = li.getBoundingClientRect();
+      if (!r.height) return;
+      var dist = r.top <= mid && r.bottom >= mid ? 0 : Math.min(Math.abs(r.top - mid), Math.abs(r.bottom - mid));
+      if (dist < bestDist) { bestDist = dist; best = ev; }
+    });
+
+    // Grid: one cell lit, the first visible cell of that event (its start day, or today if it started earlier)
+    if (railOn) railOn.classList.remove("on");
+    railOn = null;
+    var mine = best && railCells.get(best);
+    if (mine) {
+      railOn = mine.filter(function (b) { return !b.hidden; })[0] || null;
+      if (railOn) railOn.classList.add("on");
+    }
+
+    if (daylistEl.hidden) return;
+    Object.keys(dlDays).forEach(function (d) { dlDays[d].classList.remove("on"); });
+    dlTopEl.classList.remove("on");
+    dlBottomEl.classList.remove("on");
+    if (!best || best.recurring === true || !best.date) return;     // recurring events have no date in the list
+
+    // Only ONE day is lit: the day the card's event starts on (today if it started earlier). Cards are sorted by
+    // date, so the light moves to the next day only after the last card of the previous day has scrolled past.
+    var start = best.date < dlToday ? dlToday : best.date;
+    if (start > dlLast || !dlDays[start]) return;                    // outside the 30 days
+    dlDays[start].classList.add("on");
+    var sm = +start.slice(5, 7) - 1;
+    (sm === dlTopMonth ? dlTopEl : dlBottomEl).classList.add("on");
+  }
+
+  var dlQueued = false;
+  function queueDayList() {
+    if (dlQueued) return;
+    dlQueued = true;
+    requestAnimationFrame(function () { dlQueued = false; updateDayList(); });
+  }
+  window.addEventListener("scroll", queueDayList, { passive: true });
+  window.addEventListener("resize", queueDayList);
+
   /* ---- Search ---- */
 
   // Lowercase and strip accents so "francaise" finds "Française". Devanagari and Urdu are left as they are.
@@ -662,6 +791,7 @@ footer { padding: 8px 0 32px; }
       li.hidden = !ok;
       (railCells.get(ev) || []).forEach(function (b) { b.hidden = !ok; });
     });
+    queueDayList();                                 // cards moved or vanished, so re-pick the middle card
   }
 
   // Keep the search in the address bar (?q=...) so a filtered view can be shared
@@ -725,6 +855,8 @@ footer { padding: 8px 0 32px; }
     searchText.clear();
     searchEl.classList.add("pending");
     railEl.hidden = true;
+    daylistEl.hidden = true;
+    railOn = null;
     fetch("events.json", { cache: "no-cache" })
       .then(function (res) {
         if (!res.ok) throw new Error("HTTP " + res.status);
@@ -766,8 +898,9 @@ footer { padding: 8px 0 32px; }
           listEl.append(li);
         });
         buildRail(events, today);
+        buildDayList(events, today);
         searchEl.classList.remove("pending");
-        applySearch();                                // applies a search typed early or taken from ?q=
+        applySearch();                              // applies a search typed early or taken from ?q=
         preloadFirst(events.map(function (ev) { return assetUrl(ev.poster) || assetUrl(ev.thumb); }));
       })
       .catch(function () {
