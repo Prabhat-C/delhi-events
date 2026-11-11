@@ -971,24 +971,30 @@
       "date": "2026-11-12",
       "end_date": null,
       "start_time": "16:00",
-      "end_time": null,
+      "end_time": "22:00",
       "venue": "India Islamic Cultural Centre, Lodhi Road, Delhi-110003",
       "registration_link": null,
       "confidence": "high",
-      "notes": "",
+      "notes": "Kavi Sammelan 4:00 PM to 5:30 PM; Mushaira 6:30 PM to 10 PM.",
       "recurrence": null,
       "recurring": false,
       "poster": "posters/f6b8c912a562.jpg",
       "thumb": "thumbs/f6b8c912a562.jpg",
       "source_files": [
-        "done/WhatsApp Image 2026-11-09 at 9.16.22 PM.jpeg"
+        "done/WhatsApp Image 2026-11-09 at 9.16.22 PM.jpeg",
+        "done/Screenshot 2026-11-11 at 8.39.20 PM.png"
       ],
       "image_hashes": [
-        "f6b8c912a56271fb2d810067c55833ab59285afedf13ca15f3df8832971df591"
+        "f6b8c912a56271fb2d810067c55833ab59285afedf13ca15f3df8832971df591",
+        "c29775eeda80bcd3eab7e4ac5dc82361cb8762b7f2a2ace4697d400c319d4b2f"
       ],
       "rung": "haiku-low",
       "added": "2026-11-10",
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBAgQF/8QAJRAAAQIEBQUBAAAAAAAAAAAAAQACAxEhMQQSMkFRYYGRodHi/8QAFwEBAAMAAAAAAAAAAAAAAAAAAQACA//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwDjvxZADbusZmkqU9KjcTEZV5zbXqBwkuE4h+TQ4TH5UjZqMcvqNO0zYISYOjuhMMLcJxHfZKCDK3taHwGZ3XvyoOHZ18oCsHR3QtEKA0M38oSs/9k="
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBAgQF/8QAJRAAAQIEBQUBAAAAAAAAAAAAAQACAxEhMQQSMkFRYYGRodHi/8QAFwEBAAMAAAAAAAAAAAAAAAAAAQACA//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwDjvxZADbusZmkqU9KjcTEZV5zbXqBwkuE4h+TQ4TH5UjZqMcvqNO0zYISYOjuhMMLcJxHfZKCDK3taHwGZ3XvyoOHZ18oCsHR3QtEKA0M38oSs/9k=",
+      "source_labels": [
+        "poster",
+        "poster"
+      ]
     },
     {
       "id": "86bc0112112f",
@@ -1295,6 +1301,306 @@
       ],
       "image_hashes": [
         "aacff0f170aa442a06096450bd86dad72ee4ac2afb9f279c8e0b11cda1182019"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-11"
+    },
+    {
+      "id": "26119afe44ab",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Taana-Baana: Many Strands, One Song",
+      "organiser": "Arthshila Delhi",
+      "description": "A musical performance by vocalist Vidya Shah, an evening of music and expression about the many strands that come together to create a shared song. It is presented in conjunction with an ongoing exhibition.",
+      "details": "Join us for Taana-Baana: Many Strands, One Song, a musical performance by acclaimed vocalist Vidya Shah.\n\nAn evening of music and expression, celebrating the many strands that come together to create a shared song.\n\nPresented in conjunction with the ongoing exhibition.\n\n14 November 2026\n6:00 PM\nArthshila Delhi, Okhla Phase II\nRegistration Mendatory (free):",
+      "date": "2026-11-14",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Arthshila Delhi, Okhla Phase II",
+      "registration_link": "https://go.allevents.in/bb9wj",
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/e15cb03ebfcd.jpg",
+      "thumb": "thumbs/e15cb03ebfcd.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAYCBQMEB//EACUQAAIBAwMEAgMAAAAAAAAAAAECAwAEEgURIQYTMUEUUWFxkf/EABcBAAMBAAAAAAAAAAAAAAAAAAABAgP/xAAZEQEBAAMBAAAAAAAAAAAAAAAAAgERMUH/2gAMAwEAAhEDEQA/AGOOSSGRgqbqWJ3Lk+T+q2e8SOAKVr/qiSyv7i3W0RxG5XIuRvWOXqm4VlDWMZ3XLiQ+P5QfTcJWHqiq7Q706pY/IaMRHMriDv4ooIo6tZTSa1dt2ZcWmOLBDianNbsY2VbdlLDnGNjh+N/VdCoqKnfrSbxOOKHpKJ00fZlKnutwQR9UVfUVbN//2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-11 at 8.38.06 PM.png",
+        "done/Screenshot 2026-11-11 at 8.38.39 PM.png"
+      ],
+      "image_hashes": [
+        "e15cb03ebfcd0272fb1c249fd01917f5f664dc8fad984dc227769dc91e1b7343",
+        "7991263deb36431cda83912864408e25ee25a8dc71e1ebece2e895967f74b08a"
+      ],
+      "source_labels": [
+        "poster",
+        "text_caption"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-11"
+    },
+    {
+      "id": "43824ea58a62",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "AFD Ciné-Club: Knit's Island",
+      "organiser": "Alliance Française Delhi",
+      "description": "A French film in which a film crew enters a 250 km² online space where people gather to simulate a survivalist fiction, meeting players who may or may not be playing.",
+      "details": null,
+      "date": "2026-11-12",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "M.L Bhartia Auditorium, Alliance Française de Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "French movie with English subtitles.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/4ac4346cf8f9.jpg",
+      "thumb": "thumbs/4ac4346cf8f9.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAYBAgMEBf/EACAQAAICAwADAAMAAAAAAAAAAAECAAMEERIhImExQVH/xAAZAQACAwEAAAAAAAAAAAAAAAAAAQIDBAX/xAAaEQEBAAIDAAAAAAAAAAAAAAAAAREhAhJR/9oADAMBAAIRAxEAPwBobMr7atCe1OjtTqWpLunSOGG9ewMUb6cnLy8i6jNKV2uWVWU/g/o+Z0MDNqw8OvFy8hzYrElgmx5MLpZONupDIrBhtSCPkJq1ZeJWujmUts732BCLKPW+E9buVA/nyQOXJ9fP0zFCZ3Vws68tqErCBv/Z",
+      "source_files": [
+        "done/Screenshot 2026-11-11 at 8.38.56 PM.png"
+      ],
+      "image_hashes": [
+        "4ac4346cf8f91d0d4921cbe3848d99d91fd306603ff2e6125ef1789a82f3721b"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-11"
+    },
+    {
+      "id": "37dca6622989",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Films of the Spirit: Death of Death",
+      "organiser": "India International Centre",
+      "description": "A documentary that follows researchers, biohackers and visionaries pursuing immortality, asking whether we would want to live forever.",
+      "details": null,
+      "date": "2026-11-12",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "Lecture Room 1, Annexe, India International Centre, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "English, 2025, 54 minutes. Monthly film festival.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/b4d8a9dc3622.jpg",
+      "thumb": "thumbs/b4d8a9dc3622.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAUABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAMEBQIG/8QAJRAAAQQBAwMFAQAAAAAAAAAAAgABAxEEBRIhIjFxBhNBUWGB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAMAwEAAhEDEQA/APXmI+3zbeFGO0i5tr+rWNleoAxppIzxp+h3bduanpW9P1EM0TLZLEwvXV88Wi4Y0iFrbwiiaQWbhydv1FXErPpWMUhHJuku+Cp2a/4u8PAixgcRcz57m90iIhWCjFn7IiJgf//Z",
+      "source_files": [
+        "done/Screenshot 2026-11-11 at 8.39.38 PM.png"
+      ],
+      "image_hashes": [
+        "b4d8a9dc36228266d6b9ec845826e7c0fc8a19ab8fe7fced691b3bee567b6730"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-11"
+    },
+    {
+      "id": "5f3e56080846",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Ek Shaam Kinnaron Ke Naam",
+      "organiser": "Ratnav",
+      "description": "The first session of a programme in which writers share poems, stories and perspectives on the lives, struggles and dreams of the kinnar community.",
+      "details": null,
+      "date": "2026-11-12",
+      "end_date": null,
+      "start_time": "16:30",
+      "end_time": "17:30",
+      "venue": "Shriram Centre, Mandi House",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Open to all: writers, poets, storytellers, thinkers and supporters. Followed by high tea.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/0e7524ce181e.jpg",
+      "thumb": "thumbs/0e7524ce181e.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFBAH/xAAqEAACAQMDAgQHAQAAAAAAAAABAgMABBESIUEFBjFRYbETFCMyYnGB8f/EABcBAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAcEQACAgIDAAAAAAAAAAAAAAAAARESAyExQWH/2gAMAwEAAhEDEQA/AN1/1SRI0aOJA5DEiQkEAc48vWpx69OqmQQxMoX89/Sm3K3EvUoUWHS7LIqqxwMeJPvWX4c2ogiPHByvtmsY3wdEaRoXuuUKNdrGD6OaKYe3I5VR1bGUGdhufPairti7Cnp0Q3UrJcQwSJLGsgUtJltXH8NUheIwVvkp9wCcR535qZetPbQRx2UrW4JZmCsd9/PxpadwPbQCK4Vp5QPvO3+/uplBVsb1S6lN39MSouhcKQQRtzRUae/1ys7KxZzqY6uTRSirNaP/2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-11 at 8.40.09 PM.png"
+      ],
+      "image_hashes": [
+        "0e7524ce181e93c1f0e59b43c9217732972c6400cc5a705bdcc23b577d2164bc"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-11"
+    },
+    {
+      "id": "43264fc184db",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Bhagat Ravidas: Life, Teachings and Philosophy",
+      "organiser": "Sahitya Akademi in collaboration with Mata Sundari College for Women",
+      "description": "A literary forum on the life, teachings and philosophy of Bhagat Ravidas, dedicated to the 650th birth anniversary of Shiromani Bhagat Sant Ravidas Ji.",
+      "details": null,
+      "date": "2026-11-12",
+      "end_date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "venue": "Mata Gujri Hall, Mata Sundari College for Women, Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Tea after the programme.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/fcc45c18e242.jpg",
+      "thumb": "thumbs/fcc45c18e242.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAaABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAECAwb/xAAgEAACAgMAAQUAAAAAAAAAAAABAgAREiExAyMyQWGB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgED/8QAGBEBAQEBAQAAAAAAAAAAAAAAAAExESH/2gAMAwEAAhEDEQA/APShVUnEDI7kX0ybqibNCaw8a7wF9vcqIrC8UI5FdGYgCjgG9xGCrpVAERMxiaIOOP3Ir0KQqPmPJ7f2YUAOKEnCl8dbJ7EREL//2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-11 at 8.40.39 PM.png"
+      ],
+      "image_hashes": [
+        "fcc45c18e242accb0b122a9ad6bae4c740f9f4841a3ae693d38fcd4d0c74bedc"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-11"
+    },
+    {
+      "id": "62ebbc1d6d3e",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "State of Parliamentary Democracy in India",
+      "organiser": null,
+      "description": "A panel discussion on the state of parliamentary democracy in India, with Kapil Sibal, Balveer Arora, Sobhana K. Nair and Amrita Madhukalya, in conversation with Suhas Borker.",
+      "details": null,
+      "date": "2026-11-12",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Annexe Lecture Room II, India International Centre",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "This is the 20th edition of the annual discussion which began in 2006.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/6e6d09817899.jpg",
+      "thumb": "thumbs/6e6d09817899.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIEAwb/xAAiEAABBAIBBAMAAAAAAAAAAAABAAIDEQQhEgUycdEjYYH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/AOpyXOie17d3rZPulkMyVxAaGeNp8kkZeP8AKWi+3kBy/EnUA4z4xErow190CBz+kNyxY1mtkklCYGxdUhLCebDjmyIp3NBfF22pw2DqpjlF1A/XnXpVuc7kRyNLONoiBEYDQdkABR1ShLGSW7NoUH//2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-11 at 8.41.40 PM.png"
+      ],
+      "image_hashes": [
+        "6e6d09817899de9c84f6f47e5edb85030bb87cb0b56c5504281dcd8ff00e77f6"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-11"
+    },
+    {
+      "id": "a21ef8ed2e35",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "पुस्तक लोकार्पण एवं अभिनंदन समारोह",
+      "organiser": "Diamond Books and Sahitya Sanstha Soch",
+      "description": "A book launch and felicitation ceremony for poet and writer Dr. Pravin Shukla on his 55th birthday, marking the release of his book Jeevan Ke Do Chhor.",
+      "details": null,
+      "date": "2026-11-12",
+      "end_date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "venue": "Constitution Club, Speaker Hall, Rafi Marg, New Delhi (near Patel Chowk Metro Station, Gate No. 3)",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Contact numbers on poster: 9711767909, 9582871847, 9866216748, 9899994855.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/c55553b99871.jpg",
+      "thumb": "thumbs/c55553b99871.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFBAb/xAAiEAACAgICAgIDAAAAAAAAAAABAgMRAAQSIQVBEzFRcZH/xAAXAQADAQAAAAAAAAAAAAAAAAAAAgMB/8QAGREAAwEBAQAAAAAAAAAAAAAAAAEREhNR/9oADAMBAAIRAxEAPwCzHKxacvD8SxvQp7sWR319+8dGyyOFJa2P1fWOOukZ2JAtF2DHu7oVhCoMgpfr2PWTiHpk8fsa+3rfI8aIeRFc+WGVFjRRQVf5hhheBRUpWpKAv3+cXCxV+lu+snbHk549iVF4UrkDrFDy2x6EY/QxOiNyzoVNgHDMfjdh9nWMkgXlyI6GGUTqosP/2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-11 at 8.42.17 PM.png"
+      ],
+      "image_hashes": [
+        "c55553b9987149874310e60cfc60b1967a87ae80b6382f5b404f4d0e6934977a"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-11"
+    },
+    {
+      "id": "dd0dd6d5243c",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Dāstān-e-Nehru: Chapter Two, Nehru's Discovery of India",
+      "organiser": "Nehruvian",
+      "description": "A talk by historian Prof. Rudrangshu Mukherjee on Nehru's Discovery of India, part of the Dāstān-e-Nehru series.",
+      "details": null,
+      "date": "2026-11-12",
+      "end_date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "venue": "Jawahar Bhawan, Dr. Rajendra Prasad Rd, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "RSVP on 8447275628. Nearest metro station: Central Secretariat, Gate no. 2.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/f4f7d3670d54.jpg",
+      "thumb": "thumbs/f4f7d3670d54.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAIEBQMG/8QAJRAAAQQCAQQBBQAAAAAAAAAAAQIDBBEAEgUTITFBUVNhkrHw/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAID/8QAGREBAAIDAAAAAAAAAAAAAAAAAAEhIjFR/9oADAMBAAIRAxEAPwD0HIRlSmEtokFg7XsPf95yhJAABXZ+/vEW4Qoj4yPkJqosXqhWtKSCavtkKaJwyXi5JmQw8o2SSO2GBFJ5QsynGxHSrVVXt5yd7kkPtlDsNC03epNj9ZqOcTGecU6vfZZs0rFPCRD9T88NMeG4hSFwraaSwnYjRPjDO7DCIbfSZvW77m8MM53T/9k=",
+      "source_files": [
+        "done/Screenshot 2026-11-11 at 8.42.41 PM.png"
+      ],
+      "image_hashes": [
+        "f4f7d3670d547a50c85d039e90a849bc12c7074824b089a6a7676231122db983"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-11"
+    },
+    {
+      "id": "5276acda32ce",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "National Tribal Literary Festival: From Oral Tradition to Contemporary Tribal Literature",
+      "organiser": "Ministry of Tribal Affairs, Government of India",
+      "description": "A literary festival with sessions on tribal oral traditions, folklore, tribal literature and tribal story and poetry readings across multiple languages.",
+      "details": null,
+      "date": "2026-11-12",
+      "end_date": "2026-11-13",
+      "start_time": null,
+      "end_time": null,
+      "venue": "Silver Oak, India Habitat Centre, Lodi Road, New Delhi-110003",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Session timings vary by day; see poster for full schedule.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/3d9170a29a3b.jpg",
+      "thumb": "thumbs/3d9170a29a3b.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAECAwQG/8QAIhAAAgIBAwQDAAAAAAAAAAAAAQIAEQMSITEyQWGBBCRR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8A6NVUZmYdR8xjQYxk0IbrgHeF16gpoVy99XqTjc05K+tXMYM+BiyWyMDfeJTG9rZUr4u4hi1XusLtq1bVERC0G+YjZH+0cQDUAEJsfvEREUR//9k=",
+      "source_files": [
+        "done/tribal-literary-festival.jpg"
+      ],
+      "image_hashes": [
+        "3d9170a29a3b38b60f535f368bd855cb83904c88a8406546f4d3df41a35c00b1"
       ],
       "source_labels": [
         "poster"
