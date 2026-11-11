@@ -156,9 +156,9 @@ footer { padding: 8px 0 32px; }
 .info p { margin: 0; }
 .info p + p { margin-top: 12px; }
 .info a { color: inherit; text-decoration: underline; }   /* same colour and font as the rest of the box */
-@media (min-width: 1480px) {
+@media (min-width: 1300px) {
   footer { padding: 0; }
-  .info { position: absolute; top: 57px; right: 30px; width: 320px; }   /* top = top edge of the FED letters; sits in the free space beside the 760px column */
+  .info { position: absolute; top: 57px; right: 24px; width: min(320px, calc(50vw - 440px)); }   /* top = top edge of the FED letters; sits in the free space beside the 760px column */
 }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; }
@@ -191,7 +191,11 @@ footer { padding: 8px 0 32px; }
   <div class="wrap">
     <aside class="info">
       <p>Every event listed here is free. Details can change, so check with the organiser.</p>
-      <p><a href="https://chat.whatsapp.com/LikFIKWgCoILTAktiD6NGE" target="_blank" rel="noopener noreferrer">Join on WhatsApp</a></p>
+      <p>
+        <!-- Replace REPLACE_FEEDBACK_LINK below (a Google Form or a mailto: link both work) -->
+        <a href="https://forms.gle/78FRMKMFPsaNT2Ry9" target="_blank" rel="noopener noreferrer">Feedback</a> &middot;
+        <a href="https://chat.whatsapp.com/LikFIKWgCoILTAktiD6NGE" target="_blank" rel="noopener noreferrer">Join on WhatsApp</a>
+      </p>
       <p>© 2026 FED | Free Events Delhi. Made by Prabhat.</p>
     </aside>
   </div>
@@ -299,13 +303,26 @@ footer { padding: 8px 0 32px; }
     return box;
   }
 
+  // GoatCounter event: one row per event title, e.g. "register: Umang Utsav 2026".
+  // Does nothing if the counter script has not loaded (ad blocker, slow network).
+  function trackRegister(title) {
+    try {
+      if (window.goatcounter && typeof window.goatcounter.count === "function") {
+        window.goatcounter.count({ path: "register: " + title, title: "Register click: " + title, event: true });
+      }
+    } catch (e) { /* analytics must never break the page */ }
+  }
+
   function registerButton(ev) {
     var href = safeLink(ev.registration_link);
     if (!href) return null;
-    return el("a", {
+    var title = str(ev.title) || "Untitled event";
+    var a = el("a", {
       "class": "btn", href: href, target: "_blank", rel: "noopener noreferrer",
-      "aria-label": "Register for " + (str(ev.title) || "this event") + " (opens in a new tab)"
+      "aria-label": "Register for " + title + " (opens in a new tab)"
     }, "Register");
+    a.addEventListener("click", function () { trackRegister(title); });
+    return a;
   }
 
   /* ---- Poster preloading ---- */
@@ -546,7 +563,7 @@ footer { padding: 8px 0 32px; }
   // The gap between the h1's top edge and the top of its capital letters depends on the font, so it is measured
   // with canvas text metrics and written to the box as an inline `top`. The CSS value is the fallback.
   // (`top` only has an effect when the box is absolutely positioned, i.e. on wide screens.)
-  var INFO_NUDGE = -10;   // manual fine-tune in pixels: positive moves the box down, negative moves it up
+  var INFO_NUDGE = 0;   // manual fine-tune in pixels: positive moves the box down, negative moves it up
   var infoBox = document.querySelector(".info");
   var brandEl = document.querySelector(".brand");
   function alignInfo() {
@@ -570,5 +587,7 @@ footer { padding: 8px 0 32px; }
   load();
 })();
 </script>
+<!-- GoatCounter analytics (cookieless). Replace MYCODE with your GoatCounter site code, e.g. "fed" for fed.goatcounter.com -->
+<script data-goatcounter="https://fed.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
