@@ -1235,6 +1235,72 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-11"
+    },
+    {
+      "id": "1e932cca65c1",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "The Political Economy of New India",
+      "organiser": "The Multidisciplinary Society, St. Stephen's College",
+      "description": "A conversation on economic governance, electoral democracy and the crisis of the republic, with Dr. Parakala Prabhakar and Prof. Zoya Hasan.",
+      "details": null,
+      "date": "2026-11-13",
+      "end_date": null,
+      "start_time": "14:00",
+      "end_time": null,
+      "venue": "Room B",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Registration is by scanning the QR code on the poster; no written link is given.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/79c04a0d3eb9.jpg",
+      "thumb": "thumbs/79c04a0d3eb9.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAQDBQECBv/EACUQAAICAQQBAwUAAAAAAAAAAAECAAMRBBIxQSEFEzNCYXGCof/EABYBAQEBAAAAAAAAAAAAAAAAAAECAP/EABcRAQEBAQAAAAAAAAAAAAAAAAARASH/2gAMAwEAAhEDEQA/AKxdK5CvWrHIBOVkh09gAYhRg9j+THvuKVZDhVOAO476ZY9muRFsQOynblivPWR3LqOqxtOxJIK+YToNZ6yBftrBIUAE+4yZPfiEU1SC2wVBBYy1EYCgc55miktYuMLlsBl5zFk+YSavn9podO64tdeHsC7yoDMAV3EeMn7wi1n0/iExf//Z",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-11 at 11.26.01 AM.jpeg"
+      ],
+      "image_hashes": [
+        "79c04a0d3eb92eaa8569dc6f70be27ca1c7aae27f51dfde1f974afb5cf2bbc89"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-11"
+    },
+    {
+      "id": "fd98a1bdb2f4",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "IIC Double Bill: Music Recitals",
+      "organiser": "India International Centre",
+      "description": "A double bill of music recitals: a sitar recital by Sujoy Basu, followed by a semi classical vocal recital by Sonali Natta.",
+      "details": null,
+      "date": "2026-11-13",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "C.D. Deshmukh Auditorium, 40 Max Mueller Marg, New Delhi 110003",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Two performances: sitar recital at 6:00 PM and semi classical vocal recital at 7:00 PM.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/aacff0f170aa.jpg",
+      "thumb": "thumbs/aacff0f170aa.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDAQT/xAAiEAACAgEEAQUAAAAAAAAAAAABAgMRAAQFEjFhEyEyQZH/xAAWAQEBAQAAAAAAAAAAAAAAAAADAQL/xAAYEQADAQEAAAAAAAAAAAAAAAAAARECEv/aAAwDAQACEQMRAD8A5G1XDTrK/wAW6A7yU24xxPx4s3lWFZB9UGiVApFAAi/Y14xklWaZaijWiCKWjd4l0DE2ad2Q9I36MMaSL0nKcUJHdrf3hmqy8I//2Q==",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-11 at 4.20.03 PM.jpeg"
+      ],
+      "image_hashes": [
+        "aacff0f170aa442a06096450bd86dad72ee4ac2afb9f279c8e0b11cda1182019"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-11"
     }
   ]
 }
