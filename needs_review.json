@@ -14,6 +14,19 @@
       "source_files": [
         "done/WhatsApp Image 2026-11-12 at 6.46.18 PM.jpeg"
       ]
+    },
+    {
+      "id": null,
+      "status": null,
+      "title": "thumb-air.png",
+      "date": null,
+      "confidence": null,
+      "reasons": [
+        "2 events match 'air' (2be82e650a1a Mushaira & Kavi Sammelan; 369054132786 On Air); use the event id in the file name"
+      ],
+      "poster": null,
+      "thumb": null,
+      "source_files": []
     }
   ]
 }
