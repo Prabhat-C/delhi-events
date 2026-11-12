@@ -656,5 +656,12 @@
     "event_id": "369054132786",
     "title": "On Air",
     "processed": "2026-11-12"
+  },
+  "3fc76a196764a1371000c5142dab0e960341fabe4d76674ae342198eadab4fa3": {
+    "file": "thumb-369054132786.png",
+    "outcome": "image_override",
+    "event_id": "369054132786",
+    "title": "On Air",
+    "processed": "2026-11-12"
   }
 }

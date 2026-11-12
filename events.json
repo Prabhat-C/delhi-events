@@ -1807,16 +1807,19 @@
       "recurrence": null,
       "recurring": false,
       "poster": "posters/ff0adebb5913.jpg",
-      "thumb": "thumbs/ff0adebb5913.jpg",
+      "thumb": "thumbs/3fc76a196764.jpg",
       "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDAQL/xAAlEAACAQIEBgMAAAAAAAAAAAABAgADEgQREzEhIjJBUdFhccH/xAAWAQEBAQAAAAAAAAAAAAAAAAACBAH/xAAcEQADAAIDAQAAAAAAAAAAAAAAAQIhMQMREjL/2gAMAwEAAhEDEQA/AJKuDY4LWSohZad1thJI8bfEgw4tqFn6gO/HeV1quKWmESs+mRbbn29TI0w1MOWVXU5W7ZrMbyGYlxg8ldQ3fkTdKVPLmBJ+/UR9k3lHXc6QzAOfCR1ES7pHA+TEQPZVx/JtTCmmvKNoiIyetn//2Q==",
       "source_files": [
-        "done/WhatsApp Image 2026-11-12 at 6.46.18 PM.jpeg"
+        "done/WhatsApp Image 2026-11-12 at 6.46.18 PM.jpeg",
+        "done/thumb-369054132786.png"
       ],
       "image_hashes": [
-        "ff0adebb59139441637aa3813b58a37da261ff6a623205f440339cbb2eae6e8b"
+        "ff0adebb59139441637aa3813b58a37da261ff6a623205f440339cbb2eae6e8b",
+        "3fc76a196764a1371000c5142dab0e960341fabe4d76674ae342198eadab4fa3"
       ],
       "source_labels": [
-        "poster"
+        "poster",
+        "other"
       ],
       "rung": "sonnet-medium",
       "added": "2026-11-12"
