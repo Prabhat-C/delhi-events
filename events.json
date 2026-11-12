@@ -1754,6 +1754,72 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-11"
+    },
+    {
+      "id": "f1ebb0b95789",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Aarambh XXXIX",
+      "organiser": "The Raza Foundation",
+      "description": "A series featuring young classical performers of music and dance. This evening features a Hindustani classical vocal recital by Ghulam Hasan Khan and a pakhawaj recital by Aditya Dip.",
+      "details": null,
+      "date": "2026-11-18",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "The Theatre-Amaltas, Gate No-3, India Habitat Centre, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Tea is served from 6:45pm.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/b9fc9e41a93a.jpg",
+      "thumb": "thumbs/b9fc9e41a93a.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAbABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAMFAgQG/8QAJhAAAgICAQIFBQAAAAAAAAAAAQIDEQAEIRIiBTEyYXETI0FR4f/EABcBAQEBAQAAAAAAAAAAAAAAAAEDAAL/xAAYEQEBAQEBAAAAAAAAAAAAAAAAEQIxcf/aAAwDAQACEQMRAD8AuTnWiXqkVB+arnEGfWBa5kcE36qr2GN2diDWhWWY0GAWwtk/zMpARyCte45yavpcU8Uq9SEEXXqwyfu7AimC9Vdt8fJwxaNbxaD6cMey0ruz9IjQA9prK+vOuxqI6UCFAZb5U/o5Mf78cYlAYIO2x5Y6OoeyIBFPmFFXhDrV6m+Mw7Uu7cMTOoQCwLwzoYkXo8r+ecMa4f/Z",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-12 at 6.28.59 PM.jpeg"
+      ],
+      "image_hashes": [
+        "b9fc9e41a93a30949865a189b3875178219e6336fe8a0b11842bd6fb4cfb41fc"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "369054132786",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "On Air",
+      "organiser": "National School of Drama",
+      "description": "A Hindi theatre production presented by third year students of the National School of Drama, directed by Nikhil Mehta and created and performed by the students.",
+      "details": null,
+      "date": "2026-11-16",
+      "end_date": "2026-11-18",
+      "start_time": "16:30",
+      "end_time": null,
+      "venue": "Bahumukh Auditorium, NSD",
+      "registration_link": null,
+      "confidence": "medium",
+      "notes": "Two shows each day, 16:30 and 19:30. Limited seats; passes can be collected on a first come first served basis two hours prior to the performance from the NSD reception. Suitable for audiences above age 12. Enquiries: 011-23031120/21/25.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/ff0adebb5913.jpg",
+      "thumb": "thumbs/ff0adebb5913.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDAQL/xAAlEAACAQIEBgMAAAAAAAAAAAABAgADEgQREzEhIjJBUdFhccH/xAAWAQEBAQAAAAAAAAAAAAAAAAACBAH/xAAcEQADAAIDAQAAAAAAAAAAAAAAAQIhMQMREjL/2gAMAwEAAhEDEQA/AJKuDY4LWSohZad1thJI8bfEgw4tqFn6gO/HeV1quKWmESs+mRbbn29TI0w1MOWVXU5W7ZrMbyGYlxg8ldQ3fkTdKVPLmBJ+/UR9k3lHXc6QzAOfCR1ES7pHA+TEQPZVx/JtTCmmvKNoiIyetn//2Q==",
+      "source_files": [
+        "done/WhatsApp Image 2026-11-12 at 6.46.18 PM.jpeg"
+      ],
+      "image_hashes": [
+        "ff0adebb59139441637aa3813b58a37da261ff6a623205f440339cbb2eae6e8b"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "sonnet-medium",
+      "added": "2026-11-12"
     }
   ]
 }
