@@ -28,6 +28,21 @@
       "poster": null,
       "thumb": null,
       "source_files": []
+    },
+    {
+      "id": "aa8b26da3f41",
+      "status": "published",
+      "title": "Awareness and Capacity Building Workshop on Mission LiFE, Gender, AI and Climate Change and Panel Discussion on AI for Advancing Inclusive and Sustainable Climate Action",
+      "date": "2026-11-13",
+      "confidence": "medium",
+      "reasons": [
+        "confidence is medium"
+      ],
+      "poster": "posters/6e168c45175b.jpg",
+      "thumb": "thumbs/6e168c45175b.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-12 at 11.41.40 PM.png"
+      ]
     }
   ]
 }
