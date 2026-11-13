@@ -866,5 +866,12 @@
     "event_id": "fa4f4f7c03aa",
     "title": "Man with a Movie Camera",
     "processed": "2026-11-14"
+  },
+  "347af3fa8692a80c1a5f8e7b72e119e78a59331ced1eff332ac928ded44700fb": {
+    "file": "poster-93ef9a2d9dd0.jpg",
+    "outcome": "image_override",
+    "event_id": "93ef9a2d9dd0",
+    "title": "Sniper: The White Raven",
+    "processed": "2026-11-14"
   }
 }
