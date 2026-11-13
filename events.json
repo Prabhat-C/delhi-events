@@ -2429,6 +2429,111 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-14"
+    },
+    {
+      "id": "f19d92d3646d",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Second Wind - Indian Premiere",
+      "organiser": null,
+      "description": "Indian premiere of the 2025 Ukrainian documentary Second Wind, directed by Masha Kondakova. It follows five Ukrainian defenders, four of them with prosthetic limbs, as they attempt to climb Mount Kilimanjaro.",
+      "details": null,
+      "date": "2026-11-18",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "C. D. Deshmukh Auditorium, IIC Main Building",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "The screening is followed by a Q&A session with director Masha Kondakova joining online and Nagender Parashar, founder and CEO of Parashar Industries.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/9481c9f8aab4.jpg",
+      "thumb": "thumbs/9481c9f8aab4.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAECAwQG/8QAIhAAAgIBBAEFAAAAAAAAAAAAAAECESEDEjFBYRMjUYGR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOqc81eos/IR1drv3H4bHdStRhafNEvVlfQFsW2sprwwGuAAzrY7pydPpDSinhan4WrljAUHa7+0BIAP/9k=",
+      "source_files": [
+        "done/Screenshot 2026-11-14 at 2.40.42 AM.png",
+        "done/Screenshot 2026-11-14 at 2.40.50 AM.png"
+      ],
+      "image_hashes": [
+        "9481c9f8aab494718afaa8e96716f5189a6e39db1e98786611cdf2a3b4628961",
+        "b1bb553826c20438a9b431cc57d03e51be39e1aef4c7ca08767a5254ba96b343"
+      ],
+      "source_labels": [
+        "other",
+        "other"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-14"
+    },
+    {
+      "id": "fa4f4f7c03aa",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Man with a Movie Camera",
+      "organiser": null,
+      "description": "Screening of Dziga Vertov's 1929 silent documentary from the Ukrainian SSR, produced by the All-Ukrainian Photo Cinema Administration (VUFKU). Through groundbreaking cinematography and editing, it captures the rhythms of urban life in the late 1920s.",
+      "details": null,
+      "date": "2026-11-28",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Lecture Hall 1, IIC Annexe, India International Centre (IIC), 40 Max Mueller Marg, Lodhi Estate, New Delhi",
+      "registration_link": null,
+      "confidence": "medium",
+      "notes": "Silent film presented with English subtitles.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/b78edb808dce.jpg",
+      "thumb": "thumbs/b78edb808dce.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAjABQDASIAAhEBAxEB/8QAGQABAQEAAwAAAAAAAAAAAAAAAAEDAgQG/8QAIxABAAMAAAUEAwAAAAAAAAAAAQACEQMSIVFxIjFBgRORof/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD1TfF9XE/ZBxSttXiPnJdCylK6Pacvy2XOkDWqp1qnmIqqa59RAww121TykpUXC1V8x61+fftLy8Tv/YGlRDHPqJa7ym+8QOugL0+WXCIgbgB0MiIgf//Z",
+      "source_files": [
+        "done/Screenshot 2026-11-14 at 2.41.21 AM.png",
+        "done/Screenshot 2026-11-14 at 2.41.05 AM.png"
+      ],
+      "image_hashes": [
+        "b78edb808dce4e091fcbf913ccf6a31ddc87ad370e444b4fa9fd3a88baa05505",
+        "b5f3306a221138c2f8cbef1ffb265b6b376b5b730183fc3ef4c8ca0410c16dd9"
+      ],
+      "source_labels": [
+        "text_caption",
+        "text_caption"
+      ],
+      "rung": "sonnet-medium",
+      "added": "2026-11-14"
+    },
+    {
+      "id": "93ef9a2d9dd0",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Sniper: The White Raven",
+      "organiser": null,
+      "description": "Ukrainian feature film Sniper: The White Raven, directed by Marian Bushan, inspired by true events. It follows a schoolteacher whose life is shattered by Russian aggression in Donbas in 2014, leading him to join the Ukrainian Armed Forces and become a sniper.",
+      "details": null,
+      "date": "2026-11-16",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Lecture Hall 1, IIC Annexe",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/5956bb993b50.jpg",
+      "thumb": "thumbs/5956bb993b50.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAbABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAECAwYHBf/EACkQAAEDAgMGBwAAAAAAAAAAAAEAAgMR0QYSURQWIjFhkyEzQkRUcZH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AnOEIx7qbtC6VuD43Gm1zDqYxdWItbU1c7mkygep6Dg7mR/Nk7YuhWWPKG8J8EIIC5lTxD9F04OiPN1OuYXWYUGgRQaBBqYljA8xp+3BCyyg0CEH/2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-14 at 2.41.53 AM.png"
+      ],
+      "image_hashes": [
+        "5956bb993b5001cee7ed410a4027aed82a8923539646b5ff69f1469f5675d365"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-14"
     }
   ]
 }
