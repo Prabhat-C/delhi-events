@@ -2143,18 +2143,21 @@
       "recurrence": null,
       "recurring": false,
       "poster": "posters/5b0cab18c05a.jpg",
-      "thumb": "thumbs/5b0cab18c05a.jpg",
+      "thumb": "thumbs/7ff30fa978db.jpg",
       "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFAf/EACMQAAEDAwIHAAAAAAAAAAAAAAMAAQIEESESQRMVMTI0YXH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABgRAAMBAQAAAAAAAAAAAAAAAAACEQED/9oADAMBAAIRAxEAPwCVRlqIU8hxjAsOt5td4/HWBqDgk5IiC0rWZ3049smQeGBPF3R0XFgc21qT+c1t3vwM7aY4QnSd7oUUuH//2Q==",
       "source_files": [
         "done/Screenshot 2026-11-13 at 1.43.14 PM.png",
+        "done/thumb-everything.png",
         "done/Screenshot 2026-11-13 at 1.43.23 PM.png"
       ],
       "image_hashes": [
         "5b0cab18c05a6daa3baea1ae51fc3cfe6cf60fc011a4038dd0520cdf9835b5bf",
+        "7ff30fa978dba7ccd0ddb16702e9a1a5a24772a40ef864bd60c696f1eddf4552",
         "bc7fd396ca4353aa286256bfd9a39c4d5232f3153324e1884266f9815a72db98"
       ],
       "source_labels": [
         "poster",
+        "other",
         "other"
       ],
       "rung": "haiku-low",
@@ -2179,16 +2182,19 @@
       "recurrence": null,
       "recurring": false,
       "poster": "posters/e4804d13d47c.jpg",
-      "thumb": "thumbs/e4804d13d47c.jpg",
+      "thumb": "thumbs/224aad18812e.jpg",
       "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABQACBP/EACIQAAICAgEEAwEAAAAAAAAAAAECAwQAERIFITFBEyRRcf/EABYBAQEBAAAAAAAAAAAAAAAAAAMAAf/EABcRAQEBAQAAAAAAAAAAAAAAAAABERL/2gAMAwEAAhEDEQA/AEavUXt25YJUi+NuWuKnZ0fez+Z0WLUVQIp5gEEgJGT7zPTqtWf7tcSK7knTkaG/PjEOJVlB7/zChLkoxZ+n2tvNC0jg65NXIOWLJsr3JJyyb0//2Q==",
       "source_files": [
-        "done/Screenshot 2026-11-13 at 5.07.30 PM.png"
+        "done/Screenshot 2026-11-13 at 5.07.30 PM.png",
+        "done/thumb-branding.png"
       ],
       "image_hashes": [
-        "e4804d13d47cff95fc1963f49ca75fb3a66607213da17952beb1244090760fda"
+        "e4804d13d47cff95fc1963f49ca75fb3a66607213da17952beb1244090760fda",
+        "224aad18812e0ca8465af7756bde3abcbcf8d03550213c497aee61175c068962"
       ],
       "source_labels": [
-        "poster"
+        "poster",
+        "other"
       ],
       "rung": "haiku-low",
       "added": "2026-11-13"

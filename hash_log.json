@@ -782,5 +782,19 @@
     "event_id": "e4a0bf6fa7a9",
     "title": "A Lec-Dem in Classical Indian Music: Mandar & Dakshayani",
     "processed": "2026-11-13"
+  },
+  "224aad18812e0ca8465af7756bde3abcbcf8d03550213c497aee61175c068962": {
+    "file": "thumb-branding.png",
+    "outcome": "image_override",
+    "event_id": "fb485d64d80b",
+    "title": "When Branding Met the Movies: Book Discussion",
+    "processed": "2026-11-13"
+  },
+  "7ff30fa978dba7ccd0ddb16702e9a1a5a24772a40ef864bd60c696f1eddf4552": {
+    "file": "thumb-everything.png",
+    "outcome": "image_override",
+    "event_id": "031100271bed",
+    "title": "This Changes Everything (2015)",
+    "processed": "2026-11-13"
   }
 }
