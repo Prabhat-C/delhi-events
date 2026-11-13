@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Events admin</title>
+<style>
+  :root {
+    --bg: #f6f5f2; --card: #ffffff; --ink: #1d1d1b; --muted: #6b6a65; --line: #e3e1db;
+    --accent: #2f5d50; --accent-ink: #ffffff; --danger: #b3261e; --warn: #9a6200; --warn-bg: #fff4dc;
+    --ok-bg: #e5f2ec; --radius: 10px;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  header { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+  .bar { max-width: 980px; margin: 0 auto; padding: 10px 16px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  h1 { font-size: 17px; margin: 0; margin-right: auto; }
+  nav { display: flex; gap: 4px; }
+  nav button { background: none; border: 0; padding: 8px 12px; border-radius: 8px; font: inherit; color: var(--muted); cursor: pointer; }
+  nav button.active { background: var(--ink); color: #fff; }
+  .count { display: inline-block; min-width: 18px; padding: 0 5px; margin-left: 4px; border-radius: 9px;
+    background: var(--warn); color: #fff; font-size: 12px; text-align: center; }
+  #statusbar { max-width: 980px; margin: 0 auto; padding: 0 16px 10px; font-size: 14px; display: none; }
+  #statusbar.show { display: block; }
+  #statusbar .inner { padding: 8px 12px; border-radius: 8px; background: var(--ok-bg); }
+  #statusbar.busy .inner { background: var(--warn-bg); }
+  #statusbar.err .inner { background: #fde7e5; color: var(--danger); }
+  main { max-width: 980px; margin: 0 auto; padding: 16px; }
+  section[hidden] { display: none; }
+  h2 { font-size: 15px; margin: 22px 0 10px; }
+  .muted { color: var(--muted); }
+  .small { font-size: 13px; }
+  button.btn, label.btn { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--card);
+    color: var(--ink); padding: 8px 14px; border-radius: 8px; font: inherit; cursor: pointer; }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .btn.danger { color: var(--danger); border-color: #efc4c0; }
+  .btn:disabled { opacity: .5; cursor: default; }
+  .btn.sm { padding: 5px 10px; font-size: 13px; }
+  input[type=text], input[type=password], input[type=date], input[type=time], input[type=url], input[type=search], select, textarea {
+    width: 100%; font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); }
+  textarea { resize: vertical; min-height: 70px; }
+  label.f { display: block; font-size: 13px; color: var(--muted); margin: 10px 0 4px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  @media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
+
+  /* Upload */
+  #drop { border: 2px dashed #c9c6bd; border-radius: var(--radius); background: var(--card); padding: 36px 16px; text-align: center; cursor: pointer; }
+  #drop.over { border-color: var(--accent); background: var(--ok-bg); }
+  #drop strong { display: block; font-size: 16px; margin-bottom: 4px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; margin-top: 14px; }
+  .pv { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .pv img { display: block; width: 100%; aspect-ratio: 3/4; object-fit: cover; background: #ddd; }
+  .pv .nm { font-size: 11px; padding: 4px 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .pv .x { position: absolute; top: 4px; right: 4px; width: 26px; height: 26px; border-radius: 13px; border: 0;
+    background: rgba(0,0,0,.65); color: #fff; cursor: pointer; font-size: 15px; line-height: 26px; padding: 0; }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 14px; }
+  ul.plain { list-style: none; padding: 0; margin: 0; }
+  ul.plain li { display: flex; gap: 10px; align-items: center; justify-content: space-between; padding: 8px 12px;
+    background: var(--card); border: 1px solid var(--line); border-radius: 8px; margin-bottom: 6px; font-size: 14px; word-break: break-all; }
+
+  /* Events */
+  .filters { display: grid; grid-template-columns: 1fr 150px 170px; gap: 8px; }
+  @media (max-width: 640px) { .filters { grid-template-columns: 1fr 1fr; } .filters input { grid-column: 1 / -1; } }
+  .ev { display: flex; gap: 12px; padding: 10px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    margin-top: 8px; cursor: pointer; text-align: left; width: 100%; font: inherit; color: inherit; }
+  .ev:hover { border-color: #bdb9ae; }
+  .ev img, .ev .noimg { width: 64px; height: 84px; object-fit: cover; border-radius: 6px; background: #ddd; flex: none; }
+  .ev .t { font-weight: 600; }
+  .ev .m { font-size: 13px; color: var(--muted); }
+  .tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
+  .tag { font-size: 11px; padding: 1px 7px; border-radius: 9px; background: #ecebe6; color: var(--muted); }
+  .tag.warn { background: var(--warn-bg); color: var(--warn); }
+  .tag.off { background: #fde7e5; color: var(--danger); }
+
+  /* Selection */
+  .evrow { display: flex; align-items: stretch; gap: 6px; margin-top: 8px; }
+  .evrow .ev { margin-top: 0; flex: 1; min-width: 0; }
+  .sel { display: flex; align-items: center; padding: 0 6px; cursor: pointer; }
+  .sel input { width: 20px; height: 20px; cursor: pointer; }
+  .seltools { margin-top: 10px; display: flex; gap: 8px; }
+  .bulk { position: sticky; bottom: 0; z-index: 6; display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+    margin: 12px -16px -16px; padding: 12px 16px; background: var(--ink); color: #fff; }
+  .bulk .grow { flex: 1; font-weight: 600; }
+  .bulk .btn { background: #fff; }
+  .bulk .btn.danger { background: var(--danger); color: #fff; border-color: var(--danger); }
+  .bulk .btn.primary { background: #4c9a84; border-color: #4c9a84; color: #fff; }
+
+  /* Review */
+  .rv { display: flex; gap: 12px; padding: 12px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); margin-top: 8px; }
+  .rv img, .rv .noimg { width: 72px; height: 96px; object-fit: cover; border-radius: 6px; background: #ddd; flex: none; }
+  .rv .body { flex: 1; min-width: 0; }
+  .rv .reasons { margin: 4px 0; padding-left: 18px; font-size: 14px; }
+  .rv .extra { font-size: 12px; color: var(--muted); word-break: break-all; }
+
+  /* Editor */
+  dialog { border: 0; border-radius: 14px; padding: 0; width: min(760px, 100vw - 16px); max-height: calc(100vh - 16px); }
+  dialog::backdrop { background: rgba(0,0,0,.45); }
+  .dlg { display: flex; flex-direction: column; max-height: calc(100vh - 16px); }
+  .dlg-head { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+  .dlg-head h3 { margin: 0; font-size: 16px; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .dlg-body { overflow: auto; padding: 4px 16px 16px; }
+  .dlg-foot { display: flex; gap: 8px; flex-wrap: wrap; padding: 12px 16px; border-top: 1px solid var(--line); }
+  .dlg-foot .spacer { flex: 1; }
+  .imgs { display: flex; gap: 14px; align-items: flex-start; margin-top: 12px; flex-wrap: wrap; }
+  .imgs img { width: 150px; border-radius: 8px; background: #ddd; }
+  .imgs .ib { display: flex; flex-direction: column; gap: 6px; }
+  .note { padding: 8px 12px; border-radius: 8px; background: var(--warn-bg); color: var(--warn); font-size: 14px; margin-top: 12px; }
+  .meta { font-size: 12px; color: var(--muted); margin-top: 14px; word-break: break-all; }
+  .linkrow { display: flex; gap: 6px; }
+  .linkrow input { flex: 1; }
+  .chk { display: flex; gap: 8px; align-items: center; font-size: 14px; }
+
+  #toast { position: fixed; left: 50%; bottom: 78px; transform: translateX(-50%); background: var(--ink); color: #fff;
+    padding: 10px 16px; border-radius: 10px; font-size: 14px; max-width: calc(100vw - 32px); display: none; z-index: 50; }
+  #toast.err { background: var(--danger); }
+  .empty { padding: 30px; text-align: center; color: var(--muted); }
+  code { font-size: 13px; background: #ecebe6; padding: 1px 4px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <h1>Events admin</h1>
+    <nav id="tabs" hidden>
+      <button data-tab="upload" class="active">Upload</button>
+      <button data-tab="events">Events</button>
+      <button data-tab="review">Needs review<span class="count" id="rvcount" hidden></span></button>
+    </nav>
+    <button class="btn sm" id="btn-settings" hidden>Settings</button>
+  </div>
+  <div id="statusbar"><div class="inner" id="statustext"></div></div>
+</header>
+
+<main>
+  <!-- Settings -->
+  <section id="tab-settings" hidden>
+    <h2>Connect to your repo</h2>
+    <p class="muted small">Your token is saved only in this browser. Don't use this page on a shared computer, or click "Sign out" when you're done.</p>
+    <div class="row">
+      <div><label class="f" for="s-owner">GitHub owner</label><input type="text" id="s-owner" autocomplete="off"></div>
+      <div><label class="f" for="s-repo">Repository</label><input type="text" id="s-repo" autocomplete="off"></div>
+    </div>
+    <div class="row">
+      <div><label class="f" for="s-branch">Branch</label><input type="text" id="s-branch" value="main" autocomplete="off"></div>
+      <div><label class="f" for="s-token">Fine-grained token</label><input type="password" id="s-token" autocomplete="off" placeholder="github_pat_..."></div>
+    </div>
+    <div class="actions">
+      <button class="btn primary" id="s-save">Connect</button>
+      <button class="btn" id="s-signout">Sign out</button>
+    </div>
+    <h2>How to make the token</h2>
+    <ol class="small">
+      <li>On github.com go to Settings, then Developer settings, then Personal access tokens, then <b>Fine-grained tokens</b>, and click Generate new token.</li>
+      <li>Repository access: <b>Only select repositories</b>, and pick this site's repo.</li>
+      <li>Permissions: <b>Contents: Read and write</b> and <b>Actions: Read-only</b>. Leave everything else as it is.</li>
+      <li>Pick an expiry date, generate the token, and paste it above.</li>
+    </ol>
+  </section>
+
+  <!-- Upload -->
+  <section id="tab-upload" hidden>
+    <div id="drop" tabindex="0" role="button">
+      <strong>Drop screenshots here</strong>
+      <span class="muted">or tap to choose images</span>
+      <input type="file" id="file-in" accept="image/*" multiple hidden>
+    </div>
+    <div class="grid" id="pending"></div>
+    <div class="actions" id="pending-actions" hidden>
+      <button class="btn primary" id="btn-upload">Upload</button>
+      <button class="btn" id="btn-clear">Clear</button>
+      <span class="muted small">All images go up in one commit, so they're processed as one batch.</span>
+    </div>
+    <h2>Waiting in inbox</h2>
+    <ul class="plain" id="inbox"></ul>
+  </section>
+
+  <!-- Events -->
+  <section id="tab-events" hidden>
+    <div class="filters">
+      <input type="search" id="f-q" placeholder="Search title, venue, organiser">
+      <select id="f-when">
+        <option value="upcoming">Upcoming</option>
+        <option value="past">Past</option>
+        <option value="all">All dates</option>
+      </select>
+      <select id="f-status">
+        <option value="any">Any status</option>
+        <option value="published">Published</option>
+        <option value="unpublished">Not published</option>
+        <option value="review">In review</option>
+      </select>
+    </div>
+    <div class="seltools"><button class="btn sm" id="ev-selall" hidden>Select all shown</button></div>
+    <div id="evlist"></div>
+    <div class="bulk" id="bulk-ev" hidden>
+      <span class="grow" id="bulk-ev-n"></span>
+      <button class="btn sm" id="bulk-ev-clear" type="button">Clear</button>
+      <button class="btn sm danger" id="bulk-ev-del" type="button">Delete selected</button>
+    </div>
+  </section>
+
+  <!-- Review -->
+  <section id="tab-review" hidden>
+    <div class="seltools"><button class="btn sm" id="rv-selall" hidden>Select all</button></div>
+    <div id="rvlist"></div>
+    <div class="bulk" id="bulk-rv" hidden>
+      <span class="grow" id="bulk-rv-n"></span>
+      <button class="btn sm" id="bulk-rv-clear" type="button">Clear</button>
+      <button class="btn sm primary" id="bulk-rv-fix" type="button">Mark selected as fixed</button>
+    </div>
+  </section>
+</main>
+
+<dialog id="editor">
+  <div class="dlg">
+    <div class="dlg-head">
+      <h3 id="e-heading">Edit event</h3>
+      <button class="btn sm" id="e-close" type="button">Close</button>
+    </div>
+    <div class="dlg-body">
+      <div id="e-review"></div>
+      <div class="imgs">
+        <img id="e-poster" alt="">
+        <div class="ib">
+          <span class="small muted">Replace image</span>
+          <label class="btn sm">Poster and thumbnail<input type="file" accept="image/*" data-kind="poster" hidden></label>
+          <label class="btn sm">Thumbnail only<input type="file" accept="image/*" data-kind="thumb" hidden></label>
+          <label class="btn sm">Zoom poster only<input type="file" accept="image/*" data-kind="zoom" hidden></label>
+          <span class="small muted" style="max-width:260px">The new image is processed by the workflow, which takes a minute or two.</span>
+        </div>
+      </div>
+      <label class="f" for="e-title">Title</label><input type="text" id="e-title">
+      <label class="f" for="e-organiser">Organiser</label><input type="text" id="e-organiser">
+      <label class="f" for="e-description">Description</label><textarea id="e-description" rows="2"></textarea>
+      <label class="f" for="e-details">Details</label><textarea id="e-details" rows="4"></textarea>
+      <div class="row">
+        <div><label class="f" for="e-date">Date</label><input type="date" id="e-date"></div>
+        <div><label class="f" for="e-end_date">End date</label><input type="date" id="e-end_date"></div>
+      </div>
+      <div class="row">
+        <div><label class="f" for="e-start_time">Start time</label><input type="time" id="e-start_time"></div>
+        <div><label class="f" for="e-end_time">End time</label><input type="time" id="e-end_time"></div>
+      </div>
+      <label class="f" for="e-venue">Venue</label><input type="text" id="e-venue">
+      <label class="f" for="e-registration_link">Registration link</label>
+      <div class="linkrow">
+        <input type="url" id="e-registration_link" placeholder="https://...">
+        <button class="btn sm" type="button" id="e-openlink">Open</button>
+      </div>
+      <label class="f" for="e-recurrence">Recurrence (leave empty if it doesn't repeat)</label>
+      <input type="text" id="e-recurrence" placeholder="e.g. Alternate Fridays from 6 Nov">
+      <label class="f" for="e-notes">Notes</label><textarea id="e-notes" rows="2"></textarea>
+      <label class="f" for="e-status">Status</label>
+      <select id="e-status"></select>
+      <div class="meta" id="e-meta"></div>
+    </div>
+    <div class="dlg-foot">
+      <button class="btn danger" id="e-delete" type="button">Delete event</button>
+      <span class="spacer"></span>
+      <label class="chk" id="e-resolve-wrap"><input type="checkbox" id="e-resolve" checked> Mark review as fixed</label>
+      <button class="btn primary" id="e-save" type="button">Save</button>
+    </div>
+  </div>
+</dialog>
+
+<div id="toast"></div>
+
+<script>
+'use strict';
+
+/* ---------------- Config ---------------- */
+const CFG_KEY = 'events-admin-config';
+const FIELDS = ['title', 'organiser', 'description', 'details', 'date', 'end_date', 'start_time', 'end_time',
+  'venue', 'registration_link', 'recurrence', 'notes', 'status'];
+const OVERRIDE_PREFIX = /^(poster|thumb|zoom)-/i;
+
+function loadCfg() {
+  let c = {};
+  try { c = JSON.parse(localStorage.getItem(CFG_KEY)) || {}; } catch (e) { c = {}; }
+  const g = guessRepo();
+  return { owner: c.owner || g.owner || '', repo: c.repo || g.repo || '', branch: c.branch || 'main', token: c.token || '' };
+}
+function saveCfg() {
+  try { localStorage.setItem(CFG_KEY, JSON.stringify(cfg)); } catch (e) { toast('This browser would not save the settings.', true); }
+}
+function guessRepo() {
+  const h = location.hostname;
+  if (!h.endsWith('.github.io')) return {};
+  const owner = h.split('.')[0];
+  const seg = location.pathname.split('/').filter(Boolean);
+  const repo = seg.length && !seg[0].includes('.') ? seg[0] : h;
+  return { owner, repo };
+}
+let cfg = loadCfg();
+
+/* ---------------- Helpers ---------------- */
+const $ = s => document.querySelector(s);
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const encPath = p => p.split('/').map(encodeURIComponent).join('/');
+const dump = obj => JSON.stringify(obj, null, 2) + '\n';
+const todayIST = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata' }).format(new Date());
+
+let toastTimer;
+function toast(msg, isErr) {
+  const t = $('#toast');
+  t.textContent = msg; t.className = isErr ? 'err' : ''; t.style.display = 'block';
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { t.style.display = 'none'; }, isErr ? 7000 : 3500);
+}
+function setStatus(html, kind) {
+  const bar = $('#statusbar');
+  if (!html) { bar.className = ''; return; }
+  $('#statustext').innerHTML = html;
+  bar.className = 'show ' + (kind || '');
+}
+
+let busy = false;
+async function withBusy(fn) {
+  if (busy) { toast('Please wait for the current action to finish.', true); return; }
+  busy = true; document.body.style.cursor = 'progress';
+  document.querySelectorAll('button, input[type=file]').forEach(b => { if (!b.closest('nav')) b.disabled = true; });
+  try { return await fn(); }
+  catch (e) { console.error(e); setStatus(esc(e.message || String(e)), 'err'); toast(e.message || String(e), true); }
+  finally {
+    busy = false; document.body.style.cursor = '';
+    document.querySelectorAll('button, input[type=file]').forEach(b => { b.disabled = false; });
+    renderPendingActions();
+    renderBulk();
+  }
+}
+
+function fmtDate(iso) {
+  if (!iso || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return iso || '';
+  const [y, m, d] = iso.split('-').map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+}
+function whenText(ev) {
+  if (ev.recurrence) return ev.recurrence;
+  let s = fmtDate(ev.date) || 'No date';
+  if (ev.end_date && ev.end_date !== ev.date) s += ' to ' + fmtDate(ev.end_date);
+  if (ev.start_time) s += ', ' + ev.start_time + (ev.end_time ? '–' + ev.end_time : '');
+  return s;
+}
+const isRecurring = ev => !!(ev.recurring || ev.recurrence);
+const isPast = ev => !isRecurring(ev) && !!(ev.end_date || ev.date) && (ev.end_date || ev.date) < todayIST();
+
+/* Same cleanup process.py applies: strip tracking params, plain viewform for Google Forms. */
+function cleanLink(url) {
+  if (!url) return null;
+  url = url.trim();
+  let u;
+  try { u = new URL(url); } catch (e) { return url; }
+  const gf = u.hostname === 'docs.google.com' && u.pathname.match(/\/forms\/(?:u\/\d+\/)?d\/e\/([^/]+)\//);
+  if (gf) return 'https://docs.google.com/forms/d/e/' + gf[1] + '/viewform';
+  if (u.hostname === 'docs.google.com' && u.pathname.startsWith('/forms/')) { u.search = ''; return u.toString(); }
+  [...u.searchParams.keys()].forEach(k => {
+    if (/^utm_/i.test(k) || ['fbclid', 'sfnsn', 'igshid'].includes(k.toLowerCase())) u.searchParams.delete(k);
+  });
+  return u.toString();
+}
+
+function fileToB64(file) {
+  return new Promise((resolve, reject) => {
+    const r = new FileReader();
+    r.onload = () => resolve(String(r.result).split(',')[1]);
+    r.onerror = () => reject(new Error('Could not read ' + file.name));
+    r.readAsDataURL(file);
+  });
+}
+
+/* ---------------- GitHub API ---------------- */
+const R = () => `/repos/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.repo)}`;
+
+async function gh(path, opts = {}) {
+  const headers = {
+    Authorization: 'Bearer ' + cfg.token,
+    Accept: opts.accept || 'application/vnd.github+json',
+    'X-GitHub-Api-Version': '2022-11-28'
+  };
+  if (opts.body) headers['Content-Type'] = 'application/json';
+  let res;
+  try {
+    res = await fetch('https://api.github.com' + path, {
+      method: opts.method || 'GET', headers, cache: 'no-store',
+      body: opts.body ? JSON.stringify(opts.body) : undefined
+    });
+  } catch (e) {
+    throw new Error('Could not reach GitHub. Check your internet connection.');
+  }
+  if (!res.ok) {
+    let msg = '';
+    try { msg = (await res.json()).message; } catch (e) { /* ignore */ }
+    let nice = `GitHub said ${res.status}${msg ? ': ' + msg : ''}`;
+    if (res.status === 401) nice = 'GitHub rejected the token. It may have expired: make a new one in Settings.';
+    if (res.status === 403 && /rate limit/i.test(msg)) nice = 'GitHub rate limit reached. Wait a few minutes and try again.';
+    const err = new Error(nice); err.status = res.status; err.ghMessage = msg;
+    throw err;
+  }
+  if (res.status === 204) return null;
+  return opts.raw ? res.text() : res.json();
+}
+
+async function getHead() {
+  const ref = await gh(`${R()}/git/ref/heads/${cfg.branch}`);
+  const commit = await gh(`${R()}/git/commits/${ref.object.sha}`);
+  return { sha: ref.object.sha, tree: commit.tree.sha };
+}
+async function listPaths(treeSha) {
+  const t = await gh(`${R()}/git/trees/${treeSha}?recursive=1`);
+  if (t.truncated) console.warn('Repo tree listing was truncated');
+  return new Set(t.tree.filter(e => e.type === 'blob').map(e => e.path));
+}
+async function readText(path, ref) {
+  try {
+    return await gh(`${R()}/contents/${encPath(path)}?ref=${ref}`, { accept: 'application/vnd.github.raw+json', raw: true });
+  } catch (e) {
+    if (e.status === 404) return null;
+    throw e;
+  }
+}
+
+/*
+ * Make one commit. `build(ctx)` reads the latest files and returns
+ * { text: {path: string}, blobs: {path: base64}, del: [path] }.
+ * If someone else (usually the workflow) committed in the meantime, the branch
+ * update is rejected, and we re-read the latest files and apply the change again.
+ */
+async function commitChange(message, build, onProgress) {
+  const blobCache = new Map();
+  for (let attempt = 1; attempt <= 5; attempt++) {
+    const head = await getHead();
+    const paths = await listPaths(head.tree);
+    const ctx = {
+      head, paths,
+      readJSON: async (p, dflt) => {
+        const t = await readText(p, head.sha);
+        if (t == null) return dflt;
+        try { return JSON.parse(t); } catch (e) { throw new Error(p + ' is not valid JSON. Fix it on GitHub first.'); }
+      }
+    };
+    const change = await build(ctx);
+    if (!change) return null;
+    const entries = [];
+    for (const [p, txt] of Object.entries(change.text || {})) entries.push({ path: p, mode: '100644', type: 'blob', content: txt });
+    const blobs = Object.entries(change.blobs || {});
+    let i = 0;
+    for (const [p, b64] of blobs) {
+      i++;
+      if (onProgress) onProgress(i, blobs.length);
+      if (!blobCache.has(p)) {
+        const blob = await gh(`${R()}/git/blobs`, { method: 'POST', body: { content: b64, encoding: 'base64' } });
+        blobCache.set(p, blob.sha);
+      }
+      entries.push({ path: p, mode: '100644', type: 'blob', sha: blobCache.get(p) });
+    }
+    for (const p of change.del || []) if (paths.has(p)) entries.push({ path: p, mode: '100644', type: 'blob', sha: null });
+    if (!entries.length) return null;
+
+    const tree = await gh(`${R()}/git/trees`, { method: 'POST', body: { base_tree: head.tree, tree: entries } });
+    const commit = await gh(`${R()}/git/commits`, { method: 'POST', body: { message, tree: tree.sha, parents: [head.sha] } });
+    try {
+      await gh(`${R()}/git/refs/heads/${cfg.branch}`, { method: 'PATCH', body: { sha: commit.sha, force: false } });
+      return commit;
+    } catch (e) {
+      if (e.status === 422 && attempt < 5) { await sleep(1200 * attempt); continue; }
+      throw e;
+    }
+  }
+}
+
+/* ---------------- Workflow runs ---------------- */
+let actionsWarned = false;
+const isWorkflowRun = r => (r.path || '').startsWith('.github/workflows/');
+
+async function activeRuns() {
+  try {
+    const lists = await Promise.all(['in_progress', 'queued'].map(s => gh(`${R()}/actions/runs?status=${s}&per_page=20`)));
+    return lists.flatMap(l => l.workflow_runs).filter(isWorkflowRun);
+  } catch (e) {
+    if (e.status === 403 || e.status === 404) {
+      if (!actionsWarned) { actionsWarned = true; toast('The token cannot read Actions, so the page cannot see processing status. Add "Actions: Read-only" to the token.', true); }
+      return [];
+    }
+    throw e;
+  }
+}
+
+/* Before editing JSON files, wait until processing finishes so the two don't clash. */
+async function waitForIdle(what) {
+  for (let i = 0; i < 150; i++) {
+    const runs = await activeRuns();
+    if (!runs.length) return;
+    setStatus(`Waiting for processing to finish before ${esc(what)}…`, 'busy');
+    await sleep(6000);
+  }
+  throw new Error('Processing has been running for over 15 minutes. Check the Actions tab on GitHub.');
+}
+
+let watchId = 0;
+async function watchProcessing(commit) {
+  const id = ++watchId;
+  const since = new Date(new Date(commit.committer.date).getTime() - 10000).toISOString().replace(/\.\d+Z$/, 'Z');
+  const started = Date.now();
+  let sawRun = false;
+  setStatus('Uploaded. Waiting for processing to start…', 'busy');
+  while (Date.now() - started < 20 * 60 * 1000) {
+    await sleep(6000);
+    if (id !== watchId) return;
+    let runs;
+    try {
+      runs = (await gh(`${R()}/actions/runs?per_page=20&created=${encodeURIComponent('>=' + since)}`)).workflow_runs.filter(isWorkflowRun);
+    } catch (e) {
+      if (e.status === 403 || e.status === 404) { setStatus('Uploaded. The token cannot read Actions, so check processing on GitHub.', ''); return; }
+      continue;
+    }
+    if (!runs.length) {
+      if (Date.now() - started > 120000) { setStatus('Uploaded, but no processing run has started. Check the Actions tab on GitHub.', 'err'); return; }
+      continue;
+    }
+    sawRun = true;
+    const active = runs.filter(r => r.status !== 'completed');
+    if (active.length) {
+      const mins = Math.max(0, Math.round((Date.now() - started) / 60000));
+      setStatus(`Processing… (${esc(active[0].status.replace('_', ' '))}, ${mins} min so far)`, 'busy');
+      continue;
+    }
+    const latest = runs.sort((a, b) => b.created_at.localeCompare(a.created_at))[0];
+    if (latest.conclusion === 'success') {
+      setStatus('Processing finished. The public page updates about a minute after this.', '');
+      await reload();
+      setTimeout(() => { if (id === watchId) setStatus(''); }, 15000);
+    } else {
+      setStatus(`Processing ended with "${esc(latest.conclusion)}". <a href="${esc(latest.html_url)}" target="_blank" rel="noopener">See the log on GitHub</a>.`, 'err');
+      await reload();
+    }
+    return;
+  }
+  if (sawRun) setStatus('Processing is taking longer than usual. Check the Actions tab on GitHub.', 'err');
+}
+
+/* ---------------- Data ---------------- */
+const state = { head: null, eventsDoc: null, events: [], review: [], inbox: [] };
+const sel = { ev: new Set(), rv: new Set() };   // selected event ids / selected review-item keys
+let shownEv = [], shownRv = [];                  // what the lists currently show
+const rvKey = item => JSON.stringify(item);
+const getEvents = doc => Array.isArray(doc) ? doc : (doc && Array.isArray(doc.events) ? doc.events : []);
+function setEvents(doc, arr) {
+  if (Array.isArray(doc)) { const copy = [...arr]; doc.length = 0; doc.push(...copy); return doc; }
+  doc.events = arr; return doc;
+}
+const emptyEventsDoc = () => ({ events: [] });
+
+async function reload() {
+  const head = await getHead();
+  const [paths, evText, rvText] = await Promise.all([
+    listPaths(head.tree), readText('events.json', head.sha), readText('needs_review.json', head.sha)
+  ]);
+  state.head = head;
+  state.inbox = [...paths].filter(p => p.startsWith('inbox/') && !/\/\.(gitkeep|keep)$/.test(p)).sort();
+  try { state.eventsDoc = evText ? JSON.parse(evText) : emptyEventsDoc(); } catch (e) { throw new Error('events.json is not valid JSON. Fix it on GitHub first.'); }
+  state.events = getEvents(state.eventsDoc);
+  let rv = { review: [] };
+  try { rv = rvText ? JSON.parse(rvText) : rv; } catch (e) { toast('needs_review.json is not valid JSON.', true); }
+  state.review = Array.isArray(rv.review) ? rv.review : [];
+  renderAll();
+}
+
+function imgUrl(p) {
+  if (!p) return '';
+  return `https://raw.githubusercontent.com/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.repo)}/${state.head.sha}/${encPath(p)}`;
+}
+function imgTag(p, alt) {
+  if (!p) return '<div class="noimg"></div>';
+  // raw.githubusercontent works for public repos right away; fall back to the Pages copy.
+  return `<img loading="lazy" alt="${esc(alt || '')}" src="${esc(imgUrl(p))}" data-fallback="${esc(encPath(p))}" onerror="if(this.dataset.fallback){this.src=this.dataset.fallback;this.dataset.fallback='';}">`;
+}
+const reviewFor = id => state.review.filter(r => r && r.id && r.id === id);
+
+/* ---------------- Rendering ---------------- */
+function renderAll() { renderInbox(); renderEvents(); renderReview(); }
+
+function renderInbox() {
+  const ul = $('#inbox');
+  if (!state.inbox.length) { ul.innerHTML = '<li class="muted">Nothing waiting. Everything has been processed.</li>'; return; }
+  ul.innerHTML = state.inbox.map(p => `<li><span>${esc(p.slice(6))}</span><button class="btn sm danger" data-rm-inbox="${esc(p)}">Remove</button></li>`).join('');
+}
+
+function renderEvents() {
+  const q = $('#f-q').value.trim().toLowerCase();
+  const when = $('#f-when').value, st = $('#f-status').value;
+  const today = todayIST();
+  let list = state.events.filter(ev => {
+    if (q && ![ev.title, ev.venue, ev.organiser].join(' ').toLowerCase().includes(q)) return false;
+    if (when === 'upcoming' && isPast(ev)) return false;
+    if (when === 'past' && !isPast(ev)) return false;
+    if (st === 'published' && ev.status !== 'published') return false;
+    if (st === 'unpublished' && ev.status === 'published') return false;
+    if (st === 'review' && !reviewFor(ev.id).length) return false;
+    return true;
+  });
+  const key = ev => isRecurring(ev) ? today : (ev.date || '9999');
+  list.sort((a, b) => key(a).localeCompare(key(b)) || (a.start_time || '').localeCompare(b.start_time || ''));
+  if (when === 'past') list.reverse();
+  shownEv = list.map(e => e.id);
+  // Only events that are on screen can stay selected, so a bulk delete never hits hidden ones.
+  sel.ev = new Set([...sel.ev].filter(id => shownEv.includes(id)));
+  const box = $('#evlist');
+  if (!list.length) { box.innerHTML = '<div class="empty">No events match.</div>'; renderBulk(); return; }
+  box.innerHTML = list.map(ev => {
+    const tags = [];
+    if (ev.status !== 'published') tags.push(`<span class="tag off">${esc(ev.status || 'no status')}</span>`);
+    if (reviewFor(ev.id).length) tags.push('<span class="tag warn">Needs review</span>');
+    if (isRecurring(ev)) tags.push('<span class="tag">Recurring</span>');
+    if (isPast(ev)) tags.push('<span class="tag">Past</span>');
+    if (!ev.registration_link) tags.push('<span class="tag">No link</span>');
+    return `<div class="evrow"><label class="sel"><input type="checkbox" data-sel-ev="${esc(ev.id)}"${sel.ev.has(ev.id) ? ' checked' : ''} aria-label="Select ${esc(ev.title || 'event')}"></label>
+    <button class="ev" data-edit="${esc(ev.id)}">
+      ${imgTag(ev.thumb || ev.poster, '')}
+      <div><div class="t">${esc(ev.title || '(no title)')}</div>
+      <div class="m">${esc(whenText(ev))}</div>
+      <div class="m">${esc(ev.venue || 'No venue')}</div>
+      <div class="tags">${tags.join('')}</div></div></button></div>`;
+  }).join('');
+  renderBulk();
+}
+
+function renderReview() {
+  const n = state.review.length;
+  $('#rvcount').hidden = !n; $('#rvcount').textContent = n;
+  const box = $('#rvlist');
+  shownRv = state.review.map(rvKey);
+  sel.rv = new Set([...sel.rv].filter(k => shownRv.includes(k)));
+  if (!n) { box.innerHTML = '<div class="empty">Nothing to review.</div>'; renderBulk(); return; }
+  box.innerHTML = state.review.map((item, i) => {
+    const ev = item && item.id ? state.events.find(e => e.id === item.id) : null;
+    const reasons = Array.isArray(item.reasons) ? item.reasons : (item.reasons ? [item.reasons] : []);
+    const shown = new Set(['id', 'reasons', 'poster', 'thumb', 'link_problem', 'title']);
+    const extra = Object.entries(item || {}).filter(([k, v]) => !shown.has(k) && v != null && v !== '')
+      .map(([k, v]) => `${esc(k)}: ${esc(typeof v === 'string' ? v : JSON.stringify(v))}`).join('<br>');
+    const title = ev ? ev.title : (item.title || (item.id ? 'Event ' + item.id + ' (no longer in events.json)' : 'Not linked to an event'));
+    return `<div class="rv">
+      <label class="sel"><input type="checkbox" data-sel-rv="${i}"${sel.rv.has(rvKey(item)) ? ' checked' : ''} aria-label="Select review item"></label>
+      ${imgTag(item.thumb || item.poster || (ev && (ev.thumb || ev.poster)), '')}
+      <div class="body">
+        <div class="t"><b>${esc(title)}</b></div>
+        ${ev ? `<div class="small muted">${esc(whenText(ev))}</div>` : ''}
+        ${reasons.length ? `<ul class="reasons">${reasons.map(r => `<li>${esc(r)}</li>`).join('')}</ul>` : ''}
+        ${item.link_problem ? `<div class="small">Link problem: ${esc(typeof item.link_problem === 'string' ? item.link_problem : JSON.stringify(item.link_problem))}</div>` : ''}
+        ${extra ? `<div class="extra">${extra}</div>` : ''}
+        <div class="actions">
+          ${ev ? `<button class="btn sm primary" data-edit="${esc(ev.id)}">Fix event</button>` : ''}
+          <button class="btn sm" data-resolve="${i}">Mark as fixed</button>
+        </div>
+      </div></div>`;
+  }).join('');
+  renderBulk();
+}
+
+/* ---------------- Tabs ---------------- */
+function showTab(name) {
+  ['settings', 'upload', 'events', 'review'].forEach(t => { $('#tab-' + t).hidden = t !== name; });
+  document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
+}
+$('#tabs').addEventListener('click', e => { const b = e.target.closest('button[data-tab]'); if (b) showTab(b.dataset.tab); });
+['#f-q', '#f-when', '#f-status'].forEach(s => $(s).addEventListener('input', renderEvents));
+
+/* ---------------- Settings ---------------- */
+function fillSettings() {
+  $('#s-owner').value = cfg.owner; $('#s-repo').value = cfg.repo; $('#s-branch').value = cfg.branch; $('#s-token').value = cfg.token;
+}
+$('#btn-settings').addEventListener('click', () => { fillSettings(); showTab('settings'); });
+$('#s-signout').addEventListener('click', () => {
+  cfg.token = ''; saveCfg(); fillSettings();
+  $('#tabs').hidden = true; $('#btn-settings').hidden = true; setStatus('');
+  toast('Signed out. The token was removed from this browser.');
+});
+$('#s-save').addEventListener('click', () => withBusy(async () => {
+  cfg = { owner: $('#s-owner').value.trim(), repo: $('#s-repo').value.trim(), branch: $('#s-branch').value.trim() || 'main', token: $('#s-token').value.trim() };
+  if (!cfg.owner || !cfg.repo || !cfg.token) throw new Error('Fill in owner, repository and token.');
+  let repo;
+  try { repo = await gh(R()); } catch (e) {
+    if (e.status === 404) throw new Error('Repo not found. Check the names, and that the token has access to this repo.');
+    throw e;
+  }
+  if (repo.permissions && !repo.permissions.push) throw new Error('This account cannot write to the repo.');
+  saveCfg();
+  await start();
+}));
+
+/* ---------------- Upload ---------------- */
+let pending = [];
+const drop = $('#drop'), fileIn = $('#file-in');
+drop.addEventListener('click', () => fileIn.click());
+drop.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileIn.click(); } });
+fileIn.addEventListener('change', () => { addFiles(fileIn.files); fileIn.value = ''; });
+['dragenter', 'dragover'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add('over'); }));
+['dragleave', 'drop'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.remove('over'); }));
+drop.addEventListener('drop', e => addFiles(e.dataTransfer.files));
+// Also accept drops anywhere on the upload tab, and pasted images.
+document.addEventListener('dragover', e => { if (!$('#tab-upload').hidden) e.preventDefault(); });
+document.addEventListener('drop', e => { if (!$('#tab-upload').hidden && !drop.contains(e.target)) { e.preventDefault(); addFiles(e.dataTransfer.files); } });
+document.addEventListener('paste', e => {
+  if ($('#tab-upload').hidden || !e.clipboardData) return;
+  const files = [...e.clipboardData.files];
+  if (files.length) { e.preventDefault(); addFiles(files); }
+});
+
+function addFiles(list) {
+  let skipped = 0;
+  for (const f of list) {
+    if (!f.type.startsWith('image/')) { skipped++; continue; }
+    if (pending.some(p => p.file.name === f.name && p.file.size === f.size)) continue;
+    pending.push({ file: f, url: URL.createObjectURL(f) });
+  }
+  if (skipped) toast(`${skipped} file(s) skipped because they are not images.`, true);
+  renderPending();
+}
+function renderPending() {
+  $('#pending').innerHTML = pending.map((p, i) =>
+    `<div class="pv"><img src="${esc(p.url)}" alt=""><button class="x" data-unpend="${i}" title="Remove">×</button><div class="nm">${esc(p.file.name)}</div></div>`).join('');
+  renderPendingActions();
+}
+function renderPendingActions() {
+  $('#pending-actions').hidden = !pending.length;
+  $('#btn-upload').textContent = pending.length === 1 ? 'Upload 1 image' : `Upload ${pending.length} images`;
+}
+$('#pending').addEventListener('click', e => {
+  const b = e.target.closest('[data-unpend]'); if (!b) return;
+  const [p] = pending.splice(+b.dataset.unpend, 1); URL.revokeObjectURL(p.url); renderPending();
+});
+$('#btn-clear').addEventListener('click', () => { pending.forEach(p => URL.revokeObjectURL(p.url)); pending = []; renderPending(); });
+
+function inboxName(file, used) {
+  let name = file.name.replace(/[\\/]/g, '_');
+  // A normal screenshot must never be mistaken for a poster-/thumb-/zoom- override.
+  if (OVERRIDE_PREFIX.test(name)) name = 'upload-' + name;
+  let out = name, n = 2;
+  while (used.has(out.toLowerCase())) { out = name.replace(/(\.[^.]*)?$/, m => ` (${n})` + m); n++; }
+  used.add(out.toLowerCase());
+  return 'inbox/' + out;
+}
+
+$('#btn-upload').addEventListener('click', () => withBusy(async () => {
+  if (!pending.length) return;
+  const blobs = {}; const used = new Set();
+  for (const p of pending) blobs[inboxName(p.file, used)] = await fileToB64(p.file);
+  const n = pending.length;
+  const commit = await commitChange(`Add ${n} screenshot${n > 1 ? 's' : ''} from admin page`, async () => ({ blobs }),
+    (i, total) => setStatus(`Uploading image ${i} of ${total}…`, 'busy'));
+  pending.forEach(p => URL.revokeObjectURL(p.url)); pending = []; renderPending();
+  toast(`Uploaded ${n} image${n > 1 ? 's' : ''}.`);
+  await reload();
+  watchProcessing(commit);
+}));
+
+$('#inbox').addEventListener('click', e => {
+  const b = e.target.closest('[data-rm-inbox]'); if (!b) return;
+  const path = b.dataset.rmInbox;
+  if (!confirm(`Remove ${path.slice(6)} from the inbox? It will not be processed.`)) return;
+  withBusy(async () => {
+    await commitChange(`Remove ${path} from inbox (admin page)`, async () => ({ del: [path] }));
+    toast('Removed.'); await reload();
+  });
+});
+
+/* ---------------- Editor ---------------- */
+const dlg = $('#editor');
+let editing = null; // { id, orig }
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-edit]'); if (b) openEditor(b.dataset.edit);
+});
+$('#e-close').addEventListener('click', () => dlg.close());
+$('#e-openlink').addEventListener('click', () => {
+  const v = $('#e-registration_link').value.trim();
+  if (v) window.open(v, '_blank', 'noopener'); else toast('No link to open.', true);
+});
+
+function openEditor(id) {
+  const ev = state.events.find(e => e.id === id);
+  if (!ev) { toast('That event is no longer in events.json.', true); return; }
+  editing = { id, orig: JSON.parse(JSON.stringify(ev)) };
+  $('#e-heading').textContent = ev.title || 'Edit event';
+  const statuses = new Set(['published', 'hidden', ...state.events.map(e => e.status).filter(Boolean)]);
+  $('#e-status').innerHTML = [...statuses].map(s => `<option value="${esc(s)}">${esc(s === 'published' ? 'published (shown on the site)' : s + ' (not shown)')}</option>`).join('');
+  for (const f of FIELDS) { const el = $('#e-' + f); if (el) el.value = ev[f] == null ? '' : ev[f]; }
+  const poster = $('#e-poster');
+  poster.onerror = () => { if (poster.dataset.fb) { poster.src = poster.dataset.fb; poster.dataset.fb = ''; } };
+  poster.dataset.fb = ev.poster ? encPath(ev.poster) : '';
+  poster.src = imgUrl(ev.poster || ev.thumb);
+  const rv = reviewFor(id);
+  $('#e-review').innerHTML = rv.length
+    ? `<div class="note"><b>Needs review:</b> ${esc(rv.flatMap(r => Array.isArray(r.reasons) ? r.reasons : [r.reasons]).filter(Boolean).join('; '))}${rv.some(r => r.link_problem) ? '<br>Link problem: ' + esc(rv.map(r => r.link_problem).filter(Boolean).map(x => typeof x === 'string' ? x : JSON.stringify(x)).join('; ')) : ''}</div>`
+    : '';
+  $('#e-resolve-wrap').style.display = rv.length ? '' : 'none';
+  $('#e-resolve').checked = true;
+  $('#e-meta').innerHTML = [
+    `id: ${esc(ev.id)}`, ev.added ? `added: ${esc(ev.added)}` : '', ev.confidence ? `confidence: ${esc(ev.confidence)}` : '',
+    ev.rung != null ? `rung: ${esc(ev.rung)}` : '', (ev.source_files || []).length ? `source files: ${esc(ev.source_files.join(', '))}` : ''
+  ].filter(Boolean).join('<br>');
+  dlg.showModal();
+  dlg.querySelector('.dlg-body').scrollTop = 0;
+}
+
+function readForm() {
+  const out = {};
+  for (const f of FIELDS) {
+    const v = $('#e-' + f).value.trim();
+    out[f] = v === '' ? null : v;
+  }
+  out.registration_link = cleanLink(out.registration_link);
+  if (!out.title) throw new Error('Title is required.');
+  if (!out.date && !out.recurrence) throw new Error('Add a date, or a recurrence for repeating events.');
+  if (out.end_date && out.date && out.end_date < out.date) throw new Error('End date is before the start date.');
+  if (out.registration_link && !/^https?:\/\//i.test(out.registration_link)) throw new Error('The registration link must start with http:// or https://');
+  out.recurring = !!out.recurrence;
+  return out;
+}
+
+$('#e-save').addEventListener('click', () => withBusy(async () => {
+  const form = readForm();
+  const { id, orig } = editing;
+  const diff = {};
+  for (const [k, v] of Object.entries(form)) {
+    const before = orig[k] === '' ? null : (orig[k] === undefined ? null : orig[k]);
+    if (JSON.stringify(before) !== JSON.stringify(v)) diff[k] = v;
+  }
+  const resolve = reviewFor(id).length && $('#e-resolve').checked;
+  if (!Object.keys(diff).length && !resolve) { dlg.close(); toast('Nothing changed.'); return; }
+
+  await waitForIdle('saving');
+  setStatus('Saving…', 'busy');
+  await commitChange(`Edit event "${form.title}" (admin page)`, async ctx => {
+    const doc = await ctx.readJSON('events.json', emptyEventsDoc());
+    const ev = getEvents(doc).find(e => e.id === id);
+    if (!ev) throw new Error('This event is no longer in events.json (it may have been merged or deleted). Your changes were not saved.');
+    Object.assign(ev, diff);
+    const text = { 'events.json': dump(doc) };
+    if (resolve) {
+      const rv = await ctx.readJSON('needs_review.json', { review: [] });
+      rv.review = (rv.review || []).filter(r => !(r && r.id === id));
+      text['needs_review.json'] = dump(rv);
+    }
+    return { text };
+  });
+  dlg.close();
+  setStatus('Saved. The public page updates in about a minute.', '');
+  setTimeout(() => setStatus(''), 8000);
+  await reload();
+}));
+
+$('#e-delete').addEventListener('click', () => {
+  const { id, orig } = editing;
+  if (!confirm(`Delete "${orig.title}"? This removes it from the site along with its poster, thumbnail and original screenshots.`)) return;
+  withBusy(async () => {
+    await waitForIdle('deleting');
+    setStatus('Deleting…', 'busy');
+    await commitChange(`Delete event "${orig.title}" (admin page)`, async ctx => {
+      const doc = await ctx.readJSON('events.json', emptyEventsDoc());
+      const arr = getEvents(doc);
+      const idx = arr.findIndex(e => e.id === id);
+      if (idx < 0) throw new Error('This event is no longer in events.json.');
+      const [ev] = arr.splice(idx, 1);
+      setEvents(doc, arr);
+      const stillUsed = new Set();
+      arr.forEach(e => [e.poster, e.thumb, ...(e.source_files || [])].forEach(p => p && stillUsed.add(p)));
+      // Only files in these folders are deleted. hash_log.json is left alone on purpose,
+      // so the same screenshot uploaded again is not turned back into an event.
+      const del = [ev.poster, ev.thumb, ...(ev.source_files || [])]
+        .filter(p => p && /^(posters|thumbs|done)\//.test(p) && !stillUsed.has(p));
+      const rv = await ctx.readJSON('needs_review.json', { review: [] });
+      const before = (rv.review || []).length;
+      rv.review = (rv.review || []).filter(r => !(r && r.id === id));
+      const text = { 'events.json': dump(doc) };
+      if (rv.review.length !== before) text['needs_review.json'] = dump(rv);
+      return { text, del };
+    });
+    dlg.close();
+    setStatus('Deleted. The public page updates in about a minute.', '');
+    setTimeout(() => setStatus(''), 8000);
+    await reload();
+  });
+});
+
+dlg.querySelectorAll('input[type=file][data-kind]').forEach(inp => inp.addEventListener('change', () => {
+  const file = inp.files[0]; inp.value = '';
+  if (!file) return;
+  const kind = inp.dataset.kind;
+  const { id, orig } = editing;
+  withBusy(async () => {
+    const ext = ((file.name.match(/\.[A-Za-z0-9]+$/) || ['.jpg'])[0]).toLowerCase();
+    const path = `inbox/${kind}-${id}${ext}`;
+    const b64 = await fileToB64(file);
+    setStatus('Uploading image…', 'busy');
+    const commit = await commitChange(`Replace ${kind} image for "${orig.title}" (admin page)`, async () => ({ blobs: { [path]: b64 } }));
+    dlg.close();
+    toast('Image uploaded. It will appear after processing.');
+    await reload();
+    watchProcessing(commit);
+  });
+}));
+
+/* ---------------- Review ---------------- */
+$('#rvlist').addEventListener('click', e => {
+  const b = e.target.closest('[data-resolve]'); if (!b) return;
+  const item = state.review[+b.dataset.resolve];
+  const key = JSON.stringify(item);
+  withBusy(async () => {
+    await waitForIdle('updating the review list');
+    await commitChange('Resolve review item (admin page)', async ctx => {
+      const rv = await ctx.readJSON('needs_review.json', { review: [] });
+      const list = rv.review || [];
+      const idx = list.findIndex(r => JSON.stringify(r) === key);
+      if (idx < 0) return null; // already gone
+      list.splice(idx, 1); rv.review = list;
+      return { text: { 'needs_review.json': dump(rv) } };
+    });
+    setStatus('');
+    toast('Marked as fixed.');
+    await reload();
+  });
+});
+
+/* ---------------- Bulk actions ---------------- */
+function renderBulk() {
+  const ne = sel.ev.size, nr = sel.rv.size;
+  $('#bulk-ev').hidden = !ne; $('#bulk-ev-n').textContent = ne + ' selected';
+  $('#bulk-rv').hidden = !nr; $('#bulk-rv-n').textContent = nr + ' selected';
+  const allEv = shownEv.length > 0 && shownEv.every(id => sel.ev.has(id));
+  $('#ev-selall').hidden = !shownEv.length;
+  $('#ev-selall').textContent = allEv ? 'Unselect shown' : 'Select all shown';
+  const allRv = shownRv.length > 0 && shownRv.every(k => sel.rv.has(k));
+  $('#rv-selall').hidden = !shownRv.length;
+  $('#rv-selall').textContent = allRv ? 'Unselect all' : 'Select all';
+}
+
+$('#evlist').addEventListener('change', e => {
+  const c = e.target.closest('[data-sel-ev]'); if (!c) return;
+  if (c.checked) sel.ev.add(c.dataset.selEv); else sel.ev.delete(c.dataset.selEv);
+  renderBulk();
+});
+$('#rvlist').addEventListener('change', e => {
+  const c = e.target.closest('[data-sel-rv]'); if (!c) return;
+  const item = state.review[+c.dataset.selRv]; if (!item) return;
+  if (c.checked) sel.rv.add(rvKey(item)); else sel.rv.delete(rvKey(item));
+  renderBulk();
+});
+$('#ev-selall').addEventListener('click', () => {
+  const all = shownEv.every(id => sel.ev.has(id));
+  shownEv.forEach(id => all ? sel.ev.delete(id) : sel.ev.add(id)); renderEvents();
+});
+$('#rv-selall').addEventListener('click', () => {
+  const all = shownRv.every(k => sel.rv.has(k));
+  shownRv.forEach(k => all ? sel.rv.delete(k) : sel.rv.add(k)); renderReview();
+});
+$('#bulk-ev-clear').addEventListener('click', () => { sel.ev.clear(); renderEvents(); });
+$('#bulk-rv-clear').addEventListener('click', () => { sel.rv.clear(); renderReview(); });
+
+$('#bulk-ev-del').addEventListener('click', () => {
+  const ids = new Set(sel.ev);
+  const items = state.events.filter(e => ids.has(e.id));
+  if (!items.length) return;
+  const n = items.length, s = n > 1 ? 's' : '';
+  const names = items.slice(0, 8).map(e => '• ' + (e.title || e.id)).join('\n') + (n > 8 ? `\n…and ${n - 8} more` : '');
+  if (!confirm(`Delete ${n} event${s}?\n\n${names}\n\nThis removes them from the site along with their posters, thumbnails and original screenshots.`)) return;
+  withBusy(async () => {
+    await waitForIdle('deleting');
+    setStatus(`Deleting ${n} event${s}…`, 'busy');
+    await commitChange(`Delete ${n} event${s} (admin page)`, async ctx => {
+      const doc = await ctx.readJSON('events.json', emptyEventsDoc());
+      const all = getEvents(doc);
+      const removed = all.filter(e => ids.has(e.id));
+      if (!removed.length) throw new Error('None of the selected events are still in events.json.');
+      const keep = all.filter(e => !ids.has(e.id));
+      setEvents(doc, keep);
+      const stillUsed = new Set();
+      keep.forEach(e => [e.poster, e.thumb, ...(e.source_files || [])].forEach(p => p && stillUsed.add(p)));
+      // hash_log.json is left alone on purpose, so the same screenshots are not turned back into events.
+      const del = [...new Set(removed.flatMap(e => [e.poster, e.thumb, ...(e.source_files || [])])
+        .filter(p => p && /^(posters|thumbs|done)\//.test(p) && !stillUsed.has(p)))];
+      const rv = await ctx.readJSON('needs_review.json', { review: [] });
+      const before = (rv.review || []).length;
+      rv.review = (rv.review || []).filter(r => !(r && r.id && ids.has(r.id)));
+      const text = { 'events.json': dump(doc) };
+      if (rv.review.length !== before) text['needs_review.json'] = dump(rv);
+      return { text, del };
+    });
+    sel.ev.clear();
+    setStatus(`Deleted ${n} event${s}. The public page updates in about a minute.`, '');
+    setTimeout(() => setStatus(''), 8000);
+    await reload();
+  });
+});
+
+$('#bulk-rv-fix').addEventListener('click', () => {
+  const keys = new Set(sel.rv);
+  const n = keys.size; if (!n) return;
+  const s = n > 1 ? 's' : '';
+  if (!confirm(`Mark ${n} review item${s} as fixed? ${n > 1 ? 'They' : 'It'} will be removed from the list.`)) return;
+  withBusy(async () => {
+    await waitForIdle('updating the review list');
+    await commitChange(`Resolve ${n} review item${s} (admin page)`, async ctx => {
+      const rv = await ctx.readJSON('needs_review.json', { review: [] });
+      const list = rv.review || [];
+      const rest = list.filter(r => !keys.has(rvKey(r)));
+      if (rest.length === list.length) return null; // already gone
+      rv.review = rest;
+      return { text: { 'needs_review.json': dump(rv) } };
+    });
+    sel.rv.clear();
+    setStatus('');
+    toast(`Marked ${n} item${s} as fixed.`);
+    await reload();
+  });
+});
+
+/* ---------------- Start ---------------- */
+async function start() {
+  if (!cfg.token || !cfg.owner || !cfg.repo) { fillSettings(); showTab('settings'); return; }
+  $('#tabs').hidden = false; $('#btn-settings').hidden = false;
+  setStatus('Loading…', 'busy');
+  await reload();
+  setStatus('');
+  showTab($('#tab-settings').hidden ? (document.querySelector('#tabs .active') || {}).dataset?.tab || 'upload' : 'upload');
+  // If something is already being processed, show it.
+  const runs = await activeRuns();
+  if (runs.length) watchProcessing({ committer: { date: runs[0].created_at } });
+}
+withBusy(start);
+</script>
+</body>
+</html>
