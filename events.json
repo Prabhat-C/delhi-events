@@ -2363,6 +2363,72 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-13"
+    },
+    {
+      "id": "0e4184b52772",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Hell Jumper",
+      "organiser": "India International Centre",
+      "description": "A 2024 documentary about foreign volunteers who joined the fighting in Ukraine, directed by Paddy Wivell. The screening is followed by an online discussion led by Rajiv Mehrotra, with the producer.",
+      "details": null,
+      "date": "2026-11-14",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "C.D. Deshmukh Auditorium, India International Centre, 40 Max Mueller Marg, New Delhi 110003",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Film runs 89 minutes with English subtitles. Followed by an online discussion.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/a1c2f925d548.jpg",
+      "thumb": "thumbs/a1c2f925d548.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMEBQYC/8QAKBAAAQQBAgILAAAAAAAAAAAAAQACAxEEEiIxMgUTITRRYXFygaHB/8QAGAEAAgMAAAAAAAAAAAAAAAAAAQIAAwT/xAAZEQEAAwEBAAAAAAAAAAAAAAAAAREhMRL/2gAMAwEAAhEDEQA/AM7FHG++sforhtu1IdjY7hYyYwa4aa/VYYhjjxYS/Jijc5vK4WR6pz3OA5mdvg2lomdxXzrO15IUnpHvA9oQnAwDEkhaJHAv0Bo3Eaa+FPOZAANw+1SBdO5UvmLGzc97ZcjVGbbpHBCUhMj/2Q==",
+      "source_files": [
+        "done/IMG-20261114-WA0002.jpg"
+      ],
+      "image_hashes": [
+        "a1c2f925d548dd9a725edb96fe96eca44cdca06d3418d3819f924899f6a7957d"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-14"
+    },
+    {
+      "id": "479466d20b1c",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Dikshant Samaroh 2026",
+      "organiser": "Kathak Kendra, National Institute of Kathak Dance",
+      "description": "Annual convocation-style samaroh of Kathak Kendra with inauguration, diploma distribution and performances by rank holders. Includes the dance choreography Raghu Rang, based on the Ramayana.",
+      "details": null,
+      "date": "2026-11-14",
+      "end_date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "venue": "Meghdoot Theatre-I, Rabindra Bhawan, Copernicus Marg, New Delhi 110001",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Programme: 4:00 p.m. inauguration and diploma distribution; 4:50 p.m. rank holder performances; 5:50 p.m. Raghu Rang. All are welcome.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/bd0adfdbcc73.jpg",
+      "thumb": "thumbs/bd0adfdbcc73.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAbABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAIBAwQG/8QAJhAAAQMDAgUFAAAAAAAAAAAAAQACEQMSIRNRBCIxYaEjQYGR0f/EABcBAAMBAAAAAAAAAAAAAAAAAAABAwL/xAAXEQEBAQEAAAAAAAAAAAAAAAAAARES/9oADAMBAAIRAxEAPwDorqYMDLtikpOALgYNxJnZFanxJksNLTxAcHE+CqtPiQRbpz3a79WVdjVSa23lNw3KFNIVBTArRf7xMeUIM7j6GWzjqOqrY9uDY53wIVQe5xqNJwJj6UXFrA4HMhPmJ5taj2bb22QkpuJbJKElI//Z",
+      "source_files": [
+        "done/IMG-20261114-WA0003.jpg"
+      ],
+      "image_hashes": [
+        "bd0adfdbcc735bed98375d08d273d4b976db0bf0d4b089afa96bc6716c6ebc8f"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-14"
     }
   ]
 }

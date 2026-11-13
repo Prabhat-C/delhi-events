@@ -803,5 +803,19 @@
     "event_id": "41413d354947",
     "title": "A Theatre Evening",
     "processed": "2026-11-13"
+  },
+  "a1c2f925d548dd9a725edb96fe96eca44cdca06d3418d3819f924899f6a7957d": {
+    "file": "IMG-20261114-WA0002.jpg",
+    "outcome": "published",
+    "event_id": "0e4184b52772",
+    "title": "Hell Jumper",
+    "processed": "2026-11-14"
+  },
+  "bd0adfdbcc735bed98375d08d273d4b976db0bf0d4b089afa96bc6716c6ebc8f": {
+    "file": "IMG-20261114-WA0003.jpg",
+    "outcome": "published",
+    "event_id": "479466d20b1c",
+    "title": "Dikshant Samaroh 2026",
+    "processed": "2026-11-14"
   }
 }
