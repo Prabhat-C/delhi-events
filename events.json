@@ -2448,18 +2448,21 @@
       "notes": "The screening is followed by a Q&A session with director Masha Kondakova joining online and Nagender Parashar, founder and CEO of Parashar Industries.",
       "recurrence": null,
       "recurring": false,
-      "poster": "posters/9481c9f8aab4.jpg",
-      "thumb": "thumbs/9481c9f8aab4.jpg",
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAECAwQG/8QAIhAAAgIBBAEFAAAAAAAAAAAAAAECESEDEjFBYRMjUYGR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AOqc81eos/IR1drv3H4bHdStRhafNEvVlfQFsW2sprwwGuAAzrY7pydPpDSinhan4WrljAUHa7+0BIAP/9k=",
+      "poster": "posters/160432d2cdde.jpg",
+      "thumb": "thumbs/160432d2cdde.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQDBQYC/8QAJhAAAgEDBAEDBQAAAAAAAAAAAQIDAAQRBRIhMRMVQYEUUWGh8f/EABYBAQEBAAAAAAAAAAAAAAAAAAMABP/EABcRAQEBAQAAAAAAAAAAAAAAAAABERL/2gAMAwEAAhEDEQA/AGYbWJo3MqZIIAOevimPT7NjhkUN7KJK4gQCcPMSUweCtS3CwvbukYAcrgYTum2gyKN4MOwHWTiimvo5x2TRS9B5piFTHqc0rMzLLGpAOewTn+fmq+eTUfLJBFKT5XkYj3C8D4FV8uryuwJLAg5BU8io5tUeUqx3FlBAJPP6rM1tNZTrbWqRXE4Mi53bmye6KyvqVyOBNIB9t2aKk//Z",
       "source_files": [
+        "done/poster-f19d92d3646d.jpg",
         "done/Screenshot 2026-11-14 at 2.40.42 AM.png",
         "done/Screenshot 2026-11-14 at 2.40.50 AM.png"
       ],
       "image_hashes": [
+        "160432d2cddebb13a75774ba438f597064bf44e4f1d821cf043ac5fad0514e4c",
         "9481c9f8aab494718afaa8e96716f5189a6e39db1e98786611cdf2a3b4628961",
         "b1bb553826c20438a9b431cc57d03e51be39e1aef4c7ca08767a5254ba96b343"
       ],
       "source_labels": [
+        "poster",
         "other",
         "other"
       ],
