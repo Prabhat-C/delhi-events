@@ -2330,6 +2330,39 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-13"
+    },
+    {
+      "id": "41413d354947",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "A Theatre Evening",
+      "organiser": "Dramebaaz",
+      "description": "An evening of three plays: Backbone, Pinjra and Jungle Ki Adalat.",
+      "details": null,
+      "date": "2026-11-18",
+      "end_date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "venue": "Ragantra, F-64, Okhla Phase-1, 3rd floor, in front of Toyota Showroom, New Delhi - 110020",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/bfaa6c40e5ae.jpg",
+      "thumb": "thumbs/bfaa6c40e5ae.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAQFAwEC/8QAJBAAAgIBAgcAAwAAAAAAAAAAAQIAAxESMQQFISJBUWFCcXL/xAAXAQADAQAAAAAAAAAAAAAAAAAAAgQB/8QAHREAAgEEAwAAAAAAAAAAAAAAAAECAxESEyIxYf/aAAwDAQACEQMRAD8AsOxUdhTI31GZ12WAjU1AGct3HOPkjW8xHC8y4oYLgtpKgDI+/qegz2VlmR2C79Opkig2VXTLNlleRhxt7hMeXBRwo0jtLEjPqEWSxk0ArbyipuJe8XANYxLdc+c9PUbWoBdANaqNt4lX+X9GdfxEdeS4lEaC7TH6iEDKzLkMfkJLMIuy5uj0/9k=",
+      "source_files": [
+        "done/IMG-20261113-WA0001.jpg"
+      ],
+      "image_hashes": [
+        "bfaa6c40e5aea988f85f5f8d75ae065c7551f021e9981745d7cfa6683c2bdc33"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-13"
     }
   ]
 }
