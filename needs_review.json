@@ -1,22 +1,6 @@
 {
   "review": [
     {
-      "id": "369054132786",
-      "status": "published",
-      "title": "On Air",
-      "date": "2026-11-16",
-      "confidence": "medium",
-      "reasons": [
-        "confidence is medium"
-      ],
-      "poster": "posters/ff0adebb5913.jpg",
-      "thumb": "thumbs/3fc76a196764.jpg",
-      "source_files": [
-        "done/WhatsApp Image 2026-11-12 at 6.46.18 PM.jpeg",
-        "done/thumb-369054132786.png"
-      ]
-    },
-    {
       "id": null,
       "status": null,
       "title": "thumb-air.png",
@@ -28,21 +12,6 @@
       "poster": null,
       "thumb": null,
       "source_files": []
-    },
-    {
-      "id": "aa8b26da3f41",
-      "status": "published",
-      "title": "Awareness and Capacity Building Workshop on Mission LiFE, Gender, AI and Climate Change and Panel Discussion on AI for Advancing Inclusive and Sustainable Climate Action",
-      "date": "2026-11-13",
-      "confidence": "medium",
-      "reasons": [
-        "confidence is medium"
-      ],
-      "poster": "posters/6e168c45175b.jpg",
-      "thumb": "thumbs/6e168c45175b.jpg",
-      "source_files": [
-        "done/Screenshot 2026-11-12 at 11.41.40 PM.png"
-      ]
     }
   ]
 }
