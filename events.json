@@ -2123,6 +2123,42 @@
       ],
       "rung": "haiku-medium",
       "added": "2026-11-12"
+    },
+    {
+      "id": "031100271bed",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "This Changes Everything (2015)",
+      "organiser": "Progressive Artists' League",
+      "description": "Screening of the film This Changes Everything (2015), followed by a discussion on the film.",
+      "details": null,
+      "date": "2026-11-15",
+      "end_date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "venue": "267 - 3rd floor, Pocket B, Sukhdev Vihar, Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "RSVP button on the listing. WhatsApp contact for enquiries: 7038203920.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/5b0cab18c05a.jpg",
+      "thumb": "thumbs/5b0cab18c05a.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFAf/EACMQAAEDAwIHAAAAAAAAAAAAAAMAAQIEESESQRMVMTI0YXH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABgRAAMBAQAAAAAAAAAAAAAAAAACEQED/9oADAMBAAIRAxEAPwCVRlqIU8hxjAsOt5td4/HWBqDgk5IiC0rWZ3049smQeGBPF3R0XFgc21qT+c1t3vwM7aY4QnSd7oUUuH//2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-13 at 1.43.14 PM.png",
+        "done/Screenshot 2026-11-13 at 1.43.23 PM.png"
+      ],
+      "image_hashes": [
+        "5b0cab18c05a6daa3baea1ae51fc3cfe6cf60fc011a4038dd0520cdf9835b5bf",
+        "bc7fd396ca4353aa286256bfd9a39c4d5232f3153324e1884266f9815a72db98"
+      ],
+      "source_labels": [
+        "poster",
+        "other"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-13"
     }
   ]
 }
