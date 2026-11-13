@@ -859,5 +859,12 @@
     "event_id": "f19d92d3646d",
     "title": "Second Wind - Indian Premiere",
     "processed": "2026-11-14"
+  },
+  "af666db7e85e015fedbdbd82584c037f7d1e8fa59d0f76895202c6c07c1bb386": {
+    "file": "poster-fa4f4f7c03aa.jpg",
+    "outcome": "image_override",
+    "event_id": "fa4f4f7c03aa",
+    "title": "Man with a Movie Camera",
+    "processed": "2026-11-14"
   }
 }

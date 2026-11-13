@@ -2487,18 +2487,21 @@
       "notes": "Silent film presented with English subtitles.",
       "recurrence": null,
       "recurring": false,
-      "poster": "posters/b78edb808dce.jpg",
-      "thumb": "thumbs/b78edb808dce.jpg",
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAjABQDASIAAhEBAxEB/8QAGQABAQEAAwAAAAAAAAAAAAAAAAEDAgQG/8QAIxABAAMAAAUEAwAAAAAAAAAAAQACEQMSIVFxIjFBgRORof/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD1TfF9XE/ZBxSttXiPnJdCylK6Pacvy2XOkDWqp1qnmIqqa59RAww121TykpUXC1V8x61+fftLy8Tv/YGlRDHPqJa7ym+8QOugL0+WXCIgbgB0MiIgf//Z",
+      "poster": "posters/af666db7e85e.jpg",
+      "thumb": "thumbs/af666db7e85e.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMEBQYC/8QAKBAAAgEEAQIFBQEAAAAAAAAAAQIDAAQRITESQQUTIjJRFGGBkdHh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgQB/8QAGxEBAQACAwEAAAAAAAAAAAAAAQACEQMhIlH/2gAMAwEAAhEDEQA/ANMWQZJlAAO8txWeimmW5RoroxxySetT3HGvzqpniVp9XcHrtI3VUIJ6sHJPbjeqVa+TY20MN1MglQaOtDPcj4+/xUb0bqcHyn2uHbDe6iiEKYx0j90UdwlO9tJIC0kYY8nrHH+1Fu7Gzur3zJfUXjVMBtFcmnLabJMFuSTn20SRlZIlKxrlgqFRwBvdalo3REKBVS5WFAAFVWAGO1FV9x4XNJIGVowMY2T/ACijoqceLFxHd//Z",
       "source_files": [
+        "done/poster-fa4f4f7c03aa.jpg",
         "done/Screenshot 2026-11-14 at 2.41.21 AM.png",
         "done/Screenshot 2026-11-14 at 2.41.05 AM.png"
       ],
       "image_hashes": [
+        "af666db7e85e015fedbdbd82584c037f7d1e8fa59d0f76895202c6c07c1bb386",
         "b78edb808dce4e091fcbf913ccf6a31ddc87ad370e444b4fa9fd3a88baa05505",
         "b5f3306a221138c2f8cbef1ffb265b6b376b5b730183fc3ef4c8ca0410c16dd9"
       ],
       "source_labels": [
+        "poster",
         "text_caption",
         "text_caption"
       ],
