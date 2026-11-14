@@ -2744,6 +2744,72 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-14"
+    },
+    {
+      "id": "97123d6836e6",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "आज कविता 45",
+      "organiser": "Raza Foundation and India International Centre",
+      "description": "A poetry evening (kavya-sandhya) featuring poets Janardan Gond (Prayagraj), Mahesh Alok (Agra), Nishant Tyagi (Delhi) and Sandeep Tiwari (Bareilly).",
+      "details": null,
+      "date": "2026-11-26",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "Lecture Hall-2, India International Centre Annexe, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Tea is served at 6:15 pm.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/a9487878759a.jpg",
+      "thumb": "thumbs/a9487878759a.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEBQb/xAAmEAABAwMCBQUAAAAAAAAAAAABAgMRAAQhEkEFIlFysRMUMzTB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAaEQEBAAIDAAAAAAAAAAAAAAAAAQIxERIh/9oADAMBAAIRAxEAPwDbbdRDTJKAoBOJgnAime5tXFhKXRM40mJP7Qw3qbQRg6U5BHQVLe37FjchtRTr0a5UQADsDjehe6l426UXbegYLYPTc0UvijvrusuEJktCY2yaKeUdY2bYShsAJyhMyknYVJf2Lr9+24htJQlpaJwMmYgVfafE32J8U6g3bmLsONItkOtkLDXMFGSOY0VpcU+wnsHk0VFy9VH/2Q==",
+      "source_files": [
+        "done/IMG-20261114-WA0015.jpg"
+      ],
+      "image_hashes": [
+        "a9487878759ad35376c823969572cb7da16414f8034bd510ff76fc802707e226"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-14"
+    },
+    {
+      "id": "677bf628ac63",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "The Game of Dice",
+      "organiser": "Sadhya - A Unit of Performing Arts",
+      "description": "A dance production with choreography by Santosh Nair and music by Sharat Chandra Srivastava, presented by Impresario India.",
+      "details": null,
+      "date": "2026-11-24",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "Stein Auditorium, India Habitat Centre, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Enquiries: 9811120913.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/b18f8476dd5f.jpg",
+      "thumb": "thumbs/b18f8476dd5f.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAbABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUCAwYE/8QAKBAAAgEDAwMCBwAAAAAAAAAAAQIDAAQRBSExEkFRBhMiM3GBkcHx/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAD/8QAGhEAAwADAQAAAAAAAAAAAAAAAAERAxIhMf/aAAwDAQACEQMRAD8AYadYWb6Tau9rbNI0eWZ1GSfNWpp9kW3tLXY4OVUfqrdKjLaPacfKGxqcM0ctzJAjAyR8jB+n3oEyvqOGK21QpbxrEnQp6UGBnFFT9Rq8+rSe2jt0KqMek8gUUxgMrDUYoZHSYtCHVRlduMjAHb+Vw29wwu7l4VkEchKrh+AR381n3upllBEh+E7Z371MajddLj3BuCDhRx+K1WvpVjS9MokQTQYIjXAVu2NsnufJopfBdTtHvK22w34GKKnkj4wh/9k=",
+      "source_files": [
+        "done/IMG-20261114-WA0016.jpg"
+      ],
+      "image_hashes": [
+        "b18f8476dd5ffc904428c195400f16ce9a3513dcce908134e0641092923da4f1"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-14"
     }
   ]
 }
