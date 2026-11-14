@@ -2695,16 +2695,19 @@
       "recurrence": null,
       "recurring": false,
       "poster": "posters/a3d4668c75cd.jpg",
-      "thumb": "thumbs/a3d4668c75cd.jpg",
+      "thumb": "thumbs/e68d1a6c6c6b.jpg",
       "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAArABQDASIAAhEBAxEB/8QAGgAAAwADAQAAAAAAAAAAAAAAAAIDAQQFBv/EACsQAAEDAwIEBAcAAAAAAAAAAAEAAgMEERIhYTEzcsEiI0FxMkJRUoGhsf/EABcBAQEBAQAAAAAAAAAAAAAAAAECAwD/xAAXEQEBAQEAAAAAAAAAAAAAAAAAAREC/9oADAMBAAIRAxEAPwD0EMDI2+Y3NpALBgAG6cN08bImk5R3/ATwlwItcjEaX2TzEhzTcj2WLRo1lPE6RpMQb4eFtyhVrOY3p7lCdMtVhALgCD8I1HsnnvkyxN1JjnNIxHoP4qSE3jLrX3UhCs5jenuULNbzW9PcoSYrHk0B122LRoTsme4SOGJabcQVzqernNOzx/KPQKjaqb7/ANBdgxWr5jenuULk11VMZ9ZDoPoEKpyucv/Z",
       "source_files": [
-        "done/IMG-20261114-WA0012.jpg"
+        "done/IMG-20261114-WA0012.jpg",
+        "done/thumb-ce3df97c9d25.jpg"
       ],
       "image_hashes": [
-        "a3d4668c75cd3196bf4fd40c12a26bfa10a2b565b88dfb1a3d901768b1993bd2"
+        "a3d4668c75cd3196bf4fd40c12a26bfa10a2b565b88dfb1a3d901768b1993bd2",
+        "e68d1a6c6c6b139a880719623a4f5d832a7b4d4ab267f7af7f2a67cc2d6a6886"
       ],
       "source_labels": [
-        "text_caption"
+        "text_caption",
+        "other"
       ],
       "rung": "haiku-low",
       "added": "2026-11-14"
