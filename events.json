@@ -2810,6 +2810,75 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-14"
+    },
+    {
+      "id": "83c4f68749a4",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Doobta hua aadmi",
+      "organiser": "Sharad Theatre House",
+      "description": "A Hindi stage play, an adaptation of Anton Chekhov's The Sinking Man, directed by Vishal Bhat.",
+      "details": null,
+      "date": "2026-11-29",
+      "end_date": null,
+      "start_time": "14:00",
+      "end_time": null,
+      "venue": "Laxminagar Studio",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Free entry for all. Nearest metro: Nirman Vihar, Delhi. Contact: 9643449357.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/b9bd84db1bcc.jpg",
+      "thumb": "thumbs/b9bd84db1bcc.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAdABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAMBBQIEBv/EACYQAQABAwMEAQUBAAAAAAAAAAECAAMREiExBAUTQXEiUVKRsfD/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABoRAAMBAAMAAAAAAAAAAAAAAAABEQISMVH/2gAMAwEAAhEDEQA/AF3WTBlcuXIZNk3+/qlTu21MSup72Af81jY6jU3S7blOCbAhpwbUmXOfGxPX1DUc7djL8Myl52a4PTXNGQ8jy5eCildnnjpp7IeR5+CirUg+zn2cy3LTESY1Oq4xtjFTjYdqLdpHGRw/jTMY9H6oQdXpY9rvabNwTCXH+FFanRL4542zPg+CimgM/9k=",
+      "source_files": [
+        "done/IMG-20261114-WA0019.jpg",
+        "done/IMG-20261114-WA0020.jpg"
+      ],
+      "image_hashes": [
+        "b9bd84db1bcc466507ea5bbad7fbfff915e3494491c6a8fcc3a51914b33767c2",
+        "e276d3b962469e849845cb2f4e3a0a8c8e00a662ccdb69be49d3f0550ac9b392"
+      ],
+      "source_labels": [
+        "poster",
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-14"
+    },
+    {
+      "id": "2d8ee89afdc6",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Bharatanatyam Recital by Jasmine Kaur",
+      "organiser": null,
+      "description": "A Bharatanatyam dance recital by Jasmine Kaur, a disciple of Shri Mavin Khoo, with accompanying artists Varun Rajasekharan, Venkateshwaran Kuppuswamy, Manohar Balatchandirane and G. Raghavendra Prasath.",
+      "details": null,
+      "date": "2026-11-15",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Chinmaya Mission Auditorium",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Open to all.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/c680a9d7dbce.jpg",
+      "thumb": "thumbs/c680a9d7dbce.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAIBAwQF/8QAIhAAAgIBAwQDAAAAAAAAAAAAAQIAEQMEEjEyQVGRBSGh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQIA/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERAv/aAAwDAQACEQMRAD8A4TkQw6d86uUUttriIQxHH7NPxxp3DAgAXYNEV5lbcVNhJ6jMrI2J2Qmipo0YTTqcGXJl3JhLAj7ZRYY+YSVpNUdYacKw77ABVVXJk3k29Q9mVsCuMEMe3eIXYDqPuMJou4qSLIhEhEx//9k=",
+      "source_files": [
+        "done/IMG-20261114-WA0021.jpg"
+      ],
+      "image_hashes": [
+        "c680a9d7dbce56a48804ed269c11e4cc0b3b742768d865e783c90b3ee75444d9"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-14"
     }
   ]
 }
