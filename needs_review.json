@@ -1,20 +1,3 @@
 {
-  "review": [
-    {
-      "id": "ce3df97c9d25",
-      "status": "published",
-      "title": "Children's Day Celebration 2026",
-      "date": "2026-11-15",
-      "confidence": "high",
-      "reasons": [
-        "no poster"
-      ],
-      "poster": "posters/a3d4668c75cd.jpg",
-      "thumb": "thumbs/e68d1a6c6c6b.jpg",
-      "source_files": [
-        "done/IMG-20261114-WA0012.jpg",
-        "done/thumb-ce3df97c9d25.jpg"
-      ]
-    }
-  ]
+  "review": []
 }
