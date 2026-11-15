@@ -22,6 +22,9 @@ Pipeline
      originals in done/ (poster screenshot first), which are never modified. If the display poster cannot be made, "poster"
      falls back to the original in done/. "poster_blur" is a tiny base64 JPEG (about 20 px wide) of the same image,
      used by the zoom view as a placeholder; anything that replaces "poster" must replace "poster_blur" too. "source_labels" holds one label per source file.
+     "extra_posters" (optional, added from admin.html) is a list of {"poster", "poster_blur"} shown after "poster" in the
+     zoom view. "poster" can be null when the owner deleted every poster (the page then shows the title). Merges and
+     replacements keep the extra posters; only the owner removes them.
   7. Merge step (after all batches): events from this run are compared with each other and with the existing
      entries by date + normalised venue + start_time (title ignored). Matches are merged into one entry;
      same date and venue with a different start time goes to needs_review.json instead.
@@ -438,6 +441,16 @@ def match_kind(a: dict, b: dict) -> tuple[Optional[str], str]:
     return None, ""
 
 
+def poster_paths(e: dict) -> list:
+    """Every display poster of an entry: "poster" first, then the "extra_posters" added from the admin page."""
+    out = [e.get("poster")] + [x.get("poster") for x in (e.get("extra_posters") or []) if isinstance(x, dict)]
+    return [p for p in out if isinstance(p, str) and p]
+
+
+def extra_posters(e: dict) -> list:
+    return [x for x in (e.get("extra_posters") or []) if isinstance(x, dict) and isinstance(x.get("poster"), str)]
+
+
 def remove_derived(base: Path, rel, keep, dry_run: bool = False) -> None:
     """Delete a thumbnail or display poster that is no longer used. Only files directly inside thumbs/ or
     posters/ are ever removed, never anything in done/."""
@@ -516,6 +529,24 @@ def merge_pair(store: MergeStore, w: dict, l: dict) -> None:
     added = [a for a in (w.get("added"), l.get("added")) if a]
     if added:
         w["added"] = min(added)
+
+    # Posters added on the admin page are kept from both entries (w's first). If the owner deleted every poster of w,
+    # l's poster and thumbnail fill the gap, like any other empty field.
+    seen = set(poster_paths(w))
+    if not w.get("poster") and l.get("poster"):
+        w["poster"], w["poster_blur"] = l["poster"], l.get("poster_blur")
+        if not w.get("thumb"):
+            w["thumb"] = l.get("thumb")
+        seen.add(l["poster"])
+    extras = extra_posters(w)
+    for x in extra_posters(l):
+        if x["poster"] not in seen:
+            extras.append(x)
+            seen.add(x["poster"])
+    if extras:
+        w["extra_posters"] = extras
+    else:
+        w.pop("extra_posters", None)
 
     for h in l_hashes:                                     # the hash log must point at the surviving entry
         if h in store.hashlog:
@@ -1209,6 +1240,8 @@ def upsert(ctx: Ctx, entry: dict) -> tuple[str, str, Optional[dict]]:
                          (_real_poster(ex), completeness(ex), CONF_RANK.get(ex.get("confidence"), 0))
             if new_better:
                 entry["id"] = ex["id"]
+                if extra_posters(ex):                        # posters added on the admin page stay with the event
+                    entry["extra_posters"] = extra_posters(ex)
                 entry["source_files"], entry["image_hashes"], entry["source_labels"] = new_files, new_hashes, new_labels
                 ctx.events[i] = entry
                 ctx.review = [r for r in ctx.review if r["id"] != ex["id"]]
@@ -1395,7 +1428,7 @@ def find_override_target(events: list, key: str) -> tuple[Optional[dict], str]:
 
 def _derived_in_use(ctx: Ctx, rel, owner_id) -> bool:
     """True when an event other than owner_id still points to this thumbs/ or posters/ file."""
-    return any(rel in (e.get("poster"), e.get("thumb")) for e in ctx.events if e.get("id") != owner_id)
+    return any(rel == e.get("thumb") or rel in poster_paths(e) for e in ctx.events if e.get("id") != owner_id)
 
 
 def _override_problem(ctx: Ctx, name: str, why: str) -> None:

@@ -75,6 +75,21 @@
   .tag.warn { background: var(--warn-bg); color: var(--warn); }
   .tag.off { background: #fde7e5; color: var(--danger); }
 
+  /* Title placeholder for events with no image */
+  .noimg.ph { display: flex; align-items: center; justify-content: center; padding: 6px; text-align: center; overflow: hidden;
+    font-size: 11px; line-height: 1.25; font-weight: 600; color: #fff; background: var(--accent); overflow-wrap: anywhere; hyphens: auto; }
+
+  /* Editor images */
+  .imgsec h4 { font-size: 13px; color: var(--muted); font-weight: 600; margin: 14px 0 6px; }
+  .ptiles { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-start; }
+  .ptile { width: 116px; display: flex; flex-direction: column; gap: 4px; }
+  .ptile img, .ptile .noimg { width: 116px; height: 154px; object-fit: cover; border-radius: 8px; background: #ddd; }
+  .ptile .noimg.ph { background: var(--accent); }
+  .ptile .lbl { font-size: 11px; color: var(--muted); }
+  .ptile .btn { justify-content: center; }
+  .addtile { width: 116px; height: 154px; border: 2px dashed #c9c6bd; border-radius: 8px; display: flex; align-items: center;
+    justify-content: center; text-align: center; font-size: 13px; color: var(--muted); cursor: pointer; padding: 8px; }
+
   /* Selection */
   .evrow { display: flex; align-items: stretch; gap: 6px; margin-top: 8px; }
   .evrow .ev { margin-top: 0; flex: 1; min-width: 0; }
@@ -104,9 +119,6 @@
   .dlg-body { overflow: auto; padding: 4px 16px 16px; }
   .dlg-foot { display: flex; gap: 8px; flex-wrap: wrap; padding: 12px 16px; border-top: 1px solid var(--line); }
   .dlg-foot .spacer { flex: 1; }
-  .imgs { display: flex; gap: 14px; align-items: flex-start; margin-top: 12px; flex-wrap: wrap; }
-  .imgs img { width: 150px; border-radius: 8px; background: #ddd; }
-  .imgs .ib { display: flex; flex-direction: column; gap: 6px; }
   .note { padding: 8px 12px; border-radius: 8px; background: var(--warn-bg); color: var(--warn); font-size: 14px; margin-top: 12px; }
   .meta { font-size: 12px; color: var(--muted); margin-top: 14px; word-break: break-all; }
   .linkrow { display: flex; gap: 6px; }
@@ -222,16 +234,7 @@
     </div>
     <div class="dlg-body">
       <div id="e-review"></div>
-      <div class="imgs">
-        <img id="e-poster" alt="">
-        <div class="ib">
-          <span class="small muted">Replace image</span>
-          <label class="btn sm">Poster and thumbnail<input type="file" accept="image/*" data-kind="poster" hidden></label>
-          <label class="btn sm">Thumbnail only<input type="file" accept="image/*" data-kind="thumb" hidden></label>
-          <label class="btn sm">Zoom poster only<input type="file" accept="image/*" data-kind="zoom" hidden></label>
-          <span class="small muted" style="max-width:260px">The new image is processed by the workflow, which takes a minute or two.</span>
-        </div>
-      </div>
+      <div id="e-images"></div>
       <label class="f" for="e-title">Title</label><input type="text" id="e-title">
       <label class="f" for="e-organiser">Organiser</label><input type="text" id="e-organiser">
       <label class="f" for="e-description">Description</label><textarea id="e-description" rows="2"></textarea>
@@ -573,12 +576,26 @@ function imgUrl(p) {
   if (!p) return '';
   return `https://raw.githubusercontent.com/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.repo)}/${state.head.sha}/${encPath(p)}`;
 }
-function imgTag(p, alt) {
-  if (!p) return '<div class="noimg"></div>';
+function imgTag(p, alt, title) {
+  if (!p) return title != null ? `<div class="noimg ph">${esc(title || 'No title')}</div>` : '<div class="noimg"></div>';
   // raw.githubusercontent works for public repos right away; fall back to the Pages copy.
   return `<img loading="lazy" alt="${esc(alt || '')}" src="${esc(imgUrl(p))}" data-fallback="${esc(encPath(p))}" onerror="if(this.dataset.fallback){this.src=this.dataset.fallback;this.dataset.fallback='';}">`;
 }
 const reviewFor = id => state.review.filter(r => r && r.id && r.id === id);
+
+/* Posters shown in the zoom view, in order: the main `poster`, then `extra_posters`. */
+function posterList(ev) {
+  if (!ev || !ev.poster) return [];
+  const extras = Array.isArray(ev.extra_posters) ? ev.extra_posters.filter(x => x && x.poster) : [];
+  return [{ poster: ev.poster, poster_blur: ev.poster_blur || null }, ...extras];
+}
+function setPosterList(ev, list) {
+  ev.poster = list.length ? list[0].poster : null;
+  ev.poster_blur = list.length ? (list[0].poster_blur || null) : null;
+  if (list.length > 1) ev.extra_posters = list.slice(1).map(x => ({ poster: x.poster, poster_blur: x.poster_blur || null }));
+  else delete ev.extra_posters;
+}
+const eventFiles = e => [e.thumb, ...posterList(e).map(x => x.poster), ...(e.source_files || [])].filter(Boolean);
 
 /* ---------------- Rendering ---------------- */
 function renderAll() { renderInbox(); renderEvents(); renderReview(); }
@@ -617,9 +634,11 @@ function renderEvents() {
     if (isRecurring(ev)) tags.push('<span class="tag">Recurring</span>');
     if (isPast(ev)) tags.push('<span class="tag">Past</span>');
     if (!ev.registration_link) tags.push('<span class="tag">No link</span>');
+    if (!ev.poster) tags.push('<span class="tag">No poster</span>');
+    if (posterList(ev).length > 1) tags.push(`<span class="tag">${posterList(ev).length} posters</span>`);
     return `<div class="evrow"><label class="sel"><input type="checkbox" data-sel-ev="${esc(ev.id)}"${sel.ev.has(ev.id) ? ' checked' : ''} aria-label="Select ${esc(ev.title || 'event')}"></label>
     <button class="ev" data-edit="${esc(ev.id)}">
-      ${imgTag(ev.thumb || ev.poster, '')}
+      ${imgTag(ev.thumb || ev.poster, '', ev.title)}
       <div><div class="t">${esc(ev.title || '(no title)')}</div>
       <div class="m">${esc(whenText(ev))}</div>
       <div class="m">${esc(ev.venue || 'No venue')}</div>
@@ -644,7 +663,7 @@ function renderReview() {
     const title = ev ? ev.title : (item.title || (item.id ? 'Event ' + item.id + ' (no longer in events.json)' : 'Not linked to an event'));
     return `<div class="rv">
       <label class="sel"><input type="checkbox" data-sel-rv="${i}"${sel.rv.has(rvKey(item)) ? ' checked' : ''} aria-label="Select review item"></label>
-      ${imgTag(item.thumb || item.poster || (ev && (ev.thumb || ev.poster)), '')}
+      ${imgTag(item.thumb || item.poster || (ev && (ev.thumb || ev.poster)), '', ev ? ev.title : (item.title || ''))}
       <div class="body">
         <div class="t"><b>${esc(title)}</b></div>
         ${ev ? `<div class="small muted">${esc(whenText(ev))}</div>` : ''}
@@ -780,18 +799,18 @@ $('#e-openlink').addEventListener('click', () => {
   if (v) window.open(v, '_blank', 'noopener'); else toast('No link to open.', true);
 });
 
-function openEditor(id) {
+function openEditor(id, draft) {
   const ev = state.events.find(e => e.id === id);
   if (!ev) { toast('That event is no longer in events.json.', true); return; }
   editing = { id, orig: JSON.parse(JSON.stringify(ev)) };
   $('#e-heading').textContent = ev.title || 'Edit event';
   const statuses = new Set(['published', 'hidden', ...state.events.map(e => e.status).filter(Boolean)]);
   $('#e-status').innerHTML = [...statuses].map(s => `<option value="${esc(s)}">${esc(s === 'published' ? 'published (shown on the site)' : s + ' (not shown)')}</option>`).join('');
-  for (const f of FIELDS) { const el = $('#e-' + f); if (el) el.value = ev[f] == null ? '' : ev[f]; }
-  const poster = $('#e-poster');
-  poster.onerror = () => { if (poster.dataset.fb) { poster.src = poster.dataset.fb; poster.dataset.fb = ''; } };
-  poster.dataset.fb = ev.poster ? encPath(ev.poster) : '';
-  poster.src = imgUrl(ev.poster || ev.thumb);
+  for (const f of FIELDS) {
+    const el = $('#e-' + f); if (!el) continue;
+    el.value = draft && f in draft ? draft[f] : (ev[f] == null ? '' : ev[f]);
+  }
+  renderEditorImages(ev);
   const rv = reviewFor(id);
   $('#e-review').innerHTML = rv.length
     ? `<div class="note"><b>Needs review:</b> ${esc(rv.flatMap(r => Array.isArray(r.reasons) ? r.reasons : [r.reasons]).filter(Boolean).join('; '))}${rv.some(r => r.link_problem) ? '<br>Link problem: ' + esc(rv.map(r => r.link_problem).filter(Boolean).map(x => typeof x === 'string' ? x : JSON.stringify(x)).join('; ')) : ''}</div>`
@@ -802,9 +821,149 @@ function openEditor(id) {
     `id: ${esc(ev.id)}`, ev.added ? `added: ${esc(ev.added)}` : '', ev.confidence ? `confidence: ${esc(ev.confidence)}` : '',
     ev.rung != null ? `rung: ${esc(ev.rung)}` : '', (ev.source_files || []).length ? `source files: ${esc(ev.source_files.join(', '))}` : ''
   ].filter(Boolean).join('<br>');
-  dlg.showModal();
-  dlg.querySelector('.dlg-body').scrollTop = 0;
+  if (!dlg.open) { dlg.showModal(); dlg.querySelector('.dlg-body').scrollTop = 0; }
 }
+
+function renderEditorImages(ev) {
+  const list = posterList(ev);
+  const thumbTile = `<div class="ptile">
+      ${imgTag(ev.thumb, '', ev.thumb ? null : (list.length ? 'No thumbnail: the card uses the first poster' : ev.title))}
+      <label class="btn sm">Replace<input type="file" accept="image/*" data-kind="thumb" hidden></label>
+      ${ev.thumb ? '<button class="btn sm danger" type="button" data-img="del-thumb">Delete</button>' : ''}
+    </div>`;
+  const tiles = list.map((x, i) => `<div class="ptile">
+      ${imgTag(x.poster, '')}
+      <span class="lbl">${i === 0 ? 'Poster 1 (main)' : 'Poster ' + (i + 1)}</span>
+      ${i === 0 ? '<label class="btn sm">Replace<input type="file" accept="image/*" data-kind="zoom" hidden></label>'
+                : `<button class="btn sm" type="button" data-img="first" data-path="${esc(x.poster)}">Make main</button>`}
+      <button class="btn sm danger" type="button" data-img="del-poster" data-path="${esc(x.poster)}">Delete</button>
+    </div>`).join('');
+  $('#e-images').innerHTML = `<div class="imgsec">
+    <h4>Card thumbnail</h4>
+    <div class="ptiles">${thumbTile}</div>
+    <h4>Posters in the zoom view (visitors swipe through them in this order)</h4>
+    <div class="ptiles">${tiles || '<div class="ptile">' + imgTag(null, '', 'No poster: the site shows the title') + '</div>'}
+      <label class="addtile">+ Add poster${list.length ? 's' : ''}<input type="file" accept="image/*" multiple id="e-addposters" hidden></label>
+    </div>
+    <div class="actions"><label class="btn sm">Replace main poster and thumbnail<input type="file" accept="image/*" data-kind="poster" hidden></label></div>
+    <p class="small muted">With no thumbnail, the card uses the main poster. With no thumbnail and no posters, the card shows the title instead.
+      "Replace" goes through the workflow and takes a minute or two; adding, deleting and reordering are saved straight away.</p>
+  </div>`;
+}
+
+const snapshotForm = () => Object.fromEntries(FIELDS.map(f => [f, $('#e-' + f).value]));
+
+/*
+ * Change the images of the open event in one commit, then reopen the editor
+ * without losing text the owner typed but has not saved yet.
+ * `mutate(ev)` changes the event and may return { blobs } for new files.
+ * Files in posters/ and thumbs/ that the event no longer uses (and no other event uses) are deleted.
+ */
+async function imageChange(message, mutate) {
+  const { id } = editing;
+  const draft = snapshotForm();
+  await waitForIdle('changing images');
+  setStatus('Saving images…', 'busy');
+  await commitChange(message, async ctx => {
+    const doc = await ctx.readJSON('events.json', emptyEventsDoc());
+    const all = getEvents(doc);
+    const ev = all.find(e => e.id === id);
+    if (!ev) throw new Error('This event is no longer in events.json (it may have been merged or deleted).');
+    const before = eventFiles(ev);
+    const extra = (await mutate(ev)) || {};
+    const after = new Set(eventFiles(ev));
+    const used = new Set();
+    all.forEach(e => { if (e !== ev) eventFiles(e).forEach(p => used.add(p)); });
+    const del = before.filter(p => !after.has(p) && !used.has(p) && /^(posters|thumbs)\//.test(p));
+    return { text: { 'events.json': dump(doc) }, blobs: extra.blobs, del };
+  });
+  setStatus('Saved. The public page updates in about a minute.', '');
+  setTimeout(() => setStatus(''), 8000);
+  await reload();
+  openEditor(id, draft);
+}
+
+/* ---- Making poster copies in the browser (same size rules as process.py) ---- */
+async function decodeImage(file) {
+  if (window.createImageBitmap) {
+    try { return await createImageBitmap(file, { imageOrientation: 'from-image' }); } catch (e) { /* fall through */ }
+  }
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error(`Could not open ${file.name}. Use a JPG or PNG image.`));
+    img.src = URL.createObjectURL(file);
+  });
+}
+function jpegB64(src, w, h, q) {
+  const c = document.createElement('canvas'); c.width = w; c.height = h;
+  const x = c.getContext('2d'); x.fillStyle = '#fff'; x.fillRect(0, 0, w, h); x.drawImage(src, 0, 0, w, h);
+  return c.toDataURL('image/jpeg', q).split(',')[1];
+}
+async function sha12(b64) {
+  try {
+    const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+    const d = await crypto.subtle.digest('SHA-256', bytes);
+    return [...new Uint8Array(d)].map(b => b.toString(16).padStart(2, '0')).join('').slice(0, 12);
+  } catch (e) {
+    return Array.from(crypto.getRandomValues(new Uint8Array(6)), b => b.toString(16).padStart(2, '0')).join('');
+  }
+}
+async function makePoster(file) {
+  const img = await decodeImage(file);
+  const W = img.width || img.naturalWidth, H = img.height || img.naturalHeight;
+  if (!W || !H) throw new Error(`Could not open ${file.name}.`);
+  const s = Math.min(1, 1600 / Math.max(W, H));
+  const b64 = jpegB64(img, Math.round(W * s), Math.round(H * s), 0.8);       // display copy: long edge <= 1600, q80
+  const blur = jpegB64(img, 20, Math.max(1, Math.round(H * 20 / W)), 0.7);    // ~20px wide placeholder, no data: prefix
+  return { path: `posters/${await sha12(b64)}.jpg`, b64, blur };
+}
+
+$('#e-images').addEventListener('click', e => {
+  const b = e.target.closest('button[data-img]'); if (!b) return;
+  const act = b.dataset.img, path = b.dataset.path;
+  const title = editing.orig.title;
+  if (act === 'del-thumb') {
+    if (!confirm('Delete the thumbnail? The card will use the main poster, or the title if there is no poster.')) return;
+    withBusy(() => imageChange(`Delete thumbnail of "${title}" (admin page)`, ev => { ev.thumb = null; }));
+  } else if (act === 'del-poster') {
+    const n = posterList(editing.orig).length;
+    if (!confirm(n === 1 ? 'Delete the only poster? Without a thumbnail too, the site will show the title instead.' : 'Delete this poster?')) return;
+    withBusy(() => imageChange(`Delete a poster of "${title}" (admin page)`,
+      ev => setPosterList(ev, posterList(ev).filter(x => x.poster !== path))));
+  } else if (act === 'first') {
+    withBusy(() => imageChange(`Change main poster of "${title}" (admin page)`, ev => {
+      const list = posterList(ev); const i = list.findIndex(x => x.poster === path);
+      if (i > 0) list.unshift(list.splice(i, 1)[0]);
+      setPosterList(ev, list);
+    }));
+  }
+});
+
+$('#e-images').addEventListener('change', e => {
+  const inp = e.target;
+  if (inp.id === 'e-addposters') {
+    const files = [...inp.files]; inp.value = '';
+    if (!files.length) return;
+    const title = editing.orig.title;
+    withBusy(async () => {
+      const made = [];
+      for (let i = 0; i < files.length; i++) {
+        setStatus(`Preparing poster ${i + 1} of ${files.length}…`, 'busy');
+        made.push(await makePoster(files[i]));
+      }
+      const blobs = Object.fromEntries(made.map(m => [m.path, m.b64]));
+      await imageChange(`Add ${made.length} poster${made.length > 1 ? 's' : ''} to "${title}" (admin page)`, ev => {
+        const list = posterList(ev);
+        for (const m of made) if (!list.some(x => x.poster === m.path)) list.push({ poster: m.path, poster_blur: m.blur });
+        setPosterList(ev, list);
+        return { blobs };
+      });
+    });
+    return;
+  }
+  if (inp.matches('input[type=file][data-kind]')) overrideUpload(inp);
+});
 
 function readForm() {
   const out = {};
@@ -867,10 +1026,10 @@ $('#e-delete').addEventListener('click', () => {
       const [ev] = arr.splice(idx, 1);
       setEvents(doc, arr);
       const stillUsed = new Set();
-      arr.forEach(e => [e.poster, e.thumb, ...(e.source_files || [])].forEach(p => p && stillUsed.add(p)));
+      arr.forEach(e => eventFiles(e).forEach(p => stillUsed.add(p)));
       // Only files in these folders are deleted. hash_log.json is left alone on purpose,
       // so the same screenshot uploaded again is not turned back into an event.
-      const del = [ev.poster, ev.thumb, ...(ev.source_files || [])]
+      const del = eventFiles(ev)
         .filter(p => p && /^(posters|thumbs|done)\//.test(p) && !stillUsed.has(p));
       const rv = await ctx.readJSON('needs_review.json', { review: [] });
       const before = (rv.review || []).length;
@@ -886,7 +1045,7 @@ $('#e-delete').addEventListener('click', () => {
   });
 });
 
-dlg.querySelectorAll('input[type=file][data-kind]').forEach(inp => inp.addEventListener('change', () => {
+function overrideUpload(inp) {
   const file = inp.files[0]; inp.value = '';
   if (!file) return;
   const kind = inp.dataset.kind;
@@ -902,7 +1061,7 @@ dlg.querySelectorAll('input[type=file][data-kind]').forEach(inp => inp.addEventL
     await reload();
     watchProcessing(commit);
   });
-}));
+}
 
 /* ---------------- Review ---------------- */
 $('#rvlist').addEventListener('click', e => {
@@ -978,9 +1137,9 @@ $('#bulk-ev-del').addEventListener('click', () => {
       const keep = all.filter(e => !ids.has(e.id));
       setEvents(doc, keep);
       const stillUsed = new Set();
-      keep.forEach(e => [e.poster, e.thumb, ...(e.source_files || [])].forEach(p => p && stillUsed.add(p)));
+      keep.forEach(e => eventFiles(e).forEach(p => stillUsed.add(p)));
       // hash_log.json is left alone on purpose, so the same screenshots are not turned back into events.
-      const del = [...new Set(removed.flatMap(e => [e.poster, e.thumb, ...(e.source_files || [])])
+      const del = [...new Set(removed.flatMap(eventFiles)
         .filter(p => p && /^(posters|thumbs|done)\//.test(p) && !stillUsed.has(p)))];
       const rv = await ctx.readJSON('needs_review.json', { review: [] });
       const before = (rv.review || []).length;

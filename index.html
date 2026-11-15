@@ -106,7 +106,6 @@ header { padding: 40px 0 56px; text-align: center; }
 /* Paints the thumbnail column grey so there is no gap while the image fades in */
 .card:not(.no-thumb) { background: linear-gradient(to right, var(--thumb-bg) 30%, var(--surface) 30%); }
 .card:hover { border-color: var(--muted); }
-.card.no-thumb { grid-template-columns: minmax(0, 1fr); }
 .body { min-width: 0; padding: clamp(8px, 2.5vw, 16px) clamp(10px, 3vw, 20px); }
 .thumb {
   width: 100%; height: 100%; aspect-ratio: 3 / 4;
@@ -185,6 +184,41 @@ dialog::backdrop { background: rgba(0, 0, 0, .6); }
 @media (min-width: 760px) {
   .zoom { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 28px; padding: 0 24px 24px; align-items: start; }
 }
+
+/* ---- Title box: shown in place of the image when an event has no thumbnail and no poster ---- */
+.title-ph {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  aspect-ratio: 3 / 4; padding: 10px; overflow: hidden;
+  background: var(--theme-btn); color: #fff; font-weight: 650; line-height: 1.25; overflow-wrap: anywhere;
+}
+.title-ph span { display: -webkit-box; -webkit-line-clamp: 7; line-clamp: 7; -webkit-box-orient: vertical; overflow: hidden; }
+.card .title-ph { width: 100%; height: 100%; font-size: clamp(.72rem, 2.6vw, 1.05rem); }
+.zoom .title-ph { border-radius: 4px; padding: 24px; font-size: clamp(1.4rem, 5vw, 2.2rem); }
+
+/* ---- Poster slider in the zoom view (events with more than one poster): swipe, arrows, dots ---- */
+.slider-view { position: relative; }
+.slides {
+  display: flex; align-items: center; overflow-x: auto; border-radius: 4px; background: #16181d;   /* posters of different shapes sit centred on a dark frame */
+  scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-x: contain; scrollbar-width: none;
+}
+.slides::-webkit-scrollbar { display: none; }
+.slides:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.slide { flex: 0 0 100%; min-width: 0; scroll-snap-align: center; scroll-snap-stop: always; }
+.slide-nav {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
+  width: 40px; height: 40px; padding: 0 0 3px; border: 0; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(22, 24, 29, .6); color: #fff; font-size: 1.6rem; line-height: 1; cursor: pointer;
+  transition: opacity .2s ease;
+}
+.slide-nav:hover { background: rgba(22, 24, 29, .8); }
+.slide-nav.prev { left: 8px; }
+.slide-nav.next { right: 8px; }
+.slide-nav[disabled] { opacity: 0; pointer-events: none; }
+.dots { display: flex; justify-content: center; gap: 2px; margin-top: 8px; }
+.dot { width: 22px; height: 22px; padding: 0; border: 0; background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.dot::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #b9bec3; }
+.dot[aria-current="true"]::before { background: var(--theme-btn); }
 
 /* ---- Info box (notice and copyright): at the bottom on small screens, top right on wide screens ---- */
 body { position: relative; }
@@ -497,9 +531,11 @@ footer { padding: 8px 0 32px; }
     var thumb = assetUrl(ev.thumb) || assetUrl(ev.poster);
     var poster = assetUrl(ev.poster);
 
-    var card = el("article", { "class": "card" + (thumb ? "" : " no-thumb") });
+    var card = el("article", { "class": "card" });
 
-    if (thumb) {
+    if (!thumb) {
+      card.append(titleBox(title));                  // no thumbnail and no poster: the title takes the image's place
+    } else {
       var attrs = { "class": "thumb", src: thumb, alt: "Poster for " + title,
                     width: "300", height: "400", decoding: "async" };   // size hint; CSS sets the real size
       if (index >= 4) attrs.loading = "lazy";          // first 4 load immediately
@@ -604,12 +640,91 @@ footer { padding: 8px 0 32px; }
     return wrap;
   }
 
+  // Box with the event title, used in place of an image when the event has no thumbnail and no poster.
+  // aria-hidden: the title is already read out next to it.
+  function titleBox(title) {
+    return el("div", { "class": "title-ph", dir: "auto", "aria-hidden": "true" }, el("span", {}, title));
+  }
+
+  // Posters for the zoom view, in order: "poster", then "extra_posters" (added on the admin page).
+  // With no poster the card thumbnail is used; with neither, the list is empty.
+  function zoomPosters(ev) {
+    var main = assetUrl(ev.poster);
+    if (!main) {
+      var t = assetUrl(ev.thumb);
+      return t ? [{ src: t, blur: null }] : [];
+    }
+    var list = [{ src: main, blur: ev.poster_blur }];
+    (Array.isArray(ev.extra_posters) ? ev.extra_posters : []).forEach(function (x) {
+      var src = x && assetUrl(x.poster);
+      if (src && src !== main) list.push({ src: src, blur: x.poster_blur });
+    });
+    return list;
+  }
+
+  var slideKeys = null;                             // arrow-key handler of the slider in the open zoom view
+
+  // Swipeable posters: native horizontal scroll with snapping (touch swipe and trackpads work out of the box),
+  // plus arrow buttons, dots and the keyboard's left/right keys.
+  function buildSlider(title, posters) {
+    var n = posters.length;
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var track = el("div", { "class": "slides", tabindex: "0", role: "region",
+                            "aria-roledescription": "carousel", "aria-label": "Posters for " + title });
+    posters.forEach(function (p, i) {
+      track.append(el("div", { "class": "slide", role: "group", "aria-roledescription": "slide",
+                               "aria-label": (i + 1) + " of " + n },
+        buildPoster(title + " (" + (i + 1) + " of " + n + ")", p.blur, p.src)));
+    });
+    var prev = el("button", { type: "button", "class": "slide-nav prev", "aria-label": "Previous poster" }, "\u2039");
+    var next = el("button", { type: "button", "class": "slide-nav next", "aria-label": "Next poster" }, "\u203A");
+    var dots = el("div", { "class": "dots" });
+    var dotBtns = posters.map(function (p, i) {
+      var d = el("button", { type: "button", "class": "dot", "aria-label": "Poster " + (i + 1) + " of " + n });
+      d.addEventListener("click", function () { go(i); });
+      dots.append(d);
+      return d;
+    });
+
+    var cur = -1;
+    function current() { return Math.max(0, Math.min(n - 1, Math.round(track.scrollLeft / (track.clientWidth || 1)))); }
+    function go(i) {
+      i = Math.max(0, Math.min(n - 1, i));
+      track.scrollTo({ left: i * track.clientWidth, behavior: reduce ? "auto" : "smooth" });
+    }
+    function mark() {
+      var i = current();
+      if (i === cur) return;
+      cur = i;
+      dotBtns.forEach(function (d, k) { d.setAttribute("aria-current", k === i ? "true" : "false"); });
+      prev.disabled = i === 0;
+      next.disabled = i === n - 1;
+    }
+    var queued = false;
+    track.addEventListener("scroll", function () {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(function () { queued = false; mark(); });
+    }, { passive: true });
+    prev.addEventListener("click", function () { go(current() - 1); });
+    next.addEventListener("click", function () { go(current() + 1); });
+    slideKeys = function (e) {
+      if (e.key === "ArrowLeft") { e.preventDefault(); go(current() - 1); }
+      else if (e.key === "ArrowRight") { e.preventDefault(); go(current() + 1); }
+    };
+    mark();
+    return el("div", { "class": "slider" }, [el("div", { "class": "slider-view" }, [track, prev, next]), dots]);
+  }
+
   function openZoom(ev, thisYear) {
     var title = str(ev.title) || "Untitled event";
-    var posterSrc = assetUrl(ev.poster) || assetUrl(ev.thumb);
+    var posters = zoomPosters(ev);
     zoomBody.replaceChildren();
+    slideKeys = null;
 
-    if (posterSrc) zoomBody.append(buildPoster(title, ev.poster_blur, posterSrc));
+    if (posters.length > 1) zoomBody.append(buildSlider(title, posters));
+    else if (posters.length) zoomBody.append(buildPoster(title, posters[0].blur, posters[0].src));
+    else zoomBody.append(titleBox(title));
 
     var side = el("div", { "class": "side" });
     side.append(el("h2", { id: "zoom-title", dir: "auto" }, title), metaBlock(ev, thisYear));
@@ -627,7 +742,8 @@ footer { padding: 8px 0 32px; }
   document.getElementById("close").addEventListener("click", function () { dialog.close(); });
   // Clicks on the backdrop land on the dialog element itself (its content fills the rest)
   dialog.addEventListener("click", function (e) { if (e.target === dialog) dialog.close(); });
-  dialog.addEventListener("close", function () { document.body.style.overflow = ""; });
+  dialog.addEventListener("close", function () { document.body.style.overflow = ""; slideKeys = null; });
+  dialog.addEventListener("keydown", function (e) { if (slideKeys) slideKeys(e); });
 
   /* ---- Event rail ---- */
 
