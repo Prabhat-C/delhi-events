@@ -3083,6 +3083,42 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-15"
+    },
+    {
+      "id": "a4cb844580f2",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "World Heritage Week 2026: Heritage Walk and Cultural Evening",
+      "organiser": "Delhi Development Authority",
+      "description": "A guided heritage walk through the historic precinct of Mehrauli Archaeological Park, followed by a cultural evening with a live violin performance by Johar Ali celebrating music and culture.",
+      "details": null,
+      "date": "2026-11-20",
+      "end_date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "venue": "Mehrauli Archaeological Park, New Delhi",
+      "registration_link": "https://docs.google.com/forms/d/e/1FAIpQLSco3JGqSp4aQZPPr_17tiKEzLtDMPs8_IWCxW3Bz6VqqNp8AA/viewform",
+      "confidence": "high",
+      "notes": "Heritage Walk runs 4:00 PM to 5:00 PM; Cultural Evening starts at 5:30 PM onwards. Free entry with prior registration required.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/e0cebb3cb7fb.jpg",
+      "thumb": "thumbs/e0cebb3cb7fb.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUCAwYE/8QALBAAAgEDAgMFCQAAAAAAAAAAAQIAAxESBSEiUXEEFDEzcwYTNIGRobHB8f/EABcBAAMBAAAAAAAAAAAAAAAAAAABAgP/xAAXEQEBAQEAAAAAAAAAAAAAAAABABIR/9oADAMBAAIRAxEAPwDTvVIYqmBI5tYyCNUpkgheJsjk/h0iSpriMVfuzcYuBkPn0kzrqVkDd2C8sqgvb6TLRaZZ+jZoG235G8IkHtFToqqns1Ugi4Kbj+wi0RllqaVUZve3aogOHAwBBFrneWDT+0lsVQ4k7XPh9420f4Kv6n6E7KHmr0hkatI2cbTajuwFfEoSrC+14S5/Preo35hFkq43/9k=",
+      "source_files": [
+        "done/Screenshot 2026-11-15 at 4.18.42 PM.png",
+        "done/Screenshot 2026-11-15 at 4.19.04 PM.png"
+      ],
+      "image_hashes": [
+        "e0cebb3cb7fb4e3496b103e211dd2347ccc540c30bd3364ca18f680b4d6615fb",
+        "8a6778c83c7ca58f1ad564381c1b55b5741ccc1938dede7259bc6a12a62ee59f"
+      ],
+      "source_labels": [
+        "poster",
+        "other"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-15"
     }
   ]
 }
