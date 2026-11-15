@@ -3080,6 +3080,42 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-14"
+    },
+    {
+      "id": "bb6758e880e9",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Yeh Kaisi Hawa Chali!",
+      "organiser": "Katyayani",
+      "description": "A dramatised reading exploring gender-bending in Indian cinema, from Raja Harishchandra (1913) to contemporary Bollywood, through film clips and fun facts. It is presented by Sohaila Kapur and Nidhikant Pandey, with a multimedia odyssey featuring Sohaila Kapur and Aviekal Kakkar.",
+      "details": "Dramatised Reading. Yeh Kaisi Hawa Chali!\nAn exploration of gender-bending in Indian cinema, from Raja Harishchandra (1913), India’s first feature film to contemporary Bollywood. Through selected film clips and fun facts, the programme explores how men and women have portrayed characters of another gender on screen, tracing the evolution of this cinematic trope over the years. Presented by Sohaila Kapur and Nidhikant Pandey. Produced by Anuradha Dar. Collab. Three Arts Club and Katyayani Production.",
+      "date": "2026-11-28",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "The Theatre, India Habitat Centre",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Seating on a first come, first served basis.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/dc21c51f1016.jpg",
+      "thumb": "thumbs/dc21c51f1016.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAQCBQEDBv/EACYQAAICAQQBAgcAAAAAAAAAAAECAxEABBIhMYFRcQUTIjNBYdH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAwT/xAAaEQACAwEBAAAAAAAAAAAAAAAAAQIRIVEx/9oADAMBAAIRAxEAPwCl02ld4pJCkpO7aFTb5u+ucm8CtCFIWN+ASz35FDn2/eYeeOcqdOCO9yua5Ju+MY+GIh1KGYKvNih2cNNvWUrSEekCLt+UZiO23KtH05wy3jKo0iKopXPRU8nk9n1OGFzlwsorpzMESUW+h+QBdisbgIhmSRQgdTd2SaxdPsp5ya/zKUZ/DeuuKjhlNkknYDZJv84Yiez74YqEf//Z",
+      "source_files": [
+        "done/Screenshot 2026-11-15 at 2.21.54 PM.png",
+        "done/Screenshot 2026-11-15 at 2.22.27 PM.png"
+      ],
+      "image_hashes": [
+        "dc21c51f1016e956d089849e4d8f22fd0897c6abefd7757f8eb53ce5929722ed",
+        "e73264840d89c095ce91ef78e830d497d5bc1debe8c164e557052b0006ea308c"
+      ],
+      "source_labels": [
+        "poster",
+        "text_caption"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-15"
     }
   ]
 }
