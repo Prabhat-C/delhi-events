@@ -3200,6 +3200,39 @@
       ],
       "rung": "sonnet-medium",
       "added": "2026-11-15"
+    },
+    {
+      "id": "86b0049ee205",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Chief ki Dawat / Doobta hua aadmi / License",
+      "organiser": "Sharad Theatre House",
+      "description": "Three plays staged together: Chief ki Dawat by Bhishm Sahni, Doobta hua aadmi, an adaptation of Anton Chekhov's The Sinking Man, and License, based on the story by Saadat Hasan Manto.",
+      "details": null,
+      "date": "2026-11-29",
+      "end_date": null,
+      "start_time": "14:00",
+      "end_time": null,
+      "venue": "Big Think Dance Studio, F-195B, Mangal Bazar, Nirman Vihar, Laxminagar, New Delhi, 110092",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Free entry for all. Nearest metro: Nirman Vihar. Contact: 9643449357.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/8a0681eb4a7c.jpg",
+      "thumb": "thumbs/8a0681eb4a7c.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIFBAP/xAAlEAACAgECBgIDAAAAAAAAAAABAgMRABIhBBMxQWFxBfAigZH/xAAXAQEAAwAAAAAAAAAAAAAAAAABAgME/8QAHxEAAgECBwAAAAAAAAAAAAAAAAECEVEDEiFBYZHh/9oADAMBAAIRAxEAPwCFLEQqnWwYbFa3Avp5xCAWAEjEd7FbfrKbI78Erxgh6om76nY/fGE6pKUUhQXUXS0GNdbv1lCmzTLD1J/JNkoxcHf8VIA8YZq5aKSI2fSCehrvhhmGruZ04h9Kh42YEnUQ3X7YxjMVTSEcnsA21ZwTiEjk5iwqGoD1tjt8hqDKY1qvV5OjsDknuuvBIuKdFqOOPSTY1qGP9wxFmTSAIENbWScMKcCpI//Z",
+      "source_files": [
+        "done/IMG-20261116-WA0000.jpg"
+      ],
+      "image_hashes": [
+        "8a0681eb4a7c12938cfc659ad5d027ae23facf159b306d34acb6ac23c242eac4"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-16"
     }
   ]
 }

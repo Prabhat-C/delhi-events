@@ -1,3 +1,19 @@
 {
-  "review": []
+  "review": [
+    {
+      "id": "86b0049ee205",
+      "status": "published",
+      "title": "Chief ki Dawat / Doobta hua aadmi / License",
+      "date": "2026-11-29",
+      "confidence": "high",
+      "reasons": [
+        "possible duplicate of 'Doobta hua aadmi' (83c4f68749a4): same date and start time, and one venue is worded as a longer version of the other"
+      ],
+      "poster": "posters/8a0681eb4a7c.jpg",
+      "thumb": "thumbs/8a0681eb4a7c.jpg",
+      "source_files": [
+        "done/IMG-20261116-WA0000.jpg"
+      ]
+    }
+  ]
 }
