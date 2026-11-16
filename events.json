@@ -1654,8 +1654,8 @@
       "grouping_uncertain": false,
       "title": "Izhakalkkappuram (2026)",
       "organiser": "Habitat World",
-      "description": "Screening of the 2026 film Izhakalkkappuram, followed by a discussion with the filmmaker.",
-      "details": null,
+      "description": "A Malayalam film directed by Venu Nair, in which a strict Gandhian scholar clashes with his progressive documentary-filmmaker daughter inside an ancestral family home. A post-screening discussion with the filmmaker follows the screening.",
+      "details": "\"Izhakalkkappuram / The Unseen Thread\" (2026/Malayalam with English subtitles/96 mins) Dir. Venu Nair. Inside an ancestral family home, a strict Gandhian scholar clashes with his progressive documentary-filmmaker daughter. Their sharp ideological differences ignite a deep, quiet generational storm. Followed by a post-screening discussion with the filmmaker.",
       "date": "2026-11-16",
       "end_date": null,
       "start_time": "19:00",
@@ -1663,7 +1663,7 @@
       "venue": "Stein Auditorium, India Habitat Centre",
       "registration_link": null,
       "confidence": "high",
-      "notes": "Free entry.",
+      "notes": "Free entry. Event is open to all. Entry on first come, first serve basis.",
       "recurrence": null,
       "recurring": false,
       "poster": "posters/3d0432ffef08.jpg",
@@ -1671,14 +1671,23 @@
       "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMCBAb/xAAmEAABAwEFCQAAAAAAAAAAAAABAAIDEQQSIYHBExUyNUZxc4Kx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgH/xAAXEQEAAwAAAAAAAAAAAAAAAAAAESFB/9oADAMBAAIRAxEAPwDMuGzs76jB1APqnBAN3STvjwv3WuIwyOafauX++ib04fKdEJo9UIS0xCpKEqDgPdCov//Z",
       "source_files": [
         "done/Screenshot 2026-11-11 at 11.14.33 PM.png",
-        "done/Screenshot 2026-11-11 at 11.14.50 PM.png"
+        "done/Screenshot 2026-11-11 at 11.14.50 PM.png",
+        "done/Screenshot 2026-11-16 at 4.56.11 PM.png",
+        "done/Screenshot 2026-11-16 at 4.56.21 PM.png",
+        "done/Screenshot 2026-11-16 at 5.00.22 PM.png"
       ],
       "image_hashes": [
         "3d0432ffef08ca084c6cd9e5608f8c4d2639c912e1078c3cdec4f369c67e34ae",
-        "51f667da2220bcd0985c80ae578d0d33cc9a18c000a7946f56518692918e70d0"
+        "51f667da2220bcd0985c80ae578d0d33cc9a18c000a7946f56518692918e70d0",
+        "46f530d6dc3ad20ec3187ecb67bb9ebb4496e00ab2af27b79f9df108800dffde",
+        "f9b04079ad881e371364bc5034bfa419147109f6ac834dbb8a0ff9491ba359ee",
+        "0b9dc205c0b0b88896cada8746c4cbd23e6e5e46e278e709ef13cdcdcf9a195a"
       ],
       "source_labels": [
         "poster",
+        "other",
+        "poster",
+        "text_caption",
         "other"
       ],
       "rung": "haiku-low",
@@ -3188,6 +3197,177 @@
       ],
       "image_hashes": [
         "8a0681eb4a7c12938cfc659ad5d027ae23facf159b306d34acb6ac23c242eac4"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-16"
+    },
+    {
+      "id": "aa44fb612a96",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Russian Culture Evening",
+      "organiser": "Russian Fashion Academy",
+      "description": "An evening of Russian culture featuring a fashion performance show by the Russian Fashion Academy. Guests can explore Russian aesthetics where cultural heritage meets modern fashion trends.",
+      "details": "On November 26, the Russian House in New Delhi will host Russian Culture Evening, featuring a spectacular fashion show by the Russian Fashion Academy.\n\nGuests will enjoy an exciting journey into the world of Russian aesthetics, where a rich cultural heritage blends harmoniously with modern fashion trends.\n\nYou must bring a physical, printed copy of your ID card.",
+      "date": "2026-11-26",
+      "end_date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "venue": "Russian House, 24 Firoz Shah Road, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Guests must bring a physical, printed copy of their ID card.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/7f6c9f8b22e2.jpg",
+      "thumb": "thumbs/7f6c9f8b22e2.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAUABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBAX/xAAmEAACAgIBAwIHAAAAAAAAAAABAgARAwQSEyExBVEGFCIyQXHR/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EABoRAQACAwEAAAAAAAAAAAAAAAARQQEhUWH/2gAMAwEAAhEDEQA/AO4+f5XSw5GxcwwVRWTj5Ey6vqefHlbk3XQsqFQyjpMT7+SP5NOzpHf9Mx4erxU4xYAs37zBj+H1XYTJ1nHFuX2Cia8n6u8keuk447isTZFkE2DRiSxoyIqhwaFeIhnSGFb1tWmKniLIrv2lj41CvXagSK/ERFFrUUcR+oiJUf/Z",
+      "source_files": [
+        "done/Screenshot 2026-11-16 at 4.54.08 PM.png",
+        "done/Screenshot 2026-11-16 at 4.54.30 PM.png"
+      ],
+      "image_hashes": [
+        "7f6c9f8b22e29947d12619aa3a7bc2eff8fc0f8da2c421c7beb7ad6bd69a0b2c",
+        "64ee0fa896a8c3ab5412cf37d3ed756c8922d229a5fff3441524ac7515bfdce9"
+      ],
+      "source_labels": [
+        "poster",
+        "text_caption"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-16"
+    },
+    {
+      "id": "a7f3bc4d7ef3",
+      "status": "published",
+      "grouping_uncertain": true,
+      "title": "Hum Na Kisi Se Kam",
+      "organiser": "Mahavijeta Arts Association",
+      "description": "A theatre play directed by Himmat Singh Negi, performed as part of the 13th Komal & V.K Pahuja Theatre Festival. The cast includes Abhishek, Kavita, Deepika and Suraj.",
+      "details": null,
+      "date": "2026-11-16",
+      "end_date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "venue": "India International Centre, Lodhi Road, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Entry free.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/f0bc028f59c7.jpg",
+      "thumb": "thumbs/f0bc028f59c7.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAgX/xAApEAACAQIFAwIHAAAAAAAAAAABAgMAEQQFEiFBEyIxMnEUQmFyobHw/8QAGAEAAgMAAAAAAAAAAAAAAAAAAgQBAwX/xAAdEQACAgIDAQAAAAAAAAAAAAAAAQIREiEDMlEx/9oADAMBAAIRAxEAPwB2WRiCDW0ba33v02Pbx4qzqA3DRPb6xsb0nHy9LF4VyHYDV2qduN6xBOmYoY52VgJLgLa4tv8AxrN7LIblfZjGyzCznWFeMHgdv4NFW3v81FVZy9JU5eks6Q4sBZFBA4YUuPLMMjAxRRofN1uDVh9D+x/VSYfxJ9hoot1pgNX9IMdmE3xLLBLoRO3YDcjmiuavpX2oplRS1Q2uKNH/2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-16 at 4.56.36 PM.png"
+      ],
+      "image_hashes": [
+        "f0bc028f59c76afcf155964864ea03abfdb8b74d7a7498c3601849d6c0237dee"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-16"
+    },
+    {
+      "id": "fa2c32ac82d7",
+      "status": "published",
+      "grouping_uncertain": true,
+      "title": "13th Komal & V.K Pahuja Theatre Festival",
+      "organiser": "Komal & V.K. Pahuja Foundation",
+      "description": "A theatre festival with inauguration and a full day of plays, including Hum Na Kisi Se Kam, Pride and Prejudice and tragedy-themed comedy. Prize distribution is also part of the festival.",
+      "details": null,
+      "date": "2026-11-16",
+      "end_date": null,
+      "start_time": "09:15",
+      "end_time": null,
+      "venue": "Deshmukh Auditorium, India International Centre Lodhi Estate, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Free entry. Contact Dr. Supriya Pahuja, 9810427848. Play timings: 09:45 am, 11:00 am, 12:15 pm, 02:00 pm, 03:15 pm, 05:45 pm and 07:00 pm.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/473bfd675ac5.jpg",
+      "thumb": "thumbs/473bfd675ac5.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYBBAUD/8QAKxAAAgEDAgQDCQAAAAAAAAAAAQIDAAQREiEFEyIxFFFhFTJBU3OBkbHR/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAGREBAQEBAQEAAAAAAAAAAAAAAAEREiFB/9oADAMBAAIRAxEAPwDCPMRVL6NBGeofD0rtIukIFaEu/ujSR+6YrlF9gEhVB5C74G/basaCaOXitqqq0Z5wJBIIHnSy/GpZnqqbSZzkSxDYdnC9xnt96Kd0CAHOF3O3TRRjKzIriyurCGzecFpUSMoGOTuM4qV4NZWr89QwaFlYEybdx329aVlu5Z8GQg6BhcDGKsycTnuVVWWJQDq6EA/PmKtNN/iYFyPERnf5wopGmvZlfA5WPop/KKvJ0//Z",
+      "source_files": [
+        "done/Screenshot 2026-11-16 at 4.59.57 PM.png"
+      ],
+      "image_hashes": [
+        "473bfd675ac57ed0d1a0ea97c5bb2ae6fe60822db46a1f700d8a4013107f59fc"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-16"
+    },
+    {
+      "id": "27d42a2d9e22",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "National Conference on Cyber Security, Digital Forensics and Intelligence (NCCDFI 2026)",
+      "organiser": "National Institute of Electronics and Information Technology (NIELIT)",
+      "description": "The third national conference on cyber security, digital forensics and intelligence, themed 'Cyber Secure India: Fortifying India's Digital Future'. It covers tracks on cyber security, digital forensics, threat intelligence, blockchain and crypto, drones and IoT, and includes a cyber security hackathon and an industry exhibition.",
+      "details": null,
+      "date": "2026-11-16",
+      "end_date": "2026-11-17",
+      "start_time": null,
+      "end_time": null,
+      "venue": "Dr. Ambedkar International Centre, 15 Janpath, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/b36be137a973.jpg",
+      "thumb": "thumbs/b36be137a973.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAARABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAEDAgQF/8QAJhAAAQMCBAYDAAAAAAAAAAAAAQACAxJRBBETMSEyNFJhkXHh8P/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A61TjuT7So3PtZGXDMNMmpndozC2IYYZow9uoAe7gUE4Z7tLc73+kV8cQjbS0uy8ogqxPTx/rq9vKPhEVEoiKD//Z",
+      "source_files": [
+        "done/Screenshot 2026-11-16 at 4.58.52 PM.png",
+        "done/Screenshot 2026-11-16 at 4.59.19 PM.png"
+      ],
+      "image_hashes": [
+        "b36be137a973140778878fb9ec11752100e8e9d9ab95ab4cb17591319ac28aab",
+        "237e00c04f48a85ae9445d745a368dd7e4d4ea4a2911de358d4b8eb9eeb2d49c"
+      ],
+      "source_labels": [
+        "other",
+        "text_caption"
+      ],
+      "rung": "haiku-medium",
+      "added": "2026-11-16"
+    },
+    {
+      "id": "16bdd2d3cd07",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Panel Discussion: US Midterms 2026: Domestic Political Shifts and Global Geopolitical Implications",
+      "organiser": "India Foundation",
+      "description": "A panel discussion on the US Midterms 2026 and their domestic political shifts and global geopolitical implications. Panelists are Shyam Saran, Meera Shankar and C. Raja Mohan, moderated by Alok Bansal.",
+      "details": null,
+      "date": "2026-11-16",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Gulmohar Hall, India Habitat Centre",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Event is open to all. Entry on first come, first serve basis.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/aed64e08ca4c.jpg",
+      "thumb": "thumbs/aed64e08ca4c.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAYCAwEEBf/EACkQAAEDAwEFCQAAAAAAAAAAAAEAAgMEESESBRMxMlEGIkFSY4GRoeH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgP/xAAcEQABBQADAAAAAAAAAAAAAAAAAgMSE1ERQVL/2gAMAwEAAhEDEQA/ANiXs9AHAGae9saIRn4VJ2BFmz6o29JMU88UUmmxJ8bki31lVCqj8g6Eh/4iKcNLXNOCdhteAdUwxblAQmyIxPZdmW9dNkJijCbXfRls0cjixr+8OIChUb2KFz4Q6WQcGF4aD7pNZylSUTNqeOxrgqat7CZaRrDfA3l8ISahEyqT/9k=",
+      "source_files": [
+        "done/Screenshot 2026-11-16 at 5.00.35 PM.png"
+      ],
+      "image_hashes": [
+        "aed64e08ca4c5bbea3963a25812500d93723b5c4f242fbf1f03c4270043f3c58"
       ],
       "source_labels": [
         "poster"
