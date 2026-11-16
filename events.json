@@ -3347,6 +3347,108 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-16"
+    },
+    {
+      "id": "bc3a9af05fc4",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "National Epilepsy Day: How Soon Should We Stop Seizures?",
+      "organiser": null,
+      "description": "A talk marking National Epilepsy Day on how soon seizures should be stopped, with speakers including Dr. Manjari Tripathi, Professor and HOD, Department of Neurology, AIIMS New Delhi.",
+      "details": null,
+      "date": "2026-11-17",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "Gulmohar, India Habitat Centre",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/eb5bae46a99b.jpg",
+      "thumb": "thumbs/eb5bae46a99b.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAhABQDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAMFBAYHAf/EACoQAAIBAwMCAwkAAAAAAAAAAAECAwAEEQUSITFBEzKBFCNCRFFhcoLB/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAIDAf/EABgRAQEBAQEAAAAAAAAAAAAAAAABEhEh/9oADAMBAAIRAxEAPwDPuLO1yN8Uzkr1Bzntjk/as6G8hhgSOK1ZERfK3VR2+uetV769pkTtFOZ98bFTtXjg1FPrumtGFWSdRuDeQ81VzL4vXfKuZJS+1wQwZcg47Uqpg1izeFQskj7AFyUx0pWkzxLV7wqNUudwDe+fgtj4jSZ4zHysR/FwCD6V0CSK3LMfZISc8kxA5rzwIB8nan9AKxcaLp5HgtyPN/BSugx2sG3ItoFz2CClBBc9fWoW7UpQWw6UpSg//9k=",
+      "source_files": [
+        "done/Screenshot 2026-11-17 at 2.19.56 AM.png"
+      ],
+      "image_hashes": [
+        "eb5bae46a99b5f7c4c42448ce809536f71a1befcc5120dc23034bdea223383a1"
+      ],
+      "source_labels": [
+        "other"
+      ],
+      "rung": "haiku-medium",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "c19798ff4359",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Art & Admin Day: Join Me",
+      "organiser": "shehermeinhoonmaitere",
+      "description": "A body-doubling day where people work in person together to finish an art piece, a project, a book or a poem they have been avoiding.",
+      "details": null,
+      "date": "2026-11-22",
+      "end_date": null,
+      "start_time": "12:00",
+      "end_time": "15:00",
+      "venue": "Town Park, Sec 15, Faridabad",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/64a06f2a7c26.jpg",
+      "thumb": "thumbs/64a06f2a7c26.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAgX/xAAjEAACAgICAQQDAAAAAAAAAAABAgMRAAQSITEFMkFRE3Gx/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEDAv/EABsRAAMBAQADAAAAAAAAAAAAAAABAhESITFB/9oADAMBAAIRAxEAPwDszSzrMqRRckI7b6yeTc2Eofg8gXyNUcpieRkLPQA+fGZnaKbUZypkQd0p81+svNT9Q6lrQ1QJYFdlCk30DfzhkcHqkWvCsc0UquL6SMkAX/cMm6nRqPHo1vO/OuRK+a49Y+BXTWUXQYWFr2jH6/sONwSx6a76nCYasMoDSRKzfZGGU4YYhH//2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-17 at 2.20.22 AM.png"
+      ],
+      "image_hashes": [
+        "64a06f2a7c262a5f49a4e7cf5acf3222ff30490e0f051fd6cb2a746ce92e7f13"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "97855d52d6b8",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "31st European Union Film Festival (EUFF), Delhi",
+      "organiser": null,
+      "description": "A film festival screening European feature films, documentaries and animations in Delhi, with special talks, screenings and Q&A sessions.",
+      "details": null,
+      "date": "2026-11-25",
+      "end_date": "2026-12-04",
+      "start_time": null,
+      "end_time": null,
+      "venue": "India Habitat Centre (Stein Auditorium, Gulmohar Hall); Instituto Cervantes; Goethe-Institut / Max Mueller Bhavan; Liszt Institute-Hungarian Cultural Centre; India International Centre (CD Deshmukh Auditorium, Annexe Lecture Room 1); Triveni Kala Sangam (Auditorium)",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Show times and venues differ for each film; check the schedule for the specific screening.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/ed9521971561.jpg",
+      "thumb": "thumbs/ed9521971561.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAECBAUD/8QAKBAAAgECAwYHAAAAAAAAAAAAAQIAESEDBAUSMUFxkcETIjJCUWKC/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgEF/8QAGhEAAwADAQAAAAAAAAAAAAAAAAERAhNRIf/aAAwDAQACEQMRAD8A2JreZQG4JY7RqCacr7obW8ywsVH5PYznH0Lc9YU0Q8IoaurDhvGuZvDFB4bcfMCe8TmGI4i6sOHoaBFtekLTYaslnJVQQN3xKjEp7FPMQXwqdRQxJL/RekRUaZ//2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-17 at 2.21.58 AM.png",
+        "done/Screenshot 2026-11-17 at 2.22.10 AM.png"
+      ],
+      "image_hashes": [
+        "ed9521971561088840bb68ca5a395f5e78154c0a4fbfb84554b8fa2b05380457",
+        "b8027b1c0ccd8539eb9869114b689d801c76bd2a247975cec4ba6c47e05cea05"
+      ],
+      "source_labels": [
+        "poster",
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-17"
     }
   ]
 }

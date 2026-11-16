@@ -1,3 +1,19 @@
 {
-  "review": []
+  "review": [
+    {
+      "id": "bc3a9af05fc4",
+      "status": "published",
+      "title": "National Epilepsy Day: How Soon Should We Stop Seizures?",
+      "date": "2026-11-17",
+      "confidence": "high",
+      "reasons": [
+        "no poster"
+      ],
+      "poster": "posters/eb5bae46a99b.jpg",
+      "thumb": "thumbs/eb5bae46a99b.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-17 at 2.19.56 AM.png"
+      ]
+    }
+  ]
 }
