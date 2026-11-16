@@ -3324,9 +3324,9 @@
       "notes": "",
       "recurrence": null,
       "recurring": false,
-      "poster": "posters/b36be137a973.jpg",
+      "poster": null,
       "thumb": null,
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAARABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAEDAgQF/8QAJhAAAQMCBAYDAAAAAAAAAAAAAQACAxJRBBETMSEyNFJhkXHh8P/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A61TjuT7So3PtZGXDMNMmpndozC2IYYZow9uoAe7gUE4Z7tLc73+kV8cQjbS0uy8ogqxPTx/rq9vKPhEVEoiKD//Z",
+      "poster_blur": null,
       "source_files": [
         "done/Screenshot 2026-11-16 at 4.58.52 PM.png",
         "done/Screenshot 2026-11-16 at 4.59.19 PM.png"
