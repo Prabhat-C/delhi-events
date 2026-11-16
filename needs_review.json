@@ -1,21 +1,6 @@
 {
   "review": [
     {
-      "id": "a7f3bc4d7ef3",
-      "status": "published",
-      "title": "Hum Na Kisi Se Kam",
-      "date": "2026-11-16",
-      "confidence": "high",
-      "reasons": [
-        "grouping uncertain: check whether these screenshots belong to one post"
-      ],
-      "poster": "posters/f0bc028f59c7.jpg",
-      "thumb": "thumbs/f0bc028f59c7.jpg",
-      "source_files": [
-        "done/Screenshot 2026-11-16 at 4.56.36 PM.png"
-      ]
-    },
-    {
       "id": "fa2c32ac82d7",
       "status": "published",
       "title": "13th Komal & V.K Pahuja Theatre Festival",

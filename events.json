@@ -3241,39 +3241,6 @@
       "added": "2026-11-16"
     },
     {
-      "id": "a7f3bc4d7ef3",
-      "status": "published",
-      "grouping_uncertain": true,
-      "title": "Hum Na Kisi Se Kam",
-      "organiser": "Mahavijeta Arts Association",
-      "description": "A theatre play directed by Himmat Singh Negi, performed as part of the 13th Komal & V.K Pahuja Theatre Festival. The cast includes Abhishek, Kavita, Deepika and Suraj.",
-      "details": null,
-      "date": "2026-11-16",
-      "end_date": null,
-      "start_time": "11:00",
-      "end_time": null,
-      "venue": "India International Centre, Lodhi Road, New Delhi",
-      "registration_link": null,
-      "confidence": "high",
-      "notes": "Entry free.",
-      "recurrence": null,
-      "recurring": false,
-      "poster": "posters/f0bc028f59c7.jpg",
-      "thumb": "thumbs/f0bc028f59c7.jpg",
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAgX/xAApEAACAQIFAwIHAAAAAAAAAAABAgMAEQQFEiFBEyIxMnEUQmFyobHw/8QAGAEAAgMAAAAAAAAAAAAAAAAAAgQBAwX/xAAdEQACAgIDAQAAAAAAAAAAAAAAAQIREiEDMlEx/9oADAMBAAIRAxEAPwB2WRiCDW0ba33v02Pbx4qzqA3DRPb6xsb0nHy9LF4VyHYDV2qduN6xBOmYoY52VgJLgLa4tv8AxrN7LIblfZjGyzCznWFeMHgdv4NFW3v81FVZy9JU5eks6Q4sBZFBA4YUuPLMMjAxRRofN1uDVh9D+x/VSYfxJ9hoot1pgNX9IMdmE3xLLBLoRO3YDcjmiuavpX2oplRS1Q2uKNH/2Q==",
-      "source_files": [
-        "done/Screenshot 2026-11-16 at 4.56.36 PM.png"
-      ],
-      "image_hashes": [
-        "f0bc028f59c76afcf155964864ea03abfdb8b74d7a7498c3601849d6c0237dee"
-      ],
-      "source_labels": [
-        "poster"
-      ],
-      "rung": "haiku-low",
-      "added": "2026-11-16"
-    },
-    {
       "id": "fa2c32ac82d7",
       "status": "published",
       "grouping_uncertain": true,
