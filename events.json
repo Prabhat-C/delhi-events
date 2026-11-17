@@ -3810,6 +3810,75 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-17"
+    },
+    {
+      "id": "7ed538acaf95",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Mehar Rangat Festival 2026",
+      "organiser": "Padmashri Kailash Kher & KEPL",
+      "description": "A festival celebrating India's folk culture and spirit of patriotism. The artist lineup includes Padmashri Kailash Kher & Kailasa, Prahlad Singh Tipaniya & Group, Dadi Pudumjee & The Ishara Puppet Theatre, Aamir Bhiyani & R Bharat Brass Band, Fire Raaja & Fire Raani, Nathoolal Solanki & Group, and Heera Sapera & The Kaalbeliyas.",
+      "details": null,
+      "date": "2026-11-20",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "Central Park, Connaught Place, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/4a5ad874cbd6.jpg",
+      "thumb": "thumbs/4a5ad874cbd6.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYBBAUC/8QAJRAAAgEDAwQCAwAAAAAAAAAAAQIDAAQREjFRBRMhQQZxFNHw/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgMA/8QAGhEBAQACAwAAAAAAAAAAAAAAAQARUQISE//aAAwDAQACEQMRAD8AbZVfsuIiA5U6SfRrJ6HDexzTG5Eix4xiSQPluRwKv39/FZoO4TqbYLvjmqNr1e3ZzpZyCcZY4B870VBqcc9ULY0gUVIIIBGxopU5DHWbm5KflxSF1XSGWPf7rqN4IirP3QoXygjJGfeKd33P9xUfqsg1PR1Ki/KJbaOOG2sHkjRQNTgqSfoCinAUUsmoLm//2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-17 at 11.38.13 PM.png",
+        "done/Screenshot 2026-11-17 at 11.38.27 PM.png"
+      ],
+      "image_hashes": [
+        "4a5ad874cbd6eacf3c2a0d3c4bb5cda80da3ea0a0e3de6011487d75b0ac059fe",
+        "515cd3f236c96c0af27099f5d810445dc02bccfcf5712f3d4988c71cacb2fc65"
+      ],
+      "source_labels": [
+        "poster",
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "cde1a2032d19",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "5th International Odissi Dance Festival of Guru Surendra Nath Jena",
+      "organiser": "Guru Surendra Nath Jena Odissi Dance Foundation",
+      "description": "The 5th International Odissi Dance festival honouring Guru Surendra Nath Jena, featuring dancers from all over India and abroad.",
+      "details": null,
+      "date": "2026-11-20",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "Triveni Kala Sangam, 205, Tansen Marg, Chamber Theatre, Mandi House, New Delhi-1",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "All are welcome.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/2cda46d1f814.jpg",
+      "thumb": "thumbs/2cda46d1f814.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAbABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAQb/xAAlEAACAQMEAgEFAAAAAAAAAAABAgMABBESISIxExRhBUGx4fD/xAAXAQEBAQEAAAAAAAAAAAAAAAABAgME/8QAGREBAQEAAwAAAAAAAAAAAAAAAAESESGB/9oADAMBAAIRAxEAPwC1ZyW9xDxjXKtg8R9qakMYckgH4KjFSLO8FjZTTOCuohVLbavmm2f1L2naASAlxhTkKQa520lqg1tDMxZfHgHHWMUUpoZEOAf3RU8n0xbaAwhJkWQAkDyDV+RWiyto5yRbxhlAYNoAP9tXO+5cqFQTyaVG3I1guriPJSaQE98jvVHFXp4ULjMsgIHQcUVBaV5Trkclj2c90UdKzX//2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-17 at 11.38.46 PM.png"
+      ],
+      "image_hashes": [
+        "2cda46d1f814ddfc1d6011a07034ef1fa68eefc83bb0f8ee2c0f2b538642d462"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-17"
     }
   ]
 }
