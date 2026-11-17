@@ -3777,6 +3777,39 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-17"
+    },
+    {
+      "id": "f9a74341b51d",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "AFD Ciné-Club: Sailing Home (La Vallée des Fous)",
+      "organiser": "Alliance Française de Delhi",
+      "description": "A French film about Jean-Paul, a man going through a rough patch who sets out to sail in a virtual boat race from his garden. The story follows his journey to reconnect with his family and himself.",
+      "details": null,
+      "date": "2026-11-19",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "M.L Bhartia Auditorium, Alliance Française de Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "French movie with English subtitles. Free entry, open to all.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/75670aafc57a.jpg",
+      "thumb": "thumbs/75670aafc57a.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYCAwQB/8QAIxAAAgICAgIBBQAAAAAAAAAAAQIAAwQREiEFYTITFDFxgf/EABcBAQEBAQAAAAAAAAAAAAAAAAEABAX/xAAZEQADAQEBAAAAAAAAAAAAAAAAARECElH/2gAMAwEAAhEDEQA/AGS7yVNbOu2DIdE/TJEtx3ayoOjgqfxyB3FbJ8tV9zkMMewVuxI2D37m3B8xjHDpquaxGXonhsSbzKhxnbcgxcg3akEeoTKmZiVLo5lLb73zEIVDy/BRS0KijY69SIVXJI5EyqST5fyZzqw468W0QR+4Qs+UJCf/2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-17 at 11.16.22 PM.png"
+      ],
+      "image_hashes": [
+        "75670aafc57a38c626b45dca9960ad860ca959d92908f4149885849a0c01ab10"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-17"
     }
   ]
 }
