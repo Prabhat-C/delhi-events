@@ -62,7 +62,7 @@
     background: var(--card); border: 1px solid var(--line); border-radius: 8px; margin-bottom: 6px; font-size: 14px; word-break: break-all; }
 
   /* Events */
-  .filters { display: grid; grid-template-columns: 1fr 150px 170px; gap: 8px; }
+  .filters { display: grid; grid-template-columns: 1fr 150px 150px 170px; gap: 8px; }
   @media (max-width: 640px) { .filters { grid-template-columns: 1fr 1fr; } .filters input { grid-column: 1 / -1; } }
   .ev { display: flex; gap: 12px; padding: 10px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
     margin-top: 8px; cursor: pointer; text-align: left; width: 100%; font: inherit; color: inherit; }
@@ -198,6 +198,13 @@
         <option value="past">Past</option>
         <option value="all">All dates</option>
       </select>
+      <select id="f-cat" aria-label="Category">
+        <option value="any">Any category</option>
+        <option value="Film">Film</option><option value="Literature">Literature</option><option value="Music">Music</option>
+        <option value="Theatre">Theatre</option><option value="Talks">Talks</option><option value="Dance">Dance</option>
+        <option value="Festivals">Festivals</option><option value="Art">Art</option>
+        <option value="none">No category</option>
+      </select>
       <select id="f-status">
         <option value="any">Any status</option>
         <option value="published">Published</option>
@@ -236,6 +243,12 @@
       <div id="e-review"></div>
       <div id="e-images"></div>
       <label class="f" for="e-title">Title</label><input type="text" id="e-title">
+      <label class="f" for="e-category">Category (one per event; the site's filter uses it)</label>
+      <select id="e-category">
+        <option value="">None</option>
+        <option>Film</option><option>Literature</option><option>Music</option><option>Theatre</option>
+        <option>Talks</option><option>Dance</option><option>Festivals</option><option>Art</option>
+      </select>
       <label class="f" for="e-organiser">Organiser</label><input type="text" id="e-organiser">
       <label class="f" for="e-description">Description</label><textarea id="e-description" rows="2"></textarea>
       <label class="f" for="e-details">Details</label><textarea id="e-details" rows="4"></textarea>
@@ -276,9 +289,10 @@
 
 /* ---------------- Config ---------------- */
 const CFG_KEY = 'events-admin-config';
-const FIELDS = ['title', 'organiser', 'description', 'details', 'date', 'end_date', 'start_time', 'end_time',
+const FIELDS = ['title', 'category', 'organiser', 'description', 'details', 'date', 'end_date', 'start_time', 'end_time',
   'venue', 'registration_link', 'recurrence', 'notes', 'status'];
 const OVERRIDE_PREFIX = /^(poster|thumb|zoom)-/i;
+const CATEGORIES = ['Film', 'Literature', 'Music', 'Theatre', 'Talks', 'Dance', 'Festivals', 'Art'];
 
 function loadCfg() {
   let c = {};
@@ -608,12 +622,14 @@ function renderInbox() {
 
 function renderEvents() {
   const q = $('#f-q').value.trim().toLowerCase();
-  const when = $('#f-when').value, st = $('#f-status').value;
+  const when = $('#f-when').value, st = $('#f-status').value, cat = $('#f-cat').value;
   const today = todayIST();
   let list = state.events.filter(ev => {
     if (q && ![ev.title, ev.venue, ev.organiser].join(' ').toLowerCase().includes(q)) return false;
     if (when === 'upcoming' && isPast(ev)) return false;
     if (when === 'past' && !isPast(ev)) return false;
+    if (cat === 'none' && CATEGORIES.includes(ev.category)) return false;
+    if (cat !== 'any' && cat !== 'none' && ev.category !== cat) return false;
     if (st === 'published' && ev.status !== 'published') return false;
     if (st === 'unpublished' && ev.status === 'published') return false;
     if (st === 'review' && !reviewFor(ev.id).length) return false;
@@ -629,6 +645,7 @@ function renderEvents() {
   if (!list.length) { box.innerHTML = '<div class="empty">No events match.</div>'; renderBulk(); return; }
   box.innerHTML = list.map(ev => {
     const tags = [];
+    tags.push(CATEGORIES.includes(ev.category) ? `<span class="tag">${esc(ev.category)}</span>` : '<span class="tag warn">No category</span>');
     if (ev.status !== 'published') tags.push(`<span class="tag off">${esc(ev.status || 'no status')}</span>`);
     if (reviewFor(ev.id).length) tags.push('<span class="tag warn">Needs review</span>');
     if (isRecurring(ev)) tags.push('<span class="tag">Recurring</span>');
@@ -685,7 +702,7 @@ function showTab(name) {
   document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
 }
 $('#tabs').addEventListener('click', e => { const b = e.target.closest('button[data-tab]'); if (b) showTab(b.dataset.tab); });
-['#f-q', '#f-when', '#f-status'].forEach(s => $(s).addEventListener('input', renderEvents));
+['#f-q', '#f-when', '#f-cat', '#f-status'].forEach(s => $(s).addEventListener('input', renderEvents));
 
 /* ---------------- Settings ---------------- */
 function fillSettings() {
@@ -806,6 +823,11 @@ function openEditor(id, draft) {
   $('#e-heading').textContent = ev.title || 'Edit event';
   const statuses = new Set(['published', 'hidden', ...state.events.map(e => e.status).filter(Boolean)]);
   $('#e-status').innerHTML = [...statuses].map(s => `<option value="${esc(s)}">${esc(s === 'published' ? 'published (shown on the site)' : s + ' (not shown)')}</option>`).join('');
+  const catSel = $('#e-category');
+  catSel.querySelectorAll('option[data-odd]').forEach(o => o.remove());
+  if (ev.category && !CATEGORIES.includes(ev.category)) {
+    const o = document.createElement('option'); o.value = ev.category; o.textContent = ev.category + ' (not one of the 8)'; o.dataset.odd = '1'; catSel.append(o);
+  }
   for (const f of FIELDS) {
     const el = $('#e-' + f); if (!el) continue;
     el.value = draft && f in draft ? draft[f] : (ev[f] == null ? '' : ev[f]);
@@ -976,6 +998,7 @@ function readForm() {
   if (!out.date && !out.recurrence) throw new Error('Add a date, or a recurrence for repeating events.');
   if (out.end_date && out.date && out.end_date < out.date) throw new Error('End date is before the start date.');
   if (out.registration_link && !/^https?:\/\//i.test(out.registration_link)) throw new Error('The registration link must start with http:// or https://');
+  if (out.category && !CATEGORIES.includes(out.category)) throw new Error('Pick one of the 8 categories, or None.');
   out.recurring = !!out.recurrence;
   return out;
 }

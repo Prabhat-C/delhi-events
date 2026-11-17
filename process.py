@@ -25,6 +25,8 @@ Pipeline
      "extra_posters" (optional, added from admin.html) is a list of {"poster", "poster_blur"} shown after "poster" in the
      zoom view. "poster" can be null when the owner deleted every poster (the page then shows the title). Merges and
      replacements keep the extra posters; only the owner removes them.
+     "category" is one of CATEGORIES (prompt rule 18). A missing or unknown value is stored as null and gets a
+     needs_review.json reason, but never holds the event or causes a retry.
   7. Merge step (after all batches): events from this run are compared with each other and with the existing
      entries by date + normalised venue + start_time (title ignored). Matches are merged into one entry;
      same date and venue with a different start time goes to needs_review.json instead.
@@ -95,6 +97,11 @@ EVENT_KEYS = [
     "confidence", "notes", "recurrence", "recurring",
 ]
 STORED_KEYS = [k for k in EVENT_KEYS if k != "images"]  # "images" is batch-relative, so not stored
+# One category per event, chosen by the model (prompt rule 18) and editable on the admin page. It is optional like
+# poster_image: a missing or unknown value never holds an event or causes a retry; it only adds a review reason.
+CATEGORIES = ("Film", "Literature", "Music", "Theatre", "Talks", "Dance", "Festivals", "Art")
+ENTRY_FIELDS = STORED_KEYS[:STORED_KEYS.index("title") + 1] + ["category"] + STORED_KEYS[STORED_KEYS.index("title") + 1:]
+CATEGORY_MISSING = "category missing or not one of the 8: pick one on the admin page"
 TEXT_FIELDS = ["title", "organiser", "description", "details", "venue", "notes", "recurrence"]
 COMPLETENESS_FIELDS = [
     "title", "organiser", "description", "details", "date", "end_date",
@@ -309,6 +316,14 @@ def validate(ev: dict, today: date) -> list[tuple[str, str]]:
     return probs
 
 
+def norm_category(v) -> Optional[str]:
+    """The model's category, spelled as in CATEGORIES (case and surrounding spaces ignored), or None."""
+    if not isinstance(v, str):
+        return None
+    k = v.strip().casefold()
+    return next((c for c in CATEGORIES if c.casefold() == k), None)
+
+
 def is_expired(ev: dict, today: date) -> bool:
     if ev.get("recurring"):
         return False
@@ -512,7 +527,7 @@ def merge_pair(store: MergeStore, w: dict, l: dict) -> None:
             hashes.append(l_hashes[k])
     w["source_files"], w["image_hashes"], w["source_labels"] = files, hashes, labels
 
-    for k in ("title", "organiser", "start_time", "end_time", "end_date", "venue", "recurrence"):
+    for k in ("title", "category", "organiser", "start_time", "end_time", "end_date", "venue", "recurrence"):
         if not w.get(k) and l.get(k):
             w[k] = l[k]
     w["recurring"] = w.get("recurrence") is not None
@@ -574,6 +589,8 @@ def merge_pair(store: MergeStore, w: dict, l: dict) -> None:
             if reason.startswith("registration link failed") and w.get("registration_link"):
                 continue
             if reason.startswith("confidence is") and w.get("confidence") == "high":
+                continue
+            if reason == CATEGORY_MISSING and w.get("category"):
                 continue
             kept.append(reason)
         if w.get("registration_link"):
@@ -1111,6 +1128,7 @@ def evaluate(ctx: Ctx, raw: dict, rung_name: str, sticky_uncertain: bool, number
     poster_img = pick_poster(raw.get("poster_image"), numbers)
     labels = parse_labels(raw.get("image_labels"), numbers)
     ev = {k: raw.get(k) for k in STORED_KEYS}
+    ev["category"] = norm_category(raw.get("category"))
     ev["grouping_uncertain"] = bool(ev["grouping_uncertain"]) or sticky_uncertain
     if isinstance(ev.get("confidence"), str):
         ev["confidence"] = ev["confidence"].strip().lower()
@@ -1193,7 +1211,7 @@ def resolve_group(ctx: Ctx, imgs: list, initial: Optional[dict], start_rung: int
 def finalize_event(best: Optional[Attempt], sticky: bool):
     """Returns (event, status, reasons, link_problem)."""
     if best is None:
-        ev = {k: None for k in STORED_KEYS}
+        ev = {k: None for k in ENTRY_FIELDS}
         ev.update(grouping_uncertain=sticky, notes="", confidence="low", recurring=False)
         return ev, "held", ["extraction failed: no usable model output on any rung"], None
     ev = dict(best.event)
@@ -1213,6 +1231,8 @@ def finalize_event(best: Optional[Attempt], sticky: bool):
         reasons.append("grouping uncertain: check whether these screenshots belong to one post")
     if not ev.get("venue"):
         reasons.append("venue missing")
+    if not ev.get("category"):
+        reasons.append(CATEGORY_MISSING)
     held = any(c in HARD_CODES for c, _ in best.problems) or conf not in ("high", "medium")
     return ev, ("held" if held else "published"), reasons, link_problem
 
@@ -1242,6 +1262,8 @@ def upsert(ctx: Ctx, entry: dict) -> tuple[str, str, Optional[dict]]:
                 entry["id"] = ex["id"]
                 if extra_posters(ex):                        # posters added on the admin page stay with the event
                     entry["extra_posters"] = extra_posters(ex)
+                if ex.get("category"):                       # the event keeps its category (it may be the owner's fix)
+                    entry["category"] = ex["category"]
                 entry["source_files"], entry["image_hashes"], entry["source_labels"] = new_files, new_hashes, new_labels
                 ctx.events[i] = entry
                 ctx.review = [r for r in ctx.review if r["id"] != ex["id"]]
@@ -1290,7 +1312,7 @@ def commit(ctx: Ctx, imgs: list, out: Outcome) -> None:
     entry = {
         "id": hashlib.sha1("".join(sorted(hashes)).encode()).hexdigest()[:12],   # sorted: independent of the choice
         "status": status,
-        **{k: ev.get(k) for k in STORED_KEYS},
+        **{k: ev.get(k) for k in ENTRY_FIELDS},
         "poster": poster, "thumb": thumb, "poster_blur": None,
         "source_files": rel_paths, "image_hashes": hashes, "source_labels": source_labels,
         "rung": best.rung if best else "none",
@@ -1298,6 +1320,8 @@ def commit(ctx: Ctx, imgs: list, out: Outcome) -> None:
     }
     action, final_id, replaced = upsert(ctx, entry)
     ctx.new_ids.add(final_id)
+    if entry.get("category"):              # a replaced entry may have taken the old entry's category
+        reasons = [r for r in reasons if r != CATEGORY_MISSING]
     if action == "duplicate":
         ctx.remove_derived(entry.get("thumb"), keep=None)   # the thumbnail made for the losing entry is not used
     elif not ctx.args.dry_run:

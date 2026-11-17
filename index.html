@@ -275,8 +275,9 @@ footer { padding: 8px 0 32px; }
   :root { --cell-gap: 4px; }
 }
 
-/* ---- Day list (phones and small screens): fixed column of the next 30 days near the right edge ----
-   Cards scroll underneath it. The day of the card in the middle of the screen is highlighted.
+/* ---- Day list (phones and small screens): the next 30 days, in the empty margin right of the cards ----
+   It starts level with the top of the first card, rises with it while scrolling, then stays centred on the screen
+   (JS sets top and right). The day of the card in the middle of the screen is highlighted.
    >>> Change the look of this list with the variables on the first line below. <<< */
 .daylist {
   --dl-row: clamp(10px, calc((100dvh - 110px) / 40), 14px);  /* height of one day; the numbers scale with it, and the list stays centred */
@@ -284,9 +285,10 @@ footer { padding: 8px 0 32px; }
   --dl-ink: var(--theme-light);                             /* colour of the day numbers (from --theme at the top of the file) */
   --dl-month-ink: var(--dl-ink);                              /* colour of the vertical month names */
   --dl-on: var(--theme-dark);                               /* colour of the highlighted day and month */
-  --dl-right: 15px;                                          /* distance from the right edge of the screen */
+  --dl-right: 2px;                                           /* fallback only: JS centres the list in the margin right of the cards */
   display: none;
-  position: fixed; top: 50%; right: var(--dl-right); transform: translateY(-50%); z-index: 5;
+  position: fixed; top: 0; right: var(--dl-right); z-index: 5;
+  visibility: hidden;                                        /* shown once JS has placed it, so it never flashes at the top */
   flex-direction: column; align-items: center;
   pointer-events: none; user-select: none; -webkit-user-select: none;   /* never blocks taps on the cards */
 }
@@ -306,6 +308,49 @@ footer { padding: 8px 0 32px; }
 @media (max-width: 1000px) {
   .daylist:not([hidden]) { display: flex; }
 }
+/* ---- Category filter ----
+   Laptops (>1000px): a list fixed on the right, mirroring the date grid on the left.
+   Phones and small screens: a row of words under the search that scrolls up with the cards, then sticks to the top.
+   Nothing is selected when the page opens. Tapping the selected category again clears it. */
+.cats { position: fixed; top: 50%; right: 16px; transform: translateY(-50%); z-index: 5;
+        width: min(220px, calc((100vw - 760px) / 2 - 40px)); }
+.cats[hidden] { display: none; }
+.cats .rail-month { margin: 0 0 6px; }
+.cat {
+  all: unset; box-sizing: border-box; width: 100%; display: flex; align-items: center; gap: 8px;
+  padding: 3px 0; cursor: pointer; font-size: .875rem; line-height: 1.4; color: var(--muted);
+}
+.cat:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.cat-sq { flex: none; width: var(--cell); height: var(--cell); border-radius: 2px; background: var(--cell-bg); }
+.cat-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cat-n { font-size: .75rem; font-variant-numeric: tabular-nums; }
+.cat:hover .cat-name { color: var(--ink); }
+.cat[aria-pressed="true"] { color: var(--ink); font-weight: 700; }
+.cat[aria-pressed="true"] .cat-sq { background: var(--cell-on); }
+.cat[aria-pressed="true"] .cat-n { color: var(--theme-dark); }
+.cat.empty { opacity: .55; }
+
+/* Phone word row. Painted in the page colour with no border or shadow, so it reads as transparent; its bottom
+   padding is the gap where cards disappear before they reach the words. */
+.catrow { display: none; position: sticky; top: 0; z-index: 4; background: var(--bg); padding: 4px 0 10px; }
+.words { display: flex; overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; }
+.words::-webkit-scrollbar { display: none; }
+.words.fade { -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); }
+.w {
+  all: unset; flex: none; display: inline-flex; flex-direction: column; align-items: center;
+  padding: 10px 7px; cursor: pointer; font-size: 13px; line-height: 1.3; color: var(--muted);
+}
+.w:first-child { padding-left: 0; }
+.w::after { content: attr(data-label); height: 0; overflow: hidden; visibility: hidden; font-weight: 700; }   /* keeps the width when the word turns bold */
+.w[aria-pressed="true"] { color: var(--ink); font-weight: 700; }
+.w:focus-visible { outline: 3px solid var(--focus); outline-offset: -2px; }
+#nomatch { text-align: center; color: var(--muted); padding: 40px 0; margin: 0; }
+@media (max-width: 1000px) {
+  header { padding-bottom: 14px; }
+  .catrow:not([hidden]) { display: block; }
+  .cats { display: none !important; }
+}
+
 /* Old browsers without relative colours (before 2023) get fixed shades of the default green instead */
 @supports not (color: hsl(from red h s l)) {
   :root { --theme-light: #a1c5ad; --theme-mid: #2f9e54; --theme-dark: #1d6233; --theme-btn: #47624f; }
@@ -320,6 +365,7 @@ footer { padding: 8px 0 32px; }
 <body>
 <nav class="rail" id="rail" aria-label="Events in the next 30 days" hidden></nav>
 <div class="daylist" id="daylist" aria-hidden="true" hidden></div>
+<nav class="cats" id="cats" aria-label="Category" hidden></nav>
 <header>
   <div class="wrap">
     <div class="logo">
@@ -343,7 +389,9 @@ footer { padding: 8px 0 32px; }
     <div class="card skel"><div class="skel-thumb"></div><div class="body"><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line"></div></div></div>
     <div class="card skel"><div class="skel-thumb"></div><div class="body"><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line"></div></div></div>
   </div>
+  <div class="catrow" id="catrow" hidden><div class="words" id="words" role="group" aria-label="Category"></div></div>
   <ul id="events"></ul>
+  <p id="nomatch" role="status" hidden>No matching events.</p>
 </main>
 
 <footer>
@@ -387,6 +435,13 @@ footer { padding: 8px 0 32px; }
   var searchClear = document.getElementById("search-clear");
   var searchText = new Map();                       // event object -> lowercase, accent-free text to search
   var railCells = new Map();                        // event object -> its rail buttons (one per day it runs)
+  var CATEGORIES = ["Film", "Literature", "Music", "Theatre", "Talks", "Dance", "Festivals", "Art"];
+  var catsEl = document.getElementById("cats");
+  var catrowEl = document.getElementById("catrow");
+  var wordsEl = document.getElementById("words");
+  var nomatchEl = document.getElementById("nomatch");
+  var activeCat = null;                             // null = nothing selected (page just opened); "All" or a category
+  var catButtons = [];                              // every category button, list and word row
 
   /* ---- Helpers ---- */
 
@@ -861,6 +916,7 @@ footer { padding: 8px 0 32px; }
     }
 
     if (daylistEl.hidden) return;
+    placeDayList();
     Object.keys(dlDays).forEach(function (d) { dlDays[d].classList.remove("on"); });
     dlTopEl.classList.remove("on");
     dlBottomEl.classList.remove("on");
@@ -875,11 +931,36 @@ footer { padding: 8px 0 32px; }
     (sm === dlTopMonth ? dlTopEl : dlBottomEl).classList.add("on");
   }
 
+  // Day list: in the empty margin right of the cards (centred in it), starting level with the top of the first
+  // card that is shown, rising with it while scrolling, then staying centred on the screen to the end of the page.
+  function placeDayList() {
+    var first = null;
+    cardFor.forEach(function (li) { if (!first && !li.hidden) first = li; });
+    var h = daylistEl.offsetHeight, w = daylistEl.offsetWidth;
+    var centre = (window.innerHeight - h) / 2;
+    var top = first ? Math.max(centre, first.getBoundingClientRect().top) : centre;
+    var edge = (first || listEl).getBoundingClientRect().right;
+    var margin = document.documentElement.clientWidth - edge;
+    daylistEl.style.top = Math.round(top) + "px";
+    daylistEl.style.right = Math.max(0, Math.round((margin - w) / 2)) + "px";
+    daylistEl.style.visibility = "visible";
+  }
+
+  // Laptop category list: centred on the screen, but kept below the info box while that is still in view.
+  var infoEl = document.querySelector(".info");
+  function placeCats() {
+    if (catsEl.hidden || !catsEl.offsetHeight) return;
+    var h = catsEl.offsetHeight, top = (window.innerHeight - h) / 2;
+    if (getComputedStyle(infoEl).position === "absolute") top = Math.max(top, infoEl.getBoundingClientRect().bottom + 24);
+    catsEl.style.top = Math.round(top) + "px";
+    catsEl.style.transform = "none";
+  }
+
   var dlQueued = false;
   function queueDayList() {
     if (dlQueued) return;
     dlQueued = true;
-    requestAnimationFrame(function () { dlQueued = false; updateDayList(); });
+    requestAnimationFrame(function () { dlQueued = false; updateDayList(); placeCats(); });
   }
   window.addEventListener("scroll", queueDayList, { passive: true });
   window.addEventListener("resize", queueDayList);
@@ -891,32 +972,100 @@ footer { padding: 8px 0 32px; }
     return String(s == null ? "" : s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
   }
 
-  // Title, venue, description and organiser, joined into one searchable string
+  // Title, venue, description, organiser and category, joined into one searchable string
   function haystack(ev) {
-    return norm([ev.title, ev.venue, ev.description, ev.organiser].map(str).filter(Boolean).join(" "));
+    return norm([ev.title, ev.venue, ev.description, ev.organiser, ev.category].map(str).filter(Boolean).join(" "));
   }
 
-  // Every typed word must appear somewhere in the event's text. No match = the cards simply disappear.
+  // A card shows when every typed word appears somewhere in its text AND it is in the selected category
+  // (no category selected, or "All", shows every category).
   function applySearch() {
     var terms = norm(searchInput.value).split(/\s+/).filter(Boolean);
     searchClear.hidden = !searchInput.value;
     searchEl.classList.toggle("has-value", !!searchInput.value);
+    var shown = 0;
     cardFor.forEach(function (li, ev) {
       var hay = searchText.get(ev) || "";
-      var ok = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      var ok = terms.every(function (t) { return hay.indexOf(t) !== -1; }) &&
+               (!activeCat || activeCat === "All" || ev.category === activeCat);
       li.hidden = !ok;
+      if (ok) shown++;
       (railCells.get(ev) || []).forEach(function (b) { b.hidden = !ok; });
     });
+    nomatchEl.hidden = shown > 0 || !cardFor.size;
     queueDayList();                                 // cards moved or vanished, so re-pick the middle card
   }
 
-  // Keep the search in the address bar (?q=...) so a filtered view can be shared
+  /* ---- Category filter ---- */
+
+  function catSlug(c) { return c.toLowerCase(); }
+
+  // One button per category for the laptop list and one for the phone row; both stay in step.
+  function buildCats(events) {
+    catsEl.replaceChildren();
+    wordsEl.replaceChildren();
+    catButtons = [];
+    var counts = { All: events.length };
+    CATEGORIES.forEach(function (c) { counts[c] = 0; });
+    events.forEach(function (ev) { if (counts[ev.category] != null) counts[ev.category]++; });
+    catsEl.append(el("div", { "class": "rail-month" }, "Category"));
+    ["All"].concat(CATEGORIES).forEach(function (c) {
+      var n = counts[c];
+      var item = el("button", { type: "button", "class": "cat" + (n ? "" : " empty"), "data-cat": c,
+                                "aria-label": c + ", " + n + (n === 1 ? " event" : " events") },
+        [el("span", { "class": "cat-sq", "aria-hidden": "true" }), el("span", { "class": "cat-name" }, c),
+         el("span", { "class": "cat-n", "aria-hidden": "true" }, String(n))]);
+      var word = el("button", { type: "button", "class": "w", "data-cat": c, "data-label": c }, c);
+      [item, word].forEach(function (b) {
+        b.addEventListener("click", function () { pickCat(c); });
+        catButtons.push(b);
+      });
+      catsEl.append(item);
+      wordsEl.append(word);
+    });
+    markCats();
+    catsEl.hidden = false;
+    catrowEl.hidden = false;
+    updateFade();
+  }
+
+  function markCats() {
+    catButtons.forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.cat === activeCat ? "true" : "false"); });
+  }
+
+  // Tap a category to show only it; tap it again to clear the selection.
+  function pickCat(c) {
+    activeCat = activeCat === c ? null : c;
+    markCats();
+    var y = window.pageYOffset;
+    applySearch();
+    syncUrl();
+    // If the list was scrolled past its start, go back to its start so the new results begin at the top.
+    var start = listEl.getBoundingClientRect().top + y - (catrowEl.offsetHeight || 0) - 8;
+    if (y > start) window.scrollTo(0, Math.max(0, start));
+  }
+
+  // Fade the right edge of the word row only while more words are hidden to the right.
+  function updateFade() {
+    wordsEl.classList.toggle("fade", wordsEl.scrollLeft + wordsEl.clientWidth < wordsEl.scrollWidth - 2);
+  }
+  wordsEl.addEventListener("scroll", updateFade, { passive: true });
+  window.addEventListener("resize", updateFade);
+
+  // Category from the address bar (?cat=music), so a filtered view can be shared
+  try {
+    var c0 = (new URLSearchParams(location.search).get("cat") || "").toLowerCase();
+    ["All"].concat(CATEGORIES).forEach(function (c) { if (catSlug(c) === c0) activeCat = c; });
+  } catch (e) { /* ignore */ }
+
+  // Keep the search and category in the address bar (?q=...&cat=...) so a filtered view can be shared
   var urlTimer = null;
   function syncUrl() {
     try {
       var u = new URL(location.href);
       var q = searchInput.value.trim();
       if (q) u.searchParams.set("q", q); else u.searchParams.delete("q");
+      if (activeCat) u.searchParams.set("cat", catSlug(activeCat)); else u.searchParams.delete("cat");
       history.replaceState(null, "", u);
     } catch (e) { /* the address bar is a nicety, never a requirement */ }
   }
@@ -970,6 +1119,9 @@ footer { padding: 8px 0 32px; }
     cardFor.clear();
     searchText.clear();
     searchEl.classList.add("pending");
+    catsEl.hidden = true;
+    catrowEl.hidden = true;
+    nomatchEl.hidden = true;
     railEl.hidden = true;
     daylistEl.hidden = true;
     railOn = null;
@@ -1015,8 +1167,9 @@ footer { padding: 8px 0 32px; }
         });
         buildRail(events, today);
         buildDayList(events, today);
+        buildCats(events);
         searchEl.classList.remove("pending");
-        applySearch();                              // applies a search typed early or taken from ?q=
+        applySearch();                              // applies a search typed early, or ?q= and ?cat= from the address bar
         preloadFirst(events.map(function (ev) { return assetUrl(ev.poster) || assetUrl(ev.thumb); }));
       })
       .catch(function () {
