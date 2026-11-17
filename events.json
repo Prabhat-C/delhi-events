@@ -3865,6 +3865,72 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-17"
+    },
+    {
+      "id": "1a144c58e775",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "The Border, the War and Our Collective Ignorance",
+      "organiser": "India International Centre",
+      "description": "A talk by Major General Ashok Singh (YSM, SM, Retd), a recipient of the Yudh Seva Medal and Sena Medal for gallantry, on the border, the war and collective ignorance.",
+      "details": null,
+      "date": "2026-11-18",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Conference Room I, India International Centre, 40 Max Mueller Marg, New Delhi 110003",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/27626d5b3a6a.jpg",
+      "thumb": "thumbs/27626d5b3a6a.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAwb/xAAoEAACAQMCAgsAAAAAAAAAAAABAgADBCEREkGhBRQVMUJRVXGBktH/xAAWAQEBAQAAAAAAAAAAAAAAAAADAAH/xAAYEQEAAwEAAAAAAAAAAAAAAAAAAREhUf/aAAwDAQACEQMRAD8A6J32lVV0VjwbvPsJnSeq5ONufEpzzk9uh2qV0rdcrErtOraFsHgfmNmzYg6XlyuvkwxygFw/iEndnv6je/cfkJqqOv/Z",
+      "source_files": [
+        "done/Screenshot 2026-11-18 at 12.09.46 AM.png"
+      ],
+      "image_hashes": [
+        "27626d5b3a6ae509592152e9ef818b9e9a46f97b557358a6aa90afaa75648bc7"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "0ee938c17e68",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "The Making of a Champion - From Promising Juniors to Elite Athletes",
+      "organiser": "Equalsportz",
+      "description": "A talk on how promising junior athletes develop into elite athletes, part of the Raising An Athlete Sports Talk Series. Speaker Deepthi Bopaiah and moderator Amita Malhotra Lalwani.",
+      "details": null,
+      "date": "2026-11-18",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "India Habitat Centre, Gulmohar",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/b062b4a6e909.jpg",
+      "thumb": "thumbs/b062b4a6e909.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAkABQDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAMFAQQGAv/EACoQAAIBAwIEBAcAAAAAAAAAAAECAwAEERIxBRMVQSFRgcEGNUNScYPR/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAQBAv/EABkRAQADAQEAAAAAAAAAAAAAAAABAhEiMf/aAAwDAQACEQMRAD8AglijldmdwGbfAA9qtYuMSwxog5RCgKN+3rVQ13bZIMqZ2OaLd2i/USpulkzWfVueLTuS2mM58s/2laltBJeRc21jMsecal2zSt27nKObUKbhwyux1HAXv496kulQLnlOnke3r41254PwxiT06EnP3Vjo/CgcdOhz+TVCVF8G/Jf3N7Uq2sbeC2g5drCsUeSdI86UHjRpzhiKikZkYgMdhSlBtWrmSLU2+aUpQf/Z",
+      "source_files": [
+        "done/Screenshot 2026-11-18 at 12.10.33 AM.png"
+      ],
+      "image_hashes": [
+        "b062b4a6e909732c7f50e09f67f8eb37b201251e96a5e3f4ca08c53e1409fac9"
+      ],
+      "source_labels": [
+        "other"
+      ],
+      "rung": "haiku-medium",
+      "added": "2026-11-18"
     }
   ]
 }

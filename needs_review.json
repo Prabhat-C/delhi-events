@@ -1,3 +1,19 @@
 {
-  "review": []
+  "review": [
+    {
+      "id": "0ee938c17e68",
+      "status": "published",
+      "title": "The Making of a Champion - From Promising Juniors to Elite Athletes",
+      "date": "2026-11-18",
+      "confidence": "high",
+      "reasons": [
+        "no poster"
+      ],
+      "poster": "posters/b062b4a6e909.jpg",
+      "thumb": "thumbs/b062b4a6e909.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-18 at 12.10.33 AM.png"
+      ]
+    }
+  ]
 }
