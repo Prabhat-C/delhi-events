@@ -3488,6 +3488,42 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-17"
+    },
+    {
+      "id": "796e8ad2eaef",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Dedicada a mi Ex",
+      "organiser": "Instituto Cervantes New Delhi, in collaboration with the Embassy of Ecuador in India",
+      "description": "A vibrant Ecuadorian comedy packed with music, humour, unexpected adventures and the chaos of chasing your dreams, directed by Jorge Ulloa. Part of a special film screening.",
+      "details": "THE REBELLION BEGINS WITH A ROCK BEAT!\n\n#InstitutoCervantesNewDelhi in collaboration with the Embassy of Ecuador in India, invites you to a special screening of ¡Dedicada a mi Ex!, a vibrant Ecuadorian comedy packed with music, humour, unexpected adventures and the chaos of chasing your dreams, directed by Jorge Ulloa!\n\nCome for the laughs, stay for the music, and experience a little taste of Ecuadorian cinema!\n\nInstituto Cervantes. Behind Hanuman Temple, Connaught Place.,New Delhi.",
+      "date": "2026-11-25",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Instituto Cervantes, Behind Hanuman Temple, Connaught Place, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/366cc101e60c.jpg",
+      "thumb": "thumbs/366cc101e60c.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYBAwUE/8QAKhAAAQMDAwMBCQAAAAAAAAAAAQIDEQAEIQUSQQYUMRMiMkJRYYGhseH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/xAAXEQEBAQEAAAAAAAAAAAAAAAAAEQES/9oADAMBAAIRAxEAPwDV1W9vLbUoaIDIt1Kgj3jnx9RipY1C4eW2y2khwL2rWo4PszOOJ/Qrp1dlTjTjlusJuEN7EyYEEgnP2qjSmHG2Wu6fbVcSr4pMcCRQWu0SptJUnaSMiipRlAzOKKQV3epS6CU2yUkjEuzH4qhPURSpau2VKTkBwQePlml6oNa5wU1J6t9EbDYkxyHf5RSoPFFMxV//2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-17 at 9.20.15 PM.png",
+        "done/Screenshot 2026-11-17 at 9.20.45 PM.png"
+      ],
+      "image_hashes": [
+        "366cc101e60c5dc2f413c96e5fea1c12ed849475c09c6835482bd1404f60bc83",
+        "d028d45bbc7e943d600088097c601f33d0a84d4a31494e8a020c1eaf90fe6f1f"
+      ],
+      "source_labels": [
+        "poster",
+        "text_caption"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-17"
     }
   ]
 }
