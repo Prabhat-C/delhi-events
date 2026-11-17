@@ -3586,16 +3586,19 @@
       "recurrence": null,
       "recurring": false,
       "poster": "posters/cec7266a21fa.jpg",
-      "thumb": "thumbs/cec7266a21fa.jpg",
+      "thumb": "thumbs/c84c0c8af9c0.jpg",
       "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAKABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGAwT/xAAiEAACAgIBAwUAAAAAAAAAAAABAgMEABESBRMhJDFRgpL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8Ao4Z0soXQOhDFTs69s1cMld2Xm7a8AHeRvTLE0fcEc0ig6J4sRnaLdnR9RL+zhbMpskttmciGQDl42o+BhiRrdkMQLEo+5wwj/9k=",
       "source_files": [
-        "done/Screenshot 2026-11-17 at 10.27.54 PM.png"
+        "done/Screenshot 2026-11-17 at 10.27.54 PM.png",
+        "done/thumb-e6e9665c2516.png"
       ],
       "image_hashes": [
-        "cec7266a21fa3dfcd6d95e52d829d8233012e0e8f8cb04ba315c75ae71d18f07"
+        "cec7266a21fa3dfcd6d95e52d829d8233012e0e8f8cb04ba315c75ae71d18f07",
+        "c84c0c8af9c0675d6cc2b81d94bbd1b6b422c6c6d6d1484d1e30a6ed0b0ee6c5"
       ],
       "source_labels": [
-        "poster"
+        "poster",
+        "other"
       ],
       "rung": "haiku-low",
       "added": "2026-11-17"
