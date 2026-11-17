@@ -3161,39 +3161,6 @@
       "added": "2026-11-15"
     },
     {
-      "id": "799df5a3a662",
-      "status": "published",
-      "grouping_uncertain": false,
-      "title": "Kailash Kher Live Performance in Delhi",
-      "organiser": null,
-      "description": "A live musical performance by Kailash Kher in Delhi, billed as a soulful evening of music and culture.",
-      "details": null,
-      "date": "2026-11-20",
-      "end_date": null,
-      "start_time": "17:30",
-      "end_time": null,
-      "venue": "Central Park, Rajiv Chowk, Delhi",
-      "registration_link": null,
-      "confidence": "high",
-      "notes": "",
-      "recurrence": null,
-      "recurring": false,
-      "poster": "posters/c13c61de753a.jpg",
-      "thumb": "thumbs/c13c61de753a.jpg",
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAABAADBQb/xAAqEAACAgECAwYHAAAAAAAAAAABAgMRAAQhBRJBExQxMlFhIjNicYGCof/EABgBAAMBAQAAAAAAAAAAAAAAAAIEBQED/8QAHREAAgIDAAMAAAAAAAAAAAAAAQIAEQMhIkFScf/aAAwDAQACEQMRAD8ADw7RL3WOWmRm3b4RvRNVf9zVzHpCpkldx4Vag3d3Q9gR+cAzSFnlS1b6GAG1YiB2h08kksLaiRgC3aLdDob6DAGIns1XydeToXcBNpYww7LmCVtz1Z99ssfp3jlj5i7BrN7A75ZeRcYURAs1zDQ6pS/NqIhdbEdB65qY5uI0kMsixgASAsaA9h6+OcdfL+mP4b5dT9sg5WYIdx9X8RyaGPTgo0iLZJA5iKGWecm+Ycs1WzAacwSV9RP/2Q==",
-      "source_files": [
-        "done/WhatsApp Image 2026-11-15 at 9.28.46 PM.jpeg"
-      ],
-      "image_hashes": [
-        "c13c61de753a3cb5adccdbd67c8bf46f5569928ff86231c638c713f894e04029"
-      ],
-      "source_labels": [
-        "poster"
-      ],
-      "rung": "sonnet-medium",
-      "added": "2026-11-15"
-    },
-    {
       "id": "86b0049ee205",
       "status": "published",
       "grouping_uncertain": false,
