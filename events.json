@@ -1074,7 +1074,7 @@
       "grouping_uncertain": false,
       "title": "14th Guru M. L. Koser Festival of Music & Dance",
       "organiser": "Pracheen Kala Kendra",
-      "description": "A two-day festival of classical music and dance. Performers include Taalyogi Pt. Suresh Talwalkar, Kashyap Bandhu, Pt. Vishwamohan Bhatt, Sh. Salil Bhatt and Vidushi Maitreyee Pahari & Troupe, with a Triveni Nritya Ballet presenting a confluence of Kathak, Odissi and Chhau.",
+      "description": "A two-day festival of music and dance presented by Pracheen Kala Kendra in memory of Guru M. L. Koser.",
       "details": null,
       "date": "2026-11-27",
       "end_date": "2026-11-28",
@@ -1083,23 +1083,26 @@
       "venue": "Kamani Auditorium, New Delhi",
       "registration_link": null,
       "confidence": "high",
-      "notes": "Registration is by scanning the QR code on the poster; no written link is given.",
+      "notes": "All are cordially invited.",
       "recurrence": null,
       "recurring": false,
-      "poster": "posters/4e2ff7b061a1.jpg",
-      "thumb": "thumbs/4e2ff7b061a1.jpg",
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQX/xAAiEAABBAEEAgMAAAAAAAAAAAABAAIDEQQFITFBEhNRkbH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/ALcaMVVdbi1kmBBK4+UbOOtvxIZqIZVm65oKh+ZA2L20b6FdplmHK582mwtkIa5wHxaE1+qYpcSQ76Qs6n//2Q==",
+      "poster": "posters/c1ee98f90e5b.jpg",
+      "thumb": "thumbs/c1ee98f90e5b.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAECAwUEBv/EACYQAAEEAQEHBQAAAAAAAAAAAAIAAQMRIRIEBTFBcYHBEzNCUWH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAQD/xAAYEQEBAQEBAAAAAAAAAAAAAAAAARIDEf/aAAwDAQACEQMRAD8A9Rs4zWWssfHLJxxSEEgymVPi7z2USOYHZ46cX423BQE5xGgEdT5fnaMJY409W79XQnnGrL1nFIQVnhvcgBvUi0vxK25X5ZXSb1higlOKKWQmzpFmd89/xZR+WXRsfuydGQnSlmG2/oAtpQnIvtoXpCvJC2k8f//Z",
       "source_files": [
+        "done/Screenshot 2026-11-17 at 10.28.05 PM.png",
         "done/WhatsApp Image 2026-11-10 at 9.53.20 PM.jpeg"
       ],
       "image_hashes": [
+        "c1ee98f90e5b5f062990cba0c81f0b1ce2acfc100ed68240ac79bc27fd07353c",
         "4e2ff7b061a13c766a3cf21efe03d20c3c8c4d745c3d3b289e1a272665eacbb9"
       ],
       "source_labels": [
+        "poster",
         "other"
       ],
       "rung": "haiku-low",
-      "added": "2026-11-11"
+      "added": "2026-11-17"
     },
     {
       "id": "1d7e0d48c767",
@@ -3114,16 +3117,16 @@
       "grouping_uncertain": false,
       "title": "World Heritage Week 2026: Heritage Walk and Cultural Evening",
       "organiser": "Delhi Development Authority",
-      "description": "A guided heritage walk through the historic precinct of Mehrauli Archaeological Park, followed by a cultural evening with a live violin performance by Johar Ali celebrating music and culture.",
+      "description": "A World Heritage Week programme with a Heritage Walk in collaboration with INTACH Delhi Chapter, exploring centuries-old monuments and hidden stories of Mehrauli Archaeological Park. It also includes a Cultural Evening with a live violin performance by Johar Ali.",
       "details": null,
       "date": "2026-11-20",
       "end_date": null,
       "start_time": "16:00",
-      "end_time": null,
+      "end_time": "17:00",
       "venue": "Mehrauli Archaeological Park, New Delhi",
       "registration_link": "https://docs.google.com/forms/d/e/1FAIpQLSco3JGqSp4aQZPPr_17tiKEzLtDMPs8_IWCxW3Bz6VqqNp8AA/viewform",
       "confidence": "high",
-      "notes": "Heritage Walk runs 4:00 PM to 5:00 PM; Cultural Evening starts at 5:30 PM onwards. Free entry with prior registration required.",
+      "notes": "Heritage Walk runs 4:00 PM to 5:00 PM; Cultural Evening starts at 5:30 PM onwards. Free entry with prior registration required. Free entry. Prior registration required (via QR code on poster). The Cultural Evening starts at 17:30 onwards.",
       "recurrence": null,
       "recurring": false,
       "poster": "posters/e0cebb3cb7fb.jpg",
@@ -3131,15 +3134,18 @@
       "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUCAwYE/8QALBAAAgEDAgMFCQAAAAAAAAAAAQIAAxESBSEiUXEEFDEzcwYTNIGRobHB8f/EABcBAAMBAAAAAAAAAAAAAAAAAAABAgP/xAAXEQEBAQEAAAAAAAAAAAAAAAABABIR/9oADAMBAAIRAxEAPwDTvVIYqmBI5tYyCNUpkgheJsjk/h0iSpriMVfuzcYuBkPn0kzrqVkDd2C8sqgvb6TLRaZZ+jZoG235G8IkHtFToqqns1Ugi4Kbj+wi0RllqaVUZve3aogOHAwBBFrneWDT+0lsVQ4k7XPh9420f4Kv6n6E7KHmr0hkatI2cbTajuwFfEoSrC+14S5/Preo35hFkq43/9k=",
       "source_files": [
         "done/Screenshot 2026-11-15 at 4.18.42 PM.png",
-        "done/Screenshot 2026-11-15 at 4.19.04 PM.png"
+        "done/Screenshot 2026-11-15 at 4.19.04 PM.png",
+        "done/Screenshot 2026-11-17 at 10.26.32 PM.png"
       ],
       "image_hashes": [
         "e0cebb3cb7fb4e3496b103e211dd2347ccc540c30bd3364ca18f680b4d6615fb",
-        "8a6778c83c7ca58f1ad564381c1b55b5741ccc1938dede7259bc6a12a62ee59f"
+        "8a6778c83c7ca58f1ad564381c1b55b5741ccc1938dede7259bc6a12a62ee59f",
+        "ec716ad235400f759bd0e0eae4a234f8519d9d5e701228b2fd4e331bf34ba258"
       ],
       "source_labels": [
         "poster",
-        "other"
+        "other",
+        "poster"
       ],
       "rung": "haiku-low",
       "added": "2026-11-15"
@@ -3521,6 +3527,240 @@
       "source_labels": [
         "poster",
         "text_caption"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "0441acec0aee",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Dara Shukoh: The Faqir and the Throne of Thorns",
+      "organiser": null,
+      "description": "A book launch and discussion on Dara Shukoh's life and thought, with author Amit Ranjan and writer Mridula Garg in conversation. The book revisits Dara Shukoh's intellectual journey and his engagement with different spiritual traditions.",
+      "details": "\"Dara Shukoh: The Faqir and the Throne of Thorns\" by Amit Ranjan. Publisher: Penguin Random House. The book revisits the life and intellectual journey of Dara Shukoh, the eldest son of Shah Jahan. A student of Sufism and comparative thought, Dara Shukoh engaged deeply with Hindu and Islamic traditions and translated 52 Upanishads into Persian, seeking connections between different spiritual traditions. It also looks at his interest in poetry, the arts and the cultural exchanges of his time. Discussants: Amit Ranjan, author; Mridula Garg, writer.",
+      "date": "2026-11-22",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "Gulmohar Hall, India Habitat Centre",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Entry free. Limited seating on first come first basis. Open to all.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/46ee56c7e0e8.jpg",
+      "thumb": "thumbs/46ee56c7e0e8.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAWABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAQFBgED/8QAJhAAAQQBAwEJAAAAAAAAAAAAAQACAxEhBBIxBQYzNEFhgZGh4f/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABgRAQEAAwAAAAAAAAAAAAAAAAABAhES/9oADAMBAAIRAxEAPwDQGWSztaSPK3BdE0tZjz6uWPDiGngAH5V/PotW/qEsgmhED2Fu3N8Y+1hvLHlKdphqHF8jpY3cUHCkUXTdMljhDN8ZrF3yiah1UZ3Z7PiyKN93+q7kIeQQSPYIiqW7esYGwYRERH//2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-17 at 10.27.19 PM.png",
+        "done/Screenshot 2026-11-17 at 10.27.39 PM.png"
+      ],
+      "image_hashes": [
+        "46ee56c7e0e8cb3106453e0150554a4502cca302c4617c89fa35b515d4ea96db",
+        "1a69b0a8460e420b4c8332c4087538ca0649dd9f0e43e8c624c6f9608ba34f21"
+      ],
+      "source_labels": [
+        "poster",
+        "text_caption"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "e6e9665c2516",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Dr. Ved Pratap Vaidik 3rd Memorial Lecture",
+      "organiser": "Suparn Vaidik, Prof. Aparna Vaidik, Anil Sanweria, Vaidik Smriti Nyas",
+      "description": "The 3rd Memorial Lecture in honour of Dr. Ved Pratap Vaidik, titled \"Unseen Dimensions of Citizenship\" (नागरिकता के अनदेखे आयाम), delivered by Prof. Nivedita Menon, political scientist and feminist scholar.",
+      "details": null,
+      "date": "2026-12-05",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Seminar Hall I, II, III, Kamla Devi Complex, India International Center, 40 Max Mueller Marg, Lodhi Estate, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "High tea at 19:30.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/cec7266a21fa.jpg",
+      "thumb": "thumbs/cec7266a21fa.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAKABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGAwT/xAAiEAACAgIBAwUAAAAAAAAAAAABAgMEABESBRMhJDFRgpL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8Ao4Z0soXQOhDFTs69s1cMld2Xm7a8AHeRvTLE0fcEc0ig6J4sRnaLdnR9RL+zhbMpskttmciGQDl42o+BhiRrdkMQLEo+5wwj/9k=",
+      "source_files": [
+        "done/Screenshot 2026-11-17 at 10.27.54 PM.png"
+      ],
+      "image_hashes": [
+        "cec7266a21fa3dfcd6d95e52d829d8233012e0e8f8cb04ba315c75ae71d18f07"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "221dabe74ab4",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Standing at Eternity",
+      "organiser": "IGNCA in collaboration with BDSA",
+      "description": "A Kathak dance production by Pt. Birju Maharaj's Kalashram School of Dance and Music. Dance composed by Saswati Sen and Mamta Maharaj, with poetry and music by Kelvin Brown.",
+      "details": null,
+      "date": "2026-11-21",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "Samvet Auditorium, IGNCA, Janpath Building, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/376de1dd2a0e.jpg",
+      "thumb": "thumbs/376de1dd2a0e.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAdABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIFAwT/xAAoEAACAQMCBQMFAAAAAAAAAAABAgMAERIEIQUGEyJBMmHRMVFicZH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQP/xAAZEQADAQEBAAAAAAAAAAAAAAAAARECEiH/2gAMAwEAAhEDEQA/AJyc3cS7haAZfgfmmfmriSBCTp+z02Q/NTBppI0jIDESgFQPN6VY2kfCIEvvsPanhYyivOPE1ysNP3G57D9f7RUdo1DHfL3opECsWj6MSRiQSR2xZl2Ivfet9K8B4yJJXVI2Fy3pNz4rkgHVjBBK22+9MoiGrSGaMyqWFxla9VrKzKXrXVhosGAvE0YjYllyW5Iv+qK7GKzEMVxUbKqmwUeAKKyNKz//2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-17 at 10.28.42 PM.png"
+      ],
+      "image_hashes": [
+        "376de1dd2a0e95efec90e5fe969ced07fcadeef9fcdb1bc798640c946153fe83"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "2406b5d8d1fb",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Youm-e-Zauq",
+      "organiser": "Anjuman Taraqqi Urdu (Delhi), in collaboration with Ghalib Institute",
+      "description": "A programme marking Youm-e-Zauq with speeches, Bazm-e-Mausiqi and a Terhi Mushaira featuring poets, held at Aiwan-e-Ghalib.",
+      "details": null,
+      "date": "2026-11-19",
+      "end_date": null,
+      "start_time": "15:00",
+      "end_time": null,
+      "venue": "Aiwan-e-Ghalib, Aiwan-e-Ghalib Marg, New Delhi-2",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "RSVP: Khurshid Alam, General Secretary, mobile 9350560275.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/212acbdcbf6f.jpg",
+      "thumb": "thumbs/212acbdcbf6f.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAIDBAUB/8QAJhAAAQQBAwMEAwAAAAAAAAAAAQACAxEEEiFxBTFhFTI0QVGBsf/EABYBAQEBAAAAAAAAAAAAAAAAAAQDBf/EABoRAAIDAQEAAAAAAAAAAAAAAAABAgMRMjH/2gAMAwEAAhEDEQA/ANTGxoH4TZHst5JF7n7TsxMfUNcYrxdqXprScSMmi0F1j9lSNZqlNmhfBUV4Ubesyc2NkOZLHGKa0ihfgITdQ+fNyP4EIlnTNGrhF3p7qxY/bYLqt1fasuicTrkDSeaWI3KljAa0im9thsn9RySDcl2PwlrwBKL1nc83mynbcjtwEKEvdK4vebcfFIRLOmPqWQR//9k=",
+      "source_files": [
+        "done/Screenshot 2026-11-17 at 10.28.52 PM.png"
+      ],
+      "image_hashes": [
+        "212acbdcbf6ff0ec639552552e19b689a9265337b72460a1c24564379b7dbdae"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "f6e7e89ebe23",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Bazm-e-Munawwar: Ek Shaam Samvidhan ke Naam",
+      "organiser": "Munawwar Rana Foundation",
+      "description": "A mushaira and kavi sammelan with poets including Shahzada Gulrez, Sanjay Mishra Shauq, Azm Shakiri, Nikhat Amrohi and others. Chief guest Shri Mallikarjun Kharge will also launch the books 'Seep Ke Moti' and 'Meer Aake Laut Gaya' by Munawwar Rana.",
+      "details": null,
+      "date": "2026-11-26",
+      "end_date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "venue": "Mavalankar Auditorium, Constitution Club of India, Rafi Marg, New Delhi-110001",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/9ed0d5c5a3a1.jpg",
+      "thumb": "thumbs/9ed0d5c5a3a1.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMCBAUB/8QAJRAAAgEEAQMFAQEAAAAAAAAAAQIDAAQRIRMFEjEiIzJhcUFC/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAECA//EABgRAQEBAQEAAAAAAAAAAAAAAAABERIx/9oADAMBAAIRAxEAPwDctLeCztwkagA79WyT+123wveJHD7/ANAapy9vGO7xgeKVb53yDDZ1gEVHrdQu+lWslw0hVlZ9ntbAzRV6f5j8oq5aeksvuy5VAMJt20frFRA98BoQo539XICcY81CzcXvTxNPGjM3ywMA4OqakURkDcS9wYyZ38j/AGkOkbR43t14w4VcrhxvzRWV1HqtxbXskMSxhEwB6fqinloyv//Z",
+      "source_files": [
+        "done/Screenshot 2026-11-17 at 10.29.12 PM.png"
+      ],
+      "image_hashes": [
+        "9ed0d5c5a3a1a83ebb89064644fdda1d4023f07d2840b6dd21ecfd4122e0a147"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "65a6ce2277e8",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Aavartan: An Evening of Kathak Dance Presentations",
+      "organiser": "Aishwarya Srivastava",
+      "description": "An evening of Kathak dance presentations presented by Aishwarya Srivastava, with Bloom Dance and Fitness Studio.",
+      "details": null,
+      "date": "2026-11-21",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "Muktadhara Auditorium, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/cd0c99ac5323.jpg",
+      "thumb": "thumbs/cd0c99ac5323.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABQDASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAAAAUBAwYE/8QAJhAAAQMCBQMFAAAAAAAAAAAAAQACAwQREiExQVETImEFcZGx8P/EABYBAQEBAAAAAAAAAAAAAAAAAAECAP/EABcRAQEBAQAAAAAAAAAAAAAAAAEAEhH/2gAMAwEAAhEDEQA/AOYijMhsCBbkr0upAIwQWjLla6aLFcm+2Q35+FTraUMjl6eMsY0EEga/j9KtBGVothvkUWXRvDjcW90T0jjUfSquMG1QOwaW3PlVWV9I1hZISG4cnNFySfHhEU5J03NSSv6ju8a621RETkt1v//Z",
+      "source_files": [
+        "done/Screenshot 2026-11-17 at 10.29.32 PM.png"
+      ],
+      "image_hashes": [
+        "cd0c99ac5323dcf2f92e1ba2d958d1d2c339f07c58ed930908891eab42d36dbc"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "d826e9f42331",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Shrungaram featuring Madalasa",
+      "organiser": "Rasa School of Odissi Dance",
+      "description": "An Odissi dance presentation, Shrungaram featuring Madalasa, exploring the many shades of the Nayika in love through the poetry of Kavi Samrat Upendra Bhanja.",
+      "details": null,
+      "date": "2026-11-21",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "Triveni Kala Sangam, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Contact: +91 97697 98633.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/466d8ae72bf5.jpg",
+      "thumb": "thumbs/466d8ae72bf5.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAACBf/EACAQAAEEAwADAQEAAAAAAAAAAAEAAhEhAxIxBBNBFGH/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/8QAGREAAwEBAQAAAAAAAAAAAAAAAAERMQIh/9oADAMBAAIRAxEAPwB5eGY9G2G0jMyluQd6o5jLmhridrqgEfJlNG2n+tNLGHTTrOxszw+RyFIeDy2txjd+pNwQpIyeBf1v9kRM8Kxk8g6iWxP0lF3OnyjHFnycjtiZ5AA+KLlCi2+US0H2NbNwVID3SeCq4pIhWf/Z",
+      "source_files": [
+        "done/Screenshot 2026-11-17 at 10.29.45 PM.png"
+      ],
+      "image_hashes": [
+        "466d8ae72bf59864124a760d42095a3f61360238509a4eb2f8d2e85346376357"
+      ],
+      "source_labels": [
+        "poster"
       ],
       "rung": "haiku-low",
       "added": "2026-11-17"
