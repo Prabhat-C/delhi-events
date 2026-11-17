@@ -1812,16 +1812,19 @@
       "notes": "Tea is served from 6:45pm.",
       "recurrence": null,
       "recurring": false,
-      "poster": "posters/b9fc9e41a93a.jpg",
-      "thumb": "thumbs/b9fc9e41a93a.jpg",
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAbABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAMFAgQG/8QAJhAAAgICAQIFBQAAAAAAAAAAAQIDEQAEIRIiBTEyYXETI0FR4f/EABcBAQEBAQAAAAAAAAAAAAAAAAEDAAL/xAAYEQEBAQEBAAAAAAAAAAAAAAAAEQIxcf/aAAwDAQACEQMRAD8AuTnWiXqkVB+arnEGfWBa5kcE36qr2GN2diDWhWWY0GAWwtk/zMpARyCte45yavpcU8Uq9SEEXXqwyfu7AimC9Vdt8fJwxaNbxaD6cMey0ruz9IjQA9prK+vOuxqI6UCFAZb5U/o5Mf78cYlAYIO2x5Y6OoeyIBFPmFFXhDrV6m+Mw7Uu7cMTOoQCwLwzoYkXo8r+ecMa4f/Z",
+      "poster": "posters/8ab824bf7164.jpg",
+      "thumb": "thumbs/8ab824bf7164.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAQBAwUCBv/EACcQAAIBAwQBAgcAAAAAAAAAAAECAwAEEQUSITEiQVETYXGBkcHR/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQIA/8QAFxEBAQEBAAAAAAAAAAAAAAAAAAEhEf/aAAwDAQACEQMRAD8A9TLMYlwkbSMBnAHp9aqErpn4dtONxzyoPPv3XOo6hFYpFujM0jsAI1YBse9MuqZ8XwcdVKi6TyOCXjkU562j+0VJbng/nFFZsYOv2cVmrXEspkeZ/AN2uRz+637KdbuwglhG1Cg8dx4+XFIa5AJjbFmYBT0MYNNaRZR20LOjyM0h8tzZ6omU29mrQG9Q/wB80VJ7opS//9k=",
       "source_files": [
+        "done/poster-f1ebb0b95789.png",
         "done/WhatsApp Image 2026-11-12 at 6.28.59 PM.jpeg"
       ],
       "image_hashes": [
+        "8ab824bf7164d8a6e625603f85d5ce84d731125aec67cc37ed446cb3c446de21",
         "b9fc9e41a93a30949865a189b3875178219e6336fe8a0b11842bd6fb4cfb41fc"
       ],
       "source_labels": [
+        "poster",
         "poster"
       ],
       "rung": "haiku-low",
