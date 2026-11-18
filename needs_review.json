@@ -14,6 +14,22 @@
       "source_files": [
         "done/IMG-20261118-WA0007.jpg"
       ]
+    },
+    {
+      "id": "50f851ed2394",
+      "status": "published",
+      "title": "75th Anniversary of the Hungarian State Folk Ensemble",
+      "date": "2026-11-23",
+      "confidence": "high",
+      "reasons": [
+        "possible duplicate of 'Csárdás & Kathak: A Cultural Confluence' (6e91f736d2b1): same date and start time, and one venue is worded as a longer version of the other"
+      ],
+      "poster": "posters/cb2b26977e51.jpg",
+      "thumb": "thumbs/cb2b26977e51.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-18 at 10.41.46 PM.png",
+        "done/Screenshot 2026-11-18 at 10.42.01 PM.png"
+      ]
     }
   ]
 }

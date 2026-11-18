@@ -1405,5 +1405,40 @@
     "event_id": "97ecbcc03441",
     "title": "5th International Odissi Dance Festival",
     "processed": "2026-11-18"
+  },
+  "f407f5ef11ea0dc0890264ad0833f63503c7f3869230cc0dd997ddddea267536": {
+    "file": "Screenshot 2026-11-18 at 10.40.50 PM.png",
+    "outcome": "duplicate_event",
+    "event_id": "cde1a2032d19",
+    "title": "5th International Odissi Dance Festival of Guru Surendra Nath Jena",
+    "processed": "2026-11-18"
+  },
+  "6d28c1df5a59471e470b95ceb1e9902bc04446e1b5e4badcd52178310682257f": {
+    "file": "Screenshot 2026-11-18 at 10.41.00 PM.png",
+    "outcome": "published",
+    "event_id": "b18df084e352",
+    "title": "Solo Bharatanatyam Margam",
+    "processed": "2026-11-18"
+  },
+  "2c1800b12324336a619c9574f1abb50bd9606653ef4999018c905e985f6126b3": {
+    "file": "Screenshot 2026-11-18 at 10.41.30 PM.png",
+    "outcome": "published",
+    "event_id": "b18df084e352",
+    "title": "Solo Bharatanatyam Margam",
+    "processed": "2026-11-18"
+  },
+  "cb2b26977e51062e9770d1eb7117c66c4b071e0ae48684136d7764c692f71b04": {
+    "file": "Screenshot 2026-11-18 at 10.41.46 PM.png",
+    "outcome": "published",
+    "event_id": "50f851ed2394",
+    "title": "75th Anniversary of the Hungarian State Folk Ensemble",
+    "processed": "2026-11-18"
+  },
+  "73a95e72fe71bf99d684bc6a2f8f3c909c85298106f5a428dd5ccb34f88fbfe1": {
+    "file": "Screenshot 2026-11-18 at 10.42.01 PM.png",
+    "outcome": "published",
+    "event_id": "50f851ed2394",
+    "title": "75th Anniversary of the Hungarian State Folk Ensemble",
+    "processed": "2026-11-18"
   }
 }
