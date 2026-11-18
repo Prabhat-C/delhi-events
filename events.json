@@ -485,7 +485,7 @@
       "title": "Rasabilasa 2026",
       "category": "Dance",
       "organiser": "Srijan Chhanda, Kolkata",
-      "description": "An evening of dazzling solo and group Odissi and Bharatanatyam performances celebrating the birth centenary of Guru Kelucharan Mahapatra, presented by Dr. Rajib Bhattacharya.",
+      "description": "A birth centenary tribute to Guru Kelucharan Mahapatra, featuring three dance performances by leading dance exponents. Presented by Dr. Rajib Bhattacharya, Director, Srijan Chhanda, Kolkata.",
       "details": null,
       "date": "2026-11-19",
       "end_date": null,
@@ -494,20 +494,26 @@
       "venue": "Stein Auditorium, India Habitat Centre, Lodhi Road, New Delhi",
       "registration_link": null,
       "confidence": "high",
-      "notes": "",
+      "notes": "Entry via Gate No. 3.",
       "recurrence": null,
       "recurring": false,
       "poster": "posters/484d1a12154f.jpg",
       "thumb": "thumbs/484d1a12154f.jpg",
       "source_files": [
-        "done/WhatsApp Image 2026-11-02 at 5.14.32 PM-2.jpeg"
+        "done/WhatsApp Image 2026-11-02 at 5.14.32 PM-2.jpeg",
+        "done/Screenshot 2026-11-18 at 11.05.32 PM.png"
       ],
       "image_hashes": [
-        "484d1a12154f8b1e5d414b32fefc4a1c47244379361bf013786983737d68b237"
+        "484d1a12154f8b1e5d414b32fefc4a1c47244379361bf013786983737d68b237",
+        "0050115f5db6f33d4024c685c726763e398a4faef9ae98397f1218c8f1ceed00"
       ],
       "rung": "haiku-low",
       "added": "2026-11-10",
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABQADBP/EACIQAAEDAwQDAQAAAAAAAAAAAAECAwQAESEFEhNBBiJRgv/EABYBAQEBAAAAAAAAAAAAAAAAAAIAA//EABoRAQACAwEAAAAAAAAAAAAAAAEAAhEhQVH/2gAMAwEAAhEDEQA/AA3YQZjKU4ewlJA7zcVvGZ00yYqXXCEKSebJwrNusdV2eSqIjNpBNg9gfPWgEE8Kjc33jNAs2rNsBoi8aJpo5BJcUlQWduSPXHwVUVzvEm7qz+jVQ29ZYPJ//9k="
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABQADBP/EACIQAAEDAwQDAQAAAAAAAAAAAAECAwQAESEFEhNBBiJRgv/EABYBAQEBAAAAAAAAAAAAAAAAAAIAA//EABoRAQACAwEAAAAAAAAAAAAAAAEAAhEhQVH/2gAMAwEAAhEDEQA/AA3YQZjKU4ewlJA7zcVvGZ00yYqXXCEKSebJwrNusdV2eSqIjNpBNg9gfPWgEE8Kjc33jNAs2rNsBoi8aJpo5BJcUlQWduSPXHwVUVzvEm7qz+jVQ29ZYPJ//9k=",
+      "source_labels": [
+        "poster",
+        "poster"
+      ]
     },
     {
       "id": "516bbb6f6875",
@@ -4407,6 +4413,108 @@
         "other"
       ],
       "rung": "haiku-medium",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "439f300fb807",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Aarohan 2026: An Evening of Music & Dance",
+      "category": "Festivals",
+      "organiser": "Sai Shinjini Academy of Fine Arts & Culture",
+      "description": "An evening of music and dance featuring Pt. Anup Jalota, Vidushi Geetanjali Lal, Vidushi Saswati Sen, Vidushi Alpana Vajpeyi, Shri Ishaan Ghosh and Smt. Shinjini Kulkarni. Includes a special performance by Aavya M Bhutoria.",
+      "details": null,
+      "date": "2026-11-19",
+      "end_date": null,
+      "start_time": null,
+      "end_time": null,
+      "venue": "Shri Ram Centre for Performing Arts, Safdar Hashmi Marg, New Delhi, Delhi 110001, India",
+      "registration_link": null,
+      "confidence": "medium",
+      "notes": "Free entry on a first come, first serve basis. Start time not stated.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/7121157252cc.jpg",
+      "thumb": "thumbs/7121157252cc.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAIDBAUB/8QAJxAAAgEDBAAFBQAAAAAAAAAAAQIAAxEhBAUSEyIxQXGxMlGBofH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAA//EABcRAQEBAQAAAAAAAAAAAAAAAAABESH/2gAMAwEAAhEDEQA/AORR2+gFSsRyV6DOyE2tmwHvkfMw6/b6u3akJWQ5HIYwf5NmiZX62NlKAO6s3hfifP3+Z7uXUayGjWH0MxWoSPsbZ9ZObql7Nc/cNY+u1HbVVVYKFsq2ESrUr11bXpti/gYEfqJRNNStsK/4EjTALNyBI9LiIgVOAHPEG0RED//Z",
+      "source_files": [
+        "done/Screenshot 2026-11-18 at 11.06.04 PM.png"
+      ],
+      "image_hashes": [
+        "7121157252cc863481b2d1198022923583dc4eaa10867ed669da38f15c190f6d"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "sonnet-medium",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "a9234ab517a4",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "IIC Double Bill Dance Recitals",
+      "category": "Dance",
+      "organiser": "India International Centre",
+      "description": "A double bill of dance recitals: Mohiniyattam by Aparna Sajeev at 6:00 PM, followed by Bharatanatyam by Anuradha Mathur at 7:00 PM.",
+      "details": null,
+      "date": "2026-11-19",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "C.D. Deshmukh Auditorium, India International Centre, 40 Max Mueller Marg, New Delhi 110003",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Two recitals on one evening: the Mohiniyattam recital starts at 6:00 PM and the Bharatanatyam recital at 7:00 PM.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/f644c309bc8d.jpg",
+      "thumb": "thumbs/f644c309bc8d.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABQACBP/EAB4QAAIDAAIDAQAAAAAAAAAAAAECAAMREiEFE0Ex/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/xAAXEQEBAQEAAAAAAAAAAAAAAAABAAIR/9oADAMBAAIRAxEAPwA9PWlVZcMNH6MmzbXrBCRg3DDhcrrWhXj2AWEV8s9C31ikOStZ1nUaR8HRlrwmcC8j77LEYcsGjRh+SnFZYxc8iSR12ZRL/9k=",
+      "source_files": [
+        "done/Screenshot 2026-11-18 at 11.06.16 PM.png"
+      ],
+      "image_hashes": [
+        "f644c309bc8de56749fd5dc58e72ba682dbe3a3441baf717adf35fb3dc7e61f5"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "9564a238b7c2",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Comparative Analysis of Women and Child Burials from Harappan Sites of North-Western Region of India",
+      "category": "Talks",
+      "organiser": "India International Centre",
+      "description": "A lecture by Dr. Satarupa Bal, Assistant Superintending Archaeologist, Archaeological Survey of India, on women and child burials from Harappan sites in north-western India. Chaired by K.N. Shrivastava and moderated by Pratap Bhanu Singh Sengar.",
+      "details": null,
+      "date": "2026-11-19",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Conference Room II, India International Centre, 40 Max Mueller Marg, New Delhi 110003",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/70531a9223f1.jpg",
+      "thumb": "thumbs/70531a9223f1.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAXABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAUBAgT/xAAmEAABAwIEBgMAAAAAAAAAAAABAAIDBBESEyGhBTFBYXHhJHKB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAB/8QAGREAAwEBAQAAAAAAAAAAAAAAAAERElFh/9oADAMBAAIRAxEAPwCBld9l2+lewAu6r3/FZI5gbVNhwhzZT1Pi3JdA0WG+fUfjfSGgx9JeV32RU8PDHavnqSfr6RW/GZH1EwzyuABkcQBa11gleBa+nhETFEYZHHmdkRFFEf/Z",
+      "source_files": [
+        "done/Screenshot 2026-11-18 at 11.08.33 PM.png"
+      ],
+      "image_hashes": [
+        "70531a9223f137d935d7ce7b8de9ecbeb908dda9fcf722a07ca6d4ef517b25fc"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
       "added": "2026-11-18"
     }
   ]
