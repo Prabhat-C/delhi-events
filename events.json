@@ -2777,40 +2777,6 @@
       "added": "2026-11-14"
     },
     {
-      "id": "4fbd1c87fe37",
-      "status": "published",
-      "grouping_uncertain": false,
-      "title": "Hungarian Folk Dance",
-      "category": "Dance",
-      "organiser": null,
-      "description": "Hungarian folk dance performance by the Hungarian State Folk Ensemble, featuring a Csardas and Kathak fusion with Guru Shovana Narayan's Asavari Repertory.",
-      "details": null,
-      "date": "2026-11-23",
-      "end_date": null,
-      "start_time": "19:00",
-      "end_time": null,
-      "venue": "Stein Auditorium, India Habitat Centre",
-      "registration_link": null,
-      "confidence": "high",
-      "notes": "Seating on first come first served basis.",
-      "recurrence": null,
-      "recurring": false,
-      "poster": "posters/24927fd816ae.jpg",
-      "thumb": "thumbs/24927fd816ae.jpg",
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAgABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDBAX/xAAjEAACAgICAgEFAAAAAAAAAAABAgMRACEEEjHhQVFhcZLx/8QAGAEAAwEBAAAAAAAAAAAAAAAAAwQFAQL/xAAbEQACAwEBAQAAAAAAAAAAAAAAAQIDESEEQf/aAAwDAQACEQMRAD8A5MTRgHuLJ+144eCtoP194geNiEVGXsaBMnrJzs3HVXc6bxW7xVFT025wUgWa8YY4p7KtdaOq3hmdI7slpAclouXGUpHjNq31v4PxWa5zLzUYPHFELDWor+3k4+FHyGLSGrFaO83QcKOJeqSN+CfWduaxB43x1uX0ywQiFOsduCSbIwzo9AKGGBc96Kykm28P/9k=",
-      "source_files": [
-        "done/IMG-20261114-WA0010.jpg"
-      ],
-      "image_hashes": [
-        "24927fd816aea08ab9e284ee14abe2368b3199f20db054d2551ff833731b7861"
-      ],
-      "source_labels": [
-        "poster"
-      ],
-      "rung": "haiku-low",
-      "added": "2026-11-14"
-    },
-    {
       "id": "ce3df97c9d25",
       "status": "published",
       "grouping_uncertain": false,
@@ -4043,6 +4009,188 @@
         "other"
       ],
       "rung": "haiku-medium",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "6e91f736d2b1",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Csárdás & Kathak: A Cultural Confluence",
+      "category": "Dance",
+      "organiser": "Hungarian State Folk Ensemble",
+      "description": "A Hungarian folk dance performance by the Hungarian State Folk Ensemble, presented alongside a special performance by Padamshree Guru Shovana Narayan's Asavari's repertory of Kathak.",
+      "details": null,
+      "date": "2026-11-23",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "Stein Auditorium, India Habitat Centre",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Seating on first come first served basis.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/dcad1710eac2.jpg",
+      "thumb": "thumbs/dcad1710eac2.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAbABQDASIAAhEBAxEB/8QAGwAAAQQDAAAAAAAAAAAAAAAAAAIEBQYBAwf/xAAoEAACAQQBAgQHAAAAAAAAAAABAgMAERIhBAUxExVRYSIkQWJxkdH/xAAYAQACAwAAAAAAAAAAAAAAAAABBAADBf/EABwRAQEAAQUBAAAAAAAAAAAAAAEAEQIDEhMhIv/aAAwDAQACEQMRAD8AhFZ5JkJAZr6uBS5H8FQWjQB+3bdtVpVpYjG4DBcg2ajYIp7I68rEzSXAbLUeJqie3ftdJ5RssWMjLrR+hvRS+QEWZgl8fu70VLL1GFJ7HM46T4QQYZklr737VkXWMZZHXf0q0w9I4DTOh4yYi9hv1p55L07EfKp+z/aPBfSb3Vzi55J8Tkkk/mir8OhdMYknhxnfvRR4Mr1t/9k=",
+      "source_files": [
+        "done/IMG-20261118-WA0005.jpg",
+        "done/IMG-20261114-WA0010.jpg"
+      ],
+      "image_hashes": [
+        "dcad1710eac285ea1185e5885944162b295bd4066f3b743b0158aedc4c71505f",
+        "24927fd816aea08ab9e284ee14abe2368b3199f20db054d2551ff833731b7861"
+      ],
+      "source_labels": [
+        "poster",
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-14"
+    },
+    {
+      "id": "b32cca0fbbed",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "A Print in the Art Universe: Who Creates History, What Creates Value?",
+      "category": "Talks",
+      "organiser": "National Gallery of Modern Art and Dhoomimal Gallery",
+      "description": "A panel discussion on the history and value of prints within the art world, held alongside the exhibition In the Etched Trace of Time: six decades of Anupam Sud.",
+      "details": null,
+      "date": "2026-11-20",
+      "end_date": null,
+      "start_time": "16:30",
+      "end_time": null,
+      "venue": "The Auditorium, Administrative Building, National Gallery of Modern Art, New Delhi",
+      "registration_link": "https://docs.google.com/forms/d/e/1FAIpQLScsR7MlPVB8xXOesgqSIW6f0vO-aGNldQmJZXKuI_sNaOtMng/viewform",
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/80ad127fdf88.jpg",
+      "thumb": "thumbs/80ad127fdf88.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUBAwQC/8QAIxAAAQQBAwQDAAAAAAAAAAAAAQACAxESBSFxBDEy0VGBkf/EABcBAQEBAQAAAAAAAAAAAAAAAAACAQP/xAAVEQEBAAAAAAAAAAAAAAAAAAAAMf/aAAwDAQACEQMRAD8AeyNDJBb6sdtl1HjhGDO627kkNGXK1FjSOFV08gkc8V418rlFrsBXiPxCgvFoRjC3VYi0ENfZ49qqLU4GOdTZLPemikhUBQo+dqkAO7ZD9D2hIShB/9k=",
+      "source_files": [
+        "done/IMG-20261118-WA0006.jpg",
+        "done/IMG_20261118_145736.jpg"
+      ],
+      "image_hashes": [
+        "80ad127fdf88018bf387275158b7d9ac100f5bb129ad45a325221e33705b029f",
+        "3abfeb721038c0b698c0163cfd406195b8b55281fe6fcdd8ebe3e2cd22dc6743"
+      ],
+      "source_labels": [
+        "poster",
+        "other"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "a7fdf0aabb20",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Cultural Vibe of the Day - IITF 2026",
+      "category": "Festivals",
+      "organiser": "ITPO",
+      "description": "Daily cultural programme at the 45th India International Trade Fair featuring an Andhra Pradesh State Day celebration, Bharatanatyam by Vidhushi Shilpa Arun Kumar, Indian Dance Grand Prix Season 2, Shiv Shakti Bhakti Beats by Parmen, and UP folk music and dance by Raksha Tripathi.",
+      "details": null,
+      "date": "2026-11-18",
+      "end_date": null,
+      "start_time": "15:00",
+      "end_time": null,
+      "venue": "Amphitheatre-1, Amphitheatre 2 and Open Amphitheatre, Bharat Mandapam, New Delhi",
+      "registration_link": null,
+      "confidence": "medium",
+      "notes": "Multiple performances at different times and amphitheatres: State Day Celebration - Andhra Pradesh 18:00-19:30 (Amphitheatre-1); Shaurya Charitable Trust 15:00-16:30 (Amphitheatre-1); Surinder Singh Bakshi 15:00-16:30 (Amphitheatre 2); Parmen 18:00 (Open Amphitheatre); Raksha Tripathi 18:00-19:30 (Amphitheatre 2). Part of IITF, 13-27 November 2026.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/e8fadfee92d6.jpg",
+      "thumb": "thumbs/e8fadfee92d6.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAXABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDAQX/xAAlEAACAQMCBQUAAAAAAAAAAAABAgMABBESIRMiMWFxBUFRscH/xAAXAQADAQAAAAAAAAAAAAAAAAABAgME/8QAHREBAAICAgMAAAAAAAAAAAAAAQARAiEDURIiQf/aAAwDAQACEQMRAD8A85Lea6mSNirALvJjAHbAHXzWs3o7xxl0dZCBnSAcnxUlkjxzyJJsygAjhcSr3PKcY8izoZKLTNab1IGti5DAiPVvpPMRSsI7S4nXVEo0jbdgPulWMuM0sf06lqrJbzM4RXDAAaJGTHsOmK3EshTmiKqRjed/w0pWTysge52GwKRgFUk+Djp23pSlM7bZG1+z/9k=",
+      "source_files": [
+        "done/IMG-20261118-WA0007.jpg"
+      ],
+      "image_hashes": [
+        "e8fadfee92d6e56c82540b4fcb7a1aab5e195cf0ae248e204dee925d78a96168"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "sonnet-medium",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "9f9299a58706",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Se(w)cular Stitches: Constitution Day Stitching Circle",
+      "category": "Art",
+      "organiser": "Rafunaama and Singhleton",
+      "description": "A stitching circle marking Constitution Day, revisiting and reflecting on fundamental rights through textile art.",
+      "details": "Se(w)cular Stitches: Constitution Day Special\n76 years after the adoption of our Constitution, where do we stand on our Fundamental Rights? What rights do we want for the future?\n\nJoin us for a stitching circle to revisit, reflect and imagine together. Let's stitch our rights, hopes and demands into being!\n\n26 November\n5–7 PM\nThe Community Library Project, South Ex 1\n\nMaterials will be provided, but feel free to bring your own.\nRegister here: https://forms.gle/k3gCiLC8XeiCxm417\nSuggested donation: ₹300–500. All proceeds go to The Community Library Project (TCLP).\n\nAbout: Se(w)cular Stitches is a stitching circle series facilitated by Rafunaama and Singhleton... a space to think, create and connect through the power of textile art.",
+      "date": "2026-11-26",
+      "end_date": null,
+      "start_time": "17:00",
+      "end_time": "19:00",
+      "venue": "The Community Library Project, South Ex 1",
+      "registration_link": "https://forms.gle/k3gCiLC8XeiCxm417",
+      "confidence": "high",
+      "notes": "Materials will be provided, but bring your own is welcome. Suggested donation of ₹300–500; all proceeds go to The Community Library Project.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/bc03d1d83737.jpg",
+      "thumb": "thumbs/bc03d1d83737.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQFA//EACMQAAICAQMDBQAAAAAAAAAAAAABAhExAxJBBCEiBSNRYYH/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQMC/8QAFREBAQAAAAAAAAAAAAAAAAAAAEH/2gAMAwEAAhEDEQA/ANnoHKa1KSu0VJTTSr9ZL6ck4aqab8lgsjGO66ld8kVGPKfk+3LBy1Fc5d+XyBBo9JLap0krrBTvebx9gDgcntqPtwx8AAbL/9k=",
+      "source_files": [
+        "done/IMG-20261118-WA0008.jpg",
+        "done/IMG_20261118_163003.jpg"
+      ],
+      "image_hashes": [
+        "bc03d1d837373e5a41c85c000b0719a240627c164068068b136739c57cd2db21",
+        "8f0acaaf5c161b2df523a56a0a10a87e238eefd20d7c6d57004c1b1ecb7cc81a"
+      ],
+      "source_labels": [
+        "poster",
+        "text_caption"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "ea14a7765ec9",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "The Aravali Story Trails",
+      "category": "Theatre",
+      "organiser": "The Rewilders",
+      "description": "A storytelling workshop bringing the Aravalli landscape to life through puppetry, folklore, nature observation and exploration, led by Seema Wahi Mukherjee.",
+      "details": "The Rewilders invites you to join an engaging and creative storytelling workshop -The Aravali Story Trails – that brings the wonders of the Aravalli landscape to life through imagination, puppetry, nature observation and exploration.\nThe workshop will be led by Seema Wahi Mukherjee, an international storyteller, puppeteer, toy pedagogist, workshop facilitator and creative learning advisor. With over three decades of experience, Seema has been bringing stories alive through imagination, creativity and the magic of play.\nA curious explorer at heart, she finds stories in the most unexpected places—even in a tiny drop of resin—and believes that every little wonder has a story waiting to be told.\nParticipants will explore the ecology of Aravali through stories, discover the little wonders around you, and experience the Aravalli landscape from a whole new perspective!\nDate: 22nd November 2026 (Sunday)\nTime: 7:30 AM\nVenue: Aravali Biodiversity Park, Gurugram\nRegistration: 9510001552\nHero MotoCorp maintains Aravali Biodiversity Park in collaboration with MCG, Gurugram, with ecological management support from The Rewilders.",
+      "date": "2026-11-22",
+      "end_date": null,
+      "start_time": "07:30",
+      "end_time": null,
+      "venue": "Aravali Biodiversity Park, Gurugram",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Registration is by phone on 9510001552. The poster gives the venue as Aravali Biodiversity Park without a city; the caption specifies Gurugram.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/738d935e2903.jpg",
+      "thumb": "thumbs/738d935e2903.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIFBgP/xAAqEAACAQMBBgUFAAAAAAAAAAABAgMAESEEBRITIjFxFTJBUWElM4GCwf/EABYBAQEBAAAAAAAAAAAAAAAAAAECA//EABoRAAMAAwEAAAAAAAAAAAAAAAABEgIRIWH/2gAMAwEAAhEDEQA/ALkqsbkSSLn06UoDE24r5xg1Mm2hMkDyMd4ILnlBpYtousrxzSR3ADAhQL++O9TJey4nKtiWb5brRU2PXPNGHjlDKehAophhSJO09DqGij3Yi6ygABclTnqPSuvg8ml1CyEceMwhLBjdW7e1W5PO/emP3f1/lS8uM07lrwxn1HSkxwR6hYwbi0Zz80VuoPJ+aKaM5P/Z",
+      "source_files": [
+        "done/IMG-20261118-WA0009.jpg",
+        "done/IMG_20261118_163050.jpg"
+      ],
+      "image_hashes": [
+        "738d935e29037a9af69e890bb3733d116fd0dccae77d63dcb3ef55721962e89f",
+        "cd36b8597b07a3e981b29ab2315e0dc01fdb6d06a4facdb7afaa684bae5c78a0"
+      ],
+      "source_labels": [
+        "poster",
+        "text_caption"
+      ],
+      "rung": "haiku-low",
       "added": "2026-11-18"
     }
   ]

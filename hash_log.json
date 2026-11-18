@@ -898,7 +898,7 @@
   "24927fd816aea08ab9e284ee14abe2368b3199f20db054d2551ff833731b7861": {
     "file": "IMG-20261114-WA0010.jpg",
     "outcome": "published",
-    "event_id": "4fbd1c87fe37",
+    "event_id": "6e91f736d2b1",
     "title": "Hungarian Folk Dance",
     "processed": "2026-11-14"
   },
@@ -1299,6 +1299,62 @@
     "outcome": "published",
     "event_id": "0ee938c17e68",
     "title": "The Making of a Champion - From Promising Juniors to Elite Athletes",
+    "processed": "2026-11-18"
+  },
+  "dcad1710eac285ea1185e5885944162b295bd4066f3b743b0158aedc4c71505f": {
+    "file": "IMG-20261118-WA0005.jpg",
+    "outcome": "published",
+    "event_id": "6e91f736d2b1",
+    "title": "Csárdás & Kathak: A Cultural Confluence",
+    "processed": "2026-11-18"
+  },
+  "80ad127fdf88018bf387275158b7d9ac100f5bb129ad45a325221e33705b029f": {
+    "file": "IMG-20261118-WA0006.jpg",
+    "outcome": "published",
+    "event_id": "b32cca0fbbed",
+    "title": "A Print in the Art Universe: Who Creates History, What Creates Value?",
+    "processed": "2026-11-18"
+  },
+  "3abfeb721038c0b698c0163cfd406195b8b55281fe6fcdd8ebe3e2cd22dc6743": {
+    "file": "IMG_20261118_145736.jpg",
+    "outcome": "published",
+    "event_id": "b32cca0fbbed",
+    "title": "A Print in the Art Universe: Who Creates History, What Creates Value?",
+    "processed": "2026-11-18"
+  },
+  "e8fadfee92d6e56c82540b4fcb7a1aab5e195cf0ae248e204dee925d78a96168": {
+    "file": "IMG-20261118-WA0007.jpg",
+    "outcome": "published",
+    "event_id": "a7fdf0aabb20",
+    "title": "Cultural Vibe of the Day - IITF 2026",
+    "processed": "2026-11-18"
+  },
+  "bc03d1d837373e5a41c85c000b0719a240627c164068068b136739c57cd2db21": {
+    "file": "IMG-20261118-WA0008.jpg",
+    "outcome": "published",
+    "event_id": "9f9299a58706",
+    "title": "Se(w)cular Stitches: Constitution Day Stitching Circle",
+    "processed": "2026-11-18"
+  },
+  "8f0acaaf5c161b2df523a56a0a10a87e238eefd20d7c6d57004c1b1ecb7cc81a": {
+    "file": "IMG_20261118_163003.jpg",
+    "outcome": "published",
+    "event_id": "9f9299a58706",
+    "title": "Se(w)cular Stitches: Constitution Day Stitching Circle",
+    "processed": "2026-11-18"
+  },
+  "738d935e29037a9af69e890bb3733d116fd0dccae77d63dcb3ef55721962e89f": {
+    "file": "IMG-20261118-WA0009.jpg",
+    "outcome": "published",
+    "event_id": "ea14a7765ec9",
+    "title": "The Aravali Story Trails",
+    "processed": "2026-11-18"
+  },
+  "cd36b8597b07a3e981b29ab2315e0dc01fdb6d06a4facdb7afaa684bae5c78a0": {
+    "file": "IMG_20261118_163050.jpg",
+    "outcome": "published",
+    "event_id": "ea14a7765ec9",
+    "title": "The Aravali Story Trails",
     "processed": "2026-11-18"
   }
 }
