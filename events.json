@@ -4345,40 +4345,6 @@
       "added": "2026-11-18"
     },
     {
-      "id": "97ecbcc03441",
-      "status": "published",
-      "grouping_uncertain": false,
-      "title": "5th International Odissi Dance Festival",
-      "category": "Dance",
-      "organiser": "Nrityashilp",
-      "description": "The 5th International Odissi Dance Festival of Guru Surendra Nath Jena, featuring dancers from all over India and abroad.",
-      "details": null,
-      "date": "2026-11-20",
-      "end_date": null,
-      "start_time": "18:30",
-      "end_time": null,
-      "venue": "Triveni Auditorium",
-      "registration_link": null,
-      "confidence": "high",
-      "notes": "Free entry. Seating is first-come, first-served. Program coordinator: Raudri Singh.",
-      "recurrence": null,
-      "recurring": false,
-      "poster": "posters/4a4dc881ec9a.jpg",
-      "thumb": "thumbs/4a4dc881ec9a.jpg",
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAkEAACAgECBgMBAAAAAAAAAAABAgARAwQSBRMhMTJRYXGBsf/EABYBAQEBAAAAAAAAAAAAAAAAAAABA//EABcRAQEBAQAAAAAAAAAAAAAAAAABESH/2gAMAwEAAhEDEQA/ALunOPEXU5izMdxDHx+BHrlxv0V1N+jEclGN7n3fBjgiqlKoU1QJEzaMuNpAsn7NwidOXfCpfofVQgvDkyOKDKK9j1IPFuMlNWcGLmUl2wQ977flS8niv0Js9oJU3Rarn6XHkyZSGKjoB/bhOrL5mEqa/9k=",
-      "source_files": [
-        "done/IMG-20261118-WA0022.jpg"
-      ],
-      "image_hashes": [
-        "4a4dc881ec9a63778e75f57727dd6716f3b5dc16c41463d9cc271b34b72a93cd"
-      ],
-      "source_labels": [
-        "poster"
-      ],
-      "rung": "haiku-high",
-      "added": "2026-11-18"
-    },
-    {
       "id": "b18df084e352",
       "status": "published",
       "grouping_uncertain": false,
