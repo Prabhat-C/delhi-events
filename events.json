@@ -4408,43 +4408,6 @@
       ],
       "rung": "haiku-medium",
       "added": "2026-11-18"
-    },
-    {
-      "id": "50f851ed2394",
-      "status": "published",
-      "grouping_uncertain": false,
-      "title": "75th Anniversary of the Hungarian State Folk Ensemble",
-      "category": "Festivals",
-      "organiser": "Liszt Institute - Hungarian Cultural Centre",
-      "description": "An evening of music and dance celebrating the 75th anniversary of the Hungarian State Folk Ensemble, with live traditional music, ensemble dances, couple dances and solos, performed alongside an Indian musical ensemble. It is followed by a Hungarian táncház (dance house).",
-      "details": "Join us for an evening of music and dance to celebrate the \"75th Anniversary of the Hungarian State Folk Ensemble\". Rooted in the diverse traditions of the Carpathian Basin, the performance features the Hungarian State Folk Ensemble and an Indian musical ensemble, bringing together live traditional music, dynamic ensemble dances, virtuoso couple dances and expressive solos - followed by Hungarian táncház (dance house), an exploration of tradition through dance. Collab. Liszt Institute - Hungarian Cultural Centre.\n\n23rd Nov | 7:00pm | Stein Auditorium\nEntry free| no registration.",
-      "date": "2026-11-23",
-      "end_date": null,
-      "start_time": "19:00",
-      "end_time": null,
-      "venue": "Stein Auditorium",
-      "registration_link": null,
-      "confidence": "high",
-      "notes": "Entry free. No registration required. Hungarian táncház follows the performance.",
-      "recurrence": null,
-      "recurring": false,
-      "poster": "posters/cb2b26977e51.jpg",
-      "thumb": "thumbs/cb2b26977e51.jpg",
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMGBAX/xAAmEAACAQMDAwQDAAAAAAAAAAABAgMABBESIVEFBjETIkFxMqHR/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAECA//EABwRAAEEAwEAAAAAAAAAAAAAAAABAhITA0FRYf/aAAwDAQACEQMRAD8AxukfqoICkqEYLaV2PGMU2w6db3lu0sk0kZ1lMKoPjH9ror25DbS+2W5cAbjQBvzmtfT7GGytzDHHPJli++M7/X1UK1NG6ZH9MSdv28y6luZcDb8AKKoYbdCmV1qOGGD+6KmKhc7owzQOMM6EcGiYCGJpIoBI67hVABNSafNMq5Cq9KKxmuJIWa4idW1nAOPHx4oqXopSHUf/2Q==",
-      "source_files": [
-        "done/Screenshot 2026-11-18 at 10.41.46 PM.png",
-        "done/Screenshot 2026-11-18 at 10.42.01 PM.png"
-      ],
-      "image_hashes": [
-        "cb2b26977e51062e9770d1eb7117c66c4b071e0ae48684136d7764c692f71b04",
-        "73a95e72fe71bf99d684bc6a2f8f3c909c85298106f5a428dd5ccb34f88fbfe1"
-      ],
-      "source_labels": [
-        "poster",
-        "other"
-      ],
-      "rung": "haiku-low",
-      "added": "2026-11-18"
     }
   ]
 }
