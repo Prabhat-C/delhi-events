@@ -3556,13 +3556,16 @@
       "thumb": "thumbs/b984744f79bf.jpg",
       "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAIBAwQF/8QAIBABAAIDAAICAwAAAAAAAAAAAQARAgMhEjFBUQQyYf/EABcBAQEBAQAAAAAAAAAAAAAAAAABAwT/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDu7B54L37mbZt26S1H7C+TR+Qi4nkYtcVqYjZi6ms6y+BnO1dLX+h19Qk4ZBrwst8SEqE23VUMqwtyOY8lodbV/jJcaT5vvYDGTXohExyQq4QP/9k=",
       "source_files": [
-        "done/Screenshot 2026-11-17 at 2.19.47 PM.png"
+        "done/Screenshot 2026-11-17 at 2.19.47 PM.png",
+        "done/Screenshot 2026-11-19 at 6.32.14 PM.png"
       ],
       "image_hashes": [
-        "b984744f79bfdf658a7044d86916a33178eab0c3b123501e404463454c1d68d7"
+        "b984744f79bfdf658a7044d86916a33178eab0c3b123501e404463454c1d68d7",
+        "4c4b874d81d39bb7d07b51cc2125dfcc94c218b17876aa94a7eff8a9b2bae146"
       ],
       "source_labels": [
-        "poster"
+        "poster",
+        "other"
       ],
       "rung": "haiku-low",
       "added": "2026-11-17"
