@@ -4534,40 +4534,6 @@
       "added": "2026-11-19"
     },
     {
-      "id": "e1d1166f988b",
-      "status": "held",
-      "grouping_uncertain": true,
-      "title": null,
-      "category": "Talks",
-      "organiser": null,
-      "description": null,
-      "details": null,
-      "date": null,
-      "end_date": null,
-      "start_time": null,
-      "end_time": null,
-      "venue": null,
-      "registration_link": null,
-      "confidence": "low",
-      "notes": "Screenshot shows only a photo of an audience seated indoors; no event title, date, time or venue is visible.",
-      "recurrence": null,
-      "recurring": false,
-      "poster": "posters/d3da878efed6.jpg",
-      "thumb": "thumbs/d3da878efed6.jpg",
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFAv/EACYQAAICAQIDCQAAAAAAAAAAAAECAAMRBBIzcbEFFDE1QXJzgcH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABgRAQEAAwAAAAAAAAAAAAAAAAARATFB/9oADAMBAAIRAxEAPwCMHNlWzAA27WZvBeX3NrU1ym2gICFyVK5B9AAP2LNwLecp6Ty+v4h1hxWNpp75QzK+nyxOctVmEb7R4yewdTCMTX//2Q==",
-      "source_files": [
-        "done/Screenshot 2026-11-19 at 5.29.53 PM.png"
-      ],
-      "image_hashes": [
-        "d3da878efed6cf7f761dcf7e7727fbced0750a9a3f3e2b8fd3969bd1175c4c3b"
-      ],
-      "source_labels": [
-        "other"
-      ],
-      "rung": "sonnet-medium",
-      "added": "2026-11-19"
-    },
-    {
       "id": "9429a186a934",
       "status": "published",
       "grouping_uncertain": false,
