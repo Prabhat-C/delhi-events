@@ -50,22 +50,25 @@
       "notes": "",
       "recurrence": null,
       "recurring": false,
-      "poster": "posters/3a9c2035f4c9.jpg",
+      "poster": "posters/d39c833ad011.jpg",
       "thumb": "thumbs/49db04409a8f.jpg",
       "source_files": [
+        "done/zoom-7aba7f289b18.png",
         "done/Screenshot 2026-11-08 at 1.23.50 PM.png",
         "done/thumb-7aba7f289b18.png",
         "done/Screenshot 2026-11-08 at 1.26.41 PM.png"
       ],
       "image_hashes": [
+        "d39c833ad011155b32181440fc1d8bac9033e2e8ee820244f76437ea5684e530",
         "3a9c2035f4c9bac6ff1cad77d1029104c8757487cc98fa1da53bf65c67a66dcb",
         "49db04409a8f5a5377bdcf90ef76904616a2ae250a7fc74b2777651eab722d72",
         "12b8b5034f9a0b3498196d9258c3b321c1d5511e170e584a0879b84a7e2888b3"
       ],
       "rung": "haiku-low",
       "added": "2026-11-08",
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAATABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAYCBP/EACYQAAICAgECBQUAAAAAAAAAAAECABEDBBIFIRMWIlFhMUFSU8H/xAAWAQEBAQAAAAAAAAAAAAAAAAACAAP/xAAXEQEBAQEAAAAAAAAAAAAAAAAAARFB/9oADAMBAAIRAxEAPwCjLZA5Aqr/ALOXc6p4GRcSIX9XEuPp8iTvmPeqw6XX6xODPv5s7MzUvI2Qh4i/eqhwpZ1daG0mzr81+zFT2NE/ESCTqGxgBXE9Amz3JsxLFsZ4L7Qca/iIiTJlcaFQSIiIjf/Z",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBf/EACAQAAIBAwQDAAAAAAAAAAAAAAABAgMEERIhMnETNFH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAwT/xAAbEQEAAAcAAAAAAAAAAAAAAAAAAQIDERIhMf/aAAwDAQACEQMRAD8Ay7O3ml5UlpSeMvbYoqynqiqMcv4yUPTXbFjxXRObrdThoksKQEqnIA2PJ//Z",
       "source_labels": [
+        "poster",
         "poster",
         "other",
         "poster"
