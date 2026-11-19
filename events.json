@@ -4086,7 +4086,7 @@
       "venue": "The Auditorium, Administrative Building, National Gallery of Modern Art, New Delhi",
       "registration_link": "https://docs.google.com/forms/d/e/1FAIpQLScsR7MlPVB8xXOesgqSIW6f0vO-aGNldQmJZXKuI_sNaOtMng/viewform",
       "confidence": "high",
-      "notes": "",
+      "notes": "Poster says 4:30 pm onwards.",
       "recurrence": null,
       "recurring": false,
       "poster": "posters/80ad127fdf88.jpg",
@@ -4094,15 +4094,18 @@
       "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUBAwQC/8QAIxAAAQQBAwQDAAAAAAAAAAAAAQACAxESBSFxBDEy0VGBkf/EABcBAQEBAQAAAAAAAAAAAAAAAAACAQP/xAAVEQEBAAAAAAAAAAAAAAAAAAAAMf/aAAwDAQACEQMRAD8AeyNDJBb6sdtl1HjhGDO627kkNGXK1FjSOFV08gkc8V418rlFrsBXiPxCgvFoRjC3VYi0ENfZ49qqLU4GOdTZLPemikhUBQo+dqkAO7ZD9D2hIShB/9k=",
       "source_files": [
         "done/IMG-20261118-WA0006.jpg",
-        "done/IMG_20261118_145736.jpg"
+        "done/IMG_20261118_145736.jpg",
+        "done/IMG-20261120-WA0002.jpg"
       ],
       "image_hashes": [
         "80ad127fdf88018bf387275158b7d9ac100f5bb129ad45a325221e33705b029f",
-        "3abfeb721038c0b698c0163cfd406195b8b55281fe6fcdd8ebe3e2cd22dc6743"
+        "3abfeb721038c0b698c0163cfd406195b8b55281fe6fcdd8ebe3e2cd22dc6743",
+        "41093027a40f0cfb8139b8728d0f850e4d4f0e92239c6e60449e080d666f0361"
       ],
       "source_labels": [
         "poster",
-        "other"
+        "other",
+        "poster"
       ],
       "rung": "haiku-low",
       "added": "2026-11-18"
@@ -4598,6 +4601,142 @@
           "poster_blur": "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"
         }
       ]
+    },
+    {
+      "id": "c304dea4abc9",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Remembering 1947",
+      "category": "Literature",
+      "organiser": "Women Unlimited Ink",
+      "description": "An evening of remembering and conversation about Delhi in September 1947, around the book 7 from 1947: first-hand stories by Saliha Abid Husain. Speakers include Shahida Zaidi Basu, Syeda S. Hameed and Aanchal Malhotra.",
+      "details": null,
+      "date": "2026-11-20",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "Humayun World Heritage Site Museum, Nizamuddin, Sunder Nursery, New Delhi 110013",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/349868c18651.jpg",
+      "thumb": "thumbs/349868c18651.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAIEAwEF/8QAJBAAAQMDAwQDAAAAAAAAAAAAAQACEQMhMQQFEhNBUaFxsdH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAZEQEAAgMAAAAAAAAAAAAAAAAAAQIREkL/2gAMAwEAAhEDEQA/APaO4dTXu0rebC0EEgiDAnwqGh5xVf6/FgNFRZuPW5EVqgLgC7tg2VbAQYHuVIy3bXlqJAE5QujF0KsIqFHjVrS5vJ9QuGSYsqgYyftKO3wmQM0gi10JUIP/2Q==",
+      "source_files": [
+        "done/IMG-20261120-WA0000.jpg"
+      ],
+      "image_hashes": [
+        "349868c1865141889bfe11ab093406751c075e51826e23a520a930b1878434a6"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-20"
+    },
+    {
+      "id": "8fddb005ef5b",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Not So Randomly Yours: Book Discussion",
+      "category": "Literature",
+      "organiser": "India International Centre",
+      "description": "A book discussion on Vivek Atray's Not So Randomly Yours, with discussants Ambassador KP Fabian, Charu Bali, Neelesh Kulkarni and the author.",
+      "details": null,
+      "date": "2026-11-20",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Conference Room - I, IIC, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Tea/Coffee will be served at 5:30 pm at Lounge Verandah.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/c1662f67e3f5.jpg",
+      "thumb": "thumbs/c1662f67e3f5.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAjEAACAgEEAQUBAAAAAAAAAAABAgMRAAQSITFRBRMiQWFC/8QAFwEBAQEBAAAAAAAAAAAAAAAAAQMAAv/EABcRAQEBAQAAAAAAAAAAAAAAAAABETH/2gAMAwEAAhEDEQA/ALgQCO0VQKvsDrMpGOCfnfnnFyPJsCpKg+DBlI5v6o5Kln9WE8giEuxWISksV9ZGxaTVLUwRGQXDGePGGI0r6iTTo2sUCY3e+wezWGctxQWVHZkRrZQLHi8wjKkbykKEsmwOh4zm98qQyqoLAWRfONeZ1S7JP6TiMYfURzBJI2G0j+hR7OGJ1EzQuEQKFA44/cMC/9k=",
+      "source_files": [
+        "done/IMG-20261120-WA0001.jpg"
+      ],
+      "image_hashes": [
+        "c1662f67e3f53f8f084dd3fc951fe2a5600ca75fb89a33d19f61a542ac9bd021"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-20"
+    },
+    {
+      "id": "a40701b2cd8b",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "TERI-IHC Lecture Series: The Critical Role of BioWaste in India's Energy Transition to Net Zero",
+      "category": "Talks",
+      "organiser": "TERI",
+      "description": "Lecture six in the TERI-IHC series on sustainable development, on the role of biowaste in India's energy transition to net zero. Speaker Prem Shankar Jha, moderator Ajay Shankar, and panelists Suneel Pandey and Pushpita Singh.",
+      "details": null,
+      "date": "2026-11-20",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": "20:00",
+      "venue": "Gulmohar Hall",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Event is open to all. Entry on first come first serve basis.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/f0e9e92b6d61.jpg",
+      "thumb": "thumbs/f0e9e92b6d61.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAIGBQME/8QAJxAAAgICAQIEBwAAAAAAAAAAAQIDEQAhBAYSMUFxkRMUQlGBocH/xAAXAQEAAwAAAAAAAAAAAAAAAAADAAEC/8QAIBEAAQMCBwAAAAAAAAAAAAAAABIUUQEDAhETQZGx8P/aAAwDAQACEQMRAD8A7ydOcT4vY3NII1pAB+cdukoVZR81Ke7zCCh67zUk4whl2xYDYt6v2GDCwwDMLv6/ufTWGmkDa92ejFPT3HY75EorWkXDKSDjER2ZGtjfiD/MMNGItzcPQkiSX2MGrxo4srGKJ3RGkYCwoOz75BR+ePiLEbZblpx+XJMhZuLLHuqYjf7wyEwyLNNqT7k//9k=",
+      "source_files": [
+        "done/IMG-20261120-WA0010.jpg"
+      ],
+      "image_hashes": [
+        "f0e9e92b6d610a0aac8498f989a70485894e00e65dc6a34c1895b2243b7a55c7"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-20"
+    },
+    {
+      "id": "f6def92bbaa0",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "33rd Safdar Hashmi Memorial Lecture: What Do We Do When We Write?",
+      "category": "Literature",
+      "organiser": "Jana Natya Manch",
+      "description": "The 33rd Safdar Hashmi Memorial Lecture, given by poet, novelist, translator and journalist Jerry Pinto on the question 'What Do We Do When We Write?'.",
+      "details": null,
+      "date": "2026-11-20",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Studio Safdar",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Studio Safdar is next to May Day Bookstore. Reach via Shadipur metro, Blue line, Gate No. 5, then cycle rickshaw ('Biyaasi number'). Advisory: avoid driving, as parking is tough.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/74165d9558cc.jpg",
+      "thumb": "thumbs/74165d9558cc.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAaABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EACUQAAIBBAIBAwUAAAAAAAAAAAECAwAEERITITEFMkFCUXGBwf/EABgBAAMBAQAAAAAAAAAAAAAAAAEDBAIF/8QAGhEAAwADAQAAAAAAAAAAAAAAAAERAgMhIv/aAAwDAQACEQMRAD8A1SwNDww2pOzOxGxz35pDHdRXECXT7K5wTqBk/OMVa5kBl01caLtuD4/tLARJOoDO+vZyT19q56fnq6PvDRxqnS5xRTv5opNMDxLbzXDD38cer4PRLfT+qyyWUUMjrsVJPfdHpjFYmwSMyE9fk0t0x53OTkmrNmMwUAm6WGoVQpyAMZoqCE6+TRUkCf/Z",
+      "source_files": [
+        "done/IMG-20261120-WA0011.jpg"
+      ],
+      "image_hashes": [
+        "74165d9558ccce4b3a9a7919801ff5cdf581f71c5aa1d1640066589cecf320c9"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-20"
     }
   ]
 }
