@@ -4485,6 +4485,114 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-18"
+    },
+    {
+      "id": "144052002ee1",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Navavidha Bhakthi: 4th Global Carnatic Confluence (Katha Katcheri, Live in Concert)",
+      "category": "Music",
+      "organiser": "Gurukulam Foundation",
+      "description": "A Katha Katcheri, the 4th Global Carnatic Confluence, featuring Padma Bhushan Smt. Sudha Ragunathan (Carnatic vocal) and Sri U Ve Dushyanth Sridhar (Upanyasam). Held in collaboration with the Dean of Students, JNU.",
+      "details": null,
+      "date": "2026-11-28",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "JNU Convention Center, Auditorium #1, Jawaharlal Nehru University, Munirka, New Delhi",
+      "registration_link": "https://docs.google.com/forms/d/e/1FAIpQLSdQdtT6DN2PQzMDcQogttlSmSs3l76fTY3v5MTILNyqfSsk5Q/viewform",
+      "confidence": "high",
+      "notes": "Entry is complimentary. Registration is via the form linked in the chat; the poster says link in bio to register.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/a2ba49fc224d.jpg",
+      "thumb": "thumbs/a2ba49fc224d.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAoEAABAwMBBgcAAAAAAAAAAAABAAIDBBEhMQUTQVFxsRIyM0NygZH/xAAXAQADAQAAAAAAAAAAAAAAAAAAAwQC/8QAGhEAAwADAQAAAAAAAAAAAAAAAAERAgQTEv/aAAwDAQACEQMRAD8Ajh5kIEmQBiwF1qSNjRguJTdnxwySu37i0AYsL6rrFHQiGoY6qO83gDMaAcTz1VLzjg0lFxPL8QtgCyEwIOp6dwLjJdgtqWk9k0wRD3Rnh4XZTToeiRL6sXVS9WVvXxStEimqLYgeR8UK7H5B990LXVivCP/Z",
+      "source_files": [
+        "done/Screenshot 2026-11-19 at 5.25.39 PM.png",
+        "done/Screenshot 2026-11-19 at 5.25.20 PM.png"
+      ],
+      "image_hashes": [
+        "a2ba49fc224d1d6bae7045c9c59c62e96df18d8f26fa5f791fe7c1673b05e9f6",
+        "d6bb118c9a9d0f4643eb75b31f5e4a18bc03d664f347dcd9b3fe1ff23327f372"
+      ],
+      "source_labels": [
+        "poster",
+        "text_caption"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-19"
+    },
+    {
+      "id": "e1d1166f988b",
+      "status": "held",
+      "grouping_uncertain": true,
+      "title": null,
+      "category": "Talks",
+      "organiser": null,
+      "description": null,
+      "details": null,
+      "date": null,
+      "end_date": null,
+      "start_time": null,
+      "end_time": null,
+      "venue": null,
+      "registration_link": null,
+      "confidence": "low",
+      "notes": "Screenshot shows only a photo of an audience seated indoors; no event title, date, time or venue is visible.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/d3da878efed6.jpg",
+      "thumb": "thumbs/d3da878efed6.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFAv/EACYQAAICAQIDCQAAAAAAAAAAAAECAAMRBBIzcbEFFDE1QXJzgcH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABgRAQEAAwAAAAAAAAAAAAAAAAARATFB/9oADAMBAAIRAxEAPwCMHNlWzAA27WZvBeX3NrU1ym2gICFyVK5B9AAP2LNwLecp6Ty+v4h1hxWNpp75QzK+nyxOctVmEb7R4yewdTCMTX//2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-19 at 5.29.53 PM.png"
+      ],
+      "image_hashes": [
+        "d3da878efed6cf7f761dcf7e7727fbced0750a9a3f3e2b8fd3969bd1175c4c3b"
+      ],
+      "source_labels": [
+        "other"
+      ],
+      "rung": "sonnet-medium",
+      "added": "2026-11-19"
+    },
+    {
+      "id": "9429a186a934",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Council on Energy, Environment and Water (CEEW)",
+      "category": "Film",
+      "organiser": "Council on Energy, Environment and Water (CEEW)",
+      "description": "A programme of short films followed by a discussion with the filmmakers of Through The Dappled Light and Before the Fire. The films include Its Only 47°C, Before the Fire, Choora, Where the Water Hides and Uppuveedukal.",
+      "details": null,
+      "date": "2026-12-10",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": "21:00",
+      "venue": "Goethe-Institut/Max Mueller Bhavan, 3, KG Marg, Mandi House, New Delhi, Delhi 110001",
+      "registration_link": "https://www.alteff.in/events?event=council-on-energy-environment-and-water-ceew-delhi",
+      "confidence": "high",
+      "notes": "Free entry, registration needed. The programme includes an audience QR poll and a snack break at 8pm.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/98445af7e36e.jpg",
+      "thumb": "thumbs/98445af7e36e.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIGAQP/xAAnEAACAgECBQMFAAAAAAAAAAABAgARAwQSEyExQXEUImFRUpHB8P/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/EABkRAQACAwAAAAAAAAAAAAAAAAABEQISUf/aAAwDAQACEQMRAD8AoeBkXn61qvp/GOiviBrV7hd01E+Osg2csro21VFqzEdBfYR8eFs6cbFtRtoNFeTdgPHzMUV1jz5GUlnI598YH7hInSLqdKj48gWy5a/abuoTOuXTcLvHjUOfaPmdtoqtorxETmxH0nSohmxftH4hNhJP/9k=",
+      "source_files": [
+        "done/Joined 17.33 2026-11-19-cropped.png",
+        "done/Joined 17.33 2026-11-19-overlay.png"
+      ],
+      "image_hashes": [
+        "98445af7e36ed4d806b35dd48ed3490077b2671bcd6fd9dec8f80b462b9c3143",
+        "b40b12395618fa04877fc49c3de3ea08a762655010ff2ff93cc0353dc38b7581"
+      ],
+      "source_labels": [
+        "poster",
+        "other"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-19"
     }
   ]
 }

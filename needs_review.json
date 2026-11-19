@@ -1,3 +1,24 @@
 {
-  "review": []
+  "review": [
+    {
+      "id": "e1d1166f988b",
+      "status": "held",
+      "title": null,
+      "date": null,
+      "confidence": "low",
+      "reasons": [
+        "title is missing",
+        "date missing or not YYYY-MM-DD: None",
+        "confidence is low",
+        "grouping uncertain: check whether these screenshots belong to one post",
+        "venue missing",
+        "no poster"
+      ],
+      "poster": "posters/d3da878efed6.jpg",
+      "thumb": "thumbs/d3da878efed6.jpg",
+      "source_files": [
+        "done/Screenshot 2026-11-19 at 5.29.53 PM.png"
+      ]
+    }
+  ]
 }
