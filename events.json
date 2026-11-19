@@ -33,7 +33,7 @@
     },
     {
       "id": "7aba7f289b18",
-      "status": "held",
+      "status": "published",
       "grouping_uncertain": false,
       "title": "9th International Ancient Arts Festival 2026",
       "category": "Festivals",
@@ -45,7 +45,7 @@
       "start_time": null,
       "end_time": null,
       "venue": "Kamani Auditorium, New Delhi",
-      "registration_link": "https://iaaf26.raysofwisdomsociety.net",
+      "registration_link": "https://iaaf26.raysofwisdomsociety.net/",
       "confidence": "high",
       "notes": "",
       "recurrence": null,
