@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FED | Free Events Delhi</title>
 <meta name="description" content="Free events in Delhi NCR: screenings, theatre, music, talks and more.">
-<link rel="preload" as="fetch" href="events.json" crossorigin>
 <style>
 /* ---- Tokens ---- */
 :root {
@@ -1113,6 +1112,19 @@ footer { padding: 8px 0 32px; }
     }
   }
 
+  // Always a fresh copy: the ?t= makes every request a new address, so neither the phone's cache nor
+  // GitHub's servers can hand back an old events.json, and no-store keeps the browser from saving it.
+  function getEvents() {
+    return fetch("events.json?t=" + Date.now(), { cache: "no-store" })
+      .then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return res.text();
+      });
+  }
+
+  var shownKey = null;                              // today's date + events.json text of what is on screen
+  var lastCheck = 0;                                // when events.json was last fetched (ms)
+
   function load() {
     showLoading();
     listEl.replaceChildren();
@@ -1125,16 +1137,45 @@ footer { padding: 8px 0 32px; }
     railEl.hidden = true;
     daylistEl.hidden = true;
     railOn = null;
-    fetch("events.json", { cache: "no-cache" })
-      .then(function (res) {
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        return res.json();
+    getEvents()
+      .then(render)
+      .catch(function () {
+        showStatus("Couldn't load events right now.", true);
+      });
+  }
+
+  // When someone comes back to a tab that was left open (phones keep tabs for days without reloading them),
+  // fetch events.json again and redraw quietly, but only if something changed: a new event, or a new day
+  // so past events drop off. Search, category and scroll position are kept.
+  function refreshIfChanged() {
+    if (document.visibilityState !== "visible" || shownKey === null) return;
+    if (Date.now() - lastCheck < 30000) return;     // at most once every 30 seconds
+    lastCheck = Date.now();
+    getEvents()
+      .then(function (text) {
+        if (todayIST() + "\n" + text === shownKey || dialog.open) return;
+        var y = window.pageYOffset;
+        render(text);
+        window.scrollTo(0, y);
       })
-      .then(function (data) {
+      .catch(function () { /* keep what is on screen */ });
+  }
+  document.addEventListener("visibilitychange", refreshIfChanged);
+  window.addEventListener("pageshow", function (e) { if (e.persisted) { lastCheck = 0; refreshIfChanged(); } });
+
+  // Builds the list from the text of events.json. Throws before touching the page if the data is bad.
+  function render(text) {
+        var data = JSON.parse(text);
         var all = Array.isArray(data) ? data : data && data.events;
         if (!Array.isArray(all)) throw new Error("Unexpected data");
 
         var today = todayIST();
+        shownKey = today + "\n" + text;
+        lastCheck = Date.now();
+        listEl.replaceChildren();
+        cardFor.clear();
+        searchText.clear();
+        railOn = null;
         var thisYear = today.slice(0, 4);
 
         var events = all.filter(function (ev) {
@@ -1154,6 +1195,7 @@ footer { padding: 8px 0 32px; }
         });
 
         if (!events.length) {
+          catsEl.hidden = catrowEl.hidden = railEl.hidden = daylistEl.hidden = nomatchEl.hidden = true;
           showStatus("No upcoming events right now. Check back soon.");
           return;
         }
@@ -1171,10 +1213,6 @@ footer { padding: 8px 0 32px; }
         searchEl.classList.remove("pending");
         applySearch();                              // applies a search typed early, or ?q= and ?cat= from the address bar
         preloadFirst(events.map(function (ev) { return assetUrl(ev.poster) || assetUrl(ev.thumb); }));
-      })
-      .catch(function () {
-        showStatus("Couldn't load events right now.", true);
-      });
   }
 
   /* ---- Align the top of the info box with the top of the FED letters (any font, any device) ---- */
