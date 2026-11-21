@@ -5307,6 +5307,43 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-21"
+    },
+    {
+      "id": "bbaaceb24361",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "नयनों में सारी रात",
+      "category": "Literature",
+      "organiser": null,
+      "description": "A discussion on the changing voices of young poetry, its sensibilities and contemporary concerns, as part of Session 2 of Hans Sahityotsav 2026. Speakers are Jyoti Shobha, Vihaan Vaibhav, Joshna Banerjee and Ketan Yadav, moderated by Asad Zaidi.",
+      "details": "‘हंस’ साहित्योत्सव 2026 के दूसरे सत्र में आइए, युवा कविता के बदलते स्वर, उसकी संवेदनाओं और\nसमकालीन सरोकारों पर होने वाली विशेष चर्चा का हिस्सा बनें।\nसत्र – 2 | नयनों में सारी बात\nयुवा कविता का स्वप्न\n\nवक्ता: ज्योति शोभा, विहान वैभव, जोशना बैनर्जी एवं केतन यादव\nसंचालन: असद ज़ैदी\n4 दिसंबर 2026\nअपराह्न 03:15 से 04:30 बजे तक\nजवाहर भवन, नई दिल्ली\n\nआइए, सुनें युवा कविता के नए स्वर और समझें आज की कविता की नई दृष्टि।",
+      "date": "2026-12-04",
+      "end_date": null,
+      "start_time": "15:15",
+      "end_time": "16:30",
+      "venue": "जवाहर भवन, डॉ. राजेंद्र प्रसाद रोड, विंडसर प्लेस, नई दिल्ली",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/7fee28e9c684.jpg",
+      "thumb": "thumbs/7fee28e9c684.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAEEAgMG/8QAJhAAAgIBAgYBBQAAAAAAAAAAAQIAAxEEcRITISIxMhRBQlGB0f/EABYBAQEBAAAAAAAAAAAAAAAAAAIDAf/EABwRAAICAgMAAAAAAAAAAAAAAAABESEDEhNBUf/aAAwDAQACEQMRAD8A6ekqKh6jpFR4ZXx3En2z5kGld001AytgJ4bDg5Vf7KarD8snCLpigKMSQSTuZFVRR3ZLqNPQlpVEONzCLWWWDUNwthfpCasjN4JsSKldoAt7QCGBI6kzcnI5SVMFKq4cMXB67ZlH2HaYJ7fqTScyxdQieyjnuXR1wfwMwlMIYfo92f/Z",
+      "source_files": [
+        "done/Screenshot 2026-11-21 at 11.06.25 PM.png",
+        "done/Screenshot 2026-11-21 at 11.06.40 PM.png"
+      ],
+      "image_hashes": [
+        "7fee28e9c684cc3bb48f6e3b6075b9378b2e86e3b765a0ed45c564c956cc6ec7",
+        "4637c4564fc7de460ee00592a416c9319bbcb4b746d081219409c0be99fb30ef"
+      ],
+      "source_labels": [
+        "poster",
+        "text_caption"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-21"
     }
   ]
 }
