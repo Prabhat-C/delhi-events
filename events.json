@@ -5344,6 +5344,278 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-21"
+    },
+    {
+      "id": "ed8db552e3ae",
+      "status": "held",
+      "grouping_uncertain": false,
+      "title": "Yaadon Ki Sunehri Baarish",
+      "category": "Music",
+      "organiser": "Jamia Millia Islamia",
+      "description": "Inaugural concert of the poems of Jnanpith Award winner Ali Sardar Jafri, sung and composed by Seema Anil Sehgal. Part of the Ali Sardar Jafri Centenary Celebrations (1913-2013).",
+      "details": null,
+      "date": "2013-11-29",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "Dr. M.A. Ansari Auditorium, Jamia Millia Islamia, New Delhi 110025",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "The event date (29 November 2013) has already passed. RSVP by phone: 011-26980164 or 011-26981717 (Extn. 1700).",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/57fd3c7171ce.jpg",
+      "thumb": "thumbs/57fd3c7171ce.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBv/EACMQAAIBBAEEAwEAAAAAAAAAAAECAAMREiFBMTJRcRMiYdH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A66wFNSEDGwmdFWBIdLgtyRoSn7EupYW6AGZgAHVNx+4n+wLrfVwF1riIr3yF+togW7Y0F9Di8ypuPkAAJ3ysM9xiyqwHkSHIx0iqfIG4GtfvHqJCE1Rkx2NRA//Z",
+      "source_files": [
+        "done/IMG-20261121-WA0031.jpg"
+      ],
+      "image_hashes": [
+        "57fd3c7171ce361333a741879b323e5a5c97c370e6cdecdb0e2049ddbaf781a9"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-high",
+      "added": "2026-11-21"
+    },
+    {
+      "id": "40cf3f6cedff",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Katha: Silent Echoes of Kuru Queens (अनुगूंज)",
+      "category": "Dance",
+      "organiser": "Kathik Cultural Society",
+      "description": "A Kathak dance production, Silent Echoes of Kuru Queens, with choreography by Leena Malakar Vij and vocals and music composed by Shuheb Hasan. Dancers Sharvi Sharma and Leena Malakar Vij perform.",
+      "details": null,
+      "date": "2026-11-30",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "Stein Auditorium, India Habitat Centre, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/ec13a6b3874d.jpg",
+      "thumb": "thumbs/ec13a6b3874d.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQb/xAAlEAACAgEEAQMFAAAAAAAAAAABAgARAwQSITFBBRRRImFxgtH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8A6fEpGR2N01eeqk/p+pOo9yrn68WZlPxXio8talSj/HA7iMGHHiZjixMvPO0dwah7dwmE2boj8wgky4zp8TDCpZwDW9zVyb0ttcEcawh+BtNkH7y9jZqphvx/ZEt8W9tx3j9yIR13CAf/2Q==",
+      "source_files": [
+        "done/IMG-20261121-WA0032.jpg"
+      ],
+      "image_hashes": [
+        "ec13a6b3874d9d46d6739622699ad79e1a56a0a13315d42a6226fce45cac82c1"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-21"
+    },
+    {
+      "id": "3ee423014c2e",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "K G Subramanyan: A Language of My Own",
+      "category": "Film",
+      "organiser": "The Raza Foundation in collaboration with India International Centre and Pundole's",
+      "description": "A film screening of K G Subramanyan: A Language of My Own, directed by Laurent Bregeat and produced by Dadiba Pundole, about the artist K G Subramanyan.",
+      "details": null,
+      "date": "2026-11-23",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "C.D. Deshmukh Auditorium, India International Centre, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Language is English with French subtitles. Duration is 52 minutes.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/8457aaf89a10.jpg",
+      "thumb": "thumbs/8457aaf89a10.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQCAwUG/8QAJRAAAQMEAQIHAAAAAAAAAAAAAQACAwQREiFBEzEyNFFhcXLB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAID/8QAFxEBAQEBAAAAAAAAAAAAAAAAAAERA//aAAwDAQACEQMRAD8A6GFgpw1jIm4t55KajDSHHDG+zc91Ra7yDiN9yo1cjaaAyBrXm4A1eylRgtazTBYIVFNL1oQ/EA8gCyEEmgmQ2cQfYAIrKd1TTmPQv2J4PqmR4R8IKBKPCnYIuqLt0doWVVebm+34hTrec5j/2Q==",
+      "source_files": [
+        "done/IMG-20261121-WA0033.jpg"
+      ],
+      "image_hashes": [
+        "8457aaf89a102eedca1a32dcdf432a9845383c0341dd317780b136a9f1c97954"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-21"
+    },
+    {
+      "id": "6926fbed200d",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Rabinal Achí: Book Launch and Panel Discussion",
+      "category": "Literature",
+      "organiser": "Sahitya Akademi in collaboration with Embassy of Guatemala, New Delhi",
+      "description": "A book launch and panel discussion on Rabinal Achí, the Maya-Achi masterpiece of pre-Columbian drama, in Spanish-Hindi. Discussants include Rishu Sharma, Walter Gutierrez, Shyama Prasad Ganguly, Amrendra Khatua and Vibha Maurya.",
+      "details": null,
+      "date": "2026-12-03",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Embassy of Guatemala, F-7/11, Ground Floor, Vasant Vihar, New Delhi 110057",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "RSVP: 011-23386626/27/28 or secretary@sahitya-akademi.gov.in.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/2ab1b3c1699b.jpg",
+      "thumb": "thumbs/2ab1b3c1699b.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAaABQDASIAAhEBAxEB/8QAGQABAQEAAwAAAAAAAAAAAAAAAAIDAQQG/8QAJBAAAQQBAgYDAAAAAAAAAAAAAQACAxExIUESIjJRYXGBkeH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgP/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/APSRta1o3J76oGinB16m7Gy5tzWXtSuNvLbeEDwojTXXkjAIo37ARXL1C+yKTC+XUEivKoSnpAP3+LJpJaLJVYwmUYSGyM/KLGRx4snCIVH/2Q==",
+      "source_files": [
+        "done/IMG-20261121-WA0034.jpg"
+      ],
+      "image_hashes": [
+        "2ab1b3c1699b66ae6141aac1e3eac4517765cc26110fce071f41376ff6213d6e"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-21"
+    },
+    {
+      "id": "2b624bce0e09",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Sangeet Sudha: Flute Recital by Shri Shashank Subramanyam",
+      "category": "Music",
+      "organiser": "Sangeet Sudha",
+      "description": "A flute recital by Shri Shashank Subramanyam, accompanied by Sh. Parupalli Phalgun on mridangam and Sh. Giridhar Udupa on ghatam.",
+      "details": null,
+      "date": "2026-11-27",
+      "end_date": null,
+      "start_time": "16:30",
+      "end_time": null,
+      "venue": "Humayun's Tomb World Heritage Site Museum Auditorium, Nizamuddin, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/069b400bca1c.jpg",
+      "thumb": "thumbs/069b400bca1c.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFBAb/xAAsEAABBAECAwUJAAAAAAAAAAABAAIDBBESIQUiMQYTI2FxMjNCUXKBkdHw/8QAFwEBAQEBAAAAAAAAAAAAAAAAAwIEBf/EAB4RAAICAgIDAAAAAAAAAAAAAAECAAMEERIxIUFR/9oADAMBAAIRAxEAPwCrqZFIXAYcfM7/AGS5br4rsNeOuX6xqc7UQAOm3zS7FwU4nTTP0sA2bn2lEtXLEkzXSTh4wHN7s4GCP4Ll4uMbz56j2sK+50j3NYdIH53QpcNmWSME8+Ns4QjfHZGKn1NVenQMJtscOr2AfCE0wz7xxxj9eSht7Mz5w6VhXVVuh9Er43/UVVeS9OwsBkDHRiqXDWwVIopXNDmtxynIQtQ6D0QmDFxy+ywWA0DP/9k=",
+      "source_files": [
+        "done/IMG-20261121-WA0035.jpg"
+      ],
+      "image_hashes": [
+        "069b400bca1c6f120feff7792c1e2e5545040190364683d7766e6f32094fc301"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-21"
+    },
+    {
+      "id": "ab655346bf1d",
+      "status": "held",
+      "grouping_uncertain": false,
+      "title": "Divya Pushpam",
+      "category": "Dance",
+      "organiser": "Divya Trilogy",
+      "description": "A unique dance feature describing the divine flowers, performed by Radhika Shetty, Arupa Lahiry, Matangi Prasanna, Sneha Chakradhar, Keerthana Ravi and Gowri Sagar. It is the third part of the Divya Trilogy, following Divya Astra and Divya Vahana.",
+      "details": null,
+      "date": "2016-12-01",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "Stein Auditorium, India Habitat Centre, Lodhi Road, New Delhi 110003",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "The poster shows the date as 1 December 2016, which is in the past relative to today's date. Entry fee is not stated.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/792ce4d15f2d.jpg",
+      "thumb": "thumbs/792ce4d15f2d.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBAgQF/8QAJxAAAQMDAQcFAAAAAAAAAAAAAQACAwQREhMFITEzcYGhIkFhkbH/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQMC/8QAGBEBAQEBAQAAAAAAAAAAAAAAABEBAlH/2gAMAwEAAhEDEQA/AOhtKF821Hl9Q7RsLMDiOA4D497qWjRjkdE8tNvTZ5v5WmbM7VkY6mcIdO2eJIP0k1FOGwSHSORbZuMZ8qfXVX5yZPXXo5jPSxSlpaXNBs7iOqFFFBpUkTXAl2IvkLG6FtHZV3EtluTu7pUl3OJDum4p1RyHdv1Z6bndigNUWWAz3lCuhMn/2Q==",
+      "source_files": [
+        "done/IMG-20261121-WA0036.jpg"
+      ],
+      "image_hashes": [
+        "792ce4d15f2d8e64525d4aefca705acbf6a0c801eacfa313382a13d463c5a14a"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "sonnet-medium",
+      "added": "2026-11-21"
+    },
+    {
+      "id": "c330c41a00e5",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Picturesque Embroideries: The Metal Embroidery Saga",
+      "category": "Talks",
+      "organiser": null,
+      "description": "A Sanskriti Lecture Series talk on metal embroidery in textiles, presented by speaker Dr. Charusmita Gupta, Senior Textile Consultant.",
+      "details": null,
+      "date": "2026-11-25",
+      "end_date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "venue": "Umang Hall, 4th Floor, New Building, IGNCA, Janpath, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/b7c27f0ed84f.jpg",
+      "thumb": "thumbs/b7c27f0ed84f.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAbABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQCBQYB/8QAKBAAAgIBAgMIAwAAAAAAAAAAAQIAEQMEIQYxgRQiI0RRYWKRkrHR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwL/xAAaEQACAwEBAAAAAAAAAAAAAAAAAgEREgMh/9oADAMBAAIRAxEAPwBnPxLgdBWmzKLBuxJHifTllPZ8gr0dK/cocugyJjYkr3RZ5xVAxW/C+hvDVtF9YhZ8NSeKtKPLZfyT+wmSyWG3C38ahKsK5NBqVJxZhe4Qk7+0oEVWF2g6mMNrdQyMDksEUdhEzDRclO2iTAA8h0MJwcoRAz//2Q==",
+      "source_files": [
+        "done/IMG-20261121-WA0037.jpg"
+      ],
+      "image_hashes": [
+        "b7c27f0ed84fa506723c2a8b145d816e13a2e5e84fb6251f53569385899a4646"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-21"
+    },
+    {
+      "id": "98c2377a7fd1",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "कला संकुल",
+      "category": "Music",
+      "organiser": "Kala Sankul, Sanskar Bharati",
+      "description": "A stage art gathering with a vocal performance by Shri Dibakar Das and a Bollywood dance by Tansen Sangeet Mahavidyalaya, Mansarovar Garden, followed by a talk on the theme of nature in Indian music (भारतीय संगीत में प्रकृति की भूमिका), with Smt. Rita Swami Choudhary as chief guest and speaker.",
+      "details": null,
+      "date": "2026-11-29",
+      "end_date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "venue": "Kala Sankul, Sanskar Bharati, 33, Deen Dayal Upadhyay Marg, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Contact number on the invitation: 9871196633.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/b94f4423175d.jpg",
+      "thumb": "thumbs/b94f4423175d.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAbABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAIDAQQG/8QAIRAAAgICAgIDAQAAAAAAAAAAAQIAERIhAzFhcSJRgZH/xAAYAQACAwAAAAAAAAAAAAAAAAAAAgEDBP/EABgRAQADAQAAAAAAAAAAAAAAAAABESEx/9oADAMBAAIRAxEAPwD0j8iqCt0a1oyHExVmLuSO6o9y5cggZqo89ySlgWrkQC920xL9OHUgE1+iELIA3/IRQVmIX4kA+rMVWbOi/u11MAyU35m4gCwNxo4LdFV1CSzb7hID/9k=",
+      "source_files": [
+        "done/IMG-20261121-WA0038.jpg"
+      ],
+      "image_hashes": [
+        "b94f4423175d59bf76fe9451eb1fa43c60e5e2a0beb8af86f3c92006fee333c1"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-21"
     }
   ]
 }
