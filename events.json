@@ -5122,6 +5122,210 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-21"
+    },
+    {
+      "id": "8cdc6f02d175",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Expert Talk: Introduction to the Diversity and Ecology of Bats",
+      "category": "Talks",
+      "organiser": null,
+      "description": "An introduction to the diversity and ecology of bats by Nakul Shokeen, on the importance of bats. The talk is followed by a walk in the park.",
+      "details": null,
+      "date": "2026-11-21",
+      "end_date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "venue": "Aravali Biodiversity Park",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/1af95fca5220.jpg",
+      "thumb": "thumbs/1af95fca5220.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAwYF/8QAKhAAAgEDAgQEBwAAAAAAAAAAAQIDAAQREiExMmFxBSKBsRMUIzNRkcH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAP/xAAXEQEBAQEAAAAAAAAAAAAAAAAAAiER/9oADAMBAAIRAxEAPwC+xtIZbb4hjAcuck7n3q2eyhW3mdYxqCbYBzn90rYXq2tkFdWfzEkqw26Y9KevJVHhjvJqRpUIVTx37Vm0cYNb8ZWcMTnyYPvwoqkyMAAHMYA2B2z1opBW6W7M75jlYdEOPanj83LH9RZtWkDkOcfjpwrUPzt3qX+8O38qqsMzrLrDdhRpEig9DRWqh5PWijqf/9k=",
+      "source_files": [
+        "done/IMG-20261121-WA0014.jpg"
+      ],
+      "image_hashes": [
+        "1af95fca5220cb6de7fd12cc3e2580693ba1d6949e33841ab1dd8643d4e90989"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-21"
+    },
+    {
+      "id": "c27d1facf54a",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Namo Bharat Dialogues: Assessing US Midterm Results: Future of US and India-US Relations",
+      "category": "Talks",
+      "organiser": "The Indian Futures",
+      "description": "A panel discussion assessing the US midterm results and the future of US and India-US relations, with speakers from academia, policy and think tanks.",
+      "details": null,
+      "date": "2026-11-21",
+      "end_date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "venue": "Nalanda Auditorium, Dr Ambedkar International Centre, 15 Janpath, Delhi 110001",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Tea/coffee at 3:30 PM at the venue.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/d8221737e68d.jpg",
+      "thumb": "thumbs/d8221737e68d.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAALABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAIBAwQF/8QAIhAAAgIBBAEFAAAAAAAAAAAAAQIDEQAEEiExE0GRocHw/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAE/8QAGhEAAgMBAQAAAAAAAAAAAAAAAAECAxEhMf/aAAwDAQACEQMRAD8A6ELOHncaVh42CrV8gtRP3jvOZZ4YpIWjRlDF7og0fT93kTSOp2qxAPdZQgtxeZ0lnhTvemvQuNTCXWMIN1UbB+cMTrgAe2GBw3qGrZYf/9k=",
+      "source_files": [
+        "done/IMG-20261121-WA0015.jpg"
+      ],
+      "image_hashes": [
+        "d8221737e68d11d312940a0cdd8c2da33512025193d65049869217be27bde567"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-21"
+    },
+    {
+      "id": "2501bd93ddad",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Why Has India Struggled to Create Enough Employment?",
+      "category": "Talks",
+      "organiser": "School of Humanities and Social Sciences, Shiv Nadar University",
+      "description": "A Conversations on Public Policy talk by Prof. Pronab Sen on why India has struggled to create enough employment.",
+      "details": null,
+      "date": "2026-11-21",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "Gulmohar Hall, India Habitat Centre, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/7574a81d682d.jpg",
+      "thumb": "thumbs/7574a81d682d.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQBAwX/xAAkEAACAgICAQMFAAAAAAAAAAABAgADBBEhMQUSEyJBUWFxof/EABYBAQEBAAAAAAAAAAAAAAAAAAMCBP/EABkRAAMBAQEAAAAAAAAAAAAAAAABAgMRIf/aAAwDAQACEQMRAD8A8Facj21IVypHHxneikVULYd+61hrAYhQON87EsTJSvHVfR0PvIa8tWtStlVKhaXJ+o2BE1hyiMrVMzMoSy0N6yGI03IPIJHY7ib5HJV71C1KgVABo98k7/sQl3grXpfV43KtoQivHO1Hbfj9SCzEei963rUsh0SHBERBy3vS3NFqFHGjjYAG1oRETQaGz//Z",
+      "source_files": [
+        "done/IMG-20261121-WA0016.jpg"
+      ],
+      "image_hashes": [
+        "7574a81d682d37fed7469a682f72ebe6c11836c7c026f3a40aabdbab831e9d4d"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-21"
+    },
+    {
+      "id": "c260c3360e73",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Qutub Festival of Classical Music",
+      "category": "Music",
+      "organiser": null,
+      "description": "A festival of classical music with live performances on violin and other instruments, held as part of the World Heritage Week 2026 cultural evenings at Qutub Complex.",
+      "details": null,
+      "date": "2026-11-20",
+      "end_date": "2026-11-22",
+      "start_time": "17:00",
+      "end_time": null,
+      "venue": "Qutub Complex, Mehrauli, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/31efda5313a7.jpg",
+      "thumb": "thumbs/31efda5313a7.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAMEAgUG/8QAJBAAAgEEAgEEAwAAAAAAAAAAAQIDAAQREiExBRMUIlFBcdH/xAAXAQEBAQEAAAAAAAAAAAAAAAADBAEC/8QAHhEAAgICAgMAAAAAAAAAAAAAAAECEQMSBDEhUWH/2gAMAwEAAhEDEQA/AJfHO0FqsUlrFNqThtsHH11Tbm/SCIyP49NV7w4/lWwWDSRPIhUhBzzyKg8oimwnGRnXOP1VMuLhduvIKyTs85d3HurqSbQIHOQo6AorPoyEAhDg9GigUa6Q1nfS4nSR8FhGzFmGtSTbOxYq52zk9ZBrF3czJHurkFmwcUi4kYzLk/gGqd00HFtdDwFQalkwvA+Q6oqVFD7E/eKK3b4dby9n/9k=",
+      "source_files": [
+        "done/IMG-20261121-WA0017.jpg"
+      ],
+      "image_hashes": [
+        "31efda5313a757f079454599a56c73c88fb4482de588cbacfbd73d25e3d71161"
+      ],
+      "source_labels": [
+        "other"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-21"
+    },
+    {
+      "id": "6bc6a75c8189",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "The Long Memory: Curtain Raiser",
+      "category": "Literature",
+      "organiser": null,
+      "description": "Unveiling of the inaugural cover of The Long Memory at the 4th Prof. B. B. Lal Memorial Lecture.",
+      "details": null,
+      "date": "2026-11-21",
+      "end_date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "venue": "Seminar Hall 1, 2 and 3, India International Centre, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/58586532f977.jpg",
+      "thumb": "thumbs/58586532f977.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAMGAQIEBf/EACUQAAEEAQMCBwAAAAAAAAAAAAEAAgMREgQhMQUTFCJBYWKBkf/EABcBAQEBAQAAAAAAAAAAAAAAAAACAQP/xAAWEQEBAQAAAAAAAAAAAAAAAAAAESH/2gAMAwEAAhEDEQA/ALRJM2NwaeSL5pQ+KjiyLn2C4ndw2XH1hmodPF2I3O8hBIF1uvPfDrhHi2F7q+PK53VzFlBBAI9UWI7EbLFHEX+IqYPBIqrWuGLgQL+lIiAN/ZERB//Z",
+      "source_files": [
+        "done/IMG-20261121-WA0018.jpg"
+      ],
+      "image_hashes": [
+        "58586532f9779a885d8a3282e0c37cbddc5fa45da95fa2d1e046d614623e90e7"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-21"
+    },
+    {
+      "id": "0372c78581ac",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Roohani Rishta: Sufi Evening by The Roohani Sisters",
+      "category": "Music",
+      "organiser": "Indian Women's Press Corps",
+      "description": "A celebration of the 32nd anniversary of the Indian Women's Press Corps with an evening of Sufi music by The Roohani Sisters and a musical performance by Anuradha Raman, with a keynote address by Justice Sudhanshu Dhulia.",
+      "details": null,
+      "date": "2026-11-21",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Jawahar Bhawan, Dr Rajendra Prasad Road, Opposite Shastri Bhawan, Windsor Place, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "RSVP: 7836808157 / 7210808157. Admit two. Please be seated by 5.45 p.m. Closest Metro station: Central Secretariat.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/7652faa1e5a6.jpg",
+      "thumb": "thumbs/7652faa1e5a6.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAbABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAECBAMG/8QAJhAAAgAFBAIBBQAAAAAAAAAAAQIAAwQRIQUSMUETcWEGIkJRof/EABYBAQEBAAAAAAAAAAAAAAAAAAIBA//EABsRAAMAAgMAAAAAAAAAAAAAAAABAiExAxEy/9oADAMBAAIRAxEAPwD0FPVmplzH8fi2TCmeDbsYhVQcyGyQRY3GIz/UFLWVEtE08opDhnDWF+bf2NwRjTqs0gsVsxHZ7hQ2mDlSafWCKA76VS2SMG/7EEOhBWU/y5v7xBDrZnHlF1BLVC7WAT8yDkcwtygEBy3uOs0D1nqMtWAtNMYXDBCb3+IkrIreCtOmeaTMccGYbQRGlDbp8m2PtvBFrYZ0f//Z",
+      "source_files": [
+        "done/IMG-20261121-WA0019.jpg"
+      ],
+      "image_hashes": [
+        "7652faa1e5a6cd68d1c8412fdea296f9083cea3c03d34e061c518f4d38cadc8d"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-21"
     }
   ]
 }
