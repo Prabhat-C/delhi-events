@@ -3704,12 +3704,15 @@
       "thumb": "thumbs/376de1dd2a0e.jpg",
       "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAdABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIFAwT/xAAoEAACAQMCBQMFAAAAAAAAAAABAgMAERIEIQUGEyJBMmHRMVFicZH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQP/xAAZEQADAQEBAAAAAAAAAAAAAAAAARECEiH/2gAMAwEAAhEDEQA/AJyc3cS7haAZfgfmmfmriSBCTp+z02Q/NTBppI0jIDESgFQPN6VY2kfCIEvvsPanhYyivOPE1ysNP3G57D9f7RUdo1DHfL3opECsWj6MSRiQSR2xZl2Ivfet9K8B4yJJXVI2Fy3pNz4rkgHVjBBK22+9MoiGrSGaMyqWFxla9VrKzKXrXVhosGAvE0YjYllyW5Iv+qK7GKzEMVxUbKqmwUeAKKyNKz//2Q==",
       "source_files": [
-        "done/Screenshot 2026-11-17 at 10.28.42 PM.png"
+        "done/Screenshot 2026-11-17 at 10.28.42 PM.png",
+        "done/IMG-20261121-WA0007.jpg"
       ],
       "image_hashes": [
-        "376de1dd2a0e95efec90e5fe969ced07fcadeef9fcdb1bc798640c946153fe83"
+        "376de1dd2a0e95efec90e5fe969ced07fcadeef9fcdb1bc798640c946153fe83",
+        "9f9436916021bcc3c97eb68f3855f2f7a711571350a770b8659f09c94bcf6674"
       ],
       "source_labels": [
+        "poster",
         "poster"
       ],
       "rung": "haiku-low",
@@ -3840,12 +3843,15 @@
       "thumb": "thumbs/466d8ae72bf5.jpg",
       "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAACBf/EACAQAAEEAwADAQEAAAAAAAAAAAEAAhEhAxIxBBNBFGH/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/8QAGREAAwEBAQAAAAAAAAAAAAAAAAERMQIh/9oADAMBAAIRAxEAPwB5eGY9G2G0jMyluQd6o5jLmhridrqgEfJlNG2n+tNLGHTTrOxszw+RyFIeDy2txjd+pNwQpIyeBf1v9kRM8Kxk8g6iWxP0lF3OnyjHFnycjtiZ5AA+KLlCi2+US0H2NbNwVID3SeCq4pIhWf/Z",
       "source_files": [
-        "done/Screenshot 2026-11-17 at 10.29.45 PM.png"
+        "done/Screenshot 2026-11-17 at 10.29.45 PM.png",
+        "done/IMG-20261121-WA0009.jpg"
       ],
       "image_hashes": [
-        "466d8ae72bf59864124a760d42095a3f61360238509a4eb2f8d2e85346376357"
+        "466d8ae72bf59864124a760d42095a3f61360238509a4eb2f8d2e85346376357",
+        "0b3d9240f5f43c48430aacda67b38f8e1cfa91cfac27bc82b122dd4f7dbbcff3"
       ],
       "source_labels": [
+        "poster",
         "poster"
       ],
       "rung": "haiku-low",
@@ -4946,6 +4952,176 @@
       ],
       "rung": "sonnet-medium",
       "added": "2026-11-20"
+    },
+    {
+      "id": "49117b78f292",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Kino Eye Film Festival",
+      "category": "Film",
+      "organiser": "Progressive Artists' League",
+      "description": "A three-day film festival marking the 109th anniversary of the Great October Revolution, screening Soviet classics such as October: Ten Days That Shook the World, Arsenal, Sentimental Romance and Sixth Part of the World, alongside Ciné-tracts of our times. Each screening is followed by a discussion.",
+      "details": null,
+      "date": "2026-11-20",
+      "end_date": "2026-11-22",
+      "start_time": null,
+      "end_time": null,
+      "venue": "Studio Montage, 267, Pocket B, Sukhdev Vihar, Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Screening times: 20 Nov at 3 PM; 21 Nov at 11 AM, 3 PM and 4 PM; 22 Nov from 11 AM to 3 PM. Registration is by QR code on the poster. Contact: 70382 03920. Nearest metro station: Sukhdev Vihar (Magenta Line).",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/67d7d3d1360e.jpg",
+      "thumb": "thumbs/67d7d3d1360e.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUCAwYE/8QAKRAAAgEDAgQFBQAAAAAAAAAAAQIDAAQREjEFEyEiBkFRcXIzNLHB0f/EABYBAQEBAAAAAAAAAAAAAAAAAAIEBf/EABwRAAICAwEBAAAAAAAAAAAAAAABAgMREkFRof/aAAwDAQACEQMRAD8AQwWZ5K64gzevMxRJadmBFpY7HmZp3Hwm75SARFsqNiPSoS8MvYAJHhOkH3qfeRpKih9+mentHMhK6Qp2GaKfzRxMUZCwyvUAZwaKSmwSprTwaS0mV4wiN3RqobcdcVDjlw9tYpMkgVlkByD1xgj9irrX6Y+K/ilXjH7WD5fyn0jSyc9zPDcmOZlSNnQFgD5+ecUUnfce1FBNeFUqmnjY/9k=",
+      "source_files": [
+        "done/IMG-20261121-WA0003.jpg"
+      ],
+      "image_hashes": [
+        "67d7d3d1360ef77f738858154bc83109f54b1505791515d013ffeb8edddf2212"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-high",
+      "added": "2026-11-21"
+    },
+    {
+      "id": "7aa37043e464",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Who Gets to Vote, Who Gets the Vote",
+      "category": "Talks",
+      "organiser": "Karwaan Baithak",
+      "description": "A conversation with Dr. Moggallan Bharti, Assistant Professor at Dr. B. R. Ambedkar University Delhi, on the Constitution, political representation, and the intersections of caste, class and gender in democracy.",
+      "details": null,
+      "date": "2026-11-21",
+      "end_date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "venue": "Arthshila Delhi, Okhla",
+      "registration_link": "https://forms.gle/wAFhqb2Xv8iHswub6",
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/fae512819591.jpg",
+      "thumb": "thumbs/fae512819591.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQCAwUG/8QALhAAAgEDAAYIBwAAAAAAAAAAAQIRAAMEBRITIjFBBiEjMjRCUdFSYXFzocHw/8QAGAEAAgMAAAAAAAAAAAAAAAAAAgMAAQT/xAAZEQADAQEBAAAAAAAAAAAAAAAAARECAyH/2gAMAwEAAhEDEQA/AN4s4vMCzasmYLevKmVQNbMM5DCN4maq2SsW7NJJk7xmktL42U+Has4cqDchwrcvagfgzKWnBoRjyjgseMsSxoqOicfIxsQ2si6twq51W47v9NFQpqOUmWsaxO0tz8yPel8vHXMKi1dgoPI3V+DXOP3z9a1Oj3i7v2/2KFaH64zNpfa0betgjaORPxGitmiiM5//2Q==",
+      "source_files": [
+        "done/IMG-20261121-WA0004.jpg"
+      ],
+      "image_hashes": [
+        "fae512819591f176b956221914d675eb7d4e9b2b583f164c79f99d20719158a4"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-21"
+    },
+    {
+      "id": "40fd7d0c6bc2",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "K. K. Mandal Memorial Concert",
+      "category": "Music",
+      "organiser": "Krittika Cultural Trust",
+      "description": "An evening of Indian classical music in memory of K. K. Mandal, with flute and vocal recitals, tabla and harmonium accompaniment, and Vidushi Manjushree Chatterjee as guest of honour.",
+      "details": null,
+      "date": "2026-11-21",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "Amaltas Auditorium, Gate 3, India Habitat Centre, Lodhi Road, New Delhi-110003",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Free entry. Contact: 9910965233.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/bf2499b4c1fb.jpg",
+      "thumb": "thumbs/bf2499b4c1fb.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAmEAACAQQABQQDAAAAAAAAAAABAgMABBEhBRITMVEiQXGRscHR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAZEQADAQEBAAAAAAAAAAAAAAAAARECIXH/2gAMAwEAAhEDEQA/ALporgMzdaELsjmTYH3ul27ySyAdaLA2QYiufgn3rb6GWS+hIwYtBs487+P3Tb+1Bt82yRJJnuUGCPqosqylLZsfD4JwXuIVd845jkZFFVWilbaMHvy77aPjVFUeAkl5LFBcQySFsE40Ccb9/FKeBH4jO3UmUuhXOcKNAaNdXasZSqyOi69K4x+KTyONieXPyP5QYTigzRfw22NhaiBSXAJOWPaiu7VmaBeZixGsnuaKbocP/9k=",
+      "source_files": [
+        "done/IMG-20261121-WA0005.jpg"
+      ],
+      "image_hashes": [
+        "bf2499b4c1fb3cd37cd5a6674814fe5d3a5b6c19abd1903f9cb292675ac4293d"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-21"
+    },
+    {
+      "id": "f9a765405b98",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "SAM at 45th India International Trade Fair",
+      "category": "Festivals",
+      "organiser": null,
+      "description": "Performances at the 45th India International Trade Fair, including the fusion band Eternal Bliss, the dance troupe Nritya Darpan by Moksh, and a guest talk by a member of DJJS.",
+      "details": null,
+      "date": "2026-11-21",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Amphitheatre 2, Opp. Hall No. 3, Bharat Mandapam, Pragati Maidan, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Entry free.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/526edbe52c38.jpg",
+      "thumb": "thumbs/526edbe52c38.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIEBQP/xAAjEAACAgICAQQDAAAAAAAAAAABAgADBBESMSETFCJRQWGh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAIB/8QAGBEBAQEBAQAAAAAAAAAAAAAAAAERIUH/2gAMAwEAAhEDEQA/AMBcJrsSrhSoLAHmEbcrPR7Wxka1q368oRsSxjYztWjeu48BuIJ1xk7qEyTXrlv77Ookqqz3yLm1zdviNDf4ERlVmu4qxJP77iMTq7gXsa2rYBgOj1/Z39Xh8wpJH0RESt8L2YyrrHusLufJiImaP//Z",
+      "source_files": [
+        "done/IMG-20261121-WA0011.jpg"
+      ],
+      "image_hashes": [
+        "526edbe52c385cf48117a13aacc084a76ac3e7a9df816328ee4a7d75cf794e58"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-21"
+    },
+    {
+      "id": "cc18b13a3780",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "दिल्ली हिंदी साहित्य सम्मेलन की मासिक कवि गोष्ठी",
+      "category": "Literature",
+      "organiser": "Delhi Hindi Sahitya Sammelan",
+      "description": "A monthly poetry gathering (kavi goshthi) of the Delhi Hindi Sahitya Sammelan, compered by Dr. Ounkar Tripathi.",
+      "details": null,
+      "date": "2026-11-21",
+      "end_date": null,
+      "start_time": "15:00",
+      "end_time": "17:00",
+      "venue": "31, North Complex, Ramakrishna Ashram Marg, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Nearest metro: Ramakrishna Ashram Marg (Blue Line). Compere contact: 9953631374.",
+      "recurrence": "monthly",
+      "recurring": true,
+      "poster": "posters/ee95bd4a68e5.jpg",
+      "thumb": "thumbs/ee95bd4a68e5.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQCAwUG/8QAJxAAAgEDAwMDBQAAAAAAAAAAAQIDAAQREiExBRNhFEFRInGRodH/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQID/8QAGhEBAQADAQEAAAAAAAAAAAAAAQACESExUf/aAAwDAQACEQMRAD8A6hrrTkenmJG2QnP2paymkRpRKrycEaIz/ajd21w933I5yQVGI9RGnzsd6TXp94hJWUjcknURjxzWap4btgx+20sgkGrtunh1waKhbI0VtEkkpmYLu596Kuh95LyTTpMWFlOwAxkMuCPzS8PUJJ1dYbO4Y8n6l960LiRhGNJx87c1SjMjHScb/Ap7IMV7WW7StEO7DJGw2w5BP6oq5mOaKJX/2Q==",
+      "source_files": [
+        "done/IMG-20261121-WA0013.jpg"
+      ],
+      "image_hashes": [
+        "ee95bd4a68e581e57f300cdd9a2f54f270b13725101ccec466d7ca8109969e7c"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-21"
     }
   ]
 }

@@ -1636,5 +1636,54 @@
     "event_id": "c5454d05bca1",
     "title": "Triveni This Weekend",
     "processed": "2026-11-20"
+  },
+  "67d7d3d1360ef77f738858154bc83109f54b1505791515d013ffeb8edddf2212": {
+    "file": "IMG-20261121-WA0003.jpg",
+    "outcome": "published",
+    "event_id": "49117b78f292",
+    "title": "Kino Eye Film Festival",
+    "processed": "2026-11-21"
+  },
+  "fae512819591f176b956221914d675eb7d4e9b2b583f164c79f99d20719158a4": {
+    "file": "IMG-20261121-WA0004.jpg",
+    "outcome": "published",
+    "event_id": "7aa37043e464",
+    "title": "Who Gets to Vote, Who Gets the Vote",
+    "processed": "2026-11-21"
+  },
+  "bf2499b4c1fb3cd37cd5a6674814fe5d3a5b6c19abd1903f9cb292675ac4293d": {
+    "file": "IMG-20261121-WA0005.jpg",
+    "outcome": "published",
+    "event_id": "40fd7d0c6bc2",
+    "title": "K. K. Mandal Memorial Concert",
+    "processed": "2026-11-21"
+  },
+  "9f9436916021bcc3c97eb68f3855f2f7a711571350a770b8659f09c94bcf6674": {
+    "file": "IMG-20261121-WA0007.jpg",
+    "outcome": "duplicate_event",
+    "event_id": "221dabe74ab4",
+    "title": "Standing at Eternity",
+    "processed": "2026-11-21"
+  },
+  "0b3d9240f5f43c48430aacda67b38f8e1cfa91cfac27bc82b122dd4f7dbbcff3": {
+    "file": "IMG-20261121-WA0009.jpg",
+    "outcome": "duplicate_event",
+    "event_id": "d826e9f42331",
+    "title": "Shrungaram featuring Madalasa",
+    "processed": "2026-11-21"
+  },
+  "526edbe52c385cf48117a13aacc084a76ac3e7a9df816328ee4a7d75cf794e58": {
+    "file": "IMG-20261121-WA0011.jpg",
+    "outcome": "published",
+    "event_id": "f9a765405b98",
+    "title": "SAM at 45th India International Trade Fair",
+    "processed": "2026-11-21"
+  },
+  "ee95bd4a68e581e57f300cdd9a2f54f270b13725101ccec466d7ca8109969e7c": {
+    "file": "IMG-20261121-WA0013.jpg",
+    "outcome": "published",
+    "event_id": "cc18b13a3780",
+    "title": "दिल्ली हिंदी साहित्य सम्मेलन की मासिक कवि गोष्ठी",
+    "processed": "2026-11-21"
   }
 }
