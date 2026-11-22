@@ -5616,6 +5616,145 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-21"
+    },
+    {
+      "id": "1c5204ee3149",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "2nd Annual Day Celebration, Saatsur Music Academy",
+      "category": "Music",
+      "organiser": "Saat Sur Music Academy",
+      "description": "An annual day celebration by Saatsur Music Academy showcasing its students' musical performances. The poster shows young students with vocal, guitar, harmonium, keyboard and tabla.",
+      "details": null,
+      "date": "2026-11-29",
+      "end_date": null,
+      "start_time": "10:00",
+      "end_time": "13:30",
+      "venue": "LTG Auditorium, Mandi House, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/3070e21cf753.jpg",
+      "thumb": "thumbs/3070e21cf753.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAbABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAQBAwIFBv/EACUQAAICAgIABQUAAAAAAAAAAAECAxEABBIhBSIxQVETQ2Khsf/EABUBAQEAAAAAAAAAAAAAAAAAAAMC/8QAGhEAAgMBAQAAAAAAAAAAAAAAAAECESETIv/aAAwDAQACEQMRAD8A6LUiEcPNjXl9/bI1XeR5FlYMCTQyYphJDTsUarIPxdf3LAjI1s3Eel+mHGqKld6a/Yh4ykMLP4isMvmm5yngvIDqyPjDAcVYym6EW0diWSVmm+m5cqFB+3fWZvFuzR+cItPYV5bB7v8AWX+HTSSKyu1gVWOHruz18m8Zb6DeYI6uvtLGebMSWJsS4YvJsTMQTIbIwwuyL5s//9k=",
+      "source_files": [
+        "done/IMG-20261122-WA0004.jpg"
+      ],
+      "image_hashes": [
+        "3070e21cf7532d98885d9f9ad3f31114e468a100294577774866f60cb6c7478b"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-22"
+    },
+    {
+      "id": "c5e81730da09",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "10 years musical journey of Swarchhanda",
+      "category": "Music",
+      "organiser": "Swarchhanda",
+      "description": "A musical evening marking ten years of Swarchhanda, with special performances by Ms Shama Rahman, singing Tagore and Panchakabi songs, and Shri Srijan Chatterjee, singing Swarnajuger gaan in Bangla and Hindi.",
+      "details": null,
+      "date": "2026-12-06",
+      "end_date": null,
+      "start_time": "17:00",
+      "end_time": "21:00",
+      "venue": "Vedic Centre, Arya Samaj Auditorium, C Block, Near Durga Bari, Greater Kailash 1",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Nearest metro station is Kailash Colony Metro Station.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/190c9afd2803.jpg",
+      "thumb": "thumbs/190c9afd2803.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEA//EACgQAAICAQIEBQUAAAAAAAAAAAECABEDISIEEhQyMUFRYfAFEzNxsf/EABcBAQEBAQAAAAAAAAAAAAAAAAADAQL/xAAaEQEAAgMBAAAAAAAAAAAAAAAAARECEhMh/9oADAMBAAIRAxEAPwDX77dOmHlBRTei7r+XF7q2ML8yJMmdmOlX6AR+ubtYopvQHQmStfnKzpMmQBtq35GEzT6onKBkS2GljwhN8OeQdBgyFEUU3ca1r09pLxXBjiM2Vsg2ubBBplPwf2V5vyt+4r9qxTjaWLqhYkqov2hGbxEILl//2Q==",
+      "source_files": [
+        "done/IMG-20261122-WA0005.jpg"
+      ],
+      "image_hashes": [
+        "190c9afd2803a5e92f6cd30e9f9488c6bf4c433418ba425f6e16c634aa950112"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-22"
+    },
+    {
+      "id": "ec40e4344c7e",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Bengal Association World Music Concert 2026",
+      "category": "Music",
+      "organiser": "Bengal Association, New Delhi",
+      "description": "The 3rd edition of the Bengal Association World Music Concert, featuring performances by the Delhi University Cultural Council, Sima Ghosh with her team paying tribute to Teejan Bai, the Niazi Brothers performing Qawwali and Sufi music, the Indian Navy Symphonic Band, a tribute to Annapurna Devi with Arup Ratan Mukherjee on sitar, and Bauls from Bengal with Rina Das Baulani and her team.",
+      "details": null,
+      "date": "2026-11-28",
+      "end_date": "2026-11-29",
+      "start_time": "16:00",
+      "end_time": null,
+      "venue": "Meghdoot Amphitheatre, Sangeet Natak Akademi, Rabindra Bhavan, Copernicus Marg, near Mandi House, New Delhi 110001",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "The concert is held in support of Ankur, a school run by Bengal Association, Delhi, for underprivileged children.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/d9d61199a4fe.jpg",
+      "thumb": "thumbs/d9d61199a4fe.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAIEBQED/8QAJRAAAQMEAAUFAAAAAAAAAAAAAQACEQMEEiEUMkFRgSIxQpGh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAMB/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEh/9oADAMBAAIRAxEAPwCjb3EMJDgMSMt78LRN5lbNxbz60ZkR+LOp2U03VrUtGJn1iQoZUWgQXA7kNEQfKiqlwmDiGsdE9o6Ir9W5t6bsbp2dUAS4Uzv6lE0x40KbW0y3Mta7mAd7rgs7cgku6n5IiNhUccoDpHcgIiJSP//Z",
+      "source_files": [
+        "done/IMG-20261122-WA0007.jpg",
+        "done/IMG-20261122-WA0006.jpg"
+      ],
+      "image_hashes": [
+        "d9d61199a4fe5746ce253f2053cc9753a50cd4a51d1b5dd81f036c679382ba0e",
+        "f96df922d546dd8b6299b3f3cc3f43007aaa88607d8f0825bacc76dd645b933f"
+      ],
+      "source_labels": [
+        "poster",
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-22"
+    },
+    {
+      "id": "3d024590f4a4",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Did I Really Do All This? Book Discussion",
+      "category": "Literature",
+      "organiser": "Museo Camera and TEBACC",
+      "description": "A book discussion on Did I Really Do All This?, the memoir of the late IPS officer Vijay Raman, with Vivek Tankha, Meeran Chadha Borwankar and moderator Dr Sabina Pillai. The Hindi edition Khaki Vardi ka Yoddha is also featured.",
+      "details": null,
+      "date": "2026-11-28",
+      "end_date": null,
+      "start_time": "17:00",
+      "end_time": "19:00",
+      "venue": "Museo Camera, Gurugram",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Entry is free and open to all, seating is first-come-first-served, and tea and refreshments will be served.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/f10f32786d5f.jpg",
+      "thumb": "thumbs/f10f32786d5f.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAIBBAUD/8QAJhAAAgEEAQMDBQAAAAAAAAAAAQIDAAQREjEFIVEicdEzQWGBof/EABcBAAMBAAAAAAAAAAAAAAAAAAECAwD/xAAYEQEBAQEBAAAAAAAAAAAAAAAAARExAv/aAAwDAQACEQMRAD8A3heMty8DSMX2yBjgeKVbxigYzZIYhtT4+1cZ4gt+ZNU9TZzkZ+eKqCBVikJaB8nGVPA8H8VO2qTzM3W7Zyl4iTIXOx7kYopOmxmO1CsMHNFPOEvVK9iJulk39C5Gumf7VJrBGheOOQqXK8LyFB+a235f3NKvP6oNqen5W1VNy+vbYjBPYUVNt9M+9FEH/9k=",
+      "source_files": [
+        "done/IMG-20261122-WA0008.jpg"
+      ],
+      "image_hashes": [
+        "f10f32786d5fbe948efffd703764b14bc5c211f57437b8f98dadb0ae0345f021"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-22"
     }
   ]
 }
