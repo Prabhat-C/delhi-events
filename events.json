@@ -5795,6 +5795,43 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-22"
+    },
+    {
+      "id": "e320fc3d42af",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "12th India International Dance and Music Festival",
+      "category": "Festivals",
+      "organiser": "Indian Council for Cultural Relations (ICCR)",
+      "description": "A celebration of cultures, traditions and artistic expressions through dance performances and musical traditions. The festival brings together artists from 13 countries.",
+      "details": "Get ready for a spectacular celebration of cultures, traditions and artistic expressions at the 12th India International Dance and Music Festival, organised by the Indian Council for Cultural Relations (ICCR).\nBringing together artists from 13 countries, the festival will celebrate the richness and diversity of global cultures through captivating dance performances and musical traditions.",
+      "date": "2026-12-04",
+      "end_date": "2026-12-06",
+      "start_time": "17:30",
+      "end_time": null,
+      "venue": "Central Park, Connaught Place, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Free entry.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/2cf4f132b150.jpg",
+      "thumb": "thumbs/2cf4f132b150.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAABQAGAgP/xAArEAABAwMDAgMJAAAAAAAAAAABAAIDBBESISIxBVEyQWEUJDNxgZGx0fD/xAAWAQEBAQAAAAAAAAAAAAAAAAACBAH/xAAaEQADAQEBAQAAAAAAAAAAAAAAAQIREiET/9oADAMBAAIRAxEAPwAZkfuLbOvccYa/dLUlKI+nSnxOnxZxxe5/WqPpox7G0tncNoOGYt+U+7F3SPihoJG8G/Clt+l2vlYZOcYyWCl7VrQ6pfvHz7+qk0Np6c0srMWRybQLXN73Ts3UaZtE2Js2TjuJtx2Hr5arKs8X92UePoEqia9ZJ28wVmqKKRwcIpSbam45UifIKW8yL60f/9k=",
+      "source_files": [
+        "done/Screenshot 2026-11-23 at 12.27.04 AM.png",
+        "done/Screenshot 2026-11-23 at 12.27.13 AM.png"
+      ],
+      "image_hashes": [
+        "2cf4f132b150042cd5a1453a21c61be03c42c0d88292adc6360a3d37db559270",
+        "c812caf406a062abea25e8c4b33b7002fc7e416223e6d12c3fc4c0c40dc6af6a"
+      ],
+      "source_labels": [
+        "poster",
+        "text_caption"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-23"
     }
   ]
 }
