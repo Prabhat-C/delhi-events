@@ -4809,7 +4809,7 @@
       "title": "शुरुआत से पहले",
       "category": "Theatre",
       "organiser": "Aahwan Theatre Group",
-      "description": "A play written by Pratap Sahgal and designed and directed by Ashok Nagar, performed by a cast of eight.",
+      "description": "A play written by Pratap Sahgal and designed and directed by Ashok Nagar, performed by Aahwan Theatre Group with a cast of seven.",
       "details": null,
       "date": "2026-11-23",
       "end_date": null,
@@ -4825,12 +4825,15 @@
       "thumb": "thumbs/03214b1b3eac.jpg",
       "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAECAwUEBv/EACYQAAICAQMDAwUAAAAAAAAAAAECAAMRBBJhBSExE3HBIjIzUWL/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8A89VYdVemULXse7btvYDjiW3UOgc3Vg+mcspsORkDEj0uyhNZUdUuyoA5YKSfE7+qajpr6ZzpDY19hG4OvkSgYbkM5KKFH6zmEbsHbIrC8CE0EqnVcAq3JJlzPWncZb+cmOj7R7n4lh+IJnMRn6cgcmEdn5G94RL/2Q==",
       "source_files": [
-        "done/IMG-20261120-WA0026.jpg"
+        "done/IMG-20261120-WA0026.jpg",
+        "done/IMG-20261122-WA0010.jpg"
       ],
       "image_hashes": [
-        "03214b1b3eacf20f40083c32e95c52c1cb91dabc216f30bd5a1f0427b67dc18f"
+        "03214b1b3eacf20f40083c32e95c52c1cb91dabc216f30bd5a1f0427b67dc18f",
+        "539d2ba08b2a9baef479cbe0d6275fcfea7f2bcb7bc528adc7973edc428080ff"
       ],
       "source_labels": [
+        "poster",
         "poster"
       ],
       "rung": "haiku-low",
@@ -5752,6 +5755,43 @@
       ],
       "source_labels": [
         "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-22"
+    },
+    {
+      "id": "549c6950c7f3",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Expert Talk: Wings Over the Aravalis by Preeti Anand",
+      "category": "Talks",
+      "organiser": "The Rewilders",
+      "description": "A talk by birder and wildlife photographer Preeti Anand on the diversity, behaviour and habitats of birds across the Aravali landscape, and the importance of bird conservation. It is part of the Expert Talk Series.",
+      "details": "Expert Talk Series – 10\nIn continuation of the Expert Talk Series, The Rewilders has scheduled the next session titled “Wings Over the Aravali”, exploring the fascinating diversity of birds found across the Aravali landscape, their ecological significance, behaviour, habitats, and the importance of bird conservation.\nPreeti Anand, a passionate birder and wildlife photographer, will deliver the talk. Preeti has documented close to 1,000 bird species across diverse landscapes of India.\nAn advocate of urban and backyard birding, she actively contributes to the conservation of green spaces in the Aravali and leads birding walks and other conservation initiatives.\nThis session will offer insights into the fascinating world of birds and the importance of conserving the green spaces that support their diversity.\nJoin us for an enriching evening to explore the avian diversity of the Aravali and develop a deeper appreciation for these fascinating winged inhabitants of our landscape.\nDate: 28 November 2026 (Saturday)\nTime: 5:30 PM\nRegistration: 9510001552\nHero MotoCorp maintains Aravali Biodiversity Park in collaboration with MCG, Gurugram, with ecological management support from The Rewilders.",
+      "date": "2026-11-28",
+      "end_date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "venue": "Aravali Biodiversity Park",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Registration is by phone number 9510001552 as stated in the caption.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/6430c3307bbe.jpg",
+      "thumb": "thumbs/6430c3307bbe.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAUBBgIDBP/EACcQAAEEAQIFBAMAAAAAAAAAAAEAAgMRBBIxEyEiMnIzQXGBksHR/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQID/8QAGxEAAwEBAAMAAAAAAAAAAAAAAAERAhIhMWH/2gAMAwEAAhEDEQA/AHEcjHSaL6vcFRUosE2fEf1K4MksnY9+pzQbITDHmbkzFjGyANHMkbIer6FGyWmOANA0EJdnZOrJdwzbW9N1vSErahLODL4/BcGMmo8jTTdIgkyRkT6GTtjfvbCNX0rLJ3u+Vm/1R4/pZ2Zhos3wV2phtFJ+BQrHB2faFPP0OT//2Q==",
+      "source_files": [
+        "done/IMG-20261122-WA0009.jpg",
+        "done/IMG_20261122_223733.jpg"
+      ],
+      "image_hashes": [
+        "6430c3307bbe8928db3004fe29f61b0fd73a52263df8d7c2c2ad23f925de958a",
+        "d854ab0b4b254dceb1884e7e4812671bd790581c41e383a2821c2009463992c6"
+      ],
+      "source_labels": [
+        "poster",
+        "text_caption"
       ],
       "rung": "haiku-low",
       "added": "2026-11-22"
