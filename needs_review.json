@@ -1,21 +1,6 @@
 {
   "review": [
     {
-      "id": "ed8db552e3ae",
-      "status": "held",
-      "title": "Yaadon Ki Sunehri Baarish",
-      "date": "2013-11-29",
-      "confidence": "high",
-      "reasons": [
-        "date 2013-11-29 is outside the sane window 2025-11-20 to 2028-11-20"
-      ],
-      "poster": "posters/57fd3c7171ce.jpg",
-      "thumb": "thumbs/57fd3c7171ce.jpg",
-      "source_files": [
-        "done/IMG-20261121-WA0031.jpg"
-      ]
-    },
-    {
       "id": "ab655346bf1d",
       "status": "held",
       "title": "Divya Pushpam",
