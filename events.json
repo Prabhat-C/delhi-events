@@ -5832,43 +5832,6 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-23"
-    },
-    {
-      "id": "1be483556b3a",
-      "status": "published",
-      "grouping_uncertain": false,
-      "title": "Se(w)cular Stitches: Constitution Day Stitching Circle",
-      "category": "Art",
-      "organiser": "Singhleton ke Saath",
-      "description": "A stitching circle to revisit and reflect on the Fundamental Rights in the Constitution 76 years after its adoption, and to imagine the rights we want for the future. Participants stitch their rights, hopes and demands through textile art.",
-      "details": "Se(w)cular Stitches: Constitution Day Special\n76 years after the adoption of our Constitution, where do we stand on our Fundamental Rights?\nWhat rights do we want for the future?\nJoin us for a stitching circle to revisit, reflect and imagine together. Let's stitch our rights, hopes and demands into being!\n\nThursday 26 November\n5–7 PM\nThe Community Library Project, South Ex 1\n\nMaterials will be provided, but feel free to bring your own.\n\nRegister using QR on poster. Pay what you can. All proceeds go to The Community Library Project (TCLP).\n\nAbout: Se(w)cular Stitches is a stitching circle series facilitated by Rafunaama and Singhleton... a space to think, create and connect through the power of textile art.",
-      "date": "2026-11-26",
-      "end_date": null,
-      "start_time": "17:00",
-      "end_time": "19:00",
-      "venue": "The Community Library Project, South Ex 1",
-      "registration_link": null,
-      "confidence": "high",
-      "notes": "Pay what you can; all proceeds go to The Community Library Project. Materials are provided, and you may bring your own. Only 2 slots left. Registration is via the link in the bio or the QR code on the poster.",
-      "recurrence": null,
-      "recurring": false,
-      "poster": "posters/4605e6352f5e.jpg",
-      "thumb": "thumbs/4605e6352f5e.jpg",
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQFAgP/xAAjEAACAgEDAwUAAAAAAAAAAAABAgARAyExQQQSkQUiI1Fh/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ANjoCzjJQF2JWA4IFeZL6cAUyggnUbSxUXuumu+ZxbYzv7jpsTE88i3kbXk8xA0OkcqHoAXW0oGRvH6YiUcWvavxpt9RESo//9k=",
-      "source_files": [
-        "done/Screenshot 2026-11-23 at 12.38.25 PM.png",
-        "done/Screenshot 2026-11-23 at 12.38.50 PM.png"
-      ],
-      "image_hashes": [
-        "4605e6352f5ee466ee267cef792c1a66f37e49d05e48022efb3b8bf210b24f45",
-        "15d7dca26afc3b3b7af96c0de59786f4b8b613cfb7df119a62645728846a32d6"
-      ],
-      "source_labels": [
-        "poster",
-        "text_caption"
-      ],
-      "rung": "haiku-low",
-      "added": "2026-11-23"
     }
   ]
 }
