@@ -4865,12 +4865,15 @@
       "thumb": "thumbs/44eb040e90d4.jpg",
       "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFBgT/xAAqEAACAQMDAgMJAAAAAAAAAAABAgMAERIEBUETIQYx8BUiMjNSYXGRwf/EABYBAQEBAAAAAAAAAAAAAAAAAAECA//EAB0RAAICAQUAAAAAAAAAAAAAAAABERITAiEiQWH/2gAMAwEAAhEDEQA/AF+3ZWZZZ5oYmQEAYnuDTxvWoY+7qYrcEobGuTa+nFI0ztjdccmRWFvwa5ECqXRSCtyQcByb01UmncFQeItWtwUhex7GxH9oqMfOiqppGEUo9NusMkg6GSsMSLqRa/FCbPqy72icAE2It5futJ9XrmnRfC3risbsFx3Mqdn1BN8HP37UVrYvliinIysnh//Z",
       "source_files": [
-        "done/IMG-20261120-WA0027.jpg"
+        "done/IMG-20261120-WA0027.jpg",
+        "done/IMG-20261124-WA0017.jpg"
       ],
       "image_hashes": [
-        "44eb040e90d46a9f61c54b42141c9c4f85da0fbb367219104641877505295165"
+        "44eb040e90d46a9f61c54b42141c9c4f85da0fbb367219104641877505295165",
+        "b5c49c534d3eb4ab7570d20bd33edaeee377024918a44bf9734cf2978eeff64e"
       ],
       "source_labels": [
+        "poster",
         "poster"
       ],
       "rung": "haiku-low",
@@ -6175,6 +6178,145 @@
       "source_labels": [
         "poster",
         "other"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "638601364367",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Tafteesh",
+      "category": "Theatre",
+      "organiser": null,
+      "description": "A play that investigates the truth hidden behind every face. Written by J. B. Priestley and directed by Sanjay Sahay.",
+      "details": null,
+      "date": "2026-12-04",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "Jawahar Bhawan, Dr. Rajendra Prasad Rd, Windsor Place, New Delhi- 110001",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/f31128bd1bed.jpg",
+      "thumb": "thumbs/f31128bd1bed.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAaABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQCAwUB/8QAJRAAAgEDBAEEAwAAAAAAAAAAAQIDAAQREiExQQUTIlHwFGSR/8QAGAEAAwEBAAAAAAAAAAAAAAAAAQIEAAP/xAAbEQEAAwADAQAAAAAAAAAAAAABAAIREjFRIf/aAAwDAQACEQMRAD8At/IRpSqRRsAoYlh8/eK4lys0cwEUbBCEbAJ3772HFKSmaOSeRApGgFQDgDbkilPHvcoWMzB4pjqwGAJb6DUxT5pKeXs0BaW8yJIIUGsZIHHNFTt19KIKVVTkkhTnuilbO9zFa+ShrcXTa0uEUaRsTzUF8f8AsRrp492KXtHYEAMQMdGr7iR9J97f2iqOQBpsaRI0iRTMFIXgmisRnYscsTv80UrR3udDM6n/2Q==",
+      "source_files": [
+        "done/IMG-20261124-WA0013.jpg"
+      ],
+      "image_hashes": [
+        "f31128bd1bed5cb23a32da4317b5fffcac705e1d68ad412b908aa63a77dcc6d9"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "69a78b228df2",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "AFD Ciné-Club: The Empire",
+      "category": "Film",
+      "organiser": "Alliance Française de Delhi",
+      "description": "A French science-fiction film directed by Bruno Dumont, set in a quiet fishing village on the Opal Coast of Northern France. A special baby is born there and unleashes a secret war between extraterrestrial forces of good and evil.",
+      "details": null,
+      "date": "2026-11-26",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "M.L Bhartia Auditorium, Alliance Française de Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Free entry, open to all. French movie with English subtitles.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/6136ec8844eb.jpg",
+      "thumb": "thumbs/6136ec8844eb.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAIFBgEDBP/EACMQAAICAgEEAgMAAAAAAAAAAAECAxEABBITITFhBRRBgcH/xAAYAQACAwAAAAAAAAAAAAAAAAAAAQIEBf/EABkRAAMBAQEAAAAAAAAAAAAAAAABAhESUf/aAAwDAQACEQMRAD8AscvykCdQAvcb8GPTJF4+lsfa1xLBIHQkgFgbyF2TJO/OGMvFKedO1UD3/Gbl3tTTA1pWkjNl7Cch3N+cTqSUTbeYTysGFqQR6wzki3dOJaO5C1m75jDDUHFeFNWbigX1XgYoUMe1/tqxMwcrG3gzrxav7eGKMMBn/9k=",
+      "source_files": [
+        "done/IMG-20261124-WA0014.jpg"
+      ],
+      "image_hashes": [
+        "6136ec8844ebb75c2cf82f3d832bfb7744c04b7104983310471c2db301d4b4a3"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-medium",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "f5e6e4660669",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "तारतूफ़ (Tartoof)",
+      "category": "Theatre",
+      "organiser": "Rajbhasha Vibhag",
+      "description": "A Hindi presentation of Molière's play Tartoof, with music, concept and direction by Anoop Trivedi, performed by staff of the National School of Drama.",
+      "details": null,
+      "date": "2026-11-28",
+      "end_date": null,
+      "start_time": "11:30",
+      "end_time": null,
+      "venue": "Abhimanch Sabhagar, National School of Drama, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/ad2a970398c0.jpg",
+      "thumb": "thumbs/ad2a970398c0.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQDBQYC/8QAKBAAAQMDAwMDBQAAAAAAAAAAAQACAwQRMRIhIgVBURMzcWFygaGx/8QAFwEBAQEBAAAAAAAAAAAAAAAAAwIBBP/EACARAAEDBAIDAAAAAAAAAAAAAAEAAhEDEiFRMTKRoeH/2gAMAwEAAhEDEQA/ANIyWJ8TpoSXgAmwJ/iXPUHgi9LPvgacqpjq3MmmAqPTjabNaOIwMnJOT+Ey3q0kkIljpyDvd5FtQxtdDB0mZ1EiZ0rmLaMcS2/Ym9kLOSdTqGvs6LfPK5QpsrnIb7CuwbUkUD6jqUhEbCyJ3ptIbxb4P1ITMkNQ6PRJKJWaTfVxJAJvjz28WSNL7R+4qKf3B8JTRHMpg251qXbWy0t4Znvhew2LSP2hdP7fCFppUzktXaA6Mx4+r//Z",
+      "source_files": [
+        "done/IMG-20261124-WA0015.jpg"
+      ],
+      "image_hashes": [
+        "ad2a970398c06bda4f6414889f15621a86b372b5999c68ce53a1629bec75c907"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "125afaab6b70",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Beyond Form: Def Col Art Night, In Conversation with Madhu Khanna",
+      "category": "Talks",
+      "organiser": "The Def Col Galleries",
+      "description": "An in-conversation session with Madhu Khanna, Oxford PhD scholar of Tantra, curator and author of Yantra, on Tantra, meditation and the practice of Sohan Qadri. It is set within the Beyond Form exhibition.",
+      "details": "Join us for an intimate evening with Madhu Khanna, scholar of Tantra (PhD, Oxford), curator and author of Yantra: The Tantric Symbol of Cosmic Unity, and founder of the Tantra Foundation.\n\nSet within our exhibition Beyond Form, the conversation explores Tantra, meditation and the practice of Sohan Qadri: how a contemplative practice becomes a way of making, and what it means to see abstraction as something felt as much as seen.\n\nCome for the conversation. Stay to look at the works again.\n\nWednesday, 25 November\nConversation: 6:30 to 7:00 PM\nDef Col Art Night: 6:00 to 9:00 PM\nKalakaar Art Salon, D-64, Second Floor, Block D, Defence Colony, New Delhi\n\nSupported by SOBER, India's first non-alcoholic alternatives brand.",
+      "date": "2026-11-25",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": "19:00",
+      "venue": "Kalakaar Art Salon, D-64, Second Floor, Block D, Defence Colony, New Delhi",
+      "registration_link": "https://luma.com/2qm2yxhv",
+      "confidence": "high",
+      "notes": "Def Col Art Night runs 6:00 to 9:00 PM; the conversation is 6:30 to 7:00 PM.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/dbef89b9c487.jpg",
+      "thumb": "thumbs/dbef89b9c487.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgMF/8QAIhAAAgIBBAIDAQAAAAAAAAAAAQIAEQMEEiExBUEGcZLB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwEC/8QAGhEBAAMAAwAAAAAAAAAAAAAAAAESEwIxQf/aAAwDAQACEQMRAD8ATHyDU5MZQafGqt2QtWfsSyed1OJBWJGoEeySPfqK+O0WLU4k3biXuyCRs5oVElKheE5qr3GPfwOUduk3n8pasmFSRxRA4hOM1bj/ACE1eWMuLbDqM+DFwzqh62kCUZlsAq/6mJ7gYR0k0ahIHUJUf//Z",
+      "source_files": [
+        "done/IMG-20261124-WA0016.jpg",
+        "done/IMG_20261124_210229.jpg"
+      ],
+      "image_hashes": [
+        "dbef89b9c487b25efa3ac2a05db199791a49d81510f033bca0d824eac97941a4",
+        "142c9670188b02ca62dad1052a344505cf85e70a62a01e4c2e08df33c151238b"
+      ],
+      "source_labels": [
+        "poster",
+        "text_caption"
       ],
       "rung": "haiku-low",
       "added": "2026-11-24"

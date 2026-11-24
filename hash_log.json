@@ -1965,5 +1965,47 @@
     "event_id": "677bf628ac63",
     "title": "The Game of Dice",
     "processed": "2026-11-24"
+  },
+  "f31128bd1bed5cb23a32da4317b5fffcac705e1d68ad412b908aa63a77dcc6d9": {
+    "file": "IMG-20261124-WA0013.jpg",
+    "outcome": "published",
+    "event_id": "638601364367",
+    "title": "Tafteesh",
+    "processed": "2026-11-24"
+  },
+  "6136ec8844ebb75c2cf82f3d832bfb7744c04b7104983310471c2db301d4b4a3": {
+    "file": "IMG-20261124-WA0014.jpg",
+    "outcome": "published",
+    "event_id": "69a78b228df2",
+    "title": "AFD Ciné-Club: The Empire",
+    "processed": "2026-11-24"
+  },
+  "ad2a970398c06bda4f6414889f15621a86b372b5999c68ce53a1629bec75c907": {
+    "file": "IMG-20261124-WA0015.jpg",
+    "outcome": "published",
+    "event_id": "f5e6e4660669",
+    "title": "तारतूफ़ (Tartoof)",
+    "processed": "2026-11-24"
+  },
+  "dbef89b9c487b25efa3ac2a05db199791a49d81510f033bca0d824eac97941a4": {
+    "file": "IMG-20261124-WA0016.jpg",
+    "outcome": "published",
+    "event_id": "125afaab6b70",
+    "title": "Beyond Form: Def Col Art Night, In Conversation with Madhu Khanna",
+    "processed": "2026-11-24"
+  },
+  "142c9670188b02ca62dad1052a344505cf85e70a62a01e4c2e08df33c151238b": {
+    "file": "IMG_20261124_210229.jpg",
+    "outcome": "published",
+    "event_id": "125afaab6b70",
+    "title": "Beyond Form: Def Col Art Night, In Conversation with Madhu Khanna",
+    "processed": "2026-11-24"
+  },
+  "b5c49c534d3eb4ab7570d20bd33edaeee377024918a44bf9734cf2978eeff64e": {
+    "file": "IMG-20261124-WA0017.jpg",
+    "outcome": "duplicate_event",
+    "event_id": "8904fd21620c",
+    "title": "Daastan-e-Yusuf",
+    "processed": "2026-11-24"
   }
 }
