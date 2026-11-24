@@ -6286,6 +6286,40 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-24"
+    },
+    {
+      "id": "956dd4754385",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "The Last Viking",
+      "category": "Film",
+      "organiser": null,
+      "description": "Opening film of the 31st EUFF, directed by Anders Thomas Jensen and starring Mads Mikkelsen and Nikolaj Lie Kaas. The Danish film follows an unusual pairing on a quest in the forest.",
+      "details": null,
+      "date": "2026-11-25",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "Stein Auditorium, India Habitat Centre",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "First come, first served.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/e077829dec95.jpg",
+      "thumb": "thumbs/e077829dec95.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAIDAQQF/8QAJBAAAQQBAwMFAAAAAAAAAAAAAQACAxESBCExFDNRQWGBkdH/xAAYAQACAwAAAAAAAAAAAAAAAAACAwEEBf/EABkRAQEBAQEBAAAAAAAAAAAAAAEAEQIDBP/aAAwDAQACEQMRAD8A52h0h1M4jBbZBIyujtxsq6iCQN3ZGQL4cdkkc/TxZsAL7poPkjZQiM8RylY9rHCjfGVqenGvfR2nqBIWUUKstGVxHFoTctDKcb20c2Nk8BxP2qukYB2Yj8n9WoOVn0S02R1yLrM59OIsH3CFNCLY9b//2Q==",
+      "source_files": [
+        "done/IMG-20261125-WA0000.jpg"
+      ],
+      "image_hashes": [
+        "e077829dec95b95d7be96a55e7027af6135a72e668f0e10d01827129317051ee"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-25"
     }
   ]
 }
