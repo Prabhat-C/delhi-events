@@ -1930,5 +1930,40 @@
     "event_id": "6391459c14ae",
     "title": "A Gala Musical Event by Utso",
     "processed": "2026-11-23"
+  },
+  "301498c0c863831eec9c15dca09635778ffb9c5ae10618a02e0ad80489ba1574": {
+    "file": "IMG-20261124-WA0000.jpg",
+    "outcome": "published",
+    "event_id": "c63da3ca9b85",
+    "title": "Gandhi Speaks Today",
+    "processed": "2026-11-24"
+  },
+  "f9be3dd523b7a7809ce0153af631b1ba63ea1a63195e098eae6454a07f1c3e81": {
+    "file": "IMG-20261124-WA0001.jpg",
+    "outcome": "published",
+    "event_id": "e8b28c925f89",
+    "title": "The U.S. Midterms: Implications and Complications",
+    "processed": "2026-11-24"
+  },
+  "3f3d7808c15e81e5f70f018981c88e73b4926440153ed1bc55058772a74f5c4c": {
+    "file": "IMG-20261124-WA0002.jpg",
+    "outcome": "published",
+    "event_id": "804dc0dbdc51",
+    "title": "Inaugural Screening: Meat (Κρέας) - Cine Hellas India",
+    "processed": "2026-11-24"
+  },
+  "405afadec626bc0e3fcc1f6ee8a26dfa898929b38e55cd6e43d5a1c607646369": {
+    "file": "IMG-20261124-WA0003.jpg",
+    "outcome": "published",
+    "event_id": "804dc0dbdc51",
+    "title": "Inaugural Screening: Meat (Κρέας) - Cine Hellas India",
+    "processed": "2026-11-24"
+  },
+  "4a5e729a4d72d532ee2034e048344211ed6b64a96634b823210cd96e4c8a2b77": {
+    "file": "IMG-20261124-WA0004.jpg",
+    "outcome": "duplicate_event",
+    "event_id": "677bf628ac63",
+    "title": "The Game of Dice",
+    "processed": "2026-11-24"
   }
 }

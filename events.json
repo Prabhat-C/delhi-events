@@ -2920,12 +2920,15 @@
       "thumb": "thumbs/b18f8476dd5f.jpg",
       "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAbABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUCAwYE/8QAKBAAAgEDAwMCBwAAAAAAAAAAAQIDAAQRBSExEkFRBhMiM3GBkcHx/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAD/8QAGhEAAwADAQAAAAAAAAAAAAAAAAERAxIhMf/aAAwDAQACEQMRAD8AYadYWb6Tau9rbNI0eWZ1GSfNWpp9kW3tLXY4OVUfqrdKjLaPacfKGxqcM0ctzJAjAyR8jB+n3oEyvqOGK21QpbxrEnQp6UGBnFFT9Rq8+rSe2jt0KqMek8gUUxgMrDUYoZHSYtCHVRlduMjAHb+Vw29wwu7l4VkEchKrh+AR381n3upllBEh+E7Z371MajddLj3BuCDhRx+K1WvpVjS9MokQTQYIjXAVu2NsnufJopfBdTtHvK22w34GKKnkj4wh/9k=",
       "source_files": [
-        "done/IMG-20261114-WA0016.jpg"
+        "done/IMG-20261114-WA0016.jpg",
+        "done/IMG-20261124-WA0004.jpg"
       ],
       "image_hashes": [
-        "b18f8476dd5ffc904428c195400f16ce9a3513dcce908134e0641092923da4f1"
+        "b18f8476dd5ffc904428c195400f16ce9a3513dcce908134e0641092923da4f1",
+        "4a5e729a4d72d532ee2034e048344211ed6b64a96634b823210cd96e4c8a2b77"
       ],
       "source_labels": [
+        "poster",
         "poster"
       ],
       "rung": "haiku-low",
@@ -6070,6 +6073,111 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-23"
+    },
+    {
+      "id": "c63da3ca9b85",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Gandhi Speaks Today",
+      "category": "Talks",
+      "organiser": "India International Centre",
+      "description": "Sudhir Chandra, former Professor of History, in conversation with journalist and author Ashutosh Bhardwaj on Gandhi.",
+      "details": null,
+      "date": "2026-11-28",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "India International Centre, Conference Room II, 40, Max Mueller Marg, New Delhi 110003",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/301498c0c863.jpg",
+      "thumb": "thumbs/301498c0c863.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAwX/xAAlEAACAQMDAgcAAAAAAAAAAAABAgADBBETITFBUQUSFCOBkdH/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/EABoRAAMAAwEAAAAAAAAAAAAAAAABEQISIVH/2gAMAwEAAhEDEQA/AEKvgwo2wr4dlPJPAGOZzXAKBtPp3P7Ky7uE9AtMA6Yo4YEbnbHeStslJqINVnDcYVAR9xNp1kPHwWhNbnT1Paz5cdQBv8Qip1UNqH//2Q==",
+      "source_files": [
+        "done/IMG-20261124-WA0000.jpg"
+      ],
+      "image_hashes": [
+        "301498c0c863831eec9c15dca09635778ffb9c5ae10618a02e0ad80489ba1574"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "e8b28c925f89",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "The U.S. Midterms: Implications and Complications",
+      "category": "Talks",
+      "organiser": "India International Centre",
+      "description": "A discussion on the implications and complications of the U.S. midterm elections, with speakers Amb. Ranjan Mathai and Manish Chand, chaired by Amb. K. P. Fabian.",
+      "details": null,
+      "date": "2026-11-28",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "India International Centre, Conference Room I, 40, Max Mueller Marg, New Delhi 110003",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/f9be3dd523b7.jpg",
+      "thumb": "thumbs/f9be3dd523b7.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBf/EACEQAAIBAgYDAAAAAAAAAAAAAAECAAMRBBMhQVFhEjGR/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAD/8QAFxEBAAMAAAAAAAAAAAAAAAAAAAECEv/aAAwDAQACEQMRAD8AxUwoZAbjXkxjhgx2Fu7R2q0GpKuW4dVtcMACfkgNdzNtLBa1HLe2noGEtWdHZfBAoCgHs8wjFhNH/9k=",
+      "source_files": [
+        "done/IMG-20261124-WA0001.jpg"
+      ],
+      "image_hashes": [
+        "f9be3dd523b7a7809ce0153af631b1ba63ea1a63195e098eae6454a07f1c3e81"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "804dc0dbdc51",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Inaugural Screening: Meat (Κρέας) - Cine Hellas India",
+      "category": "Film",
+      "organiser": "Embassy of Greece, New Delhi",
+      "description": "Inaugural screening of \"Meat\" (Κρέας), directed by Dimitris Nakos (2024), launching Cine Hellas India, a Greek movie nights series. The film is 104 minutes, in Greek with English subtitles.",
+      "details": null,
+      "date": "2026-11-24",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": "19:44",
+      "venue": "Embassy of Greece, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Free admission.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/405afadec626.jpg",
+      "thumb": "thumbs/405afadec626.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAtABQDASIAAhEBAxEB/8QAGQABAQEBAQEAAAAAAAAAAAAABAAGAwIH/8QAKhAAAQQBAgQFBQEAAAAAAAAAAQACAxEEEiEFEzFBIlFhocEyM0JxgZH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAQD/xAAaEQADAQEBAQAAAAAAAAAAAAAAARECEjHw/9oADAMBAAIRAxEAPwDLllA2YzsKOsmtlzaS11j2XvTq5ekGz599ymRwvklx+a3wFzWDfqEkRgnuLzdBvpal9Gi4Nw6JukY0I3/IWfdSPQoYNrItIm5o1avteQpdIJWnJioabkbZJvuhabP0ua0ULIutvRMxuHZORE2WDlOs0AXUSe3X9KLSXpXm+GzdkRAkuyHuJ38MdhSyBxOKsJAx5a9HX8qTuQ86+oFgMRa5sgaWnUOmx/1IGfkxmMxysHLNt2Ao/PVCJsbq8kYmatCZM3Jc635Uhd3p1hSL/FKmp//Z",
+      "source_files": [
+        "done/IMG-20261124-WA0003.jpg",
+        "done/IMG-20261124-WA0002.jpg"
+      ],
+      "image_hashes": [
+        "405afadec626bc0e3fcc1f6ee8a26dfa898929b38e55cd6e43d5a1c607646369",
+        "3f3d7808c15e81e5f70f018981c88e73b4926440153ed1bc55058772a74f5c4c"
+      ],
+      "source_labels": [
+        "poster",
+        "other"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-24"
     }
   ]
 }
