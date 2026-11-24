@@ -5080,40 +5080,6 @@
       "added": "2026-11-21"
     },
     {
-      "id": "cc18b13a3780",
-      "status": "published",
-      "grouping_uncertain": false,
-      "title": "दिल्ली हिंदी साहित्य सम्मेलन की मासिक कवि गोष्ठी",
-      "category": "Literature",
-      "organiser": "Delhi Hindi Sahitya Sammelan",
-      "description": "A monthly poetry gathering (kavi goshthi) of the Delhi Hindi Sahitya Sammelan, compered by Dr. Ounkar Tripathi.",
-      "details": null,
-      "date": "2026-11-21",
-      "end_date": null,
-      "start_time": "15:00",
-      "end_time": "17:00",
-      "venue": "31, North Complex, Ramakrishna Ashram Marg, New Delhi",
-      "registration_link": null,
-      "confidence": "high",
-      "notes": "Nearest metro: Ramakrishna Ashram Marg (Blue Line). Compere contact: 9953631374.",
-      "recurrence": "monthly",
-      "recurring": true,
-      "poster": "posters/ee95bd4a68e5.jpg",
-      "thumb": "thumbs/ee95bd4a68e5.jpg",
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQCAwUG/8QAJxAAAgEDAwMDBQAAAAAAAAAAAQIDAAQREiExBRNhFEFRInGRodH/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQID/8QAGhEBAQADAQEAAAAAAAAAAAAAAQACESExUf/aAAwDAQACEQMRAD8A6hrrTkenmJG2QnP2paymkRpRKrycEaIz/ajd21w933I5yQVGI9RGnzsd6TXp94hJWUjcknURjxzWap4btgx+20sgkGrtunh1waKhbI0VtEkkpmYLu596Kuh95LyTTpMWFlOwAxkMuCPzS8PUJJ1dYbO4Y8n6l960LiRhGNJx87c1SjMjHScb/Ap7IMV7WW7StEO7DJGw2w5BP6oq5mOaKJX/2Q==",
-      "source_files": [
-        "done/IMG-20261121-WA0013.jpg"
-      ],
-      "image_hashes": [
-        "ee95bd4a68e581e57f300cdd9a2f54f270b13725101ccec466d7ca8109969e7c"
-      ],
-      "source_labels": [
-        "poster"
-      ],
-      "rung": "haiku-low",
-      "added": "2026-11-21"
-    },
-    {
       "id": "8cdc6f02d175",
       "status": "published",
       "grouping_uncertain": false,
