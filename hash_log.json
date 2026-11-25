@@ -2042,5 +2042,54 @@
     "event_id": "4a8dd984a71a",
     "title": "कोर्टमार्शल",
     "processed": "2026-11-25"
+  },
+  "eb8b303b6421df89dc273def91945c27ef53e2bb183d9fdb266619947bdedd9a": {
+    "file": "IMG-20261125-WA0008.jpg",
+    "outcome": "published",
+    "event_id": "5bf3eba47066",
+    "title": "प्रो. सुनीति कुमार चटर्जी स्मृति व्याख्यान: रामायण का सत्य और महाभारत का धर्म",
+    "processed": "2026-11-25"
+  },
+  "67e934532b6273649547931361ae4f6884db488c04ba896b23b8cbb5fa684e2f": {
+    "file": "IMG-20261125-WA0009.jpg",
+    "outcome": "published",
+    "event_id": "51a62127a8bf",
+    "title": "Lokmanthan: The Journey So Far Book Launch",
+    "processed": "2026-11-25"
+  },
+  "30d4777226acdd6107126f754fb1c62431cf0812284cb4cf2f4df84b2ebe7409": {
+    "file": "IMG-20261125-WA0012.jpg",
+    "outcome": "duplicate_event",
+    "event_id": "97123d6836e6",
+    "title": "आज कविता 45",
+    "processed": "2026-11-25"
+  },
+  "33e75a9289ceaae940c9a5ce36aa02499ed606baf019f642c38a8a20ce9fdd6a": {
+    "file": "IMG-20261125-WA0013.jpg",
+    "outcome": "duplicate_event",
+    "event_id": "f6e7e89ebe23",
+    "title": "Bazm-e-Munawwar: Ek Shaam Samvidhan ke Naam",
+    "processed": "2026-11-25"
+  },
+  "9ed698ce5662216edd5cac8790ac993f4ef6406299cadd540db65b5f53b504b1": {
+    "file": "IMG-20261125-WA0016.jpg",
+    "outcome": "published",
+    "event_id": "5c704631d35b",
+    "title": "Sand in Your Hair",
+    "processed": "2026-11-25"
+  },
+  "cec4e2409261b4f0887641876191c7ed7d8771909d51179f30e9cefbc180fa4e": {
+    "file": "IMG-20261125-WA0017.jpg",
+    "outcome": "published",
+    "event_id": "844813a7018a",
+    "title": "Dražen",
+    "processed": "2026-11-25"
+  },
+  "0db4c1b2b75d2cf88c131bcbdfa81e5ba7d0fc71b7afc240342185faf8fd3ef5": {
+    "file": "IMG-20261125-WA0018.jpg",
+    "outcome": "held",
+    "event_id": "da78e56aa880",
+    "title": "Sirat",
+    "processed": "2026-11-25"
   }
 }

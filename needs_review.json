@@ -1,3 +1,37 @@
 {
-  "review": []
+  "review": [
+    {
+      "id": "da78e56aa880",
+      "status": "held",
+      "title": "Sirat",
+      "date": null,
+      "confidence": "low",
+      "reasons": [
+        "date missing or not YYYY-MM-DD: None",
+        "confidence is low",
+        "grouping uncertain: check whether these screenshots belong to one post",
+        "venue missing"
+      ],
+      "poster": "posters/0db4c1b2b75d.jpg",
+      "thumb": "thumbs/0db4c1b2b75d.jpg",
+      "source_files": [
+        "done/IMG-20261125-WA0018.jpg"
+      ]
+    },
+    {
+      "id": "844813a7018a",
+      "status": "published",
+      "title": "Dražen",
+      "date": "2026-11-26",
+      "confidence": "high",
+      "reasons": [
+        "possible duplicate of 'Sand in Your Hair' (5c704631d35b): same date and venue but different start time (16:30 and 18:30)"
+      ],
+      "poster": "posters/cec4e2409261.jpg",
+      "thumb": "thumbs/cec4e2409261.jpg",
+      "source_files": [
+        "done/IMG-20261125-WA0017.jpg"
+      ]
+    }
+  ]
 }
