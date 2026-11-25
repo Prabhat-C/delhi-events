@@ -6428,6 +6428,40 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-25"
+    },
+    {
+      "id": "4a8dd984a71a",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "कोर्टमार्शल",
+      "category": "Theatre",
+      "organiser": null,
+      "description": "A play titled Court Martial, written by Swadesh Deepak, directed by Arvind Gaur, with music by Dr Sangeeta Gaur.",
+      "details": null,
+      "date": "2026-11-29",
+      "end_date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "venue": "Triveni Kala Sangam, Mandi House, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Two shows on the same day, at 5 pm and 7 pm. Seating is first come, first served. Entry is free.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/aff0b15db038.jpg",
+      "thumb": "thumbs/aff0b15db038.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAaABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAgX/xAApEAABAwQBAQcFAAAAAAAAAAABAgMRAAQSMSFxBRMzQWGBwTJCUZHR/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQID/8QAGBEBAQADAAAAAAAAAAAAAAAAAAECEWH/2gAMAwEAAhEDEQA/AOBbu2jdq0XVP5mZH29BxqsJHZQ5yfPGlRv9VPatC5JbW8W4EplJIn21VJtmkWACVBT/AHpIcQDyAND8j1rO4dpR3SWUPFNvngAPr3PnRSlKKjKiSfWirk1A6vZKhbJU44CcoKcYnzB31pjToQy22GykNqcKYVPKgR/Kka8JHQfNak47Oj8UWlC62ppWKomJ4opt343sKKqB/9k=",
+      "source_files": [
+        "done/IMG-20261125-WA0007.jpg"
+      ],
+      "image_hashes": [
+        "aff0b15db038c8ae7dd99178034699638cb725b344811752386d7124329a45e5"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-medium",
+      "added": "2026-11-25"
     }
   ]
 }
