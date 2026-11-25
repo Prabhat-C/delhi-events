@@ -6470,40 +6470,6 @@
       "added": "2026-11-25"
     },
     {
-      "id": "5bf3eba47066",
-      "status": "published",
-      "grouping_uncertain": false,
-      "title": "प्रो. सुनीति कुमार चटर्जी स्मृति व्याख्यान: रामायण का सत्य और महाभारत का धर्म",
-      "category": "Talks",
-      "organiser": "Indira Gandhi National Centre for the Arts, Kalakosh Vibhag",
-      "description": "A memorial lecture in honour of Prof. Suniti Kumar Chatterji on the truth of the Ramayana and the dharma of the Mahabharata. Prof. Ambikadatta Sharma is the speaker, with Dr. Sachchidanand Joshi presiding.",
-      "details": null,
-      "date": "2026-11-26",
-      "end_date": null,
-      "start_time": "11:30",
-      "end_time": null,
-      "venue": "Umang Sabhagar, Indira Gandhi National Centre for the Arts, Janpath, New Delhi 110001",
-      "registration_link": null,
-      "confidence": "high",
-      "notes": "",
-      "recurrence": null,
-      "recurring": false,
-      "poster": "posters/eb8b303b6421.jpg",
-      "thumb": "thumbs/eb8b303b6421.jpg",
-      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAcABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgMF/8QAIBAAAgEEAgMBAAAAAAAAAAAAAQIAAxESIQQxE0Fhgf/EABUBAQEAAAAAAAAAAAAAAAAAAAME/8QAGBEBAQEBAQAAAAAAAAAAAAAAAQAhAjH/2gAMAwEAAhEDEQA/AO6vFFIBwctklWNhJQlyR4qa/bgzYODVSnsXBNwZeooRGYFiQOsu5PiTLsmeMi6sGt7IhGjY7hJ32U6YpvTBF7ZSKZC5rUbbNkAYovIa40suazEbCn8ijkaTDMAdQiD8h8uhCA+yHN//2Q==",
-      "source_files": [
-        "done/IMG-20261125-WA0008.jpg"
-      ],
-      "image_hashes": [
-        "eb8b303b6421df89dc273def91945c27ef53e2bb183d9fdb266619947bdedd9a"
-      ],
-      "source_labels": [
-        "poster"
-      ],
-      "rung": "haiku-low",
-      "added": "2026-11-25"
-    },
-    {
       "id": "51a62127a8bf",
       "status": "published",
       "grouping_uncertain": false,
