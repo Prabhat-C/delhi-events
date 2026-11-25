@@ -6394,6 +6394,40 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-25"
+    },
+    {
+      "id": "1387fe2ed97f",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Shikara: 5th Edition Cultural Festival 2026",
+      "category": "Festivals",
+      "organiser": "Kashmir Education Culture & Science Society",
+      "description": "A cultural festival celebrating Kashmiri heritage, presented by the Kashmir Education Culture & Science Society as its fifth edition.",
+      "details": null,
+      "date": "2026-12-19",
+      "end_date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "venue": "Kashmir Culture Centre, K.E.C.S.S Lawns, Pamposh Enclave, Greater Kailash-1, New Delhi-110048",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/3279596bebe9.jpg",
+      "thumb": "thumbs/3279596bebe9.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBQT/xAAiEAACAgICAQUBAAAAAAAAAAABAgADBBESISIFMTJBYVH/xAAXAQEBAQEAAAAAAAAAAAAAAAABAgME/8QAFxEBAQEBAAAAAAAAAAAAAAAAAAERIf/aAAwDAQACEQMRAD8A38TArx+Lkc24jsj2P5OmxFuRkdOQP9EkpArUDroQvjoA9D63OfGlrIyPSgHXhZocR00TSyPmPEHqILlSa+uqhXssCqQNE/crx82q+0ojHYXlttDY3qIinDKsVLAGbR1+REQVJx//2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-25 at 8.09.22 PM.png"
+      ],
+      "image_hashes": [
+        "3279596bebe9711df19bebf871c9c4f21f1ce29029b81989e1c3a68cf2179923"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-25"
     }
   ]
 }
