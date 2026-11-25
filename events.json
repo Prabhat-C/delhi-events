@@ -6326,6 +6326,74 @@
           "poster_blur": "/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAFKADAAQAAAABAAAAHAAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8AAEQgAHAAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/bAEMAAgICAgICBAICBAYEBAQGCAYGBgYICggICAgICgwKCgoKCgoMDAwMDAwMDA4ODg4ODhAQEBAQEhISEhISEhISEv/bAEMBAwMDBQQFCAQECBMNCw0TExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTE//dAAQAAv/aAAwDAQACEQMRAD8A+IbXwZq97aDVbUCTTyyRfbT+6txcSIreQZbjyk8xC4DgE4UM43Rrurf174X61o+h2/iBJbJ7Zt8Ujrqenykzxq0jqkcNw77QgAGR8xIxy6LWPp2peL/A+mQ+NbO5a2sLTGqWrqyTxnULOXZCktuC4RvmyrzJtIJGCCc8R47+M/xC/tyfU/El3f3FwYmtpzcTOz5cyEhCQPLjMUjKYwCAHb5gr7K+1rcWQp4r6sqsZKMnF6TumtNbRs7PRtPe3u9uSOR13SVaULJpNarZ6q2t9Vrr56jqKo6d4ivPFtsfEeoF3uLx3kleRzI7uXO5mc8sWPJJ5JNXq+yo4mNWnGqnuk+vX5L8keNOlKLcX0P/0PjXw7b2luiGPXdNsmnlhif7VFdT+WhVpWkK/ZpkCq22N/LBkDBTGuC8hxLTwL4H1zT7bw1q+tWUcMOqSXskt6l9sYTL+8jD28ckrQP5EYfMaTBmXa23zGXQsfiD4l0Db/whVxN4f3QxRXH9nXFzF9peLdiWXMrZc7jwu1B/Cq5OdjXPjJ8SddtBp82s38Vu1uLeeJb27dLgYKu8qzTSAmQH51XCdgoFfcYvKacsWlDDRftG3zc7T7ybXs3bVu1nr5XaPLWYVuRRlUeit8unXyOM13SvC2jzW9r4QkhNo1tDI0UCzrHBK6BpIQbl3kcoxIZixUtnZ8uKw67r4i+OpfiN4nm8Uz6da6XJcF3kgsmuDB5ksjyyOiXE03lbnckpEUjByQgYsW4WvWwsZU6UKcb2SS3Xb/Ac83eTbf8AX3n/2Q=="
         }
       ]
+    },
+    {
+      "id": "42cbd14db5f1",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "ताजमहल का टेंडर",
+      "category": "Theatre",
+      "organiser": null,
+      "description": "A theatrical play by students from a weekday theatre workshop, written by Ajay Shukla and directed by Ashish Sharma.",
+      "details": null,
+      "date": "2026-12-01",
+      "end_date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "venue": "श्री राम सेंटर4, सफदर हाशमी मार्ग, मंडी हाउस, नई दिल्ली, दिल्ली 110001",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Two shows on the day: 4 pm and 7 pm.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/229ec9d549c2.jpg",
+      "thumb": "thumbs/229ec9d549c2.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAaABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYCAwUE/8QAJhAAAgICAQMDBQEAAAAAAAAAAQIEEQADEgUhIjFRYQYTFTJxsf/EABcBAAMBAAAAAAAAAAAAAAAAAAACAwH/xAAcEQACAgMBAQAAAAAAAAAAAAAAAQIhERJRE2H/2gAMAwEAAhEDEQA/AOCJCQhkLJtkp+6K1cPj2y19egrxOocge/kRmP0+Y0OX9xmcG7ajXLv3Bxu1y48lF26UPkLpkJrJyeGh1HKoXN0SSr1H1sUq7PfDGB58YNXHYf4hww2jwPP6Y67oXG9kTVsdfVm9WyEeSkVTrYDaCbWiV4j1rGGGq/hohoX2718YaQDuSwD5D/cmrRRyswdvUObWgKj2HcYZZ9TgDqpoAeC4ZsXQ+y4f/9k=",
+      "source_files": [
+        "done/Screenshot 2026-11-25 at 6.11.58 PM.png"
+      ],
+      "image_hashes": [
+        "229ec9d549c2e7aea1e41ada4e17352a4e84275c98a1384cc5923764d3ba48bb"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "sonnet-medium",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "7b3c8fdeb0fc",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Beeterfly",
+      "category": "Theatre",
+      "organiser": "National School of Drama",
+      "description": "A play based on the life and career of world champion Mohammad Ali, conceived and directed by Riken Ngomle and performed by third-year students.",
+      "details": null,
+      "date": "2026-11-26",
+      "end_date": "2026-11-28",
+      "start_time": "16:00",
+      "end_time": null,
+      "venue": "Chahumukh, NSD Campus, Bahawalpur House, Bhagwandas Road, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Shows daily at 4:00 pm and 6:30 pm. Free entry with limited seats. Entry cards can be collected from NSD reception two hours before the show.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/3061bb02623d.jpg",
+      "thumb": "thumbs/3061bb02623d.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAABgACBAf/xAAnEAACAQMDAwMFAAAAAAAAAAABAgMABBEFITEGElETMoE0YnORsf/EABYBAQEBAAAAAAAAAAAAAAAAAAECAP/EABgRAAMBAQAAAAAAAAAAAAAAAAABIRES/9oADAMBAAIRAxEAPwArE0sxWOOJWbGAAoyaZdMobK3uIL5o4ZHdW7WYKe3HP72oppuoLZqyujOC2QAaTaZY22rqbhHaQjAcMowGx554oTtKybonQFVwCGx5NVYRo0SBRGONyW5NVJJzAOfSCkOQVHFK+iiRYXbKWGJRso+2hzc/FK+kfpJ/yD+VnBVFkEjOnc2+/iqtaL2fNVGlcn//2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-25 at 6.13.41 PM.png"
+      ],
+      "image_hashes": [
+        "3061bb02623d657a950ddd50eed92387236f45e430076d959db7cf767d1e5c43"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-25"
     }
   ]
 }
