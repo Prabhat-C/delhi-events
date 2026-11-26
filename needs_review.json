@@ -49,21 +49,6 @@
       "source_files": [
         "done/IMG-20261126-WA0008.jpg"
       ]
-    },
-    {
-      "id": "1ccdc83c9515",
-      "status": "published",
-      "title": "Bring Me Home",
-      "date": "2026-11-27",
-      "confidence": "high",
-      "reasons": [
-        "possible duplicate of 'Summer School, 2001' (e206f4c1014d): same date and venue but different start time (18:30 and 16:00)"
-      ],
-      "poster": "posters/f1e5db0f2de5.jpg",
-      "thumb": "thumbs/f1e5db0f2de5.jpg",
-      "source_files": [
-        "done/IMG-20261126-WA0012.jpg"
-      ]
     }
   ]
 }
