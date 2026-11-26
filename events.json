@@ -4389,15 +4389,18 @@
       "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYCBAUD/8QAKRAAAQMDAwMCBwAAAAAAAAAAAQACAwQRIQUSMRNBUQYWUlNxgZLB4f/EABYBAQEBAAAAAAAAAAAAAAAAAAMCBP/EAB0RAAIBBAMAAAAAAAAAAAAAAAABEQISEyEDUWH/2gAMAwEAAhEDEQA/AO83p+LbuMsgAHaIBUKLTIqyeaJr5W9PvtBJzbhNcm7YTuFreFl6KXt1OVrWxkiM8Yvkd0MKYNK5K4bkh7XY8A9We1vgaP2hMe6X5Y/L+ISWoPNX2ZVVOTQFzWuc5wsAAeVmaTFV0dRVPETpZnNwQLZJGc+FWj5cpHgfVGluRbNQNlHJLJTMdPGY5LWcCQfvhCS0K7ycPp//2Q==",
       "source_files": [
         "done/Screenshot 2026-11-18 at 10.41.00 PM.png",
-        "done/Screenshot 2026-11-18 at 10.41.30 PM.png"
+        "done/Screenshot 2026-11-18 at 10.41.30 PM.png",
+        "done/IMG-20261126-WA0007.jpg"
       ],
       "image_hashes": [
         "6d28c1df5a59471e470b95ceb1e9902bc04446e1b5e4badcd52178310682257f",
-        "2c1800b12324336a619c9574f1abb50bd9606653ef4999018c905e985f6126b3"
+        "2c1800b12324336a619c9574f1abb50bd9606653ef4999018c905e985f6126b3",
+        "5ad2dd03d3f98b5d4d37349c0916cb0853f2de2c47eb3bfc1cd8d71dcd8335af"
       ],
       "source_labels": [
         "poster",
-        "other"
+        "other",
+        "poster"
       ],
       "rung": "haiku-medium",
       "added": "2026-11-18"
@@ -5485,12 +5488,15 @@
       "thumb": "thumbs/069b400bca1c.jpg",
       "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFBAb/xAAsEAABBAECAwUJAAAAAAAAAAABAAIDBBESIQUiMQYTI2FxMjNCUXKBkdHw/8QAFwEBAQEBAAAAAAAAAAAAAAAAAwIEBf/EAB4RAAICAgIDAAAAAAAAAAAAAAECAAMEERIxIUFR/9oADAMBAAIRAxEAPwCrqZFIXAYcfM7/AGS5br4rsNeOuX6xqc7UQAOm3zS7FwU4nTTP0sA2bn2lEtXLEkzXSTh4wHN7s4GCP4Ll4uMbz56j2sK+50j3NYdIH53QpcNmWSME8+Ns4QjfHZGKn1NVenQMJtscOr2AfCE0wz7xxxj9eSht7Mz5w6VhXVVuh9Er43/UVVeS9OwsBkDHRiqXDWwVIopXNDmtxynIQtQ6D0QmDFxy+ywWA0DP/9k=",
       "source_files": [
-        "done/IMG-20261121-WA0035.jpg"
+        "done/IMG-20261121-WA0035.jpg",
+        "done/IMG-20261126-WA0013.jpg"
       ],
       "image_hashes": [
-        "069b400bca1c6f120feff7792c1e2e5545040190364683d7766e6f32094fc301"
+        "069b400bca1c6f120feff7792c1e2e5545040190364683d7766e6f32094fc301",
+        "36acdb4bd66840685fada96b01cde9ab3c06b9c7888b92c716c4865331b182c8"
       ],
       "source_labels": [
+        "poster",
         "poster"
       ],
       "rung": "haiku-low",
@@ -6635,6 +6641,281 @@
       ],
       "source_labels": [
         "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "31beaf17c05b",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "An Evening of Live Music with David Sancho Trio",
+      "category": "Music",
+      "organiser": "The Embassy of Spain in India, AECID and Triveni Kala Sangam",
+      "description": "An evening of live music with the David Sancho Trio, a Spanish music group.",
+      "details": null,
+      "date": "2026-12-01",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": null,
+      "registration_link": null,
+      "confidence": "medium",
+      "notes": "First-come-first-served seating.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/a6f644122778.jpg",
+      "thumb": "thumbs/a6f644122778.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUBBAYD/8QAKhAAAgEDAwIDCQAAAAAAAAAAAQIDAAQRBRIhMTIGNMFRcXKBgpGxsvH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgP/xAAaEQEBAAIDAAAAAAAAAAAAAAABAAIRAxIx/9oADAMBAAIRAxEAPwBJcRTPtME7MzOwdeBt546HNaTRbM2cdwBOZ0coyPknIxWb0hi2rvCzMI5GYMAcZ5px4Pcm3uw3IWRcfY0Pklo07R60VNFZzVY7Gx3iSK3g3jowAzXaC1hgBWCFEzgEIPZ/ar6b2/P1NMI+9vjP4FHGuZtrzx6tWFzFlg7rGwOMMcH30Ut1Hz0v0/qKKvUBf//Z",
+      "source_files": [
+        "done/IMG-20261126-WA0003.jpg"
+      ],
+      "image_hashes": [
+        "a6f6441227785da4fa78c9c4383ee8fe449aec3fb95037cecf40979a91c18735"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "sonnet-medium",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "fd5b89a4d985",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Launching IKYAM",
+      "category": "Music",
+      "organiser": "Ustad Mushtaq Ali Khan (UMAK) Centre for Culture",
+      "description": "Launch of IKYAM at the UMAK Centre for Culture's celebration of the 55th birth anniversary of sitar maestro Pandit Prateek Chaudhuri, with a jugalbandi and performances on sitar, violin, tabla and mridangam. Anchored by Smt. Sadhna Shrivastav.",
+      "details": null,
+      "date": "2026-11-27",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "Triveni Kala Sangam, 205 Tansen Marg, Mandi House, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/ede24113a95a.jpg",
+      "thumb": "thumbs/ede24113a95a.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFA//EACMQAAIBAgYCAwAAAAAAAAAAAAECAwAhBBESEzFRBSIyQWH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAAH/xAAZEQACAwEAAAAAAAAAAAAAAAAAAQIRIRL/2gAMAwEAAhEDEQA/AIr7UGGwrgNuMCXY8G9sqY8gka7YjmEpdtPxyv2Oxep3jpX17es6Cj+v1waJSQIyCcwbflBpXg7w3SQouR0g9G1FJzs28wz4orHEuj//2Q==",
+      "source_files": [
+        "done/IMG-20261126-WA0005.jpg"
+      ],
+      "image_hashes": [
+        "ede24113a95a0d390b0c7cf4472b75bbcfba8c53ad352a4798e2c8a3d41d3731"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "ea9e5ac42038",
+      "status": "held",
+      "grouping_uncertain": false,
+      "title": "Vocal Recital and Tabla - Mrudang Kirtan",
+      "category": "Music",
+      "organiser": null,
+      "description": "A vocal recital by Dr. Prabhakar Kashyap and Dr. Diwakar Kashyap (Kashyap Bandhu), accompanied by Dr. Raj Kumar Nahar on tabla and Sh. Sumit Mishra on harmonium. It is followed by Tabla - Mrudang Kirtan, conceived and narrated by Taalyogi Pt. Suresh Talwalkar and group.",
+      "details": null,
+      "date": "2026-11-27",
+      "end_date": null,
+      "start_time": null,
+      "end_time": null,
+      "venue": null,
+      "registration_link": null,
+      "confidence": "low",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/90112ca62770.jpg",
+      "thumb": "thumbs/90112ca62770.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAhABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EACkQAAIBBAECAwkAAAAAAAAAAAECAwAEERIhMUETMlEFFSNSYXFysfH/xAAXAQEBAQEAAAAAAAAAAAAAAAACAQAD/8QAGhEBAQEAAwEAAAAAAAAAAAAAAQARAhJBMf/aAAwDAQACEQMRAD8A3rS5ge4eOCaORwxUqZMkEdsVcz6r8QgE+lZFr7MiW5e4j3hds6k4wpPmIyO+en0pzT3UN4Dp4kYTTIPLcZBPbk1yHCaTGt45HZgzDJziipbaW9EZCrHjYnkUUOpLW1N0VkVyuXOAG70uaLw+WuJFz0AY1lre7v4lxCNAWIYnJUdBjHqcU9b15LQSNHG5EfO3BLfymcj2ONTCpZSTJIefmoqT3gqO6nRQDxjPPFFDSWMmx6Sfif2aafK/2FFFQ+V9o5fOaKKKlr//2Q==",
+      "source_files": [
+        "done/IMG-20261126-WA0008.jpg"
+      ],
+      "image_hashes": [
+        "90112ca6277073b19790601a382fb7f1d4c75444fa62a7ee6f17ce6040879c6c"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "sonnet-medium",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "b1546819c901",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Legacy for a Just World: Education, Science, and Culture in the Service of Humanity",
+      "category": "Talks",
+      "organiser": null,
+      "description": "A programme on Cuba's cultural legacy and anti-imperialist resistance, with an inauguration by the Ambassador of Cuba, a presentation on Fidel and a panel discussion on education, science and culture.",
+      "details": null,
+      "date": "2026-11-27",
+      "end_date": null,
+      "start_time": "14:00",
+      "end_time": null,
+      "venue": "India International Centre, Conference Room I",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "High tea will be served, courtesy of the Embassy of Cuba.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/dab8bef68246.jpg",
+      "thumb": "thumbs/dab8bef68246.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAVABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECAwX/xAAlEAACAgECBQUBAAAAAAAAAAABAgARAxIxISJBYnEEI2GBoeH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAMAwEAAhEDEQA/AOHjxgqTqPDtkEh2I0gUa5RvLBaRWKGjsSu/3K4wcbE1fnrMtVLLjv29dd1RKM/MekSqaD1GQomNmOldq4SDm+D5v+REbomM2Os2f03ERAv/2Q==",
+      "source_files": [
+        "done/IMG-20261126-WA0009.jpg"
+      ],
+      "image_hashes": [
+        "dab8bef68246afb951dba8f36a4e6794b3fa9d094a6612af906609f2716dc52e"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "e206f4c1014d",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Summer School, 2001",
+      "category": "Film",
+      "organiser": null,
+      "description": "Screening of Summer School, 2001, a Czech Republic drama by Dužan Duong, as part of the 31st European Union Film Festival.",
+      "details": null,
+      "date": "2026-11-27",
+      "end_date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "venue": "Instituto Cervantes",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Followed by Q&A.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/827f49e068d0.jpg",
+      "thumb": "thumbs/827f49e068d0.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAXABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAMEBQEC/8QAJhAAAgEDBAEDBQAAAAAAAAAAAQIDAAQRBRIhMRQVM0FRcYGxwf/EABgBAAMBAQAAAAAAAAAAAAAAAAECBQME/8QAIREAAgIBAgcAAAAAAAAAAAAAAAECAxEEIRMxMjNBcZH/2gAMAwEAAhEDEQA/APNtZwSWsMnjo25eWIbk/NS+FAmD40Yz1kNWdqt+La5EFnIFhR2ACHjGar2upuXO8hgCO+zkc1nKvfqf0GG+RLq0axXSqiqo2AkL1nmla+pT6bHcBZ4Y2fYD7Jfj7hh+qV2USfDjncVlS30yCS2jYySKzqCcHon8V30ZQCPJlIPfXNKVDsvsjN4fkJU1oYvEH0jH9pSlXdL2Y+hWf//Z",
+      "source_files": [
+        "done/IMG-20261126-WA0010.jpg"
+      ],
+      "image_hashes": [
+        "827f49e068d0de19483c514f53a400f7beb2f8e045a12f5d12d54360d63aee2e"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "cdbeeeebcb45",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Maricel",
+      "category": "Film",
+      "organiser": null,
+      "description": "Screening of Maricel, a Cyprus drama by Elias Demetriou, as part of the 31st European Union Film Festival.",
+      "details": null,
+      "date": "2026-11-27",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "India Habitat Centre, Gulmohar Hall",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/4aeebdc6a8ff.jpg",
+      "thumb": "thumbs/4aeebdc6a8ff.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQDBQYC/8QAJBAAAQQBBAICAwAAAAAAAAAAAQACAwQRBRIhMRORUWGBodH/xAAYAQADAQEAAAAAAAAAAAAAAAABAgQAA//EAB8RAAICAgEFAAAAAAAAAAAAAAABAhEDE5EEIkFR8P/aAAwDAQACEQMRAD8A4qU4J68ZbBG92wF2c5z7TLdLaDkU2ej/AFRw34or1kQbfAXYZt6xz17VnFfY8dpXjtvufIpmdWjbDaa1jQ0bASB88oVzqd6nDZ2SQB7tuciFjh+CeUKnA3rj5AxSrTrmtG7OC9oLh5iOT3wpG0YWnLJiz6EgI/azp7KFyfRzu1P7k1llrJBttwQcRjkHPyhIM6QqccNcFD0A/9k=",
+      "source_files": [
+        "done/IMG-20261126-WA0011.jpg"
+      ],
+      "image_hashes": [
+        "4aeebdc6a8ff796dcec0ad990bf7a7b3299c8391c5ae2868939b13f3e1ef8315"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "1ccdc83c9515",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Bring Me Home",
+      "category": "Film",
+      "organiser": null,
+      "description": "Screening of Bring Me Home, a Bulgarian drama/comedy by Martin Genovski, as part of the 31st European Union Film Festival.",
+      "details": null,
+      "date": "2026-11-27",
+      "end_date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "venue": "Instituto Cervantes",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/f1e5db0f2de5.jpg",
+      "thumb": "thumbs/f1e5db0f2de5.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAQP/xAAoEAACAQMDAgUFAAAAAAAAAAABAgMABBEFEjETURQhImGBMkFDcbH/xAAXAQEBAQEAAAAAAAAAAAAAAAABAwIE/8QAHxEAAgICAQUAAAAAAAAAAAAAAAECEQMTBCEiMZGh/9oADAMBAAIRAxEAPwBWEad0IzIIt2AGLFvq7V26dgoDbIQDnBJb5pGbZHfanFbSRrDk7RyMe1Kxq0sM7KTnHowM7u/6qcsbbfc/YUO6nDHFOgjRVBQH08cmiq15Lp0bRLcRIX6a/iL4+Qw/lFdOFvWr6gJ2ljbm2RxcMjOuSOoPIn2oGmRAbfGswHdlqIeTWVl8WdtqfwLKmrFfERhWDARgZBz9zRU5eKKvjx64qN+As//Z",
+      "source_files": [
+        "done/IMG-20261126-WA0012.jpg"
+      ],
+      "image_hashes": [
+        "f1e5db0f2de53405581f427b22111324f06d98dee2b72ac7d5d18be6983761a0"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "3254c815df8a",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Antarctica: Special Charity Screening",
+      "category": "Film",
+      "organiser": "British Council and Embassy of Ukraine in India",
+      "description": "A special charity screening of Antarctica, a travel documentary by Ukrainian filmmaker Anton Ptushkin, which takes audiences to the white continent and into the work of Ukrainian polar researchers.",
+      "details": "Culture Friday: Antarctica Documentary Screening\n\nJoin the British Council and the Embassy of Ukraine for a special screening of Antarctica, a documentary by Ukrainian filmmaker Anton Ptushkin.\n\nMarking 30 years since the transfer of Britain's Faraday Station to Ukraine—now the Akademik Vernadsky research base—the film takes audiences on a journey to the white continent, offering a glimpse into the lives and work of Ukrainian polar researchers and the vital role of Antarctic science in understanding our changing planet.\n\nDate: Friday, 27 November 2026\n\nTime: 5:00 PM (Screening, followed by high tea)\n\nVenue: British Council Auditorium, 17 Kasturba Gandhi Marg, New Delhi\n\nRegister here:",
+      "date": "2026-11-27",
+      "end_date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "venue": "British Council Auditorium, 17 Kasturba Gandhi Marg, New Delhi",
+      "registration_link": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=wXVirt3MRkCyoWJF",
+      "confidence": "high",
+      "notes": "Special charity screening, followed by high tea.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/50121a95b584.jpg",
+      "thumb": "thumbs/50121a95b584.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAQFAgMG/8QAKRAAAgEDAgQFBQAAAAAAAAAAAQIRAAMEEiEFFEGBBhMiMUIyUWGh8P/EABYBAQEBAAAAAAAAAAAAAAAAAAIDAf/EABoRAAMAAwEAAAAAAAAAAAAAAAABEQISIQP/2gAMAwEAAhEDEQA/AHOasBRHlyegcz+qaFsBlDA7n7napvK4/CsZcy8fPcEBFYEDV/b9qc4dntxESwGrUAQPj+YqhK9hrfNso5VltyDB9VFN3vD+PcutcDBdRkiSRPWN6KyoUZyRzjeRVyHe5p9izTFY80loygII6zvU9fq7UP8ALvS2ZFeSfWOPxbJZpF549h6jRU6ijWPTE//Z",
+      "source_files": [
+        "done/IMG-20261126-WA0015.jpg",
+        "done/IMG_20261126_211529.jpg"
+      ],
+      "image_hashes": [
+        "50121a95b584ad92de5bca9b8ce574f698a0a8fac83c60477b601ff898a16d98",
+        "f9f14c1d1e1b80879df948f16c8f892b7bf3701f1a25cd679d4cc2522411afc7"
+      ],
+      "source_labels": [
+        "poster",
+        "text_caption"
       ],
       "rung": "haiku-low",
       "added": "2026-11-26"
