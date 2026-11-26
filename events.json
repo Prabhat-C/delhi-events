@@ -6604,6 +6604,40 @@
       ],
       "rung": "sonnet-medium",
       "added": "2026-11-25"
+    },
+    {
+      "id": "23d7b7dfd93d",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Diabetes in Children: Current perspectives and the way ahead",
+      "category": "Talks",
+      "organiser": "Division of Pediatric Endocrinology, Department of Pediatrics, All India Institute of Medical Sciences, New Delhi",
+      "description": "A public lecture and panel discussion on diabetes in children, covering current perspectives, next-generation diabetes care, voices of children and guidelines from the Government of India. Speakers include AIIMS faculty, ICMR and government representatives.",
+      "details": null,
+      "date": "2026-11-26",
+      "end_date": null,
+      "start_time": "15:30",
+      "end_time": "17:00",
+      "venue": "J.L. Auditorium, AIIMS, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Entry free and no registration required. Please take your seat by 3:15 PM. The programme is also live streamed on the AIIMS YouTube channel. Parking is available at the Multi Level Underground Parking near Masjid Moth Campus, AIIMS. Tea is served after the lecture.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/66fcac823da9.jpg",
+      "thumb": "thumbs/66fcac823da9.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMCBAUG/8QAKRAAAgECAggHAAAAAAAAAAAAAQIAAxEEEgUTITEyM1FxIiQ0QYGhwf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwDpXpLRSyIW23uxi0JLW1YsY+q67bm/eJpkA+IWmWlxAAoAGUdDCRDADiI+4RDOwKsrYolavHmGdib79147D31ll9+ks4vkN8ShhfUU+/5JGUtEinn85izmYtzOsJowjRH/2Q==",
+      "source_files": [
+        "done/Screenshot 2026-11-26 at 12.19.09 PM.png"
+      ],
+      "image_hashes": [
+        "66fcac823da928988f54ddcfecf18932e902ca01e7409076af5002e176fe34db"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-26"
     }
   ]
 }
