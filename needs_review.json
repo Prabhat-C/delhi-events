@@ -19,22 +19,6 @@
       ]
     },
     {
-      "id": "31beaf17c05b",
-      "status": "published",
-      "title": "An Evening of Live Music with David Sancho Trio",
-      "date": "2026-12-01",
-      "confidence": "medium",
-      "reasons": [
-        "confidence is medium",
-        "venue missing"
-      ],
-      "poster": "posters/a6f644122778.jpg",
-      "thumb": "thumbs/a6f644122778.jpg",
-      "source_files": [
-        "done/IMG-20261126-WA0003.jpg"
-      ]
-    },
-    {
       "id": "ea9e5ac42038",
       "status": "held",
       "title": "Vocal Recital and Tabla - Mrudang Kirtan",
