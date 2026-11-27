@@ -7033,6 +7033,216 @@
           "poster_blur": "/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAFKADAAQAAAABAAAADgAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8AAEQgADgAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/bAEMAAgICAgICBAICBAYEBAQGCAYGBgYICggICAgICgwKCgoKCgoMDAwMDAwMDA4ODg4ODhAQEBAQEhISEhISEhISEv/bAEMBAwMDBQQFCAQECBMNCw0TExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTE//dAAQAAv/aAAwDAQACEQMRAD8A+4f2J9Y1DUPg9oumx6OsselS3Lx3ksuyMSPLOOPkJD7JXUgZAU5JBYCvo34k+F/iF4qkgkhGkJZ2Cm5hjuLVr11uQGjLbiUYK0MkiBYVjl3HPnbd0UngX7FvhJY/gTpGvW8pDXv2nzATwPLuplGFAHYdyT9BxX1dr/hDwz4qt7MeIdPtry60877aWaNXaFsjJjYjK52rnHBwPQV81SxHKpRprRL8ev4n0uc0ebG1XUe85fdzO34H8x/7Va3178fvEE+uT2q3WbUP9nheCI4tYQCkYMm0Y/2jk5PGcV89/Yrf/n5j/J//AIivqD9t6zt9P/ah8UWluSUU2ZG7GebKAnoAOp4wK+Usivfw0nOlCUt2l+R8/iYRjVnGmtE3b0vof//Z"
         }
       ]
+    },
+    {
+      "id": "92c31ac363cc",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Rhys Concessao: The Quiet Storm",
+      "category": "Music",
+      "organiser": null,
+      "description": "Piano recital by British-Indian pianist Rhys Concessao, a graduate of the Moscow Tchaikovsky Conservatory, with works by Taneyev, Chopin and Schumann.",
+      "details": null,
+      "date": "2026-12-01",
+      "end_date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "venue": "C.D. Deshmukh Auditorium",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/639ed6fa8952.jpg",
+      "thumb": "thumbs/639ed6fa8952.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAQFAQIG/8QAKBAAAgEEAQEHBQAAAAAAAAAAAQIAAwQREiExBRMUIzRBUXOCkaHB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAZEQACAwEAAAAAAAAAAAAAAAAAARESMRP/2gAMAwEAAhEDEQA/AORorTbbfbI6YxGtqeuDtwMcBRCyoJcd4CwUqhKk/PxFahOxUH9SYkcNGbJhMEEHkcwlAULd3s3FNVos+NiXGRj2j6drCkvn2yj6LAfySr71H2iLyKp6XZrC34uxuAKj4Rj1DLk/mEjL0hCiHoz/2Q==",
+      "source_files": [
+        "done/IMG-20261127-WA0001.jpg"
+      ],
+      "image_hashes": [
+        "639ed6fa89520b5c0c18874f31fefc9012e98fb964387f0e186d4c028897444d"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "8e3dede51734",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Yuri and the City: Book Launch",
+      "category": "Literature",
+      "organiser": "Speaking Tiger Books",
+      "description": "Launch of Jerry Pinto's book Yuri and the City, with the author in conversation with Omair Ahmad, writer and journalist.",
+      "details": null,
+      "date": "2026-12-03",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "Seminar Halls I & II, Kamaladevi Complex, India International Centre, Lodhi Estate, New Delhi 110003",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Tea at 6:30 pm. RSVP to Tanu Dogra at socialtanu@gmail.com.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/58f5ca9a236c.jpg",
+      "thumb": "thumbs/58f5ca9a236c.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMCBQYE/8QAJRAAAQMEAgEEAwAAAAAAAAAAAQACAwQREjEFIUEUNDVRU3GR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/xAAaEQADAAMBAAAAAAAAAAAAAAAAARECEiEi/9oADAMBAAIRAxEAPwDXuuGdDv8AqTLEZmhrgSL31ZMuRKSXOtfVjZZjk3tNdUBxJs8i4f2OtKsVSWzQelLOs8v2hHE/F01/xjyhNmISjfHM4kPOV9A6VVNws0vJTyudGIZH5+SdfS7aT3JVkNI/L4JRNLGYadkWJGAxGu0JyFJR/9k=",
+      "source_files": [
+        "done/IMG-20261127-WA0002.jpg"
+      ],
+      "image_hashes": [
+        "58f5ca9a236cde71bae459c67387e253398666a1be0b1977987e6351bf636e87"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "8a3f37690069",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "नाचनी",
+      "category": "Theatre",
+      "organiser": "Shoonya Theatre Group",
+      "description": "A solo performance by Dr. Rama Yadav in Bhanu Bharti's Nachni, designed and directed by Mayank, with light design by Atul Mishra.",
+      "details": null,
+      "date": "2026-12-04",
+      "end_date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "venue": "Amphitheatre, Triveni Kala Sangam, Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Open to all. Contact: 9999172183.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/9ef9e8aecf30.jpg",
+      "thumb": "thumbs/9ef9e8aecf30.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAIDBAUB/8QAJRAAAgIBAgQHAAAAAAAAAAAAAQIAEQMEIRMxQVESIjJDcpHB/8QAGAEAAgMAAAAAAAAAAAAAAAAAAQQAAgP/xAAZEQEBAQADAAAAAAAAAAAAAAAAEQESIVH/2gAMAwEAAhEDEQA/AO0mNVLA77CLxU38t10kS63GcYNsL7i5MhL8vCQe0Rnp3szItjbpCDlQQCwG3eECIAqsKLn6lXPpWxm8ZYjrLiepY55NDYOazX0OY0eG1EWDR3hNv2sXx/TCbRTnr//Z",
+      "source_files": [
+        "done/IMG-20261127-WA0003.jpg"
+      ],
+      "image_hashes": [
+        "9ef9e8aecf30a1f499c02c45e48c59524f5f9cfc9b9719cd44ac35ce864360fe"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "b66f2ee57a42",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Swiss German Embassy Winter Carnival",
+      "category": "Festivals",
+      "organiser": "Party Perfetto",
+      "description": "A winter festive market at the Embassy of Switzerland with festive charm, unique Christmas finds and holiday cheer, including the PartyPerfetto premium Christmas collection.",
+      "details": "Join us for a beautiful winter celebration filled with festive charm, unique Christmas finds and holiday cheer.\n\n27th - 29th November 2026\nEmbassy of Switzerland, 3-E Nyaya Marg, New Delhi - 110021\n\nEvent Timings:\n27 November: 6 PM - 9 PM\n28 November: 11 AM - 7 PM\n29 November: 11 AM - 6 PM\n\nCome visit the PartyPerfetto stall and explore our exclusive premium Christmas collection!",
+      "date": "2026-11-27",
+      "end_date": "2026-11-29",
+      "start_time": null,
+      "end_time": null,
+      "venue": "Embassy of Switzerland, 3-E Nyaya Marg, New Delhi - 110021",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Timings differ by day: 27 November 6 PM to 9 PM, 28 November 11 AM to 7 PM, 29 November 11 AM to 6 PM.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/d3f92eb173de.jpg",
+      "thumb": "thumbs/d3f92eb173de.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAECAwQG/8QAJBAAAgIBAgUFAAAAAAAAAAAAAQIAEQMScSEiMkHhMVFhkbH/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQID/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oADAMBAAIRAxEAPwD1JZqrRY+DIDOD0k7nxByIyagTQHsb+pRcmN2pdd7EfszXGh1cNQAMTN8wDUaG5qIXCiFfWxF8y9/WXBfpJLWe0RFh65zlxXwZRv5iIk1Uf//Z",
+      "source_files": [
+        "done/IMG-20261127-WA0005.jpg",
+        "done/IMG-20261127-WA0004.jpg"
+      ],
+      "image_hashes": [
+        "d3f92eb173de83ea9008b5f4b09538d6d97d63966b5d4436f1cf9aad2942ae3d",
+        "960f2dad9866e58ed68ad9cbac344074ad39d9e7415c6161871951e811de5370"
+      ],
+      "source_labels": [
+        "poster",
+        "text_caption"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "eb41b0e9503d",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Abhivyakti 2026",
+      "category": "Dance",
+      "organiser": "KathakNatyam",
+      "description": "An evening of Kathak and Bharatanatyam by disciples of Shri Tribhuwan Maharaj and Smt. Rajni Maharaj, with a tabla recital by students of Shri Ravindra Kumar Soni and a vocal recital by Vid. Sudha Raghuraman.",
+      "details": null,
+      "date": "2026-12-05",
+      "end_date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "venue": "Kamani Auditorium, 1, Copernicus Marg, Mandi House, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/a03483ae7d59.jpg",
+      "thumb": "thumbs/a03483ae7d59.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMCBP/EAB0QAAIDAQADAQAAAAAAAAAAAAECAAMRIQQSE5H/xAAWAQEBAQAAAAAAAAAAAAAAAAAEAQL/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8Ao4rBYL7MoOCQsIWstpwdmnrusrZUdEUtvAd/ZN6708c1MyMuZvQQIaEONnBOqdB7sR8nAAUrgGdEStx//9k=",
+      "source_files": [
+        "done/IMG-20261127-WA0006.jpg"
+      ],
+      "image_hashes": [
+        "a03483ae7d59cc3d178ebea5a2b874f1b7e922efbd643fc1ba7faf89a72ca446"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "23dcee068b53",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "Flicks & Frames: The 30th Edition",
+      "category": "Film",
+      "organiser": "nivfilms",
+      "description": "The 30th edition of Flicks & Frames, an evening of independent cinema featuring the films Nayan, Of Sour Mangoes, Laal Imaan, Makkar, Clinic, Sheher Ke Under and Zaat.",
+      "details": "nivfilms FLICKS & FRAMES – THE 30TH EDITION | OFFICIAL LINEUP\n\nThe wait is over! We're excited to announce the official lineup for the 30th Edition of Flicks & Frames at NIV Art Centre.\n\nFEATURED FILMS:\n\nNAYAN - SHIIVANG BHATNAGAR\nOF SOUR MANGOES - ARYAMAN RAY\nLAAL IMAAN - ANSHUL SHARMA\nMAKKAR - ANIL KUMAR ANAND\nCLINIC - ASHWATH DUTT\nSHEHER KE UNDER - ANANYA ARORA & TANYA ROY\nZAAT - VEER JAIN\n\nBig Congratulations To All Selected Filmmakers!!!!\n\nJoin us for an evening celebrating independent cinema, creative storytelling, and diverse perspectives.\n\nDate: 29th November 2026\nTime: 5:00 PM\nVenue: NIV Art Centre (Studio A), IGNOU Chowk, Delhi\nAudience Entry: FREE\n\nCome watch, connect, and experience stories through the lens of independent filmmakers.\n\nContact: +919810178802",
+      "date": "2026-11-29",
+      "end_date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "venue": "NIV Art Centre (Studio A), IGNOU Chowk, Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "Audience entry is free.",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/4d5eb14c04b9.jpg",
+      "thumb": "thumbs/4d5eb14c04b9.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAbABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBBAUC/8QAJRAAAgICAgEEAgMAAAAAAAAAAQIDBAARBSExEhNBUSJxBqHw/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAECA//EABgRAQEBAQEAAAAAAAAAAAAAAAEAAhES/9oADAMBAAIRAxEAPwCvY4etSsGB7Ts3kBox+XXwcba4aOKwYYpAWEIlBKL2N61rX947mac8/IzuDGToLDucL6evkfvI5+palt1p6rL+MAXfuAb84O3kzJcVv4pHZgWZrbqX7ICDQwzd4RZk4qBbBBkAO9EH5P1hgb1HksPnbMScm6SRoSrq22P0AfH+846zHx1mCi07vGTACirsD095du8fUnl9U0CO297bs469Tr+3GPZTSKFXrwPoZFqveE/jEgShEtbftd+nf7wx1ZFSBFUAKB0Bhjov/9k=",
+      "source_files": [
+        "done/IMG-20261127-WA0008.jpg",
+        "done/IMG-20261127-WA0007.jpg"
+      ],
+      "image_hashes": [
+        "4d5eb14c04b906b1b25278017db345b20c57a41d806e8f69fd37153497a5770e",
+        "9c8c90cffc5447fc5bf374bc12a620dcc60ae4d219381a9c0911e7af03886a40"
+      ],
+      "source_labels": [
+        "poster",
+        "text_caption"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-27"
     }
   ]
 }
