@@ -7243,6 +7243,40 @@
       ],
       "rung": "haiku-low",
       "added": "2026-11-27"
+    },
+    {
+      "id": "454b13d67cb0",
+      "status": "published",
+      "grouping_uncertain": false,
+      "title": "National Conclave of Writers, Artists and Cultural Practitioners",
+      "category": "Talks",
+      "organiser": "We The People of India",
+      "description": "A national gathering to celebrate cultural diversity, with morning and afternoon sessions featuring writers, artists and cultural practitioners. Morning session moderated by Apoorvanand.",
+      "details": null,
+      "date": "2026-11-28",
+      "end_date": null,
+      "start_time": "09:00",
+      "end_time": "18:00",
+      "venue": "Jawahar Bhawan, New Delhi",
+      "registration_link": null,
+      "confidence": "high",
+      "notes": "",
+      "recurrence": null,
+      "recurring": false,
+      "poster": "posters/4a16ebf82268.jpg",
+      "thumb": "thumbs/4a16ebf82268.jpg",
+      "poster_blur": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAdABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAECAwQFBv/EACYQAAIBBAEDAwUAAAAAAAAAAAECAwAEESExBRIiFDJBUWFiY+H/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQID/8QAGREAAwEBAQAAAAAAAAAAAAAAAAERAiFh/9oADAMBAAIRAxEAPwDpOpXCxwNDlw0inyQjIrKiAhuBKJ7jOQzeXI+hq11nqEltKIUgV+6PIYjandJaI0iQyyS4DAMylefnFRemywlms1bedbiISJwaKdHjs8cAfaiqMmUbuKI3Klo1Pd7tbNLd20EaoFiQAHjFTXEZDrLnYOtcVFIzyDyKnAyNUQdZMlrbdoKwx4P40U2OO6dA3qU3+r+0UDvp/9k=",
+      "source_files": [
+        "done/IMG-20261128-WA0010.jpg"
+      ],
+      "image_hashes": [
+        "4a16ebf82268064fbeb205d874317e1828cec8155a58b75fe91f8f2df0fab26c"
+      ],
+      "source_labels": [
+        "poster"
+      ],
+      "rung": "haiku-low",
+      "added": "2026-11-28"
     }
   ]
 }
