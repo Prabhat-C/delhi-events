@@ -1,38 +1,3 @@
 {
-  "review": [
-    {
-      "id": "da78e56aa880",
-      "status": "held",
-      "title": "Sirat",
-      "date": null,
-      "confidence": "low",
-      "reasons": [
-        "date missing or not YYYY-MM-DD: None",
-        "confidence is low",
-        "grouping uncertain: check whether these screenshots belong to one post",
-        "venue missing"
-      ],
-      "poster": "posters/0db4c1b2b75d.jpg",
-      "thumb": "thumbs/0db4c1b2b75d.jpg",
-      "source_files": [
-        "done/IMG-20261125-WA0018.jpg"
-      ]
-    },
-    {
-      "id": "ea9e5ac42038",
-      "status": "held",
-      "title": "Vocal Recital and Tabla - Mrudang Kirtan",
-      "date": "2026-11-27",
-      "confidence": "low",
-      "reasons": [
-        "confidence is low",
-        "venue missing"
-      ],
-      "poster": "posters/90112ca62770.jpg",
-      "thumb": "thumbs/90112ca62770.jpg",
-      "source_files": [
-        "done/IMG-20261126-WA0008.jpg"
-      ]
-    }
-  ]
+  "review": []
 }
